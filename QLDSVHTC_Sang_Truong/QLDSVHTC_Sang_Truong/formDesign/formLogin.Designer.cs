@@ -45,68 +45,77 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 107);
+            this.label1.Location = new System.Drawing.Point(79, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 17);
+            this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập";
             // 
             // txtTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(285, 102);
+            this.txtTK.Location = new System.Drawing.Point(215, 96);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(183, 22);
+            this.txtTK.Size = new System.Drawing.Size(209, 22);
             this.txtTK.TabIndex = 1;
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(185, 188);
+            this.label.Location = new System.Drawing.Point(79, 151);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(64, 17);
+            this.label.Size = new System.Drawing.Size(72, 17);
             this.label.TabIndex = 0;
             this.label.Text = "Mật khẩu";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(285, 185);
+            this.txtPass.Location = new System.Drawing.Point(215, 146);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(183, 22);
+            this.txtPass.Size = new System.Drawing.Size(209, 22);
             this.txtPass.TabIndex = 1;
             // 
             // cbPhongBan
             // 
             this.cbPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPhongBan.FormattingEnabled = true;
-            this.cbPhongBan.Location = new System.Drawing.Point(281, 43);
+            this.cbPhongBan.Location = new System.Drawing.Point(242, 36);
             this.cbPhongBan.Name = "cbPhongBan";
-            this.cbPhongBan.Size = new System.Drawing.Size(187, 24);
+            this.cbPhongBan.Size = new System.Drawing.Size(213, 24);
             this.cbPhongBan.TabIndex = 2;
             this.cbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cbPhongBan_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(185, 50);
+            this.label3.Location = new System.Drawing.Point(79, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 17);
+            this.label3.Size = new System.Drawing.Size(83, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Chọn khoa";
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(213, 269);
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.btnLogin.Appearance.Options.UseFont = true;
+            this.btnLogin.Appearance.Options.UseForeColor = true;
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.Ignore;
+            this.btnLogin.Location = new System.Drawing.Point(215, 225);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(94, 29);
+            this.btnLogin.Size = new System.Drawing.Size(107, 29);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(370, 269);
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.Appearance.Options.UseForeColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(398, 225);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.Size = new System.Drawing.Size(107, 29);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -114,9 +123,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // ckPass
             // 
             this.ckPass.AutoSize = true;
-            this.ckPass.Location = new System.Drawing.Point(507, 188);
+            this.ckPass.Location = new System.Drawing.Point(491, 147);
             this.ckPass.Name = "ckPass";
-            this.ckPass.Size = new System.Drawing.Size(118, 21);
+            this.ckPass.Size = new System.Drawing.Size(130, 21);
             this.ckPass.TabIndex = 4;
             this.ckPass.Text = "Hiện mật khẩu";
             this.ckPass.UseVisualStyleBackColor = true;
@@ -124,21 +133,27 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // formLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.Appearance.BackColor = System.Drawing.SystemColors.Window;
+            this.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseFont = true;
+            this.Appearance.Options.UseForeColor = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 417);
-            this.Controls.Add(this.ckPass);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.cbPhongBan);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.label);
-            this.Controls.Add(this.txtTK);
+            this.ClientSize = new System.Drawing.Size(643, 331);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbPhongBan);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtTK);
+            this.Controls.Add(this.ckPass);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.txtPass);
+            this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fromLogin";
+            this.Text = "Thông tin đăng nhập";
             this.Load += new System.EventHandler(this.fromLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();

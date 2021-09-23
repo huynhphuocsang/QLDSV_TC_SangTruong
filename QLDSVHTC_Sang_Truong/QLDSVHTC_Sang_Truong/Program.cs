@@ -120,6 +120,9 @@ namespace QLDSVHTC_Sang_Truong
         [STAThread]
         static void Main()
         {
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.Skins.SkinManager.EnableFormSkins(); 
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin = new formDesign.formLogin(); 
