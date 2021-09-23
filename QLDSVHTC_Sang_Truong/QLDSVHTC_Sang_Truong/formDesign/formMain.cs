@@ -20,14 +20,37 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void bntManageClass_ItemClick(object sender, ItemClickEventArgs e)
         {
-            formClasses classes = new formClasses();
-            classes.Show(); 
+            Form frm = this.CheckExists(typeof(formClasses));
+            if (frm != null) frm.Activate();
+            else {
+                Program.frmClasses = new formClasses();
+                Program.frmClasses.MdiParent = this;
+                Program.frmClasses.Show(); 
+            }
+            
         }
 
         private void btnReportTuition_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ReportTuitionFee report = new ReportTuitionFee();
-            report.Show();
+            Form frm = this.CheckExists(typeof(ReportTuitionFee));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Program.tutionFee = new ReportTuitionFee(); 
+                Program.tutionFee.MdiParent = this;
+                Program.tutionFee.Show();
+            }
+        }
+        private Form CheckExists(Type ftype)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == ftype)
+                {
+                    return f;
+                }
+            }
+            return null;
         }
     }
 }
