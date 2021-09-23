@@ -122,6 +122,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "formLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fromLogin";
             this.Load += new System.EventHandler(this.fromLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTK.Properties)).EndInit();

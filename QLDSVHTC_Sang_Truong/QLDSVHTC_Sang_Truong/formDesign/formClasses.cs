@@ -32,6 +32,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.LOP' table. You can move, or remove it, as needed.
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
 
+            gridView1.Columns["MALOP"].Caption = "Mã lớp";
+            gridView1.Columns["TENLOP"].Caption = "Tên lớp";
+            gridView1.Columns["KHOAHOC"].Caption = "Khóa học";
+            gridView1.Columns["MAKHOA"].Caption = "Mã khoa";
+
+
         }
     }
 }

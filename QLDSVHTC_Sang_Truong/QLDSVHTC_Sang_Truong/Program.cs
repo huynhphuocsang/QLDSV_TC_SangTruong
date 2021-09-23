@@ -34,7 +34,8 @@ namespace QLDSVHTC_Sang_Truong
 
         public static BindingSource bdsDSPM = new BindingSource();//dùng để giữ ds phân mảnh khi login
         public static  formDesign.formMain frmChinh;
-
+        public static formDesign.formClasses frmClasses;
+        public static ReportTuitionFee tutionFee; 
 
         /// <summary>
         /// The main entry point for the application.
