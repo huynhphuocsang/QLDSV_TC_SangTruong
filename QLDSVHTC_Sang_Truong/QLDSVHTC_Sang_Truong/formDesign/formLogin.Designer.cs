@@ -37,6 +37,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.ckPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtTK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // cbPhongBan
             // 
+            this.cbPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPhongBan.FormattingEnabled = true;
             this.cbPhongBan.Location = new System.Drawing.Point(281, 43);
             this.cbPhongBan.Name = "cbPhongBan";
@@ -107,12 +109,25 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnCancel.Size = new System.Drawing.Size(94, 29);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Thoát";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // ckPass
+            // 
+            this.ckPass.AutoSize = true;
+            this.ckPass.Location = new System.Drawing.Point(507, 188);
+            this.ckPass.Name = "ckPass";
+            this.ckPass.Size = new System.Drawing.Size(118, 21);
+            this.ckPass.TabIndex = 4;
+            this.ckPass.Text = "Hiện mật khẩu";
+            this.ckPass.UseVisualStyleBackColor = true;
+            this.ckPass.CheckedChanged += new System.EventHandler(this.ckPass_CheckedChanged);
             // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 417);
+            this.Controls.Add(this.ckPass);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cbPhongBan);
@@ -142,5 +157,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private System.Windows.Forms.CheckBox ckPass;
     }
 }

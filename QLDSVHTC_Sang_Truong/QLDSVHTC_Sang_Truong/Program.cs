@@ -19,20 +19,22 @@ namespace QLDSVHTC_Sang_Truong
 
         public static SqlDataReader myReader;
         public static String servername = "";
-        public static String username = "";
+        public static String username = ""; //thực sự là mã nhân viên: do ta gán username chính là mã nhân viên
         public static String mlogin = "";
         public static String pass = "";
 
         public static String database = "QLDSV_TC";
-        public static String remoteLogin = "HTKN";
-        public static String remotePass = "123";
-        public static String mloginDN = "";
-        public static String passDN = "";
-        public static String mGroup = "";
+        public static String remoteLogin = "HTKN"; //kết nối site khác
+        public static String remotePass = "123"; //kết nối site khác
+        public static String mloginDN = ""; //loginname hiện tại
+        public static String passDN = "";//pass hiện tại
+        public static String mGroup = ""; //khoa-pgv-pkt
         public static String mHoten = "";
-        public static int mPhongBan = 0;
+        public static int mPhongBan = 0;//khoa cntt hay vt
+         
 
         public static BindingSource bdsDSPM = new BindingSource();//dùng để giữ ds phân mảnh khi login
+        public static formDesign.formLogin frmLogin; 
         public static  formDesign.formMain frmChinh;
         public static formDesign.formClasses frmClasses;
         public static ReportTuitionFee tutionFee; 
@@ -120,8 +122,8 @@ namespace QLDSVHTC_Sang_Truong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            Application.Run(new formDesign.formLogin());
+            frmLogin = new formDesign.formLogin(); 
+            Application.Run(frmLogin);
         }
     }
 }
