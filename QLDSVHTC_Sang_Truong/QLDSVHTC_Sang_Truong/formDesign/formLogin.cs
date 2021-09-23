@@ -52,10 +52,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void fromLogin_Load(object sender, EventArgs e)
         {
+            skins();
             if (KetNoi_CSDLGoc() == 0) return;
             LayDSPM("SELECT * FROM V_DS_PHANMANH");
             cbPhongBan.SelectedIndex = 1; cbPhongBan.SelectedIndex = 0;
-            skins();
+            
             txtPass.Properties.UseSystemPasswordChar = true; 
         }
 
