@@ -37,7 +37,8 @@ namespace QLDSVHTC_Sang_Truong
         public static formDesign.formLogin frmLogin; 
         public static  formDesign.formMain frmChinh;
         public static formDesign.formClasses frmClasses;
-        public static ReportTuitionFee tutionFee; 
+        public static ReportTuitionFee tutionFee;
+        public static formClassRegistration frmRegister;
 
         /// <summary>
         /// The main entry point for the application.

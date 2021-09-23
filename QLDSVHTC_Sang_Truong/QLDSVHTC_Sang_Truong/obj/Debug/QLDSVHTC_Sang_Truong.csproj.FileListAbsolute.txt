@@ -93,3 +93,4 @@ D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSVHTC_Sang_Truong\QLDSVHTC_San
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formClasses.resources
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
+D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formClassRegistration.resources
