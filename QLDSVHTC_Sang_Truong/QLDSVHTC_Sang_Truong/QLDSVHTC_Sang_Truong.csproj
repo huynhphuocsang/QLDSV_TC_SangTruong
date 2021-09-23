@@ -60,6 +60,12 @@
     <Compile Include="formDesign\formClasses.Designer.cs">
       <DependentUpon>formClasses.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\formClassRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\formClassRegistration.Designer.cs">
+      <DependentUpon>formClassRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="formDesign\formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,8 +92,12 @@
     <Compile Include="Report\ReportTuitionFee.Designer.cs">
       <DependentUpon>ReportTuitionFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction.cs" />
     <EmbeddedResource Include="formDesign\formClasses.resx">
       <DependentUpon>formClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\formClassRegistration.resx">
+      <DependentUpon>formClassRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>

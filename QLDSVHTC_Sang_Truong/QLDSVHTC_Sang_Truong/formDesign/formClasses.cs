@@ -37,10 +37,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (Program.mGroup.Equals("KHOA"))
             {
                 cbDepartment.Enabled = false;
+            }else if (Program.mGroup.Equals("PGV"))
+            {
+                cbDepartment.Enabled = true;
             }
-                
 
-           
+
+
             gridView1.Columns["MALOP"].Caption = "Mã lớp";
             gridView1.Columns["TENLOP"].Caption = "Tên lớp";
             gridView1.Columns["KHOAHOC"].Caption = "Khóa học";
@@ -99,6 +102,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 return;
             }
+
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
 
         }
     }
