@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors; 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,28 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 }
             }
             return null;
+        }
+
+        private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult dialog = XtraMessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo!", MessageBoxButtons.YesNo); 
+            if(dialog == DialogResult.Yes)
+            {
+                Close();
+                Program.frmLogin.Visible = true; 
+                Program.bdsDSPM.RemoveFilter();
+                Program.frmLogin.loadAgain(); 
+            }
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formMain_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

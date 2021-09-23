@@ -56,6 +56,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             LayDSPM("SELECT * FROM V_DS_PHANMANH");
             cbPhongBan.SelectedIndex = 1; cbPhongBan.SelectedIndex = 0;
             skins();
+            txtPass.Properties.UseSystemPasswordChar = true; 
+        }
+
+
+        public void loadAgain()
+        {
+            cbPhongBan.SelectedItem = Program.mGroup;
+            Program.servername = cbPhongBan.SelectedValue.ToString(); 
         }
 
         public void skins()
@@ -111,10 +119,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             Program.mHoten = Program.myReader.GetString(1);
             Program.mGroup = Program.myReader.GetString(2);
             Program.myReader.Close();
-            Program.frmChinh = new formMain(); 
-            //Program.frmChinh.statusMa.Text = Program.username;
-            //Program.frmChinh.statusTen.Text = Program.mHoten;
-            //Program.frmChinh.statusNhom.Text = Program.mGroup;
+            Program.frmChinh = new formMain();
+            Program.frmChinh.statusMa.Text = Program.username;
+            Program.frmChinh.statusTen.Text = Program.mHoten;
+            Program.frmChinh.statusNhom.Text = Program.mGroup;
             this.Visible = false;
             Program.frmChinh.Show();
         }
@@ -129,6 +137,23 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
 
             }
+        }
+
+        private void ckPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckPass.Checked)
+            {
+                txtPass.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPass.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }

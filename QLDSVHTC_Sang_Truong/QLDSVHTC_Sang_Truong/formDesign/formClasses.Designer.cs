@@ -78,20 +78,25 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // cbDepartment
             // 
+            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDepartment.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(282, 40);
+            this.cbDepartment.Location = new System.Drawing.Point(463, 39);
             this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(208, 24);
+            this.cbDepartment.Size = new System.Drawing.Size(208, 29);
             this.cbDepartment.TabIndex = 1;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 43);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(361, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(74, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Chọn khoa";
+            this.label1.Text = "KHOA";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // qLDSV_TCDataSet
             // 
@@ -202,7 +207,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -251,7 +255,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPGridControl.Location = new System.Drawing.Point(12, 132);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(665, 473);
+            this.lOPGridControl.Size = new System.Drawing.Size(693, 473);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
