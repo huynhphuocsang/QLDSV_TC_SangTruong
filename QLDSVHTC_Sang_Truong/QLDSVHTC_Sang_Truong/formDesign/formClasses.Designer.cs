@@ -292,6 +292,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRedo.Name = "btnRedo";
             this.btnRedo.Size = new System.Drawing.Size(29, 24);
             this.btnRedo.Text = "Redo";
+            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
             // 
             // btnReload
             // 
@@ -301,6 +302,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(29, 24);
             this.btnReload.Text = "Reload";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // lOPGridControl
             // 
