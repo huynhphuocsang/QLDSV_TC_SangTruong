@@ -84,6 +84,7 @@ namespace QLDSVHTC_Sang_Truong
                 MessageBox.Show(e.Message);
                 return null;
             }
+            
         }
 
         public static DataTable ExecSqlDataTable(String cmd)

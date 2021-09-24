@@ -60,6 +60,19 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sINHVIENTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
+            this.sINHVIENGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMASV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPHAI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYSINH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMALOP1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDANGHIHOC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPASSWORD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
@@ -67,6 +80,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,7 +92,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1356, 100);
+            this.panel1.Size = new System.Drawing.Size(1536, 100);
             this.panel1.TabIndex = 0;
             // 
             // cbDepartment
@@ -157,7 +173,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lOPBindingNavigator.Name = "lOPBindingNavigator";
             this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lOPBindingNavigator.Size = new System.Drawing.Size(1356, 31);
+            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 27);
             this.lOPBindingNavigator.TabIndex = 1;
             this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -167,13 +183,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -183,7 +200,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.RightToLeftAutoMirrorImage = true;
-            this.btnDelete.Size = new System.Drawing.Size(29, 28);
+            this.btnDelete.Size = new System.Drawing.Size(29, 24);
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -193,7 +210,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -202,13 +219,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -223,7 +240,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -231,7 +248,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -240,20 +257,20 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // lOPBindingNavigatorSaveItem
             // 
             this.lOPBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.lOPBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("lOPBindingNavigatorSaveItem.Image")));
             this.lOPBindingNavigatorSaveItem.Name = "lOPBindingNavigatorSaveItem";
-            this.lOPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.lOPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.lOPBindingNavigatorSaveItem.Text = "Save Data";
             this.lOPBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPBindingNavigatorSaveItem_Click);
             // 
@@ -263,7 +280,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnUndo.Image = ((System.Drawing.Image)(resources.GetObject("btnUndo.Image")));
             this.btnUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(29, 28);
+            this.btnUndo.Size = new System.Drawing.Size(29, 24);
             this.btnUndo.Text = "Undo";
             this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
@@ -273,7 +290,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRedo.Image = ((System.Drawing.Image)(resources.GetObject("btnRedo.Image")));
             this.btnRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(29, 28);
+            this.btnRedo.Size = new System.Drawing.Size(29, 24);
             this.btnRedo.Text = "Redo";
             // 
             // btnReload
@@ -282,32 +299,48 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(29, 28);
+            this.btnReload.Size = new System.Drawing.Size(29, 24);
             this.btnReload.Text = "Reload";
             // 
             // lOPGridControl
             // 
             this.lOPGridControl.DataSource = this.lOPBindingSource;
-            this.lOPGridControl.Location = new System.Drawing.Point(12, 132);
+            this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(693, 473);
+            this.lOPGridControl.Size = new System.Drawing.Size(712, 543);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMALOP,
             this.colTENLOP,
             this.colKHOAHOC,
             this.colMAKHOA});
+            this.gridView1.DetailTabHeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
             this.gridView1.GridControl = this.lOPGridControl;
+            this.gridView1.GroupPanelText = "Danh sách lớp";
             this.gridView1.Name = "gridView1";
             // 
             // colMALOP
             // 
+            this.colMALOP.AppearanceCell.BackColor = System.Drawing.Color.Transparent;
+            this.colMALOP.AppearanceCell.Options.UseBackColor = true;
+            this.colMALOP.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMALOP.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMALOP.AppearanceHeader.Options.UseBackColor = true;
+            this.colMALOP.AppearanceHeader.Options.UseFont = true;
+            this.colMALOP.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMALOP.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMALOP.Caption = "Mã lớp";
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.MinWidth = 25;
             this.colMALOP.Name = "colMALOP";
@@ -317,6 +350,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // colTENLOP
             // 
+            this.colTENLOP.AppearanceCell.BackColor = System.Drawing.Color.White;
+            this.colTENLOP.AppearanceCell.Options.UseBackColor = true;
+            this.colTENLOP.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colTENLOP.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENLOP.AppearanceHeader.Options.UseBackColor = true;
+            this.colTENLOP.AppearanceHeader.Options.UseFont = true;
+            this.colTENLOP.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTENLOP.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTENLOP.Caption = "Tên lớp";
             this.colTENLOP.FieldName = "TENLOP";
             this.colTENLOP.MinWidth = 25;
             this.colTENLOP.Name = "colTENLOP";
@@ -326,6 +368,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // colKHOAHOC
             // 
+            this.colKHOAHOC.AppearanceCell.BackColor = System.Drawing.Color.White;
+            this.colKHOAHOC.AppearanceCell.Options.UseBackColor = true;
+            this.colKHOAHOC.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colKHOAHOC.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colKHOAHOC.AppearanceHeader.Options.UseBackColor = true;
+            this.colKHOAHOC.AppearanceHeader.Options.UseFont = true;
+            this.colKHOAHOC.AppearanceHeader.Options.UseTextOptions = true;
+            this.colKHOAHOC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colKHOAHOC.Caption = "Niên khóa";
             this.colKHOAHOC.FieldName = "KHOAHOC";
             this.colKHOAHOC.MinWidth = 25;
             this.colKHOAHOC.Name = "colKHOAHOC";
@@ -335,6 +386,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // colMAKHOA
             // 
+            this.colMAKHOA.AppearanceCell.BackColor = System.Drawing.Color.White;
+            this.colMAKHOA.AppearanceCell.Options.UseBackColor = true;
+            this.colMAKHOA.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMAKHOA.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAKHOA.AppearanceHeader.Options.UseBackColor = true;
+            this.colMAKHOA.AppearanceHeader.Options.UseFont = true;
+            this.colMAKHOA.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMAKHOA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMAKHOA.Caption = "Mã khoa";
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
@@ -342,11 +402,197 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 94;
             // 
+            // sINHVIENBindingSource
+            // 
+            this.sINHVIENBindingSource.DataMember = "FK_SINHVIEN_LOP";
+            this.sINHVIENBindingSource.DataSource = this.lOPBindingSource;
+            // 
+            // sINHVIENTableAdapter
+            // 
+            this.sINHVIENTableAdapter.ClearBeforeFill = true;
+            // 
+            // sINHVIENGridControl
+            // 
+            this.sINHVIENGridControl.DataSource = this.sINHVIENBindingSource;
+            this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sINHVIENGridControl.Location = new System.Drawing.Point(712, 127);
+            this.sINHVIENGridControl.MainView = this.gridView2;
+            this.sINHVIENGridControl.Name = "sINHVIENGridControl";
+            this.sINHVIENGridControl.Size = new System.Drawing.Size(824, 543);
+            this.sINHVIENGridControl.TabIndex = 3;
+            this.sINHVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.GroupPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gridView2.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView2.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMASV,
+            this.colHO,
+            this.colTEN,
+            this.colPHAI,
+            this.colDIACHI,
+            this.colNGAYSINH,
+            this.colMALOP1,
+            this.colDANGHIHOC,
+            this.colPASSWORD});
+            this.gridView2.GridControl = this.sINHVIENGridControl;
+            this.gridView2.GroupPanelText = "Danh sách sinh viên theo lớp";
+            this.gridView2.Name = "gridView2";
+            // 
+            // colMASV
+            // 
+            this.colMASV.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMASV.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMASV.AppearanceHeader.Options.UseBackColor = true;
+            this.colMASV.AppearanceHeader.Options.UseFont = true;
+            this.colMASV.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMASV.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMASV.Caption = "Mã sinh viên";
+            this.colMASV.FieldName = "MASV";
+            this.colMASV.MinWidth = 25;
+            this.colMASV.Name = "colMASV";
+            this.colMASV.Visible = true;
+            this.colMASV.VisibleIndex = 0;
+            this.colMASV.Width = 94;
+            // 
+            // colHO
+            // 
+            this.colHO.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colHO.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHO.AppearanceHeader.Options.UseBackColor = true;
+            this.colHO.AppearanceHeader.Options.UseFont = true;
+            this.colHO.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHO.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colHO.Caption = "Họ và tên lót";
+            this.colHO.FieldName = "HO";
+            this.colHO.MinWidth = 25;
+            this.colHO.Name = "colHO";
+            this.colHO.Visible = true;
+            this.colHO.VisibleIndex = 1;
+            this.colHO.Width = 94;
+            // 
+            // colTEN
+            // 
+            this.colTEN.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colTEN.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTEN.AppearanceHeader.Options.UseBackColor = true;
+            this.colTEN.AppearanceHeader.Options.UseFont = true;
+            this.colTEN.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTEN.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTEN.Caption = "Tên";
+            this.colTEN.FieldName = "TEN";
+            this.colTEN.MinWidth = 25;
+            this.colTEN.Name = "colTEN";
+            this.colTEN.Visible = true;
+            this.colTEN.VisibleIndex = 2;
+            this.colTEN.Width = 94;
+            // 
+            // colPHAI
+            // 
+            this.colPHAI.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colPHAI.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPHAI.AppearanceHeader.Options.UseBackColor = true;
+            this.colPHAI.AppearanceHeader.Options.UseFont = true;
+            this.colPHAI.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPHAI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPHAI.Caption = "Phái(tích nếu là \'Nữ\')";
+            this.colPHAI.FieldName = "PHAI";
+            this.colPHAI.MinWidth = 25;
+            this.colPHAI.Name = "colPHAI";
+            this.colPHAI.Visible = true;
+            this.colPHAI.VisibleIndex = 3;
+            this.colPHAI.Width = 94;
+            // 
+            // colDIACHI
+            // 
+            this.colDIACHI.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colDIACHI.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDIACHI.AppearanceHeader.Options.UseBackColor = true;
+            this.colDIACHI.AppearanceHeader.Options.UseFont = true;
+            this.colDIACHI.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDIACHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDIACHI.Caption = "Địa chỉ";
+            this.colDIACHI.FieldName = "DIACHI";
+            this.colDIACHI.MinWidth = 25;
+            this.colDIACHI.Name = "colDIACHI";
+            this.colDIACHI.Visible = true;
+            this.colDIACHI.VisibleIndex = 4;
+            this.colDIACHI.Width = 94;
+            // 
+            // colNGAYSINH
+            // 
+            this.colNGAYSINH.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colNGAYSINH.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNGAYSINH.AppearanceHeader.Options.UseBackColor = true;
+            this.colNGAYSINH.AppearanceHeader.Options.UseFont = true;
+            this.colNGAYSINH.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNGAYSINH.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNGAYSINH.Caption = "Ngày sinh";
+            this.colNGAYSINH.FieldName = "NGAYSINH";
+            this.colNGAYSINH.MinWidth = 25;
+            this.colNGAYSINH.Name = "colNGAYSINH";
+            this.colNGAYSINH.Visible = true;
+            this.colNGAYSINH.VisibleIndex = 5;
+            this.colNGAYSINH.Width = 94;
+            // 
+            // colMALOP1
+            // 
+            this.colMALOP1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMALOP1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMALOP1.AppearanceHeader.Options.UseBackColor = true;
+            this.colMALOP1.AppearanceHeader.Options.UseFont = true;
+            this.colMALOP1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMALOP1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMALOP1.Caption = "Mã lớp";
+            this.colMALOP1.FieldName = "MALOP";
+            this.colMALOP1.MinWidth = 25;
+            this.colMALOP1.Name = "colMALOP1";
+            this.colMALOP1.Visible = true;
+            this.colMALOP1.VisibleIndex = 6;
+            this.colMALOP1.Width = 94;
+            // 
+            // colDANGHIHOC
+            // 
+            this.colDANGHIHOC.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colDANGHIHOC.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDANGHIHOC.AppearanceHeader.Options.UseBackColor = true;
+            this.colDANGHIHOC.AppearanceHeader.Options.UseFont = true;
+            this.colDANGHIHOC.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDANGHIHOC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDANGHIHOC.Caption = "Đã nghỉ học";
+            this.colDANGHIHOC.FieldName = "DANGHIHOC";
+            this.colDANGHIHOC.MinWidth = 25;
+            this.colDANGHIHOC.Name = "colDANGHIHOC";
+            this.colDANGHIHOC.Visible = true;
+            this.colDANGHIHOC.VisibleIndex = 7;
+            this.colDANGHIHOC.Width = 94;
+            // 
+            // colPASSWORD
+            // 
+            this.colPASSWORD.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colPASSWORD.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPASSWORD.AppearanceHeader.Options.UseBackColor = true;
+            this.colPASSWORD.AppearanceHeader.Options.UseFont = true;
+            this.colPASSWORD.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPASSWORD.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPASSWORD.Caption = "Password";
+            this.colPASSWORD.FieldName = "PASSWORD";
+            this.colPASSWORD.MinWidth = 25;
+            this.colPASSWORD.Name = "colPASSWORD";
+            this.colPASSWORD.Visible = true;
+            this.colPASSWORD.VisibleIndex = 8;
+            this.colPASSWORD.Width = 94;
+            // 
             // formClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 610);
+            this.ClientSize = new System.Drawing.Size(1536, 670);
+            this.Controls.Add(this.sINHVIENGridControl);
             this.Controls.Add(this.lOPGridControl);
             this.Controls.Add(this.lOPBindingNavigator);
             this.Controls.Add(this.panel1);
@@ -363,6 +609,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,5 +648,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.ToolStripButton btnUndo;
         private System.Windows.Forms.ToolStripButton btnRedo;
         private System.Windows.Forms.ToolStripButton btnReload;
+        private System.Windows.Forms.BindingSource sINHVIENBindingSource;
+        private QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
+        private DevExpress.XtraGrid.GridControl sINHVIENGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colMASV;
+        private DevExpress.XtraGrid.Columns.GridColumn colHO;
+        private DevExpress.XtraGrid.Columns.GridColumn colTEN;
+        private DevExpress.XtraGrid.Columns.GridColumn colPHAI;
+        private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
+        private DevExpress.XtraGrid.Columns.GridColumn colNGAYSINH;
+        private DevExpress.XtraGrid.Columns.GridColumn colMALOP1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDANGHIHOC;
+        private DevExpress.XtraGrid.Columns.GridColumn colPASSWORD;
     }
 }
