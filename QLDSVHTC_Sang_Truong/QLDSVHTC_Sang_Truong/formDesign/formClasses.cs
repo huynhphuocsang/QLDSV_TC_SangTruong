@@ -11,12 +11,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 {
     public partial class formClasses : DevExpress.XtraEditors.XtraForm
     {
-        public bool addClass = false;
-        public bool changeClassName = false;
-
+        private bool addClass = false;
+        private bool changeClassName = false;
+        private CommandManager cmdManager; 
         public formClasses()
         {
             InitializeComponent();
+            cmdManager = new CommandManager();
         }
 
         private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -35,15 +36,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Validate();
             this.lOPBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
-            gridView1.ClearColumnErrors(); 
-            addClass =false; 
+            gridView1.ClearColumnErrors();
+            load(); 
+            //reset lai gia tri: 
+            addClass =false;
+            changeClassName = false; 
         }
 
         private void formClasses_Load(object sender, EventArgs e)
         {
-            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr; 
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.SINHVIEN' table. You can move, or remove it, as needed.
-            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
+           
 
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
 
@@ -59,8 +61,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
 
 
+            gridView1.ShowingEditor += (s, ex) =>
+            {
+                setReadOnly("MALOP", gridView1, addClass);
+                if (addClass != true)
+                    cmdManager.execute(new UpdateAction(lOPBindingSource));
 
-            
+            };
+
 
             gridView1.CellValueChanging += (s, ex) =>
              {
@@ -71,17 +79,26 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                  }
              };
 
-            gridView1.ShowingEditor += (s, ex) =>
-            {
-                setReadOnly("MALOP", gridView1, addClass);
+            gridView1.CellValueChanged += (s, ex) =>
+             {
+                 btnUndo.Enabled = true;
+                 if (addClass == true) ((InsertAction)cmdManager.getLastUndoNode()).getData();
+                 else ((UpdateAction)cmdManager.getLastUndoNode()).getData();
+             }; 
 
-            };
+            
+
+            btnUndo.Enabled = btnRedo.Enabled = false;
         }
         private void load()
         {
+
+            
             this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.LOP' table. You can move, or remove it, as needed.
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
+
 
             this.setReadOnly("MALOP", gridView1, addClass);
             this.setReadOnly("MAKHOA", gridView1, addClass);
@@ -134,29 +151,32 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
 
         }
-
+        
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            //kiêm tra thử xem liệu lớp đã được tham chiếu hay chưa? 
 
+            cmdManager.execute(new DeleteAction(lOPBindingSource));
+            btnUndo.Enabled = true;
+            addClass = false;
+            changeClassName = false;
+            if (lOPBindingSource.Count == 0) bindingNavigatorAddNewItem.Enabled = false;
         }
 
-        private void btnUndo_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            if (addClass == true && gridView1.FocusedRowHandle == gridView1.RowCount-1)
-            {
-                this.Validate();
-                this.lOPBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
-            }
-            
+            //if (addClass == true && gridView1.FocusedRowHandle == gridView1.RowCount-1)
+            //{
+            //    this.Validate();
+            //    this.lOPBindingSource.EndEdit();
+            //    this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
+            //}
 
+            cmdManager.execute(new InsertAction(lOPBindingSource));
             addClass = true;
 
             if (cbDepartment.SelectedIndex == 0)
@@ -178,7 +198,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 {
                     GridView.Columns[col].OptionsColumn.ReadOnly = false;
                 }
-                
+                else
+                {
+                    if (GridView.FocusedRowHandle == gridView1.RowCount - 1)
+                        GridView.Columns[col].OptionsColumn.ReadOnly = false;
+                    else
+                        GridView.Columns[col].OptionsColumn.ReadOnly = true;
+                }
+
 
             }
             else
@@ -211,70 +238,106 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (type.Equals("LOP"))
             {
-                
+                if (changeClassName == true)
+                {
+                    //kiểm tra tên trước: 
+                    string queryName = "DECLARE @return_value int "
+                       + "EXEC @return_value = [dbo].[SP_CHECKNAME] @Name = N'" + value + "', @Type = N'TENLOP' SELECT  'Return Value' = @return_value";
+                    SqlDataReader resultClassName = Program.ExecSqlDataReader(queryName);
 
-                //if (changeClassName == true)
-                //{
-                //    //kiểm tra tên trước: 
-                //    string queryName = "DECLARE @return_value int "
-                //       + "EXEC @return_value = [dbo].[SP_CHECKNAME] @Name = N'" + value + "', @Type = N'TENLOP' SELECT  'Return Value' = @return_value";
-                //    SqlDataReader resultClassName = Program.ExecSqlDataReader(queryName);
+                    if (resultClassName == null)
+                    {
+                        MessageBox.Show("Server bị lỗi");
+                        resultClassName.Close();
+                        return true;
+                    }
+                    resultClassName.Read();
+                    if (resultClassName.GetInt32(0) == 1)
+                    {
+                        gridView1.SetColumnError(gridView1.Columns["TENLOP"], "TÊN LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                        resultClassName.Close();
+                        return true;
+                    }
+                    else if (resultClassName.GetInt32(0) == 2)
+                    {
+                        gridView1.SetColumnError(gridView1.Columns["TENLOP"], "TÊN LỚP ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                        resultClassName.Close();
+                        return true;
+                    }
+                    resultClassName.Close();
 
-                //    if (resultClassName == null)
-                //    {
-                //        MessageBox.Show("Server bị lỗi");
-                //        resultClassName.Close();
-                //        return true;
-                //    }
-                //    resultClassName.Read();
-                //    if (resultClassName.GetInt32(0) == 1)
-                //    {
-                //        gridView1.SetColumnError(gridView1.Columns["TENLOP"], "TÊN LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                //        resultClassName.Close();
-                //        return true;
-                //    }
-                //    else if (resultClassName.GetInt32(0) == 2)
-                //    {
-                //        gridView1.SetColumnError(gridView1.Columns["TENLOP"], "TÊN LỚP ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                //        resultClassName.Close();
-                //        return true;
-                //    }
-                //    resultClassName.Close(); 
-                //}
+                }
+
+
+
 
                 //kiểm tra id 
-                string queryId = "DECLARE @return_value int "
+                if (addClass == true)
+                {
+                    string queryId = "DECLARE @return_value int "
                    + "EXEC @return_value = [dbo].[SP_CHECKID] @Ma = N'" + idValue + "', @Type = N'MALOP' SELECT  'Return Value' = @return_value";
-                SqlDataReader resultClassId = Program.ExecSqlDataReader(queryId);
+                    SqlDataReader resultClassId = Program.ExecSqlDataReader(queryId);
 
-                if (resultClassId == null)
-                {
-                    MessageBox.Show("Server bị lỗi");
-                    resultClassId.Close();
-                    return true;
-                }
-                resultClassId.Read();
-                int tempvalue = resultClassId.GetInt32(0);
-                int i = tempvalue;
-                if (resultClassId.GetInt32(0) == 1)
-                {
-                    gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                    resultClassId.Close();
-                    return true;
-                }
+                    if (resultClassId == null)
+                    {
+                        MessageBox.Show("Server bị lỗi");
+                        resultClassId.Close();
+                        return true;
+                    }
+                    resultClassId.Read();
+                    int tempvalue = resultClassId.GetInt32(0);
+                    int i = tempvalue; 
+                    if (tempvalue == 1)
+                    {
+                        gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                        resultClassId.Close();
+                        return true;
+                    }
 
-                else if (resultClassId.GetInt32(0) == 2)
-                {
-                    gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                    resultClassId.Close();
-                    return true;
+                    else if (tempvalue == 2)
+                    {
+                        gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                        resultClassId.Close();
+                        return true;
+                    }
                 }
+                
 
 
 
             }
             return false; 
                 
+        }
+
+        private void btnRedo_Click(object sender, EventArgs e)
+        {
+            cmdManager.redo();
+            if (cmdManager.redoStackSize() == 0)
+            {
+                btnRedo.Enabled = false; 
+            }
+            btnUndo.Enabled = true; 
+        }
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            cmdManager.undo();
+            if (cmdManager.undoStackSize() == 0)
+            {
+                btnUndo.Enabled = false;
+            }
+            btnRedo.Enabled = true; 
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            cmdManager.clear();
+            btnUndo.Enabled = false;
+            btnRedo.Enabled = false;
+            this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+            addClass = false;
+            changeClassName = false;
         }
     }
 }
