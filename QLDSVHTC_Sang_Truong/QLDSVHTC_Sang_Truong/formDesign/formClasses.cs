@@ -36,8 +36,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Validate();
             this.lOPBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
-            gridView1.ClearColumnErrors(); 
-
+            gridView1.ClearColumnErrors();
+            load(); 
             //reset lai gia tri: 
             addClass =false;
             changeClassName = false; 
@@ -61,8 +61,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
 
 
+            gridView1.ShowingEditor += (s, ex) =>
+            {
+                setReadOnly("MALOP", gridView1, addClass);
+                if (addClass != true)
+                    cmdManager.execute(new UpdateAction(lOPBindingSource));
 
-            
+            };
+
 
             gridView1.CellValueChanging += (s, ex) =>
              {
@@ -80,13 +86,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                  else ((UpdateAction)cmdManager.getLastUndoNode()).getData();
              }; 
 
-            gridView1.ShowingEditor += (s, ex) =>
-            {
-                setReadOnly("MALOP", gridView1, addClass);
-                if (addClass != true)
-                    cmdManager.execute(new UpdateAction(lOPBindingSource)); 
-
-            };
+            
 
             btnUndo.Enabled = btnRedo.Enabled = false;
         }
@@ -95,11 +95,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             
             this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.LOP' table. You can move, or remove it, as needed.
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
             this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.SINHVIEN' table. You can move, or remove it, as needed.
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
+
+
             this.setReadOnly("MALOP", gridView1, addClass);
             this.setReadOnly("MAKHOA", gridView1, addClass);
             this.setReadOnly("MASV", gridView2, addClass);
@@ -151,7 +151,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
 
         }
-
+        
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             //kiêm tra thử xem liệu lớp đã được tham chiếu hay chưa? 
@@ -198,7 +198,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 {
                     GridView.Columns[col].OptionsColumn.ReadOnly = false;
                 }
-                
+                else
+                {
+                    if (GridView.FocusedRowHandle == gridView1.RowCount - 1)
+                        GridView.Columns[col].OptionsColumn.ReadOnly = false;
+                    else
+                        GridView.Columns[col].OptionsColumn.ReadOnly = true;
+                }
+
 
             }
             else

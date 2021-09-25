@@ -41,7 +41,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -145,10 +145,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // lOPBindingNavigator
             // 
-            this.lOPBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.lOPBindingNavigator.AddNewItem = null;
             this.lOPBindingNavigator.BindingSource = this.lOPBindingSource;
             this.lOPBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.lOPBindingNavigator.DeleteItem = this.btnDelete;
+            this.lOPBindingNavigator.DeleteItem = null;
             this.lOPBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.lOPBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -161,7 +161,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.btnDelete,
+            this.bindingNavigatorDeleteItem,
             this.lOPBindingNavigatorSaveItem,
             this.btnUndo,
             this.btnRedo,
@@ -174,7 +174,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.Name = "lOPBindingNavigator";
             this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 27);
-            this.lOPBindingNavigator.TabIndex = 1;
+            this.lOPBindingNavigator.TabIndex = 2;
             this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
@@ -194,15 +194,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // btnDelete
+            // bindingNavigatorDeleteItem
             // 
-            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.RightToLeftAutoMirrorImage = true;
-            this.btnDelete.Size = new System.Drawing.Size(29, 24);
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -629,7 +630,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.BindingNavigator lOPBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
