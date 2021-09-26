@@ -18,11 +18,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         //tempClassName: dùng để so sánh với tên của lớp trong trường hợp sửa lại tên mới của lớp: 
         private string tempClassName = "xxxxxxxxxxxxxxxxxxxx"; 
 
-        private CommandManager cmdManager; 
+        private CommandManager cmdManager;
+        private CommandManager cmdManagerSV; 
         public formClasses()
         {
             InitializeComponent();
             cmdManager = new CommandManager();
+            cmdManagerSV = new CommandManager(); 
         }
 
         private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -397,6 +399,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
             
             //editable1 = false;
+        }
+
+        private void btnAddSV_Click(object sender, EventArgs e)
+        {
+            cmdManagerSV.execute(new InsertAction(sINHVIENBindingSource));
         }
     }
 }
