@@ -13,6 +13,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
     {
         private bool addClass = false;
         private bool changeClassName = false;
+        private int rowEditableGv1 = -1;
+
+        //tempClassName: dùng để so sánh với tên của lớp trong trường hợp sửa lại tên mới của lớp: 
+        private string tempClassName = "xxxxxxxxxxxxxxxxxxxx"; 
+
         private CommandManager cmdManager; 
         public formClasses()
         {
@@ -26,7 +31,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             string classCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle,"MALOP").ToString();
             string className = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TENLOP").ToString();
             string classSchoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "KHOAHOC").ToString();
-
+            
             if (checkEmpty(classCode, className, classSchoolYear) == true) return;
 
             if (checkExistValue(classCode,className, "LOP") == true) return; 
@@ -37,16 +42,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
             gridView1.ClearColumnErrors();
-            load(); 
+
+
+            this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
             //reset lai gia tri: 
             addClass =false;
-            changeClassName = false; 
+            changeClassName = false;
+            rowEditableGv1 = -1;
+            tempClassName = "xxxxxxxxxxxxxxxxxxxx"; 
+
+            btnEdit.Enabled = true;
+            bindingNavigatorAddNewItem.Enabled = true; 
         }
 
         private void formClasses_Load(object sender, EventArgs e)
         {
            
-
+            
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
 
             //chuyển dữ liệu từ danh sách phân mảnh vào cho combobox.
@@ -63,7 +76,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             gridView1.ShowingEditor += (s, ex) =>
             {
-                setReadOnly("MALOP", gridView1, addClass);
+                if (rowEditableGv1 != -1)
+                {
+                    editableGridview1(); 
+                }
+                else
+                {
+                    setReadOnly("MALOP", gridView1, addClass);
+                    setReadOnly("TENLOP", gridView1, addClass);
+                    setReadOnly("KHOAHOC", gridView1, addClass);
+                }
+               
                 if (addClass != true)
                     cmdManager.execute(new UpdateAction(lOPBindingSource));
 
@@ -84,9 +107,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                  btnUndo.Enabled = true;
                  if (addClass == true) ((InsertAction)cmdManager.getLastUndoNode()).getData();
                  else ((UpdateAction)cmdManager.getLastUndoNode()).getData();
-             }; 
+             };
 
-            
+           
 
             btnUndo.Enabled = btnRedo.Enabled = false;
         }
@@ -100,9 +123,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
 
 
-            this.setReadOnly("MALOP", gridView1, addClass);
-            this.setReadOnly("MAKHOA", gridView1, addClass);
-            this.setReadOnly("MASV", gridView2, addClass);
+            //gridView1.OptionsBehavior.Editable = false; 
+            //setReadOnly("MALOP", gridView1, addClass);
+            //setReadOnly("TENLOP", gridView1, addClass);
+            //setReadOnly("KHOAHOC", gridView1, addClass);
+            setReadOnly("MAKHOA", gridView1, false);
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -176,6 +201,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             //    this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
             //}
 
+            bindingNavigatorAddNewItem.Enabled = false;
+            btnEdit.Enabled = false;
+            bindingNavigatorDeleteItem.Enabled = false;
+
             cmdManager.execute(new InsertAction(lOPBindingSource));
             addClass = true;
 
@@ -197,6 +226,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 if (GridView.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle)
                 {
                     GridView.Columns[col].OptionsColumn.ReadOnly = false;
+                    
                 }
                 else
                 {
@@ -207,7 +237,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 }
 
 
-            }
+            } 
             else
             {
                 GridView.Columns[col].OptionsColumn.ReadOnly = true;
@@ -234,15 +264,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         }
 
-        private bool checkExistValue(string idValue,string value, string type)
+        private bool checkExistValue(string idValue,string nameValue, string type)
         {
             if (type.Equals("LOP"))
             {
-                if (changeClassName == true)
+                if (changeClassName == true && nameValue.Equals(tempClassName)==false)
                 {
                     //kiểm tra tên trước: 
                     string queryName = "DECLARE @return_value int "
-                       + "EXEC @return_value = [dbo].[SP_CHECKNAME] @Name = N'" + value + "', @Type = N'TENLOP' SELECT  'Return Value' = @return_value";
+                       + "EXEC @return_value = [dbo].[SP_CHECKNAME] @Name = N'" + nameValue + "', @Type = N'TENLOP' SELECT  'Return Value' = @return_value";
                     SqlDataReader resultClassName = Program.ExecSqlDataReader(queryName);
 
                     if (resultClassName == null)
@@ -338,6 +368,35 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
             addClass = false;
             changeClassName = false;
+            rowEditableGv1 = -1;
+            tempClassName = "xxxxxxxxxxxxxxxxxxxx"; 
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            rowEditableGv1 = gridView1.FocusedRowHandle;
+            tempClassName = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TENLOP").ToString(); 
+
+
+            editableGridview1();
+            btnEdit.Enabled = false;
+            //btnadd : 
+            bindingNavigatorAddNewItem.Enabled = false;
+        }
+        private void editableGridview1()
+        {
+            if (gridView1.FocusedRowHandle == rowEditableGv1 && rowEditableGv1!=-1)
+            {
+                gridView1.Columns["TENLOP"].OptionsColumn.ReadOnly = false;
+                gridView1.Columns["KHOAHOC"].OptionsColumn.ReadOnly = false;
+            }
+            else
+            {
+                gridView1.Columns["TENLOP"].OptionsColumn.ReadOnly = true;
+                gridView1.Columns["KHOAHOC"].OptionsColumn.ReadOnly = true;
+            }
+            
+            //editable1 = false;
         }
     }
 }
