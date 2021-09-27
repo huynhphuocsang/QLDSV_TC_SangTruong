@@ -51,7 +51,6 @@ namespace QLDSVHTC_Sang_Truong
         {
             action.execute();
             undoStack.Push(action);
-
         }
 
         public void commit(Transaction action)
@@ -219,6 +218,7 @@ namespace QLDSVHTC_Sang_Truong
                 DataRowView row = (DataRowView)binding[position];
                 for (int i = 0; i < oldData.Length; i++)
                 {
+                    if (i >= newData.Length) break; //mới thêm vào.
                     row[i] = newData[i];
                 }
                 binding.EndEdit();
