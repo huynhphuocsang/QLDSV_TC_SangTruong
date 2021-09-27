@@ -14,6 +14,7 @@ namespace QLDSVHTC_Sang_Truong
     {
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
+        public static SqlCommand sqlcmd = new SqlCommand();
         //=======================================================================================================mode lấy tk của user window
         public static String constr_publisher = "Data Source=SANG; Initial Catalog=QLDSV_TC; Integrated Security=true";
 
