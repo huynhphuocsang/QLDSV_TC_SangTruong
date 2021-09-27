@@ -17,6 +17,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         public formMain()
         {
             InitializeComponent();
+            userRules();
+        }
+
+        //RULES 
+        private void userRules()
+        {
+            if (Program.mGroup == "SV")
+            {
+                barBtnRegister.Enabled = true;
+            }
         }
 
         private void bntManageClass_ItemClick(object sender, ItemClickEventArgs e)

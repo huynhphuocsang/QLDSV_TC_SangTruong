@@ -73,6 +73,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(209, 22);
             this.txtPass.TabIndex = 1;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // cbPhongBan
             // 

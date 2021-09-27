@@ -37,7 +37,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnRegister = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -70,7 +70,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem1,
             this.btnLogout,
-            this.barButtonItem2});
+            this.barBtnRegister});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 7;
             this.ribbon.Name = "ribbon";
@@ -118,14 +118,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
-            // barButtonItem2
+            // barBtnRegister
             // 
-            this.barButtonItem2.Caption = "Đăng ký lớp tín chỉ";
-            this.barButtonItem2.Id = 6;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.barBtnRegister.Caption = "Đăng ký lớp tín chỉ";
+            this.barBtnRegister.Enabled = false;
+            this.barBtnRegister.Id = 6;
+            this.barBtnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barBtnRegister.Name = "barBtnRegister";
+            this.barBtnRegister.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBtnRegister.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -136,7 +137,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnRegister);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonPage2
@@ -280,6 +281,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.BarButtonItem btnLogout;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barBtnRegister;
     }
 }
