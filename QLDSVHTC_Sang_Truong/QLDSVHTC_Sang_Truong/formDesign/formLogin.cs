@@ -76,12 +76,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtTK.Text.Trim() == "" || label.Text.Trim() == "")
+            if (txtTK.Text.Trim() == "" || txtPass.Text.Trim() == "")
             {
                 MessageBox.Show("Tài khoản và mật khẩu không hợp lệ", "", MessageBoxButtons.OK);
                 return;
             }
-            if (Regex.IsMatch(txtTK.Text, regexStudent))
+            if (Regex.IsMatch(txtTK.Text.ToUpper(), regexStudent))
             {
                 Program.mlogin = "Student";
                 Program.pass = "123456";
@@ -98,7 +98,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             Program.mPhongBan = cbPhongBan.SelectedIndex;
             Program.mloginDN = Program.mlogin;
             Program.passDN = Program.pass;
-            String strCmd = "EXEC SP_DANGNHAP '" + (!isStudent ? Program.mlogin : txtTK.Text) + "', '" + label.Text + "'";// KT NẾU LÀ SV ĐNHAP THÌ SỬ DỤNG
+            String strCmd = "EXEC SP_DANGNHAP '" + (!isStudent ? Program.mlogin : txtTK.Text) + "', '" + txtPass.Text + "'";// KT NẾU LÀ SV ĐNHAP THÌ SỬ DỤNG
             Program.myReader = Program.ExecSqlDataReader(strCmd);
             if (Program.myReader == null) return;
             Program.myReader.Read();
@@ -155,6 +155,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }

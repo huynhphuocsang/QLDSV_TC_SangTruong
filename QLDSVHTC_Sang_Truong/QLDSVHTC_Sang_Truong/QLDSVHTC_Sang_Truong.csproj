@@ -81,6 +81,9 @@
     <Compile Include="func.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDSV_TCDataSet.cs">
+      <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLDSV_TCDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
