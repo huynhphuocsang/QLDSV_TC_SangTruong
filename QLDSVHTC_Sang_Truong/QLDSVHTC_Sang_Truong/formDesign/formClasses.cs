@@ -12,6 +12,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
     public partial class formClasses : DevExpress.XtraEditors.XtraForm
     {
         private bool addClass = false;
+        private bool addStudent = false;
+        
         private bool changeClassName = false;
         private int rowEditableGv1 = -1;
 
@@ -42,7 +44,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             this.Validate();
             this.lOPBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
+            //this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
+            this.lOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP); 
             gridView1.ClearColumnErrors();
 
 
@@ -111,7 +114,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                  else ((UpdateAction)cmdManager.getLastUndoNode()).getData();
              };
 
-           
+
+            gridView2.ShowingEditor += (s, ex) =>
+            {
+                setStudentCodeReadOnly(); 
+
+                //if (addClass != true)
+                //    cmdManager.execute(new UpdateAction(lOPBindingSource));
+
+            };
+
+
 
             btnUndo.Enabled = btnRedo.Enabled = false;
         }
@@ -130,6 +143,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             //setReadOnly("TENLOP", gridView1, addClass);
             //setReadOnly("KHOAHOC", gridView1, addClass);
             setReadOnly("MAKHOA", gridView1, false);
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -244,6 +258,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 GridView.Columns[col].OptionsColumn.ReadOnly = true;
             }
+
+            
         }
         private bool checkEmpty(string classCode, string className, string classSchoolYear)
         {
@@ -403,7 +419,95 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnAddSV_Click(object sender, EventArgs e)
         {
+            addStudent = true; 
+
+            //enable button: 
+            btnAddSV.Enabled = false;
+            btnDeleteSV.Enabled = false;//lỡ đâu người dùng nhấn thêm tên trùng, nhưng mà sau đó xóa record có tên tồn tại trước đó nhưng không lưu, thành ra chương trình báo lỗi vô lý.
+    
+
             cmdManagerSV.execute(new InsertAction(sINHVIENBindingSource));
+            gridView2.SetFocusedRowCellValue("PHAI", false);
+            gridView2.SetFocusedRowCellValue("DANGHIHOC", false); 
+        }
+
+        private void btnDeleteSV_Click(object sender, EventArgs e)
+        {
+            cmdManagerSV.execute(new DeleteAction(sINHVIENBindingSource));
+            btnUndoSV.Enabled = true; 
+
+        }
+
+        private void bntSaveSV_Click(object sender, EventArgs e)
+        {
+            string studentCode = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "MASV").ToString();
+            string lastName = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "HO").ToString();
+            string firstName = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "TEN").ToString();
+           
+
+            if (studentCode.Equals(""))
+            {
+                gridView2.SetColumnError(gridView2.Columns["MASV"], "Mã sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                return; 
+            }
+            if (lastName.Equals(""))
+            {
+                gridView2.SetColumnError(gridView2.Columns["HO"], "Họ sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                return;
+            }
+            if (firstName.Equals(""))
+            {
+                gridView2.SetColumnError(gridView2.Columns["TEN"], "Tên sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                return;
+            }
+
+            try
+            {
+
+                this.Validate();
+                this.sINHVIENBindingSource.EndEdit();
+
+                //điều đặc biệt
+                this.sINHVIENTableAdapter.Update(this.qLDSV_TCDataSet.SINHVIEN);
+
+                MessageBox.Show("Thành công");
+
+                //reset button: 
+                btnDeleteSV.Enabled = true;
+                btnAddSV.Enabled = true;
+                addStudent = false;
+
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Thất bại!");
+            }
+
+            
+
+            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN); 
+            
+        }
+
+        private void setStudentCodeReadOnly()
+        {
+            if (addStudent == false)
+            {
+                gridView2.Columns["MASV"].OptionsColumn.ReadOnly = true;
+            }
+            else
+            {
+                if(gridView2.FocusedRowHandle== DevExpress.XtraGrid.GridControl.NewItemRowHandle)
+                {
+                    gridView2.Columns["MASV"].OptionsColumn.ReadOnly = false;
+                }
+                else
+                {
+                    gridView2.Columns["MASV"].OptionsColumn.ReadOnly = true;
+                }
+            }
+            
         }
     }
 }

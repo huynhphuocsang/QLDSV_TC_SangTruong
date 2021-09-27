@@ -334,7 +334,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(712, 543);
+            this.lOPGridControl.Size = new System.Drawing.Size(712, 535);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -440,7 +440,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.sINHVIENGridControl.DataSource = this.sINHVIENBindingSource;
             this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sINHVIENGridControl.Location = new System.Drawing.Point(712, 127);
+            this.sINHVIENGridControl.Location = new System.Drawing.Point(712, 119);
             this.sINHVIENGridControl.MainView = this.gridView2;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
             this.sINHVIENGridControl.Size = new System.Drawing.Size(824, 543);
@@ -629,57 +629,66 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnReloadSV
             // 
-            this.btnReloadSV.Location = new System.Drawing.Point(634, 19);
+            this.btnReloadSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadSV.ImageOptions.SvgImage")));
+            this.btnReloadSV.Location = new System.Drawing.Point(634, 5);
             this.btnReloadSV.Name = "btnReloadSV";
-            this.btnReloadSV.Size = new System.Drawing.Size(94, 29);
+            this.btnReloadSV.Size = new System.Drawing.Size(94, 43);
             this.btnReloadSV.TabIndex = 0;
             this.btnReloadSV.Text = "Tải lại";
             // 
             // btnRedoSV
             // 
-            this.btnRedoSV.Location = new System.Drawing.Point(534, 19);
+            this.btnRedoSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRedoSV.ImageOptions.SvgImage")));
+            this.btnRedoSV.Location = new System.Drawing.Point(534, 5);
             this.btnRedoSV.Name = "btnRedoSV";
-            this.btnRedoSV.Size = new System.Drawing.Size(94, 29);
+            this.btnRedoSV.Size = new System.Drawing.Size(94, 43);
             this.btnRedoSV.TabIndex = 0;
             this.btnRedoSV.Text = "Redo";
             // 
             // btnUndoSV
             // 
-            this.btnUndoSV.Location = new System.Drawing.Point(434, 19);
+            this.btnUndoSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndoSV.ImageOptions.SvgImage")));
+            this.btnUndoSV.Location = new System.Drawing.Point(434, 5);
             this.btnUndoSV.Name = "btnUndoSV";
-            this.btnUndoSV.Size = new System.Drawing.Size(94, 29);
+            this.btnUndoSV.Size = new System.Drawing.Size(94, 43);
             this.btnUndoSV.TabIndex = 0;
             this.btnUndoSV.Text = "Undo";
             // 
             // bntEditSV
             // 
-            this.bntEditSV.Location = new System.Drawing.Point(334, 19);
+            this.bntEditSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bntEditSV.ImageOptions.SvgImage")));
+            this.bntEditSV.Location = new System.Drawing.Point(334, 5);
             this.bntEditSV.Name = "bntEditSV";
-            this.bntEditSV.Size = new System.Drawing.Size(94, 29);
+            this.bntEditSV.Size = new System.Drawing.Size(94, 43);
             this.bntEditSV.TabIndex = 0;
             this.bntEditSV.Text = "Sửa";
             // 
             // bntSaveSV
             // 
-            this.bntSaveSV.Location = new System.Drawing.Point(234, 19);
+            this.bntSaveSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bntSaveSV.ImageOptions.SvgImage")));
+            this.bntSaveSV.Location = new System.Drawing.Point(234, 5);
             this.bntSaveSV.Name = "bntSaveSV";
-            this.bntSaveSV.Size = new System.Drawing.Size(94, 29);
+            this.bntSaveSV.Size = new System.Drawing.Size(94, 43);
             this.bntSaveSV.TabIndex = 0;
             this.bntSaveSV.Text = "Lưu";
+            this.bntSaveSV.Click += new System.EventHandler(this.bntSaveSV_Click);
             // 
             // btnDeleteSV
             // 
-            this.btnDeleteSV.Location = new System.Drawing.Point(134, 19);
+            this.btnDeleteSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteSV.ImageOptions.SvgImage")));
+            this.btnDeleteSV.Location = new System.Drawing.Point(134, 5);
             this.btnDeleteSV.Name = "btnDeleteSV";
-            this.btnDeleteSV.Size = new System.Drawing.Size(94, 29);
+            this.btnDeleteSV.Size = new System.Drawing.Size(94, 43);
             this.btnDeleteSV.TabIndex = 0;
             this.btnDeleteSV.Text = "Xóa";
+            this.btnDeleteSV.Click += new System.EventHandler(this.btnDeleteSV_Click);
             // 
             // btnAddSV
             // 
-            this.btnAddSV.Location = new System.Drawing.Point(34, 19);
+            this.btnAddSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddSV.ImageOptions.SvgImage")));
+            this.btnAddSV.Location = new System.Drawing.Point(40, 5);
             this.btnAddSV.Name = "btnAddSV";
-            this.btnAddSV.Size = new System.Drawing.Size(94, 29);
+            this.btnAddSV.Size = new System.Drawing.Size(88, 43);
             this.btnAddSV.TabIndex = 0;
             this.btnAddSV.Text = "Thêm";
             this.btnAddSV.Click += new System.EventHandler(this.btnAddSV_Click);
@@ -688,7 +697,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1536, 670);
+            this.ClientSize = new System.Drawing.Size(1536, 662);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.sINHVIENGridControl);
             this.Controls.Add(this.lOPGridControl);
