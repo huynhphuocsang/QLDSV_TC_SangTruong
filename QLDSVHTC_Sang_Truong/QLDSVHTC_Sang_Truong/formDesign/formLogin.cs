@@ -20,6 +20,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void LayDSPM(String cmd)
         {
             DataTable dt = new DataTable();
+
             if (conn_publisher.State == ConnectionState.Closed) conn_publisher.Open();
             SqlDataAdapter da = new SqlDataAdapter(cmd, conn_publisher);
             da.Fill(dt);

@@ -51,7 +51,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.lOPBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.btnUndo = new System.Windows.Forms.ToolStripButton();
             this.btnRedo = new System.Windows.Forms.ToolStripButton();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
@@ -78,7 +77,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnReloadSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnRedoSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnUndoSV = new DevExpress.XtraEditors.SimpleButton();
-            this.bntEditSV = new DevExpress.XtraEditors.SimpleButton();
             this.bntSaveSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddSV = new DevExpress.XtraEditors.SimpleButton();
@@ -174,7 +172,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.lOPBindingNavigatorSaveItem,
-            this.btnEdit,
             this.btnUndo,
             this.btnRedo,
             this.btnReload});
@@ -223,7 +220,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -287,16 +283,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigatorSaveItem.Text = "Save Data";
             this.lOPBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPBindingNavigatorSaveItem_Click);
             // 
-            // btnEdit
-            // 
-            this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(29, 24);
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // btnUndo
             // 
             this.btnUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -354,6 +340,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView1.GridControl = this.lOPGridControl;
             this.gridView1.GroupPanelText = "Danh sách lớp";
             this.gridView1.Name = "gridView1";
+            this.gridView1.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
             // 
             // colMALOP
             // 
@@ -440,6 +427,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.sINHVIENGridControl.DataSource = this.sINHVIENBindingSource;
             this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Append.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.CancelEdit.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.EnabledAutoRepeat = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.EndEdit.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.First.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Last.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Next.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.NextPage.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Prev.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.PrevPage.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Remove.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Enabled = false;
             this.sINHVIENGridControl.Location = new System.Drawing.Point(712, 119);
             this.sINHVIENGridControl.MainView = this.gridView2;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
@@ -467,6 +466,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView2.GridControl = this.sINHVIENGridControl;
             this.gridView2.GroupPanelText = "Danh sách sinh viên theo lớp";
             this.gridView2.Name = "gridView2";
+            this.gridView2.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView2_ValidatingEditor);
+            this.gridView2.InvalidValueException += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.gridView2_InvalidValueException);
             // 
             // colMASV
             // 
@@ -480,6 +481,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMASV.FieldName = "MASV";
             this.colMASV.MinWidth = 25;
             this.colMASV.Name = "colMASV";
+            this.colMASV.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.False;
+            this.colMASV.OptionsFilter.ImmediateUpdateAutoFilter = false;
             this.colMASV.Visible = true;
             this.colMASV.VisibleIndex = 0;
             this.colMASV.Width = 94;
@@ -617,7 +620,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panelControl1.Controls.Add(this.btnReloadSV);
             this.panelControl1.Controls.Add(this.btnRedoSV);
             this.panelControl1.Controls.Add(this.btnUndoSV);
-            this.panelControl1.Controls.Add(this.bntEditSV);
             this.panelControl1.Controls.Add(this.bntSaveSV);
             this.panelControl1.Controls.Add(this.btnDeleteSV);
             this.panelControl1.Controls.Add(this.btnAddSV);
@@ -630,7 +632,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // btnReloadSV
             // 
             this.btnReloadSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadSV.ImageOptions.SvgImage")));
-            this.btnReloadSV.Location = new System.Drawing.Point(634, 5);
+            this.btnReloadSV.Location = new System.Drawing.Point(534, 5);
             this.btnReloadSV.Name = "btnReloadSV";
             this.btnReloadSV.Size = new System.Drawing.Size(94, 43);
             this.btnReloadSV.TabIndex = 0;
@@ -639,7 +641,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // btnRedoSV
             // 
             this.btnRedoSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRedoSV.ImageOptions.SvgImage")));
-            this.btnRedoSV.Location = new System.Drawing.Point(534, 5);
+            this.btnRedoSV.Location = new System.Drawing.Point(434, 5);
             this.btnRedoSV.Name = "btnRedoSV";
             this.btnRedoSV.Size = new System.Drawing.Size(94, 43);
             this.btnRedoSV.TabIndex = 0;
@@ -648,20 +650,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // btnUndoSV
             // 
             this.btnUndoSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndoSV.ImageOptions.SvgImage")));
-            this.btnUndoSV.Location = new System.Drawing.Point(434, 5);
+            this.btnUndoSV.Location = new System.Drawing.Point(334, 5);
             this.btnUndoSV.Name = "btnUndoSV";
             this.btnUndoSV.Size = new System.Drawing.Size(94, 43);
             this.btnUndoSV.TabIndex = 0;
             this.btnUndoSV.Text = "Undo";
-            // 
-            // bntEditSV
-            // 
-            this.bntEditSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bntEditSV.ImageOptions.SvgImage")));
-            this.bntEditSV.Location = new System.Drawing.Point(334, 5);
-            this.bntEditSV.Name = "bntEditSV";
-            this.bntEditSV.Size = new System.Drawing.Size(94, 43);
-            this.bntEditSV.TabIndex = 0;
-            this.bntEditSV.Text = "Sửa";
             // 
             // bntSaveSV
             // 
@@ -770,12 +763,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP1;
         private DevExpress.XtraGrid.Columns.GridColumn colDANGHIHOC;
         private DevExpress.XtraGrid.Columns.GridColumn colPASSWORD;
-        private System.Windows.Forms.ToolStripButton btnEdit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnReloadSV;
         private DevExpress.XtraEditors.SimpleButton btnRedoSV;
         private DevExpress.XtraEditors.SimpleButton btnUndoSV;
-        private DevExpress.XtraEditors.SimpleButton bntEditSV;
         private DevExpress.XtraEditors.SimpleButton bntSaveSV;
         private DevExpress.XtraEditors.SimpleButton btnDeleteSV;
         private DevExpress.XtraEditors.SimpleButton btnAddSV;
