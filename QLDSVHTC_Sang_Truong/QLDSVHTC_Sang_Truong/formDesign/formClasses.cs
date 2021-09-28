@@ -18,7 +18,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private int rowEditableGv1 = -1;
 
         //tempClassName: dùng để so sánh với tên của lớp trong trường hợp sửa lại tên mới của lớp: 
-        private string tempClassName = "xxxxxxxxxxxxxxxxxxxx"; 
+        private string tempClassName = "xxxxxxxxxxxxxxxxxxxx";
+
+        private string tempSVCode = "xxxxxxxxxxxxxxxxxxxx";
 
         private CommandManager cmdManager;
         private CommandManager cmdManagerSV; 
@@ -117,11 +119,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             gridView2.ShowingEditor += (s, ex) =>
             {
-                setStudentCodeReadOnly(); 
-
+                setStudentCodeReadOnly();
+                
                 //if (addClass != true)
                 //    cmdManager.execute(new UpdateAction(lOPBindingSource));
 
+            };
+
+
+            gridView2.CellValueChanging += (s, ex) =>
+            {
+                
+            };
+            gridView2.CellValueChanged += (s, ex) =>
+            {
+                tempSVCode = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MASV").ToString();
             };
 
 
@@ -142,7 +154,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             //setReadOnly("MALOP", gridView1, addClass);
             //setReadOnly("TENLOP", gridView1, addClass);
             //setReadOnly("KHOAHOC", gridView1, addClass);
-            setReadOnly("MAKHOA", gridView1, false);
+            //setReadOnly("MAKHOA", gridView1, false);
 
         }
         private void label1_Click(object sender, EventArgs e)
@@ -334,7 +346,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     }
                     resultClassId.Read();
                     int tempvalue = resultClassId.GetInt32(0);
-                    int i = tempvalue; 
                     if (tempvalue == 1)
                     {
                         gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
@@ -353,6 +364,34 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
 
 
+            }
+            else if (type.Equals("SV"))
+            {
+                string queryId = "DECLARE @return_value int "
+                   + "EXEC @return_value = [dbo].[SP_CHECKID] @Ma = N'" + idValue + "', @Type = N'MASV' SELECT  'Return Value' = @return_value";
+                SqlDataReader resultClassId = Program.ExecSqlDataReader(queryId);
+
+                if (resultClassId == null)
+                {
+                    MessageBox.Show("Server bị lỗi");
+                    resultClassId.Close();
+                    return true;
+                }
+                resultClassId.Read();
+                int tempvalue = resultClassId.GetInt32(0);
+                if (tempvalue == 1)
+                {
+                    gridView2.SetColumnError(gridView2.Columns["MASV"], "MÃ SINH VIÊN ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                    resultClassId.Close();
+                    return true;
+                }
+
+                else if (tempvalue == 2)
+                {
+                    gridView2.SetColumnError(gridView2.Columns["MASV"], "MÃ SINH VIÊN ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                    resultClassId.Close();
+                    return true;
+                }
             }
             return false; 
                 
@@ -422,8 +461,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             addStudent = true; 
 
             //enable button: 
-            btnAddSV.Enabled = false;
-            btnDeleteSV.Enabled = false;//lỡ đâu người dùng nhấn thêm tên trùng, nhưng mà sau đó xóa record có tên tồn tại trước đó nhưng không lưu, thành ra chương trình báo lỗi vô lý.
+            //btnAddSV.Enabled = false;
+            //btnDeleteSV.Enabled = false;//lỡ đâu người dùng nhấn thêm tên trùng, nhưng mà sau đó xóa record có tên tồn tại trước đó nhưng không lưu, thành ra chương trình báo lỗi vô lý.
     
 
             cmdManagerSV.execute(new InsertAction(sINHVIENBindingSource));
@@ -440,50 +479,58 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void bntSaveSV_Click(object sender, EventArgs e)
         {
-            string studentCode = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "MASV").ToString();
-            string lastName = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "HO").ToString();
-            string firstName = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "TEN").ToString();
-           
-
-            if (studentCode.Equals(""))
-            {
-                gridView2.SetColumnError(gridView2.Columns["MASV"], "Mã sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
-                return; 
-            }
-            if (lastName.Equals(""))
-            {
-                gridView2.SetColumnError(gridView2.Columns["HO"], "Họ sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
-                return;
-            }
-            if (firstName.Equals(""))
-            {
-                gridView2.SetColumnError(gridView2.Columns["TEN"], "Tên sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
-                return;
-            }
-
-            try
-            {
-
-                this.Validate();
-                this.sINHVIENBindingSource.EndEdit();
-
-                //điều đặc biệt
-                this.sINHVIENTableAdapter.Update(this.qLDSV_TCDataSet.SINHVIEN);
-
-                MessageBox.Show("Thành công");
-
-                //reset button: 
-                btnDeleteSV.Enabled = true;
-                btnAddSV.Enabled = true;
-                addStudent = false;
-
-
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Thất bại!");
-            }
-
             
+                string lastName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "HO").ToString();
+                string firstName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "TEN").ToString();
+                string studentCode = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MASV").ToString();
+
+                if (studentCode.Equals(""))
+                {
+                    gridView2.SetColumnError(gridView2.Columns["MASV"], "Mã sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                    return;
+                }
+                if (lastName.Equals(""))
+                {
+                    gridView2.SetColumnError(gridView2.Columns["HO"], "Họ sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                    return;
+                }
+                if (firstName.Equals(""))
+                {
+                    gridView2.SetColumnError(gridView2.Columns["TEN"], "Tên sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                    return;
+                }
+
+
+                if (checkExistValue(studentCode, "nothing", "SV") == true)
+                {
+                    btnDeleteSV.Enabled = true;
+                    btnAddSV.Enabled = true;
+                    return;
+                }
+                try
+                {
+
+                    //this.Validate();
+                    this.sINHVIENBindingSource.EndEdit();
+
+                    //điều đặc biệt
+                    this.sINHVIENTableAdapter.Update(this.qLDSV_TCDataSet.SINHVIEN);
+
+                    MessageBox.Show("Thành công");
+
+                    //reset button: 
+                    btnDeleteSV.Enabled = true;
+                    btnAddSV.Enabled = true;
+                    addStudent = false;
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Thất bại!");
+                }
+            
+
 
             this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN); 
@@ -495,6 +542,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (addStudent == false)
             {
                 gridView2.Columns["MASV"].OptionsColumn.ReadOnly = true;
+               
             }
             else
             {
@@ -508,6 +556,38 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 }
             }
             
+        }
+
+        private void bntEditSV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridView2_InvalidValueException(object sender, DevExpress.XtraEditors.Controls.InvalidValueExceptionEventArgs e)
+        {
+            //string studentCode = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MASV").ToString();
+            //if (checkExistValue(studentCode, "nothing", "SV") == true)
+            //{
+            //    MessageBox.Show(this, "Mã số sinh viên bị trùng");
+            //}
+        }
+
+        private void gridView2_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            if(gridView2.FocusedColumn.FieldName == "MASV")
+            {
+                string studentCode = e.Value as string; 
+                if (checkExistValue(studentCode, "nothing", "SV") == true)
+                {
+                    btnAddSV.Enabled = false;
+                    MessageBox.Show(this, "Mã số sinh viên bị trùng");
+                }
+                else
+                {
+                    btnAddSV.Enabled = true; 
+                    gridView2.ClearColumnErrors(); 
+                }
+            }
         }
     }
 }
