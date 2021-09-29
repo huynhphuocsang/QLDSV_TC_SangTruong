@@ -73,9 +73,15 @@ namespace QLDSVHTC_Sang_Truong
             SqlDataReader myreader;
             SqlCommand sqlCmd = new SqlCommand(strCmd, Program.conn);
             sqlCmd.CommandType = CommandType.Text;
-            if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
+
+            //cực kỳ quan trọng, nếu không có sẽ bị sai: 
+            if (conn != null && conn.State == ConnectionState.Open)
+                conn.Close();
             try
             {
+                conn.ConnectionString = Program.connstr;
+                conn.Open(); 
+            //if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
                 myreader = sqlCmd.ExecuteReader();
                 return myreader;
             }

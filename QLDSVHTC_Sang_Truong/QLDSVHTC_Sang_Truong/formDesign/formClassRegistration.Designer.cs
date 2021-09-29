@@ -115,50 +115,50 @@ namespace QLDSVHTC_Sang_Truong
             // nIENKHOALabel
             // 
             nIENKHOALabel.AutoSize = true;
-            nIENKHOALabel.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nIENKHOALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nIENKHOALabel.Location = new System.Drawing.Point(68, 29);
             nIENKHOALabel.Name = "nIENKHOALabel";
-            nIENKHOALabel.Size = new System.Drawing.Size(74, 22);
+            nIENKHOALabel.Size = new System.Drawing.Size(83, 20);
             nIENKHOALabel.TabIndex = 0;
             nIENKHOALabel.Text = "Niên khóa";
             // 
             // tENMHLabel
             // 
             tENMHLabel.AutoSize = true;
-            tENMHLabel.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tENMHLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tENMHLabel.Location = new System.Drawing.Point(666, 23);
             tENMHLabel.Name = "tENMHLabel";
-            tENMHLabel.Size = new System.Drawing.Size(66, 22);
+            tENMHLabel.Size = new System.Drawing.Size(74, 20);
             tENMHLabel.TabIndex = 5;
             tENMHLabel.Text = "Tên MH:";
             // 
             // nHOMLabel
             // 
             nHOMLabel.AutoSize = true;
-            nHOMLabel.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nHOMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nHOMLabel.Location = new System.Drawing.Point(381, 70);
             nHOMLabel.Name = "nHOMLabel";
-            nHOMLabel.Size = new System.Drawing.Size(53, 22);
+            nHOMLabel.Size = new System.Drawing.Size(58, 20);
             nHOMLabel.TabIndex = 6;
             nHOMLabel.Text = "Nhóm:";
             // 
             // mAMHLabel
             // 
             mAMHLabel.AutoSize = true;
-            mAMHLabel.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mAMHLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             mAMHLabel.Location = new System.Drawing.Point(382, 21);
             mAMHLabel.Name = "mAMHLabel";
-            mAMHLabel.Size = new System.Drawing.Size(62, 22);
+            mAMHLabel.Size = new System.Drawing.Size(69, 20);
             mAMHLabel.TabIndex = 8;
             mAMHLabel.Text = "Mã MH:";
             // 
             // hOTENLabel
             // 
             hOTENLabel.AutoSize = true;
-            hOTENLabel.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            hOTENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             hOTENLabel.Location = new System.Drawing.Point(642, 74);
             hOTENLabel.Name = "hOTENLabel";
-            hOTENLabel.Size = new System.Drawing.Size(83, 22);
+            hOTENLabel.Size = new System.Drawing.Size(93, 20);
             hOTENLabel.TabIndex = 10;
             hOTENLabel.Text = "Giảng viên:";
             // 
@@ -200,9 +200,9 @@ namespace QLDSVHTC_Sang_Truong
             this.hOTENTextEdit.Location = new System.Drawing.Point(746, 71);
             this.hOTENTextEdit.MenuManager = this.barManager1;
             this.hOTENTextEdit.Name = "hOTENTextEdit";
-            this.hOTENTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hOTENTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hOTENTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.hOTENTextEdit.Size = new System.Drawing.Size(229, 28);
+            this.hOTENTextEdit.Size = new System.Drawing.Size(229, 26);
             this.hOTENTextEdit.TabIndex = 11;
             // 
             // sP_LOAD_REGISTER_INFORBindingSource
@@ -311,9 +311,9 @@ namespace QLDSVHTC_Sang_Truong
             this.txtMaMH.Location = new System.Drawing.Point(455, 18);
             this.txtMaMH.MenuManager = this.barManager1;
             this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMH.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaMH.Properties.Appearance.Options.UseFont = true;
-            this.txtMaMH.Size = new System.Drawing.Size(125, 28);
+            this.txtMaMH.Size = new System.Drawing.Size(125, 26);
             this.txtMaMH.TabIndex = 9;
             // 
             // edNhom
@@ -328,11 +328,11 @@ namespace QLDSVHTC_Sang_Truong
             this.edNhom.Location = new System.Drawing.Point(455, 67);
             this.edNhom.MenuManager = this.barManager1;
             this.edNhom.Name = "edNhom";
-            this.edNhom.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edNhom.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edNhom.Properties.Appearance.Options.UseFont = true;
             this.edNhom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.edNhom.Size = new System.Drawing.Size(125, 28);
+            this.edNhom.Size = new System.Drawing.Size(125, 26);
             this.edNhom.TabIndex = 7;
             // 
             // tENMHTextEdit
@@ -342,16 +342,16 @@ namespace QLDSVHTC_Sang_Truong
             this.tENMHTextEdit.Location = new System.Drawing.Point(746, 18);
             this.tENMHTextEdit.MenuManager = this.barManager1;
             this.tENMHTextEdit.Name = "tENMHTextEdit";
-            this.tENMHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tENMHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tENMHTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tENMHTextEdit.Size = new System.Drawing.Size(229, 28);
+            this.tENMHTextEdit.Size = new System.Drawing.Size(229, 26);
             this.tENMHTextEdit.TabIndex = 6;
             // 
             // cbPhase
             // 
             this.cbPhase.Location = new System.Drawing.Point(161, 18);
             this.cbPhase.Name = "cbPhase";
-            this.cbPhase.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPhase.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPhase.Properties.Appearance.Options.UseFont = true;
             this.cbPhase.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -361,7 +361,7 @@ namespace QLDSVHTC_Sang_Truong
             this.cbPhase.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSuggest;
             this.cbPhase.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbPhase.Properties.ValueMember = "NIENKHOA";
-            this.cbPhase.Size = new System.Drawing.Size(129, 28);
+            this.cbPhase.Size = new System.Drawing.Size(129, 26);
             this.cbPhase.TabIndex = 5;
             this.cbPhase.EditValueChanged += new System.EventHandler(this.cbPhase_EditValueChanged_1);
             // 
@@ -373,7 +373,7 @@ namespace QLDSVHTC_Sang_Truong
             // nbSemester
             // 
             this.nbSemester.BackColor = System.Drawing.Color.White;
-            this.nbSemester.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nbSemester.Location = new System.Drawing.Point(161, 64);
             this.nbSemester.Maximum = new decimal(new int[] {
             3,
@@ -399,10 +399,10 @@ namespace QLDSVHTC_Sang_Truong
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(79, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 22);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Học kỳ";
             // 

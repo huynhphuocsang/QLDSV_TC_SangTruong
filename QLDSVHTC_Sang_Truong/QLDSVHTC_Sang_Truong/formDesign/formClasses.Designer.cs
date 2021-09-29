@@ -51,7 +51,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.lOPBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.btnUndo = new System.Windows.Forms.ToolStripButton();
             this.btnRedo = new System.Windows.Forms.ToolStripButton();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
@@ -61,7 +60,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.sINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.svBds = new System.Windows.Forms.BindingSource(this.components);
             this.sINHVIENTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
             this.sINHVIENGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -78,10 +77,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnReloadSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnRedoSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnUndoSV = new DevExpress.XtraEditors.SimpleButton();
-            this.bntEditSV = new DevExpress.XtraEditors.SimpleButton();
             this.bntSaveSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddSV = new DevExpress.XtraEditors.SimpleButton();
+            this.dANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dANGKYTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
@@ -89,11 +89,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svBds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -174,7 +175,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.lOPBindingNavigatorSaveItem,
-            this.btnEdit,
             this.btnUndo,
             this.btnRedo,
             this.btnReload});
@@ -185,7 +185,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lOPBindingNavigator.Name = "lOPBindingNavigator";
             this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 27);
+            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 31);
             this.lOPBindingNavigator.TabIndex = 2;
             this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -202,7 +202,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -287,16 +287,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigatorSaveItem.Text = "Save Data";
             this.lOPBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPBindingNavigatorSaveItem_Click);
             // 
-            // btnEdit
-            // 
-            this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(29, 24);
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // btnUndo
             // 
             this.btnUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -331,10 +321,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.lOPGridControl.DataSource = this.lOPBindingSource;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 131);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(712, 543);
+            this.lOPGridControl.Size = new System.Drawing.Size(712, 531);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -354,6 +344,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView1.GridControl = this.lOPGridControl;
             this.gridView1.GroupPanelText = "Danh sách lớp";
             this.gridView1.Name = "gridView1";
+            this.gridView1.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
             // 
             // colMALOP
             // 
@@ -427,10 +418,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 94;
             // 
-            // sINHVIENBindingSource
+            // svBds
             // 
-            this.sINHVIENBindingSource.DataMember = "FK_SINHVIEN_LOP";
-            this.sINHVIENBindingSource.DataSource = this.lOPBindingSource;
+            this.svBds.DataMember = "FK_SINHVIEN_LOP";
+            this.svBds.DataSource = this.lOPBindingSource;
             // 
             // sINHVIENTableAdapter
             // 
@@ -438,9 +429,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // sINHVIENGridControl
             // 
-            this.sINHVIENGridControl.DataSource = this.sINHVIENBindingSource;
+            this.sINHVIENGridControl.DataSource = this.svBds;
             this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sINHVIENGridControl.Location = new System.Drawing.Point(712, 127);
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Append.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.CancelEdit.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.EnabledAutoRepeat = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.EndEdit.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.First.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Last.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Next.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.NextPage.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Prev.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.PrevPage.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Remove.Enabled = false;
+            this.sINHVIENGridControl.EmbeddedNavigator.Enabled = false;
+            this.sINHVIENGridControl.Location = new System.Drawing.Point(712, 119);
             this.sINHVIENGridControl.MainView = this.gridView2;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
             this.sINHVIENGridControl.Size = new System.Drawing.Size(824, 543);
@@ -467,6 +470,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView2.GridControl = this.sINHVIENGridControl;
             this.gridView2.GroupPanelText = "Danh sách sinh viên theo lớp";
             this.gridView2.Name = "gridView2";
+            this.gridView2.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView2_ValidatingEditor);
+            this.gridView2.InvalidValueException += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.gridView2_InvalidValueException);
             // 
             // colMASV
             // 
@@ -480,6 +485,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMASV.FieldName = "MASV";
             this.colMASV.MinWidth = 25;
             this.colMASV.Name = "colMASV";
+            this.colMASV.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.False;
+            this.colMASV.OptionsFilter.ImmediateUpdateAutoFilter = false;
             this.colMASV.Visible = true;
             this.colMASV.VisibleIndex = 0;
             this.colMASV.Width = 94;
@@ -617,78 +624,87 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panelControl1.Controls.Add(this.btnReloadSV);
             this.panelControl1.Controls.Add(this.btnRedoSV);
             this.panelControl1.Controls.Add(this.btnUndoSV);
-            this.panelControl1.Controls.Add(this.bntEditSV);
             this.panelControl1.Controls.Add(this.bntSaveSV);
             this.panelControl1.Controls.Add(this.btnDeleteSV);
             this.panelControl1.Controls.Add(this.btnAddSV);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(712, 127);
+            this.panelControl1.Location = new System.Drawing.Point(712, 131);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(824, 57);
             this.panelControl1.TabIndex = 4;
             // 
             // btnReloadSV
             // 
-            this.btnReloadSV.Location = new System.Drawing.Point(634, 19);
+            this.btnReloadSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadSV.ImageOptions.SvgImage")));
+            this.btnReloadSV.Location = new System.Drawing.Point(534, 5);
             this.btnReloadSV.Name = "btnReloadSV";
-            this.btnReloadSV.Size = new System.Drawing.Size(94, 29);
+            this.btnReloadSV.Size = new System.Drawing.Size(94, 43);
             this.btnReloadSV.TabIndex = 0;
             this.btnReloadSV.Text = "Tải lại";
+            this.btnReloadSV.Click += new System.EventHandler(this.btnReloadSV_Click);
             // 
             // btnRedoSV
             // 
-            this.btnRedoSV.Location = new System.Drawing.Point(534, 19);
+            this.btnRedoSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRedoSV.ImageOptions.SvgImage")));
+            this.btnRedoSV.Location = new System.Drawing.Point(434, 5);
             this.btnRedoSV.Name = "btnRedoSV";
-            this.btnRedoSV.Size = new System.Drawing.Size(94, 29);
+            this.btnRedoSV.Size = new System.Drawing.Size(94, 43);
             this.btnRedoSV.TabIndex = 0;
             this.btnRedoSV.Text = "Redo";
             // 
             // btnUndoSV
             // 
-            this.btnUndoSV.Location = new System.Drawing.Point(434, 19);
+            this.btnUndoSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndoSV.ImageOptions.SvgImage")));
+            this.btnUndoSV.Location = new System.Drawing.Point(334, 5);
             this.btnUndoSV.Name = "btnUndoSV";
-            this.btnUndoSV.Size = new System.Drawing.Size(94, 29);
+            this.btnUndoSV.Size = new System.Drawing.Size(94, 43);
             this.btnUndoSV.TabIndex = 0;
             this.btnUndoSV.Text = "Undo";
             // 
-            // bntEditSV
-            // 
-            this.bntEditSV.Location = new System.Drawing.Point(334, 19);
-            this.bntEditSV.Name = "bntEditSV";
-            this.bntEditSV.Size = new System.Drawing.Size(94, 29);
-            this.bntEditSV.TabIndex = 0;
-            this.bntEditSV.Text = "Sửa";
-            // 
             // bntSaveSV
             // 
-            this.bntSaveSV.Location = new System.Drawing.Point(234, 19);
+            this.bntSaveSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bntSaveSV.ImageOptions.SvgImage")));
+            this.bntSaveSV.Location = new System.Drawing.Point(234, 5);
             this.bntSaveSV.Name = "bntSaveSV";
-            this.bntSaveSV.Size = new System.Drawing.Size(94, 29);
+            this.bntSaveSV.Size = new System.Drawing.Size(94, 43);
             this.bntSaveSV.TabIndex = 0;
             this.bntSaveSV.Text = "Lưu";
+            this.bntSaveSV.Click += new System.EventHandler(this.bntSaveSV_Click);
             // 
             // btnDeleteSV
             // 
-            this.btnDeleteSV.Location = new System.Drawing.Point(134, 19);
+            this.btnDeleteSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteSV.ImageOptions.SvgImage")));
+            this.btnDeleteSV.Location = new System.Drawing.Point(134, 5);
             this.btnDeleteSV.Name = "btnDeleteSV";
-            this.btnDeleteSV.Size = new System.Drawing.Size(94, 29);
+            this.btnDeleteSV.Size = new System.Drawing.Size(94, 43);
             this.btnDeleteSV.TabIndex = 0;
             this.btnDeleteSV.Text = "Xóa";
+            this.btnDeleteSV.Click += new System.EventHandler(this.btnDeleteSV_Click);
             // 
             // btnAddSV
             // 
-            this.btnAddSV.Location = new System.Drawing.Point(34, 19);
+            this.btnAddSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddSV.ImageOptions.SvgImage")));
+            this.btnAddSV.Location = new System.Drawing.Point(40, 5);
             this.btnAddSV.Name = "btnAddSV";
-            this.btnAddSV.Size = new System.Drawing.Size(94, 29);
+            this.btnAddSV.Size = new System.Drawing.Size(88, 43);
             this.btnAddSV.TabIndex = 0;
             this.btnAddSV.Text = "Thêm";
             this.btnAddSV.Click += new System.EventHandler(this.btnAddSV_Click);
+            // 
+            // dANGKYBindingSource
+            // 
+            this.dANGKYBindingSource.DataMember = "FK_CTLTC_SINHVIEN";
+            this.dANGKYBindingSource.DataSource = this.svBds;
+            // 
+            // dANGKYTableAdapter
+            // 
+            this.dANGKYTableAdapter.ClearBeforeFill = true;
             // 
             // formClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1536, 670);
+            this.ClientSize = new System.Drawing.Size(1536, 662);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.sINHVIENGridControl);
             this.Controls.Add(this.lOPGridControl);
@@ -707,11 +723,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svBds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -748,7 +765,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.ToolStripButton btnUndo;
         private System.Windows.Forms.ToolStripButton btnRedo;
         private System.Windows.Forms.ToolStripButton btnReload;
-        private System.Windows.Forms.BindingSource sINHVIENBindingSource;
+        private System.Windows.Forms.BindingSource svBds;
         private QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
         private DevExpress.XtraGrid.GridControl sINHVIENGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -761,14 +778,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP1;
         private DevExpress.XtraGrid.Columns.GridColumn colDANGHIHOC;
         private DevExpress.XtraGrid.Columns.GridColumn colPASSWORD;
-        private System.Windows.Forms.ToolStripButton btnEdit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnReloadSV;
         private DevExpress.XtraEditors.SimpleButton btnRedoSV;
         private DevExpress.XtraEditors.SimpleButton btnUndoSV;
-        private DevExpress.XtraEditors.SimpleButton bntEditSV;
         private DevExpress.XtraEditors.SimpleButton bntSaveSV;
         private DevExpress.XtraEditors.SimpleButton btnDeleteSV;
         private DevExpress.XtraEditors.SimpleButton btnAddSV;
+        private System.Windows.Forms.BindingSource dANGKYBindingSource;
+        private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
     }
 }
