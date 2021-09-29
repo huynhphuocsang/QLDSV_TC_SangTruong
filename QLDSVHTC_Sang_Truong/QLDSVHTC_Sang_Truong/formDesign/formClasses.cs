@@ -16,6 +16,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         //tempClassName: dùng để so sánh với tên của lớp trong trường hợp sửa lại tên mới của lớp: 
         
+        
 
         private CommandManager cmdManager;
         private CommandManager cmdManagerSV; 
@@ -111,7 +112,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             };
 
 
-
+            setReadOnly(); 
             btnUndo.Enabled = btnRedo.Enabled = false;
         }
         private void load()
@@ -122,14 +123,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
             this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-
-
-            //gridView1.OptionsBehavior.Editable = false; 
-            //setReadOnly("MALOP", gridView1, addClass);
-            //setReadOnly("TENLOP", gridView1, addClass);
-            //setReadOnly("KHOAHOC", gridView1, addClass);
-            //setReadOnly("MAKHOA", gridView1, false);
-
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -501,6 +494,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     bindingNavigatorAddNewItem.Enabled = true;
                 }
             }
+        }
+
+        private void btnReloadSV_Click(object sender, EventArgs e)
+        {
+            cmdManagerSV.clear();
+            btnUndoSV.Enabled = false;
+            btnRedoSV.Enabled = false; 
+            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
+            //addSV = false;
+
+            MessageBox.Show("Đã tải lại dữ liệu!"); 
+        }
+        //set malop  & makhoa thành chỉ đọc:
+        private void setReadOnly()
+        {
+            gridView1.Columns["MAKHOA"].OptionsColumn.ReadOnly = true; 
+            gridView2.Columns["MALOP"].OptionsColumn.ReadOnly = true; 
         }
     }
 }
