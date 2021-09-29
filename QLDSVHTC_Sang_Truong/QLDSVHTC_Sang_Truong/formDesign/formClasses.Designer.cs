@@ -60,7 +60,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.sINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.svBds = new System.Windows.Forms.BindingSource(this.components);
             this.sINHVIENTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
             this.sINHVIENGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -80,6 +80,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bntSaveSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteSV = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddSV = new DevExpress.XtraEditors.SimpleButton();
+            this.dANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dANGKYTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
@@ -87,11 +89,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svBds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -182,7 +185,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lOPBindingNavigator.Name = "lOPBindingNavigator";
             this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 27);
+            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 31);
             this.lOPBindingNavigator.TabIndex = 2;
             this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -199,7 +202,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -318,10 +321,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.lOPGridControl.DataSource = this.lOPBindingSource;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 131);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(712, 535);
+            this.lOPGridControl.Size = new System.Drawing.Size(712, 531);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -415,10 +418,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 94;
             // 
-            // sINHVIENBindingSource
+            // svBds
             // 
-            this.sINHVIENBindingSource.DataMember = "FK_SINHVIEN_LOP";
-            this.sINHVIENBindingSource.DataSource = this.lOPBindingSource;
+            this.svBds.DataMember = "FK_SINHVIEN_LOP";
+            this.svBds.DataSource = this.lOPBindingSource;
             // 
             // sINHVIENTableAdapter
             // 
@@ -426,7 +429,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // sINHVIENGridControl
             // 
-            this.sINHVIENGridControl.DataSource = this.sINHVIENBindingSource;
+            this.sINHVIENGridControl.DataSource = this.svBds;
             this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.sINHVIENGridControl.EmbeddedNavigator.Buttons.Append.Enabled = false;
             this.sINHVIENGridControl.EmbeddedNavigator.Buttons.CancelEdit.Enabled = false;
@@ -625,7 +628,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panelControl1.Controls.Add(this.btnDeleteSV);
             this.panelControl1.Controls.Add(this.btnAddSV);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(712, 127);
+            this.panelControl1.Location = new System.Drawing.Point(712, 131);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(824, 57);
             this.panelControl1.TabIndex = 4;
@@ -688,6 +691,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnAddSV.Text = "Thêm";
             this.btnAddSV.Click += new System.EventHandler(this.btnAddSV_Click);
             // 
+            // dANGKYBindingSource
+            // 
+            this.dANGKYBindingSource.DataMember = "FK_CTLTC_SINHVIEN";
+            this.dANGKYBindingSource.DataSource = this.svBds;
+            // 
+            // dANGKYTableAdapter
+            // 
+            this.dANGKYTableAdapter.ClearBeforeFill = true;
+            // 
             // formClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -711,11 +723,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svBds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -752,7 +765,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.ToolStripButton btnUndo;
         private System.Windows.Forms.ToolStripButton btnRedo;
         private System.Windows.Forms.ToolStripButton btnReload;
-        private System.Windows.Forms.BindingSource sINHVIENBindingSource;
+        private System.Windows.Forms.BindingSource svBds;
         private QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
         private DevExpress.XtraGrid.GridControl sINHVIENGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -772,5 +785,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraEditors.SimpleButton bntSaveSV;
         private DevExpress.XtraEditors.SimpleButton btnDeleteSV;
         private DevExpress.XtraEditors.SimpleButton btnAddSV;
+        private System.Windows.Forms.BindingSource dANGKYBindingSource;
+        private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
     }
 }

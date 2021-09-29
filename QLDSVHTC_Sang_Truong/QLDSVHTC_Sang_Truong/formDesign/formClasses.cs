@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Data;
 using System.Collections.Generic;
-
+using DevExpress.XtraEditors;
 
 
 namespace QLDSVHTC_Sang_Truong.formDesign
@@ -36,29 +36,34 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             
             if (checkEmpty(classCode, className, classSchoolYear) == true) return;
 
+            try
+            {
+                this.Validate();
+                this.lOPBindingSource.EndEdit();
+                //this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
+                this.lOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP);
+                gridView1.ClearColumnErrors();
+
+                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+                //reset lai gia tri: 
+                addClass = false;
+                bindingNavigatorAddNewItem.Enabled = true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Thêm lớp thất bại!","Thông báo!",MessageBoxButtons.OK); 
+            }
             
-
-
-            this.Validate();
-            this.lOPBindingSource.EndEdit();
-            //this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
-            this.lOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP); 
-            gridView1.ClearColumnErrors();
-
-
-            this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
-            
-            
-            //reset lai gia tri: 
-            addClass =false;
-            bindingNavigatorAddNewItem.Enabled = true; 
         }
 
         private void formClasses_Load(object sender, EventArgs e)
         {
            
-            
+            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.DANGKY' table. You can move, or remove it, as needed.
+            //this.dANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
+
+
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
 
             //chuyển dữ liệu từ danh sách phân mảnh vào cho combobox.
@@ -123,6 +128,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
             this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
+            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.DANGKY' table. You can move, or remove it, as needed.
+            this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -175,6 +183,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             //kiêm tra thử xem liệu lớp đã được tham chiếu hay chưa? 
+            if (svBds.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa lớp vì đã có sinh viên!","Cảnh báo!",MessageBoxButtons.OK);
+                return; 
+            }
 
             cmdManager.execute(new DeleteAction(lOPBindingSource));
             btnUndo.Enabled = true;
@@ -204,17 +217,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (classCode.Trim().Equals(""))
             {
-                MessageBox.Show("Mã lớp không được rỗng!");
+                MessageBox.Show("Mã lớp không được rỗng!", "Cảnh báo!", MessageBoxButtons.OK);
                 return true;
             }
             else if (className.Trim().Equals(""))
             {
-                MessageBox.Show("Tên lớp không được rỗng!");
+                MessageBox.Show("Tên lớp không được rỗng!", "Cảnh báo!", MessageBoxButtons.OK);
                 return true;
             }
             else if (classSchoolYear.Trim().Equals(""))
             {
-                MessageBox.Show("Niên khóa không được rỗng!");
+                MessageBox.Show("Niên khóa không được rỗng!", "Cảnh báo!", MessageBoxButtons.OK);
                 return true;
             }
             return false;
@@ -358,14 +371,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void btnAddSV_Click(object sender, EventArgs e)
         {
             
-            cmdManagerSV.execute(new InsertAction(sINHVIENBindingSource));
+            cmdManagerSV.execute(new InsertAction(svBds));
             gridView2.SetFocusedRowCellValue("PHAI", false);
             gridView2.SetFocusedRowCellValue("DANGHIHOC", false); 
         }
 
         private void btnDeleteSV_Click(object sender, EventArgs e)
         {
-            cmdManagerSV.execute(new DeleteAction(sINHVIENBindingSource));
+            
+            if (dANGKYBindingSource.Count > 0)
+            {
+                //MessageBox.Show("Không thể xóa sinh viên này!\nGợi ý: bạn hãy chuyển trạng thái thành : 'Đã nghỉ học'");
+                XtraMessageBox.Show("Bạn không thể xóa sinh viên này!\nGợi ý: bạn hãy chuyển trạng thái thành : 'Đã nghỉ học'", "Cảnh báo!", MessageBoxButtons.OK); 
+                return; 
+            }
+            cmdManagerSV.execute(new DeleteAction(svBds));
             btnUndoSV.Enabled = true; 
 
         }
@@ -380,7 +400,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 {
 
                     this.Validate();
-                    this.sINHVIENBindingSource.EndEdit();
+                    this.svBds.EndEdit();
 
                     //điều đặc biệt
                     this.sINHVIENTableAdapter.Update(this.qLDSV_TCDataSet.SINHVIEN);
@@ -427,13 +447,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     e.Valid = false;
                     e.ErrorText = "Mã sinh viên đã tồn tại"; 
                     btnAddSV.Enabled = false;
-                    MessageBox.Show(this, "Mã số sinh viên bị trùng");
-                }else if (checkValue == 2)
+                    MessageBox.Show(this, "Mã số sinh viên bị trùng!", "Cảnh báo!", MessageBoxButtons.OK);
+                }
+                else if (checkValue == 2)
                 {
                     e.Valid = false;
                     e.ErrorText = "Mã sinh viên đã tồn tại ở khoa khác";
                     btnAddSV.Enabled = false;
-                    MessageBox.Show(this, "Mã số sinh viên bị trùng ở khoa khác!");
+                    MessageBox.Show(this, "Mã số sinh viên bị trùng ở khoa khác!", "Cảnh báo!", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -456,15 +477,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                         e.Valid = false;
                         e.ErrorText = "Mã lớp đã bị trùng!";
                         bindingNavigatorAddNewItem.Enabled = false;
-                        MessageBox.Show(this, "Mã lớp bị trùng");
-                    }
+                        MessageBox.Show(this, "Mã lớp bị trùng", "Cảnh báo!", MessageBoxButtons.OK);
+                }
                     else if (checkValue == 2)
                     {
                         e.Valid = false;
                         e.ErrorText = "Mã lớp đã bị trùng ở khoa khác!";
                         bindingNavigatorAddNewItem.Enabled = false;
-                        MessageBox.Show(this, "Mã lớp bị trùng");
-                    }//truong hop -1 thi xu ly them: 
+                    MessageBox.Show( "Mã lớp lớp bị trùng ở khoa khác!", "Cảnh báo!", MessageBoxButtons.OK);
+                }//truong hop -1 thi xu ly them: 
                     else
                     {
 
@@ -474,19 +495,20 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             else if (gridView1.FocusedColumn.FieldName == "TENLOP")
             {
                 string className = e.Value as string;
+                
                 int checkValue = checkExistValue(className, "TENLOP");
                 if (checkValue ==1)
                 {
                     e.Valid = false;
                     e.ErrorText = "Tên lớp đã bị trùng!";
                     bindingNavigatorAddNewItem.Enabled = false;
-                    MessageBox.Show(this, "Tên lớp bị trùng");
+                    MessageBox.Show(this, "Tên lớp bị trùng","Cảnh báo!",MessageBoxButtons.OK);
                 } else if (checkValue == 2)
                 {
                     e.Valid = false;
                     e.ErrorText = "Tên lớp đã bị trùng ở khoa khác!";
                     bindingNavigatorAddNewItem.Enabled = false;
-                    MessageBox.Show(this, "Tên lớp bị trùng");
+                    MessageBox.Show(this, "Tên lớp bị trùng ở khoa khác!", "Thông báo!", MessageBoxButtons.OK);
                 } //xử lý thêm trường hợp ==-1; 
                 else
                 {
@@ -505,7 +527,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
             //addSV = false;
 
-            MessageBox.Show("Đã tải lại dữ liệu!"); 
+            MessageBox.Show("Đã tải dữ liệu thành công!", "Thông báo!", MessageBoxButtons.OK); 
         }
         //set malop  & makhoa thành chỉ đọc:
         private void setReadOnly()
