@@ -12,12 +12,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
     public partial class formClasses : DevExpress.XtraEditors.XtraForm
     {
         private bool addClass = false;
-        private bool addStudent = false;
-
-       
-        private bool classNameError = false;
-        private bool classIdError = false;
-        
         private int rowEditableGv1 = -1;
 
         //tempClassName: dùng để so sánh với tên của lớp trong trường hợp sửa lại tên mới của lớp: 
@@ -41,8 +35,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             
             if (checkEmpty(classCode, className, classSchoolYear) == true) return;
 
-            if (checkExistValue(classCode, "MALOP") == true) return;
-            if (checkExistValue(className,"TENLOP")==true) return ; 
+            
 
 
             this.Validate();
@@ -234,8 +227,31 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             return false;
 
         }
+        private bool checkEmptySV()
+        {
 
-        private bool checkExistValue(string value, string type)
+            string lastName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "HO").ToString();
+            string firstName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "TEN").ToString();
+            string studentCode = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MASV").ToString();
+
+            if (studentCode.Equals(""))
+            {
+                gridView2.SetColumnError(gridView2.Columns["MASV"], "Mã sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                return true;
+            }
+            if (lastName.Equals(""))
+            {
+                gridView2.SetColumnError(gridView2.Columns["HO"], "Họ sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                return true;
+            }
+            if (firstName.Equals(""))
+            {
+                gridView2.SetColumnError(gridView2.Columns["TEN"], "Tên sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+                return true;
+            }
+            return false;
+        }
+        private int checkExistValue(string value, string type)
         {
            
                 if (type.Equals("TENLOP"))
@@ -249,24 +265,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     {
                         MessageBox.Show("Server bị lỗi");
                         resultClassName.Close();
-                        return true;
+                        return -1;
                     }
                     resultClassName.Read();
-                    if (resultClassName.GetInt32(0) == 1)
-                    {
-                        gridView1.SetColumnError(gridView1.Columns["TENLOP"], "TÊN LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                        resultClassName.Close();
-                        return true;
-                    }
-                    else if (resultClassName.GetInt32(0) == 2)
-                    {
-                        gridView1.SetColumnError(gridView1.Columns["TENLOP"], "TÊN LỚP ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                        resultClassName.Close();
-                        return true;
-                    }
+                    int tempvalue = resultClassName.GetInt32(0);
                     resultClassName.Close();
+                return tempvalue; 
 
-                }
+            }
 
 
 
@@ -282,54 +288,32 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     {
                         MessageBox.Show("Server bị lỗi");
                         resultClassId.Close();
-                        return true;
+                        return -1;
                     }
                     resultClassId.Read();
                     int tempvalue = resultClassId.GetInt32(0);
-                    if (tempvalue == 1)
-                    {
-                        gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                        resultClassId.Close();
-                        return true;
-                    }
-
-                    else if (tempvalue == 2)
-                    {
-                        gridView1.SetColumnError(gridView1.Columns["MALOP"], "MÃ LỚP ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                        resultClassId.Close();
-                        return true;
-                    }
+                    resultClassId.Close(); 
+                    return tempvalue; 
                 }
                 
             else if (type.Equals("SV"))
             {
                 string queryId = "DECLARE @return_value int "
                    + "EXEC @return_value = [dbo].[SP_CHECKID] @Ma = N'" + value + "', @Type = N'MASV' SELECT  'Return Value' = @return_value";
-                SqlDataReader resultClassId = Program.ExecSqlDataReader(queryId);
+                SqlDataReader resultSVId = Program.ExecSqlDataReader(queryId);
 
-                if (resultClassId == null)
+                if (resultSVId == null)
                 {
                     MessageBox.Show("Server bị lỗi");
-                    resultClassId.Close();
-                    return true;
+                    resultSVId.Close();
+                    return -1;
                 }
-                resultClassId.Read();
-                int tempvalue = resultClassId.GetInt32(0);
-                if (tempvalue == 1)
-                {
-                    gridView2.SetColumnError(gridView2.Columns["MASV"], "MÃ SINH VIÊN ĐÃ TỒN TẠI", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                    resultClassId.Close();
-                    return true;
-                }
-
-                else if (tempvalue == 2)
-                {
-                    gridView2.SetColumnError(gridView2.Columns["MASV"], "MÃ SINH VIÊN ĐÃ TỒN TẠI Ở KHOA KHÁC", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-                    resultClassId.Close();
-                    return true;
-                }
+                resultSVId.Read();
+                int tempvalue = resultSVId.GetInt32(0);
+                resultSVId.Close(); 
+                return tempvalue; 
             }
-            return false;       
+            return 0;       
         }
 
         private void btnRedo_Click(object sender, EventArgs e)
@@ -380,13 +364,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnAddSV_Click(object sender, EventArgs e)
         {
-            addStudent = true; 
-
-            //enable button: 
-            //btnAddSV.Enabled = false;
-            //btnDeleteSV.Enabled = false;//lỡ đâu người dùng nhấn thêm tên trùng, nhưng mà sau đó xóa record có tên tồn tại trước đó nhưng không lưu, thành ra chương trình báo lỗi vô lý.
-    
-
+            
             cmdManagerSV.execute(new InsertAction(sINHVIENBindingSource));
             gridView2.SetFocusedRowCellValue("PHAI", false);
             gridView2.SetFocusedRowCellValue("DANGHIHOC", false); 
@@ -401,29 +379,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void bntSaveSV_Click(object sender, EventArgs e)
         {
+
+            if (checkEmptySV() == true) return; 
+
             
-                string lastName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "HO").ToString();
-                string firstName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "TEN").ToString();
-                string studentCode = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MASV").ToString();
-
-                if (studentCode.Equals(""))
-                {
-                    gridView2.SetColumnError(gridView2.Columns["MASV"], "Mã sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
-                    return;
-                }
-                if (lastName.Equals(""))
-                {
-                    gridView2.SetColumnError(gridView2.Columns["HO"], "Họ sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
-                    return;
-                }
-                if (firstName.Equals(""))
-                {
-                    gridView2.SetColumnError(gridView2.Columns["TEN"], "Tên sinh viên rỗng", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
-                    return;
-                }
-
-
-            if (checkExistValue(studentCode, "SV") == true) return; 
                 try
                 {
 
@@ -434,12 +393,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     this.sINHVIENTableAdapter.Update(this.qLDSV_TCDataSet.SINHVIEN);
 
                     MessageBox.Show("Thành công");
-
-                    //reset button: 
-                    btnDeleteSV.Enabled = true;
-                    btnAddSV.Enabled = true;
-                    addStudent = false;
-
 
                 }
                 catch (Exception ex)
@@ -474,16 +427,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if(gridView2.FocusedColumn.FieldName == "MASV")
             {
-                string studentCode = e.Value as string; 
-                if (checkExistValue(studentCode, "SV") == true)
+                string studentCode = e.Value as string;
+                int checkValue = checkExistValue(studentCode, "SV"); 
+                if (checkValue == 1)
                 {
+                    e.Valid = false;
+                    e.ErrorText = "Mã sinh viên đã tồn tại"; 
                     btnAddSV.Enabled = false;
                     MessageBox.Show(this, "Mã số sinh viên bị trùng");
+                }else if (checkValue == 2)
+                {
+                    e.Valid = false;
+                    e.ErrorText = "Mã sinh viên đã tồn tại ở khoa khác";
+                    btnAddSV.Enabled = false;
+                    MessageBox.Show(this, "Mã số sinh viên bị trùng ở khoa khác!");
                 }
                 else
                 {
                     btnAddSV.Enabled = true; 
-                    gridView2.ClearColumnErrors(); 
                 }
             }
         }
@@ -492,38 +453,52 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (gridView1.FocusedColumn.FieldName == "MALOP")
             {
+
                 string classCode = e.Value as string;
-                if (checkExistValue(classCode, "MALOP") == true)
-                {
-                    bindingNavigatorAddNewItem.Enabled = false;
-                    MessageBox.Show(this, "Mã lớp bị trùng");
-                    classIdError = true; 
-                     
-                    
-                }
-                else
-                {
-                    classIdError = false;
-                    if (classNameError == false) bindingNavigatorAddNewItem.Enabled = true;
-                    gridView1.SetColumnError(gridView1.Columns["MALOP"], " ", DevExpress.XtraEditors.DXErrorProvider.ErrorType.None);
-                    
-                    
-                }
+
+
+                    int checkValue = checkExistValue(classCode, "MALOP");
+                    if (checkValue == 1)
+                    {
+                        e.Valid = false;
+                        e.ErrorText = "Mã lớp đã bị trùng!";
+                        bindingNavigatorAddNewItem.Enabled = false;
+                        MessageBox.Show(this, "Mã lớp bị trùng");
+                    }
+                    else if (checkValue == 2)
+                    {
+                        e.Valid = false;
+                        e.ErrorText = "Mã lớp đã bị trùng ở khoa khác!";
+                        bindingNavigatorAddNewItem.Enabled = false;
+                        MessageBox.Show(this, "Mã lớp bị trùng");
+                    }//truong hop -1 thi xu ly them: 
+                    else
+                    {
+
+                        bindingNavigatorAddNewItem.Enabled = true;
+                    }
             }
             else if (gridView1.FocusedColumn.FieldName == "TENLOP")
             {
                 string className = e.Value as string;
-                if (checkExistValue(className, "TENLOP") == true)
+                int checkValue = checkExistValue(className, "TENLOP");
+                if (checkValue ==1)
                 {
-                    classNameError = true; 
+                    e.Valid = false;
+                    e.ErrorText = "Tên lớp đã bị trùng!";
                     bindingNavigatorAddNewItem.Enabled = false;
                     MessageBox.Show(this, "Tên lớp bị trùng");
-                }
+                } else if (checkValue == 2)
+                {
+                    e.Valid = false;
+                    e.ErrorText = "Tên lớp đã bị trùng ở khoa khác!";
+                    bindingNavigatorAddNewItem.Enabled = false;
+                    MessageBox.Show(this, "Tên lớp bị trùng");
+                } //xử lý thêm trường hợp ==-1; 
                 else
                 {
-                    classNameError = false;
-                    if(classIdError==false) bindingNavigatorAddNewItem.Enabled = true;
-                    gridView1.SetColumnError(gridView1.Columns["TENLOP"], "", DevExpress.XtraEditors.DXErrorProvider.ErrorType.None);
+
+                    bindingNavigatorAddNewItem.Enabled = true;
                 }
             }
         }
