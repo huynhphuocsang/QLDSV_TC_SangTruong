@@ -78,6 +78,12 @@
     <Compile Include="formDesign\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\formTuitionFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\formTuitionFee.Designer.cs">
+      <DependentUpon>formTuitionFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="func.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLDSV_TCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\ReportTuitionFee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +109,7 @@
     <Compile Include="Transaction.cs" />
     <EmbeddedResource Include="formDesign\formClasses.resx">
       <DependentUpon>formClasses.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formClassRegistration.resx">
       <DependentUpon>formClassRegistration.cs</DependentUpon>
@@ -107,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\formTuitionFee.resx">
+      <DependentUpon>formTuitionFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,6 +156,17 @@
     </None>
     <None Include="QLDSV_TCDataSet.xss">
       <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet1.xsc">
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TCDataSet1.xss">
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup />

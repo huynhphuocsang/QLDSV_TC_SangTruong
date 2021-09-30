@@ -153,7 +153,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 else
                 {
                     Program.mlogin = Program.mloginDN;
-                    Program.mlogin = Program.mloginDN;
+                    Program.pass = Program.passDN;
                 }
 
                 if (Program.KetNoi() == 0)
