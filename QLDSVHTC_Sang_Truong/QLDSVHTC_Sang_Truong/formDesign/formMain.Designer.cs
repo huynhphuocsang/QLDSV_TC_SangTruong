@@ -93,8 +93,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnReportTuition
             // 
-            this.btnReportTuition.Caption = "Học phí";
+            this.btnReportTuition.Caption = "Đóng học phí";
             this.btnReportTuition.Id = 2;
+            this.btnReportTuition.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReportTuition.ImageOptions.SvgImage")));
             this.btnReportTuition.Name = "btnReportTuition";
             this.btnReportTuition.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReportTuition_ItemClick);
             // 
@@ -123,7 +124,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.barBtnRegister.Caption = "Đăng ký lớp tín chỉ";
             this.barBtnRegister.Enabled = false;
             this.barBtnRegister.Id = 6;
-            this.barBtnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barBtnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnRegister.ImageOptions.SvgImage")));
             this.barBtnRegister.Name = "barBtnRegister";
             this.barBtnRegister.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barBtnRegister.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);

@@ -289,3 +289,4 @@ D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
 >>>>>>> ad510ab2964812aa6b419ac2354f81ba1009fa65
+D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formTuitionFee.resources
