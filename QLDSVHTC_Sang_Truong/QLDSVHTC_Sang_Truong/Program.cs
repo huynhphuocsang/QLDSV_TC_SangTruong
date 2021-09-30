@@ -48,7 +48,7 @@ namespace QLDSVHTC_Sang_Truong
 
 
 
-        public static int KetNoi()
+        public static int KetNoi(Boolean isShow = true)
         {
             if (Program.connstr != null && Program.conn.State == ConnectionState.Open)
                 Program.conn.Close();
@@ -63,7 +63,7 @@ namespace QLDSVHTC_Sang_Truong
             }
             catch (Exception e)
             {
-                XtraMessageBox.Show("Vui lòng xem lại user name và password\n" + e.Message, "Lỗi đăng nhập", MessageBoxButtons.OK);
+                if(isShow)  XtraMessageBox.Show("Vui lòng xem lại user name và password\n", "Lỗi đăng nhập", MessageBoxButtons.OK);
                 return 0;
             }
         }

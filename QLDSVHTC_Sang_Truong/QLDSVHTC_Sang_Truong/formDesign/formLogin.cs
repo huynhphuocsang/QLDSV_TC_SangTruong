@@ -14,7 +14,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
     public partial class formLogin : DevExpress.XtraEditors.XtraForm
     {
         private SqlConnection conn_publisher = new SqlConnection();
-        private String regexStudent = "N(([0-1][1-9])|([2][0]))[a-zA-Z]{4}\\d{3}";
+        String loginNameSV = "";
+        String passSV = "";
+        //private String regexStudent = "N(([0-1][1-9])|([2][0]))[a-zA-Z]{4}\\d{3}";
         public Boolean isStudent = false;
 
         private void LayDSPM(String cmd)
@@ -82,51 +84,62 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 MessageBox.Show("Tài khoản và mật khẩu không hợp lệ", "", MessageBoxButtons.OK);
                 return;
             }
-            if (Regex.IsMatch(txtTK.Text.ToUpper(), regexStudent))
+            /*if (Regex.IsMatch(txtTK.Text.ToUpper(), regexStudent))
             {
                 Program.mlogin = "Student";
                 Program.pass = "123456";
                 isStudent = true;
+            }*/
+            Program.mlogin = txtTK.Text;
+            Program.pass = txtPass.Text;
+            if (Program.KetNoi(false) == 1)
+            {
+                String strCmd = "EXEC SP_DANGNHAP '" + Program.mlogin + "'";
+                Program.myReader = Program.ExecSqlDataReader(strCmd);
             }
             else
             {
-                Program.mlogin = txtTK.Text;
-                Program.pass = txtPass.Text;
+                Program.mlogin = "Student";
+                Program.pass = "123456";
+                loginNameSV = txtTK.Text;
+                passSV = txtPass.Text;
+
+                if(Program.KetNoi()==0) return;//site 3'
+
+                String strCmd = "EXEC SP_LOGIN_SV '" + Program.mlogin + "', '"+loginNameSV+"','"+passSV+"'";
+                Program.myReader = Program.ExecSqlDataReader(strCmd);
             }
-
-            if (Program.KetNoi() == 0) return;
-
+            
             Program.mPhongBan = cbPhongBan.SelectedIndex;
             Program.mloginDN = Program.mlogin;
             Program.passDN = Program.pass;
-            String strCmd = "EXEC SP_DANGNHAP '" + (!isStudent ? Program.mlogin : txtTK.Text) + "', '" + txtPass.Text + "'";// KT NẾU LÀ SV ĐNHAP THÌ SỬ DỤNG
-            Program.myReader = Program.ExecSqlDataReader(strCmd);
-            if (Program.myReader == null) return;
+            if (Program.myReader == null) return; 
+            
             Program.myReader.Read();
-
-            //THÔNG BÁO lỖI KHÔNG LOAD ĐC SINH VIÊN TỪ LỜI GỌI SP
-            if (Program.myReader.GetString(0) == null)
+            try
             {
-                MessageBox.Show("Tài khoản và mật khẩu không hợp lệ", "", MessageBoxButtons.OK);
+                Program.username = Program.myReader.GetString(0);
+                if (Convert.IsDBNull(Program.username))
+                {
+                    MessageBox.Show("Login không có quyền truy cập dữ liệu", "", MessageBoxButtons.OK);
+                    return;
+                }
+                Program.mHoten = Program.myReader.GetString(1);
+                Program.mGroup = Program.myReader.GetString(2);
+                Program.myReader.Close();
+                Program.frmChinh = new formMain();
+                Program.frmChinh.statusMa.Text = Program.username;
+                Program.frmChinh.statusTen.Text = Program.mHoten;
+                Program.frmChinh.statusNhom.Text = Program.mGroup;
+                this.Visible = false;
+                Program.frmChinh.Show();
+            }
+            catch (Exception ex)
+            {
                 return;
             }
-
-
-            Program.username = Program.myReader.GetString(0);
-            if (Convert.IsDBNull(Program.username))
-            {
-                MessageBox.Show("Login không có quyền truy cập dữ liệu", "", MessageBoxButtons.OK);
-                return;
-            }
-            Program.mHoten = Program.myReader.GetString(1);
-            Program.mGroup = Program.myReader.GetString(2);
-            Program.myReader.Close();
-            Program.frmChinh = new formMain();
-            Program.frmChinh.statusMa.Text = Program.username;
-            Program.frmChinh.statusTen.Text = Program.mHoten;
-            Program.frmChinh.statusNhom.Text = Program.mGroup;
-            this.Visible = false;
-            Program.frmChinh.Show();
+           
+            
         }
 
         private void cbPhongBan_SelectedIndexChanged(object sender, EventArgs e)
