@@ -44,7 +44,6 @@ namespace QLDSVHTC_Sang_Truong
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barBtnDky = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnHuy = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -226,8 +225,7 @@ namespace QLDSVHTC_Sang_Truong
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barBtnDky,
-            this.barBtnHuy});
+            this.barBtnDky});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 3;
             this.barManager1.StatusBar = this.bar3;
@@ -239,8 +237,7 @@ namespace QLDSVHTC_Sang_Truong
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnDky, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnHuy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnDky, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -252,13 +249,6 @@ namespace QLDSVHTC_Sang_Truong
             this.barBtnDky.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnDky.ImageOptions.SvgImage")));
             this.barBtnDky.Name = "barBtnDky";
             this.barBtnDky.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnDky_ItemClick);
-            // 
-            // barBtnHuy
-            // 
-            this.barBtnHuy.Caption = "Hủy";
-            this.barBtnHuy.Id = 1;
-            this.barBtnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnHuy.ImageOptions.SvgImage")));
-            this.barBtnHuy.Name = "barBtnHuy";
             // 
             // bar3
             // 
@@ -800,7 +790,6 @@ namespace QLDSVHTC_Sang_Truong
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barBtnDky;
-        private DevExpress.XtraBars.BarButtonItem barBtnHuy;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

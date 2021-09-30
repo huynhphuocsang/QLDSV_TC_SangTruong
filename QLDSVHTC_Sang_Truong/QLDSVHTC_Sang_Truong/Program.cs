@@ -16,7 +16,7 @@ namespace QLDSVHTC_Sang_Truong
         public static String connstr;
         public static SqlCommand sqlcmd = new SqlCommand();
         //=======================================================================================================mode lấy tk của user window
-        public static String constr_publisher = "Data Source=SANG; Initial Catalog=QLDSV_TC; Integrated Security=true";
+        public static String constr_publisher = "Data Source=DESKTOP-PCNAJ04\\MSSQL14; Initial Catalog=QLDSV_TC; Integrated Security=true";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -48,7 +48,7 @@ namespace QLDSVHTC_Sang_Truong
 
 
 
-        public static int KetNoi()
+        public static int KetNoi(Boolean isShow = true)
         {
             if (Program.connstr != null && Program.conn.State == ConnectionState.Open)
                 Program.conn.Close();
@@ -63,7 +63,7 @@ namespace QLDSVHTC_Sang_Truong
             }
             catch (Exception e)
             {
-                XtraMessageBox.Show("Vui lòng xem lại user name và password\n" + e.Message, "Lỗi đăng nhập", MessageBoxButtons.OK);
+                if(isShow)  XtraMessageBox.Show("Vui lòng xem lại user name và password\n", "Lỗi đăng nhập", MessageBoxButtons.OK);
                 return 0;
             }
         }
