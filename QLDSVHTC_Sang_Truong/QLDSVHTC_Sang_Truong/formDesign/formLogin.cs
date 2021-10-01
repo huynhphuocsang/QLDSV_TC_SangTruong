@@ -136,6 +136,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ", "", MessageBoxButtons.OK);
                 return;
             }
            
