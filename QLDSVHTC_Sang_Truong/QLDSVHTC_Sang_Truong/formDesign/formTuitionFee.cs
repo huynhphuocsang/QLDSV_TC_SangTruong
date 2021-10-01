@@ -13,8 +13,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 {
     public partial class formTuitionFee : DevExpress.XtraEditors.XtraForm
     {
-        
 
+
+        private string studentCode;
+        private string schoolYear;
+        private string semester; 
         public formTuitionFee()
         {
             InitializeComponent();
@@ -36,6 +39,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             gridView1.Columns["HOCKY"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["HOCPHI"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["PADED"].OptionsColumn.ReadOnly = true;
+
+            gridView2.Columns["NGAYDONG"].OptionsColumn.ReadOnly = true;
+            gridView2.Columns["SOTIENDONG"].OptionsColumn.ReadOnly = true;
         }
 
         private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
@@ -59,14 +65,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void lkStudent_EditValueChanged(object sender, EventArgs e)
         {
-            string studentCode = lkStudent.GetColumnValue("MASV").ToString();
+            studentCode = lkStudent.GetColumnValue("MASV").ToString();
             string classCode = lkStudent.GetColumnValue("MALOP").ToString();
             string fullName = lkStudent.GetColumnValue("HO").ToString() + " " + lkStudent.GetColumnValue("TEN").ToString();
 
             txtClass.Text = classCode;
             txtFullname.Text = fullName;
 
-            string temp = studentCode;
+            
             this.sP_PAY_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
             this.sP_PAY_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_PAY_TUITIONFEE, studentCode);
         }
@@ -137,40 +143,72 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void sP_PAY_TUITIONFEEGridControl_Click(object sender, EventArgs e)
         {
-            string masv = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
-            txtShoolYear.Text = masv; 
+           
         }
 
         private void sP_PAY_TUITIONFEEGridControl_MouseClick(object sender, MouseEventArgs e)
         {
-            string masv = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
-            txtShoolYear.Text = masv;
+            
         }
 
         private void sP_PAY_TUITIONFEEGridControl_MouseDown(object sender, MouseEventArgs e)
         {
-            string schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
-            string semester = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString();
-            string total = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCPHI").ToString();
-            string payed = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "PADED").ToString();
-            int remain = int.Parse(total) - int.Parse(payed); 
-            txtShoolYear.Text = schoolYear;
-            txtSemester.Text = semester;
-            nmMoney.Value = remain; 
+            
         }
 
         
 
         private void sP_PAY_TUITIONFEEGridControl_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
-            string semester = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString();
+            nmMoney.Maximum = 1000000000;
+            studentCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MASV").ToString();
+            schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
+            semester = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString();
             string total = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCPHI").ToString();
             string payed = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "PADED").ToString();
             int remain = int.Parse(total) - int.Parse(payed);
             txtShoolYear.Text = schoolYear;
             txtSemester.Text = semester;
             nmMoney.Value = remain;
+            nmMoney.Maximum = remain; 
+
+            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr; 
+            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_SHOW_DETAIL_TUITIONFEE, studentCode, schoolYear, new System.Nullable<int>((int.Parse(semester))));
+        }
+
+        private void fillToolStripButton_Click_4(object sender, EventArgs e)
+        {
+            try
+            {
+               
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now;
+            int money = Convert.ToInt32(nmMoney.Value);  
+            //đăng ký
+            String str_sp = "dbo.SP_PAY_TUITION_MONEY";
+            Program.sqlcmd = Program.conn.CreateCommand();
+            Program.sqlcmd.CommandType = CommandType.StoredProcedure;
+            Program.sqlcmd.CommandText = str_sp;
+            Program.sqlcmd.Parameters.Add("@Ma", SqlDbType.NChar).Value = this.studentCode;
+            Program.sqlcmd.Parameters.Add("@Nienkhoa", SqlDbType.NChar).Value = this.schoolYear;
+            Program.sqlcmd.Parameters.Add("@Hocky", SqlDbType.Int).Value = int.Parse (this.semester); 
+            Program.sqlcmd.Parameters.Add("@Ngaydong", SqlDbType.DateTime).Value = datetime; 
+            Program.sqlcmd.Parameters.Add("@Sotiendong", SqlDbType.Int).Value = money;
+            //cần phải mở kết nổi trước, nếu không đôi khi sẽ bị lỗi
+            Program.sqlcmd.ExecuteNonQuery();
+            Program.conn.Close();
+
+            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_SHOW_DETAIL_TUITIONFEE, studentCode, schoolYear, new System.Nullable<int>((int.Parse(semester))));
         }
     }
 }
