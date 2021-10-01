@@ -43,13 +43,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnReportTuition_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(ReportTuitionFee));
+            Form frm = this.CheckExists(typeof(formTuitionFee));
             if (frm != null) frm.Activate();
             else
             {
-                Program.tutionFee = new ReportTuitionFee(); 
-                Program.tutionFee.MdiParent = this;
-                Program.tutionFee.Show();
+                formTuitionFee frmTuition = new formTuitionFee(); 
+                frmTuition.MdiParent = this;
+                frmTuition.Show(); 
             }
         }
         private Form CheckExists(Type ftype)
