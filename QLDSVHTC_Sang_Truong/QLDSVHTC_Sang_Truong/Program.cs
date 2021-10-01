@@ -41,6 +41,8 @@ namespace QLDSVHTC_Sang_Truong
         public static ReportTuitionFee tutionFee;
         public static formClassRegistration frmRegister;
 
+        public static int chiPhi = 480000;  //tiền học/1 tín
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -90,7 +91,7 @@ namespace QLDSVHTC_Sang_Truong
             //lấy mã lớp tín chỉ
             String maLTC= gridViewSpLoadRegister.GetRowCellValue(gridViewSpLoadRegister.FocusedRowHandle, "MALTC").ToString();
             
-            //so sánh vs danh sách đã đăng ký để kt trùng
+           /* //so sánh vs danh sách đã đăng ký để kt trùng
             for (int i = 0; i < bdsSP_DS_DKY_SV.Count; i++)
             {
                 DataRow dr = gridView1.GetDataRow(i);
@@ -100,7 +101,7 @@ namespace QLDSVHTC_Sang_Truong
                     MessageBox.Show("Sinh viên đã đăng ký môn này");
                     return;
                 }
-            }
+            }*/
 
             //đăng ký
             String str_sp = "dbo.SP_DKY_LOPTINCHI";
@@ -109,10 +110,22 @@ namespace QLDSVHTC_Sang_Truong
             Program.sqlcmd.CommandText = str_sp;
             Program.sqlcmd.Parameters.Add("@MALTC", SqlDbType.Int).Value = maLTC;
             Program.sqlcmd.Parameters.Add("@MASV", SqlDbType.NChar).Value = Program.frmChinh.statusMa.Text;
+            Program.sqlcmd.Parameters.Add("@CHIPHI", SqlDbType.Int).Value = Program.chiPhi;
 
-            Program.sqlcmd.ExecuteNonQuery();
-            Program.conn.Close();
-
+            try
+            {
+                Program.sqlcmd.ExecuteNonQuery();
+               
+            }
+            catch (SqlException ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Lỗi đăng ký", MessageBoxButtons.OK);
+            }
+            finally
+            {
+                Program.conn.Close();
+            }
+            
             execSP_DS_DKY_SV();
         }
 
@@ -131,9 +144,21 @@ namespace QLDSVHTC_Sang_Truong
             Program.sqlcmd.CommandText = str_sp;
             Program.sqlcmd.Parameters.Add("@MALTC", SqlDbType.Int).Value = maLTC;
             Program.sqlcmd.Parameters.Add("@MASV", SqlDbType.NChar).Value = Program.frmChinh.statusMa.Text;
+            Program.sqlcmd.Parameters.Add("@CHIPHI", SqlDbType.Int).Value = Program.chiPhi;
 
-            Program.sqlcmd.ExecuteNonQuery();
-            Program.conn.Close();
+            try 
+            {
+                Program.sqlcmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Lỗi hủy đăng ký", MessageBoxButtons.OK);
+            }
+            finally
+            {
+                Program.conn.Close();
+            }
+           
 
             execSP_DS_DKY_SV();
         }
