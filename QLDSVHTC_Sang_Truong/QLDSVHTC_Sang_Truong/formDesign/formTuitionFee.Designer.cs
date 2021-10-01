@@ -61,6 +61,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.nmMoney = new System.Windows.Forms.NumericUpDown();
             this.txtSemester = new DevExpress.XtraEditors.TextEdit();
             this.txtShoolYear = new DevExpress.XtraEditors.TextEdit();
+            this.sP_SHOW_DETAIL_TUITIONFEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet1TableAdapters.SP_SHOW_DETAIL_TUITIONFEETableAdapter();
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colNGAYDONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOTIENDONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFullname.Properties)).BeginInit();
@@ -76,6 +83,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.nmMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemester.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShoolYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_SHOW_DETAIL_TUITIONFEEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_SHOW_DETAIL_TUITIONFEEGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -237,10 +247,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.sP_PAY_TUITIONFEEGridControl.DataSource = this.sP_PAY_TUITIONFEEBindingSource;
             this.sP_PAY_TUITIONFEEGridControl.EmbeddedNavigator.ToolTip = "Double click để đóng học phí!";
             this.sP_PAY_TUITIONFEEGridControl.EmbeddedNavigator.ToolTipTitle = "Double click để đóng học phí!";
-            this.sP_PAY_TUITIONFEEGridControl.Location = new System.Drawing.Point(0, 236);
+            this.sP_PAY_TUITIONFEEGridControl.Location = new System.Drawing.Point(0, 282);
             this.sP_PAY_TUITIONFEEGridControl.MainView = this.gridView1;
             this.sP_PAY_TUITIONFEEGridControl.Name = "sP_PAY_TUITIONFEEGridControl";
-            this.sP_PAY_TUITIONFEEGridControl.Size = new System.Drawing.Size(797, 570);
+            this.sP_PAY_TUITIONFEEGridControl.Size = new System.Drawing.Size(1196, 544);
             this.sP_PAY_TUITIONFEEGridControl.TabIndex = 10;
             this.sP_PAY_TUITIONFEEGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -248,6 +258,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.gridView1.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colNIENKHOA,
             this.colHOCKY,
@@ -259,10 +275,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // colNIENKHOA
             // 
+            this.colNIENKHOA.AppearanceCell.Options.UseTextOptions = true;
+            this.colNIENKHOA.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNIENKHOA.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.colNIENKHOA.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNIENKHOA.AppearanceHeader.Options.UseBackColor = true;
             this.colNIENKHOA.AppearanceHeader.Options.UseFont = true;
+            this.colNIENKHOA.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNIENKHOA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNIENKHOA.Caption = "Niên khóa";
             this.colNIENKHOA.FieldName = "NIENKHOA";
             this.colNIENKHOA.MinWidth = 25;
@@ -273,10 +293,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // colHOCKY
             // 
+            this.colHOCKY.AppearanceCell.Options.UseTextOptions = true;
+            this.colHOCKY.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHOCKY.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.colHOCKY.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colHOCKY.AppearanceHeader.Options.UseBackColor = true;
             this.colHOCKY.AppearanceHeader.Options.UseFont = true;
+            this.colHOCKY.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHOCKY.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHOCKY.Caption = "Học kỳ";
             this.colHOCKY.FieldName = "HOCKY";
             this.colHOCKY.MinWidth = 25;
@@ -291,6 +315,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHOCPHI.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colHOCPHI.AppearanceHeader.Options.UseBackColor = true;
             this.colHOCPHI.AppearanceHeader.Options.UseFont = true;
+            this.colHOCPHI.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHOCPHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHOCPHI.Caption = "Số tiền cần đóng";
             this.colHOCPHI.FieldName = "HOCPHI";
             this.colHOCPHI.MinWidth = 25;
@@ -305,6 +331,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colPADED.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colPADED.AppearanceHeader.Options.UseBackColor = true;
             this.colPADED.AppearanceHeader.Options.UseFont = true;
+            this.colPADED.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPADED.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPADED.Caption = "Số tiền đã đóng";
             this.colPADED.FieldName = "PADED";
             this.colPADED.MinWidth = 25;
@@ -315,6 +343,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.btnPay);
             this.panelControl2.Controls.Add(this.label6);
             this.panelControl2.Controls.Add(this.label5);
             this.panelControl2.Controls.Add(this.label4);
@@ -330,7 +359,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 78);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1515, 152);
+            this.panelControl2.Size = new System.Drawing.Size(1515, 204);
             this.panelControl2.TabIndex = 11;
             // 
             // label6
@@ -388,11 +417,92 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.txtShoolYear.Size = new System.Drawing.Size(152, 22);
             this.txtShoolYear.TabIndex = 10;
             // 
+            // sP_SHOW_DETAIL_TUITIONFEEBindingSource
+            // 
+            this.sP_SHOW_DETAIL_TUITIONFEEBindingSource.DataMember = "SP_SHOW_DETAIL_TUITIONFEE";
+            this.sP_SHOW_DETAIL_TUITIONFEEBindingSource.DataSource = this.qLDSV_TCDataSet1;
+            // 
+            // sP_SHOW_DETAIL_TUITIONFEETableAdapter
+            // 
+            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.ClearBeforeFill = true;
+            // 
+            // sP_SHOW_DETAIL_TUITIONFEEGridControl
+            // 
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.DataSource = this.sP_SHOW_DETAIL_TUITIONFEEBindingSource;
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.Location = new System.Drawing.Point(803, 282);
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.MainView = this.gridView2;
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.Name = "sP_SHOW_DETAIL_TUITIONFEEGridControl";
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.Size = new System.Drawing.Size(712, 544);
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.TabIndex = 12;
+            this.sP_SHOW_DETAIL_TUITIONFEEGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Appearance.GroupPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.gridView2.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.GroupPanel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.gridView2.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView2.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView2.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colNGAYDONG,
+            this.colSOTIENDONG});
+            this.gridView2.GridControl = this.sP_SHOW_DETAIL_TUITIONFEEGridControl;
+            this.gridView2.GroupPanelText = "Chi tiêt đóng học phí";
+            this.gridView2.Name = "gridView2";
+            // 
+            // colNGAYDONG
+            // 
+            this.colNGAYDONG.AppearanceCell.Options.UseTextOptions = true;
+            this.colNGAYDONG.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNGAYDONG.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colNGAYDONG.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNGAYDONG.AppearanceHeader.Options.UseBackColor = true;
+            this.colNGAYDONG.AppearanceHeader.Options.UseFont = true;
+            this.colNGAYDONG.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNGAYDONG.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNGAYDONG.Caption = "Ngày đóng";
+            this.colNGAYDONG.FieldName = "NGAYDONG";
+            this.colNGAYDONG.MinWidth = 25;
+            this.colNGAYDONG.Name = "colNGAYDONG";
+            this.colNGAYDONG.Visible = true;
+            this.colNGAYDONG.VisibleIndex = 0;
+            this.colNGAYDONG.Width = 94;
+            // 
+            // colSOTIENDONG
+            // 
+            this.colSOTIENDONG.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSOTIENDONG.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSOTIENDONG.AppearanceHeader.Options.UseBackColor = true;
+            this.colSOTIENDONG.AppearanceHeader.Options.UseFont = true;
+            this.colSOTIENDONG.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSOTIENDONG.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSOTIENDONG.Caption = "Số tiền đóng";
+            this.colSOTIENDONG.FieldName = "SOTIENDONG";
+            this.colSOTIENDONG.MinWidth = 25;
+            this.colSOTIENDONG.Name = "colSOTIENDONG";
+            this.colSOTIENDONG.Visible = true;
+            this.colSOTIENDONG.VisibleIndex = 1;
+            this.colSOTIENDONG.Width = 94;
+            // 
+            // btnPay
+            // 
+            this.btnPay.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPay.ImageOptions.SvgImage")));
+            this.btnPay.Location = new System.Drawing.Point(1211, 138);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(130, 45);
+            this.btnPay.TabIndex = 13;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // formTuitionFee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1515, 803);
+            this.ClientSize = new System.Drawing.Size(1515, 826);
+            this.Controls.Add(this.sP_SHOW_DETAIL_TUITIONFEEGridControl);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.sP_PAY_TUITIONFEEGridControl);
             this.Controls.Add(this.panelControl1);
@@ -415,6 +525,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.nmMoney)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemester.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShoolYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_SHOW_DETAIL_TUITIONFEEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_SHOW_DETAIL_TUITIONFEEGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,5 +564,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.BindingSource sP_SHOW_DETAIL_TUITIONFEEBindingSource;
+        private QLDSV_TCDataSet1TableAdapters.SP_SHOW_DETAIL_TUITIONFEETableAdapter sP_SHOW_DETAIL_TUITIONFEETableAdapter;
+        private DevExpress.XtraGrid.GridControl sP_SHOW_DETAIL_TUITIONFEEGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colNGAYDONG;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOTIENDONG;
+        private DevExpress.XtraEditors.SimpleButton btnPay;
     }
 }
