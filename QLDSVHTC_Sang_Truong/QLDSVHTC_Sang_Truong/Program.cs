@@ -16,7 +16,7 @@ namespace QLDSVHTC_Sang_Truong
         public static String connstr;
         public static SqlCommand sqlcmd = new SqlCommand();
         //=======================================================================================================mode lấy tk của user window
-        public static String constr_publisher = "Data Source=SANG; Initial Catalog=QLDSV_TC; Integrated Security=true";
+        public static String constr_publisher = "Data Source=DESKTOP-PCNAJ04\\MSSQL14; Initial Catalog=QLDSV_TC; Integrated Security=true";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -40,6 +40,8 @@ namespace QLDSVHTC_Sang_Truong
         public static formDesign.formClasses frmClasses;
         public static ReportTuitionFee tutionFee;
         public static formClassRegistration frmRegister;
+
+        public static int chiPhi = 480000;  //tiền học/1 tín
 
         /// <summary>
         /// The main entry point for the application.
