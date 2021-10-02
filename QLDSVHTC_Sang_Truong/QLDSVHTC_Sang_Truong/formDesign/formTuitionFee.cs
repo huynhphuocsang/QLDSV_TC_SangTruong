@@ -208,7 +208,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (dialog == DialogResult.Yes)
             {
                 DateTime datetime = DateTime.Now;
-
+                if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
                 //đăng ký
                 String str_sp = "dbo.SP_PAY_TUITION_MONEY";
                 Program.sqlcmd = Program.conn.CreateCommand();
@@ -258,7 +258,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 string total = view.GetRowCellDisplayText(e.RowHandle, view.Columns["HOCPHI"]);
                 string payed = view.GetRowCellDisplayText(e.RowHandle, view.Columns["PADED"]);
-                int remain = int.Parse(total) - int.Parse(payed);
+                int remain = int.Parse(total.Replace(",","")) - int.Parse(payed.Replace(",", ""));
                 if (remain != 0)
                 {
                     e.Appearance.BackColor = Color.FromArgb(150, Color.LightCoral);
