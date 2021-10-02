@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Views.Grid; 
 
 namespace QLDSVHTC_Sang_Truong.formDesign
 {
@@ -15,9 +16,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
     {
 
 
-        private string studentCode;
+        private string studentCode="";
         private string schoolYear;
-        private string semester; 
+        private string semester;
+        private string fullName; 
         public formTuitionFee()
         {
             InitializeComponent();
@@ -42,6 +44,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             gridView2.Columns["NGAYDONG"].OptionsColumn.ReadOnly = true;
             gridView2.Columns["SOTIENDONG"].OptionsColumn.ReadOnly = true;
+            btnPay.Enabled = false; 
         }
 
         private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
@@ -67,7 +70,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             studentCode = lkStudent.GetColumnValue("MASV").ToString();
             string classCode = lkStudent.GetColumnValue("MALOP").ToString();
-            string fullName = lkStudent.GetColumnValue("HO").ToString() + " " + lkStudent.GetColumnValue("TEN").ToString();
+            fullName = lkStudent.GetColumnValue("HO").ToString() + " " + lkStudent.GetColumnValue("TEN").ToString();
 
             txtClass.Text = classCode;
             txtFullname.Text = fullName;
@@ -170,7 +173,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             txtShoolYear.Text = schoolYear;
             txtSemester.Text = semester;
             nmMoney.Value = remain;
-            nmMoney.Maximum = remain; 
+            nmMoney.Maximum = remain;
+            if (nmMoney.Value == 0)
+            {
+                btnPay.Enabled = false;
+            }
+            else
+            {
+                btnPay.Enabled = true; 
+            }
 
             this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr; 
             this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_SHOW_DETAIL_TUITIONFEE, studentCode, schoolYear, new System.Nullable<int>((int.Parse(semester))));
@@ -191,24 +202,71 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            DateTime datetime = DateTime.Now;
-            int money = Convert.ToInt32(nmMoney.Value);  
-            //đăng ký
-            String str_sp = "dbo.SP_PAY_TUITION_MONEY";
-            Program.sqlcmd = Program.conn.CreateCommand();
-            Program.sqlcmd.CommandType = CommandType.StoredProcedure;
-            Program.sqlcmd.CommandText = str_sp;
-            Program.sqlcmd.Parameters.Add("@Ma", SqlDbType.NChar).Value = this.studentCode;
-            Program.sqlcmd.Parameters.Add("@Nienkhoa", SqlDbType.NChar).Value = this.schoolYear;
-            Program.sqlcmd.Parameters.Add("@Hocky", SqlDbType.Int).Value = int.Parse (this.semester); 
-            Program.sqlcmd.Parameters.Add("@Ngaydong", SqlDbType.DateTime).Value = datetime; 
-            Program.sqlcmd.Parameters.Add("@Sotiendong", SqlDbType.Int).Value = money;
-            //cần phải mở kết nổi trước, nếu không đôi khi sẽ bị lỗi
-            Program.sqlcmd.ExecuteNonQuery();
-            Program.conn.Close();
+            int money = Convert.ToInt32(nmMoney.Value);
+            DialogResult dialog = XtraMessageBox.Show("Bạn cần kiểm tra trước khi thanh toán:\n\nMSSV:"+studentCode+"\n\nHọ và tên:"+fullName+" \n\nSố tiền thanh toán: "+ String.Format("{0:n0}",money)+" VND"
+                , "Thông báo!", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                DateTime datetime = DateTime.Now;
 
-            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
-            this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_SHOW_DETAIL_TUITIONFEE, studentCode, schoolYear, new System.Nullable<int>((int.Parse(semester))));
+                //đăng ký
+                String str_sp = "dbo.SP_PAY_TUITION_MONEY";
+                Program.sqlcmd = Program.conn.CreateCommand();
+                Program.sqlcmd.CommandType = CommandType.StoredProcedure;
+                Program.sqlcmd.CommandText = str_sp;
+                Program.sqlcmd.Parameters.Add("@Ma", SqlDbType.NChar).Value = this.studentCode;
+                Program.sqlcmd.Parameters.Add("@Nienkhoa", SqlDbType.NChar).Value = this.schoolYear;
+                Program.sqlcmd.Parameters.Add("@Hocky", SqlDbType.Int).Value = int.Parse(this.semester);
+                Program.sqlcmd.Parameters.Add("@Ngaydong", SqlDbType.DateTime).Value = datetime;
+                Program.sqlcmd.Parameters.Add("@Sotiendong", SqlDbType.Int).Value = money;
+                //cần phải mở kết nổi trước, nếu không đôi khi sẽ bị lỗi
+                Program.sqlcmd.ExecuteNonQuery();
+                Program.conn.Close();
+
+                //reload: 
+                this.sP_PAY_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
+                this.sP_PAY_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_PAY_TUITIONFEE, studentCode);
+                this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
+                this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_SHOW_DETAIL_TUITIONFEE, studentCode, schoolYear, new System.Nullable<int>((int.Parse(semester))));
+            }
+            else
+            {
+                DialogResult dialog2 = XtraMessageBox.Show("Thao tác thanh toán đã hủy!", "Thông báo!", MessageBoxButtons.OK);
+            }
+
+            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtShoolYear.Text = "";
+            txtSemester.Text = "";
+            nmMoney.Value = 0;
+            btnPay.Enabled = false;
+        }
+
+        
+        private void sP_PAY_TUITIONFEEGridControl_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridView1_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle >= 0)
+            {
+                string total = view.GetRowCellDisplayText(e.RowHandle, view.Columns["HOCPHI"]);
+                string payed = view.GetRowCellDisplayText(e.RowHandle, view.Columns["PADED"]);
+                int remain = int.Parse(total) - int.Parse(payed);
+                if (remain != 0)
+                {
+                    e.Appearance.BackColor = Color.FromArgb(150, Color.LightCoral);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.LightCoral);
+                }
+            }
+
+
         }
     }
 }

@@ -185,7 +185,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lOPBindingNavigator.Name = "lOPBindingNavigator";
             this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 27);
+            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 31);
             this.lOPBindingNavigator.TabIndex = 2;
             this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -202,7 +202,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -310,7 +310,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // btnReload
             // 
             this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(29, 28);
@@ -321,10 +320,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.lOPGridControl.DataSource = this.lOPBindingSource;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 131);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(712, 535);
+            this.lOPGridControl.Size = new System.Drawing.Size(712, 531);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -628,7 +627,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panelControl1.Controls.Add(this.btnDeleteSV);
             this.panelControl1.Controls.Add(this.btnAddSV);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(712, 127);
+            this.panelControl1.Location = new System.Drawing.Point(712, 131);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(824, 57);
             this.panelControl1.TabIndex = 4;
