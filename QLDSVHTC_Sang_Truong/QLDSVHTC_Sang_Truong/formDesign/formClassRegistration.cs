@@ -49,7 +49,7 @@ namespace QLDSVHTC_Sang_Truong
             {
                 this.qLDSV_TCDataSet.EnforceConstraints = false;
                 this.sP_DS_DKY_SVTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sP_DS_DKY_SVTableAdapter.Fill(this.qLDSV_TCDataSet.SP_DS_DKY_SV, Program.frmChinh.statusMa.Text);
+                this.sP_DS_DKY_SVTableAdapter.Fill(this.qLDSV_TCDataSet.SP_DS_DKY_SV, Program.frmChinh.statusMa.Text, cbPhase.Text, new System.Nullable<int>(((int)(System.Convert.ChangeType(nbSemester.Value, typeof(int))))));
             }
             catch (System.Exception ex)
             {
@@ -61,11 +61,13 @@ namespace QLDSVHTC_Sang_Truong
         private void nbSemester_ValueChanged(object sender, EventArgs e)
         {
             execSP_LOAD_REGISTER_INFOR();
+            execSP_DS_DKY_SV();
         }
 
         private void cbPhase_EditValueChanged_1(object sender, EventArgs e)
         {
             execSP_LOAD_REGISTER_INFOR();
+            execSP_DS_DKY_SV();
         }
 
         private void gridConSp_LOAD_REGISTER_INFOR_Click(object sender, EventArgs e)
@@ -152,7 +154,7 @@ namespace QLDSVHTC_Sang_Truong
             }
             catch (SqlException ex)
             {
-                XtraMessageBox.Show(ex.Message, "Lỗi hủy đăng ký", MessageBoxButtons.OK);
+                XtraMessageBox.Show(ex.ToString(), "Lỗi hủy đăng ký", MessageBoxButtons.OK);
             }
             finally
             {

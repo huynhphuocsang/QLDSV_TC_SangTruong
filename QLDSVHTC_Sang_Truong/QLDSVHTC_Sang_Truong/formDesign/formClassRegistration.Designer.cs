@@ -717,19 +717,19 @@ namespace QLDSVHTC_Sang_Truong
             this.xoaToolStripMenuItem,
             this.chiTietLopToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(152, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // xoaToolStripMenuItem
             // 
             this.xoaToolStripMenuItem.Name = "xoaToolStripMenuItem";
-            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
-            this.xoaToolStripMenuItem.Text = "Xóa";
+            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.xoaToolStripMenuItem.Text = "Hủy đăng ký";
             this.xoaToolStripMenuItem.Click += new System.EventHandler(this.xoaToolStripMenuItem_Click);
             // 
             // chiTietLopToolStripMenuItem
             // 
             this.chiTietLopToolStripMenuItem.Name = "chiTietLopToolStripMenuItem";
-            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.chiTietLopToolStripMenuItem.Text = "Chi tiết lớp";
             // 
             // formClassRegistration
