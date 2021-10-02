@@ -55,6 +55,7 @@ namespace QLDSVHTC_Sang_Truong
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            
         }
 
 
@@ -78,7 +79,7 @@ namespace QLDSVHTC_Sang_Truong
 
         private void gridViewSpLoadRegister_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-           lbDebug.Text= gridViewSpLoadRegister.GetRowCellValue(gridViewSpLoadRegister.FocusedRowHandle, "MALTC").ToString();
+           //lbDebug.Text= gridViewSpLoadRegister.GetRowCellValue(gridViewSpLoadRegister.FocusedRowHandle, "MALTC").ToString();
         }
 
         private void barBtnDky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

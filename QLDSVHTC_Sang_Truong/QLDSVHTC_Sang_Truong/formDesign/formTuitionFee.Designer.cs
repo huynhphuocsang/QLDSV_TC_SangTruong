@@ -194,6 +194,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHOCPHI.AppearanceHeader.Options.UseTextOptions = true;
             this.colHOCPHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHOCPHI.Caption = "Học phí";
+            this.colHOCPHI.DisplayFormat.FormatString = "n0";
+            this.colHOCPHI.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colHOCPHI.FieldName = "HOCPHI";
             this.colHOCPHI.MinWidth = 25;
             this.colHOCPHI.Name = "colHOCPHI";
@@ -210,8 +212,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colPADED.AppearanceHeader.Options.UseTextOptions = true;
             this.colPADED.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPADED.Caption = "Số tiền đã đóng";
+            this.colPADED.DisplayFormat.FormatString = "n0";
+            this.colPADED.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPADED.FieldName = "PADED";
-            this.colPADED.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPADED.MinWidth = 25;
             this.colPADED.Name = "colPADED";
             this.colPADED.Visible = true;
