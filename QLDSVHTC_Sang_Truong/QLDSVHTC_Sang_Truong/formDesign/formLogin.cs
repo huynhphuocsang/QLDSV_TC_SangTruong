@@ -128,7 +128,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 Program.mGroup = Program.myReader.GetString(2);
                 Program.myReader.Close();
                 Program.frmChinh = new formMain();
-                Program.frmChinh.statusMa.Text = Program.username;
+                Program.frmChinh.statusMa.Text = Program.username.ToUpper();
                 Program.frmChinh.statusTen.Text = Program.mHoten;
                 Program.frmChinh.statusNhom.Text = Program.mGroup;
                 this.Visible = false;
@@ -136,6 +136,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ", "", MessageBoxButtons.OK);
                 return;
             }
            
