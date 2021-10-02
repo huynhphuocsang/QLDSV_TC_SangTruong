@@ -154,7 +154,7 @@ namespace QLDSVHTC_Sang_Truong
             }
             catch (SqlException ex)
             {
-                XtraMessageBox.Show(ex.ToString(), "Lỗi hủy đăng ký", MessageBoxButtons.OK);
+                XtraMessageBox.Show(ex.Message, "Lỗi hủy đăng ký", MessageBoxButtons.OK);
             }
             finally
             {
