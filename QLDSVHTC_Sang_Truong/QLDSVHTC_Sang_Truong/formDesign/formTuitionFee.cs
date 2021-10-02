@@ -228,6 +228,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 this.sP_PAY_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_PAY_TUITIONFEE, studentCode);
                 this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
                 this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_SHOW_DETAIL_TUITIONFEE, studentCode, schoolYear, new System.Nullable<int>((int.Parse(semester))));
+
+
             }
             else
             {
