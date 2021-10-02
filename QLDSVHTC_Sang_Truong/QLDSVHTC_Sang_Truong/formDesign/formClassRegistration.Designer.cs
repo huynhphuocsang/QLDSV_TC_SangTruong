@@ -66,7 +66,6 @@ namespace QLDSVHTC_Sang_Truong
             this.colNHOM2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOSV1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.bdsSP_DS_DKY_SV = new System.Windows.Forms.BindingSource(this.components);
             this.sP_DS_DKY_SVTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.SP_DS_DKY_SVTableAdapter();
             this.sP_DS_DKY_SVGridControl = new DevExpress.XtraGrid.GridControl();
@@ -77,7 +76,6 @@ namespace QLDSVHTC_Sang_Truong
             this.colHOCKY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNIENKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTONGTIET = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label3 = new System.Windows.Forms.Label();
             this.colTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNHOM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -432,6 +430,10 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // gridViewSpLoadRegister
             // 
+            this.gridViewSpLoadRegister.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridViewSpLoadRegister.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridViewSpLoadRegister.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridViewSpLoadRegister.Appearance.GroupPanel.Options.UseForeColor = true;
             this.gridViewSpLoadRegister.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAMH,
             this.colTENMH2,
@@ -439,17 +441,20 @@ namespace QLDSVHTC_Sang_Truong
             this.colHOTEN1,
             this.colSOSV1});
             this.gridViewSpLoadRegister.GridControl = this.gridConSp_LOAD_REGISTER_INFOR;
+            this.gridViewSpLoadRegister.GroupPanelText = "DANH SÁCH LỚP TÍN CHỈ";
             this.gridViewSpLoadRegister.Name = "gridViewSpLoadRegister";
             this.gridViewSpLoadRegister.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewSpLoadRegister_RowClick);
             // 
             // colMAMH
             // 
-            this.colMAMH.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colMAMH.AppearanceCell.Options.UseFont = true;
             this.colMAMH.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colMAMH.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colMAMH.AppearanceHeader.Options.UseBackColor = true;
             this.colMAMH.AppearanceHeader.Options.UseFont = true;
+            this.colMAMH.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMAMH.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMAMH.Caption = "Mã MH";
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
@@ -461,12 +466,14 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // colTENMH2
             // 
-            this.colTENMH2.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENMH2.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colTENMH2.AppearanceCell.Options.UseFont = true;
             this.colTENMH2.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colTENMH2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENMH2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colTENMH2.AppearanceHeader.Options.UseBackColor = true;
             this.colTENMH2.AppearanceHeader.Options.UseFont = true;
+            this.colTENMH2.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTENMH2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTENMH2.Caption = "Tên MH";
             this.colTENMH2.FieldName = "TENMH";
             this.colTENMH2.MinWidth = 25;
@@ -478,12 +485,14 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // colNHOM2
             // 
-            this.colNHOM2.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNHOM2.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNHOM2.AppearanceCell.Options.UseFont = true;
             this.colNHOM2.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colNHOM2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNHOM2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNHOM2.AppearanceHeader.Options.UseBackColor = true;
             this.colNHOM2.AppearanceHeader.Options.UseFont = true;
+            this.colNHOM2.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNHOM2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNHOM2.Caption = "Nhóm";
             this.colNHOM2.FieldName = "NHOM";
             this.colNHOM2.MinWidth = 25;
@@ -495,12 +504,14 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // colHOTEN1
             // 
-            this.colHOTEN1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHOTEN1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colHOTEN1.AppearanceCell.Options.UseFont = true;
             this.colHOTEN1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colHOTEN1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHOTEN1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colHOTEN1.AppearanceHeader.Options.UseBackColor = true;
             this.colHOTEN1.AppearanceHeader.Options.UseFont = true;
+            this.colHOTEN1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHOTEN1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHOTEN1.Caption = "Giảng viên";
             this.colHOTEN1.FieldName = "HOTEN";
             this.colHOTEN1.MinWidth = 25;
@@ -512,12 +523,14 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // colSOSV1
             // 
-            this.colSOSV1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSOSV1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colSOSV1.AppearanceCell.Options.UseFont = true;
             this.colSOSV1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colSOSV1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSOSV1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colSOSV1.AppearanceHeader.Options.UseBackColor = true;
             this.colSOSV1.AppearanceHeader.Options.UseFont = true;
+            this.colSOSV1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSOSV1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSOSV1.Caption = "Số đăng ký";
             this.colSOSV1.FieldName = "SOSV";
             this.colSOSV1.MinWidth = 25;
@@ -526,16 +539,6 @@ namespace QLDSVHTC_Sang_Truong
             this.colSOSV1.Visible = true;
             this.colSOSV1.VisibleIndex = 4;
             this.colSOSV1.Width = 94;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-4, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "                 DANH SÁCH LỚP TÍN CHỈ             ";
             // 
             // bdsSP_DS_DKY_SV
             // 
@@ -561,6 +564,12 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAMH1,
             this.colTENMH1,
@@ -569,18 +578,21 @@ namespace QLDSVHTC_Sang_Truong
             this.colNIENKHOA,
             this.colTONGTIET});
             this.gridView1.GridControl = this.sP_DS_DKY_SVGridControl;
+            this.gridView1.GroupPanelText = "DANH SÁCH MÔN HỌC ĐÃ ĐĂNG KÝ";
             this.gridView1.Name = "gridView1";
             this.gridView1.RowDeleted += new DevExpress.Data.RowDeletedEventHandler(this.gridView1_RowDeleted);
             this.gridView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridView1_MouseUp);
             // 
             // colMAMH1
             // 
-            this.colMAMH1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.colMAMH1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
             this.colMAMH1.AppearanceCell.Options.UseFont = true;
             this.colMAMH1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colMAMH1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.colMAMH1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.colMAMH1.AppearanceHeader.Options.UseBackColor = true;
             this.colMAMH1.AppearanceHeader.Options.UseFont = true;
+            this.colMAMH1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMAMH1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMAMH1.Caption = "Mã MH";
             this.colMAMH1.FieldName = "MAMH";
             this.colMAMH1.MinWidth = 25;
@@ -588,16 +600,18 @@ namespace QLDSVHTC_Sang_Truong
             this.colMAMH1.OptionsColumn.AllowEdit = false;
             this.colMAMH1.Visible = true;
             this.colMAMH1.VisibleIndex = 0;
-            this.colMAMH1.Width = 94;
+            this.colMAMH1.Width = 248;
             // 
             // colTENMH1
             // 
-            this.colTENMH1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.colTENMH1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
             this.colTENMH1.AppearanceCell.Options.UseFont = true;
             this.colTENMH1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colTENMH1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.colTENMH1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.colTENMH1.AppearanceHeader.Options.UseBackColor = true;
             this.colTENMH1.AppearanceHeader.Options.UseFont = true;
+            this.colTENMH1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTENMH1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTENMH1.Caption = "Tên MH";
             this.colTENMH1.FieldName = "TENMH";
             this.colTENMH1.MinWidth = 25;
@@ -605,16 +619,20 @@ namespace QLDSVHTC_Sang_Truong
             this.colTENMH1.OptionsColumn.AllowEdit = false;
             this.colTENMH1.Visible = true;
             this.colTENMH1.VisibleIndex = 1;
-            this.colTENMH1.Width = 94;
+            this.colTENMH1.Width = 248;
             // 
             // colNHOM1
             // 
-            this.colNHOM1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.colNHOM1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
             this.colNHOM1.AppearanceCell.Options.UseFont = true;
+            this.colNHOM1.AppearanceCell.Options.UseTextOptions = true;
+            this.colNHOM1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNHOM1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colNHOM1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.colNHOM1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.colNHOM1.AppearanceHeader.Options.UseBackColor = true;
             this.colNHOM1.AppearanceHeader.Options.UseFont = true;
+            this.colNHOM1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNHOM1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNHOM1.Caption = "Nhóm";
             this.colNHOM1.FieldName = "NHOM";
             this.colNHOM1.MinWidth = 25;
@@ -622,16 +640,18 @@ namespace QLDSVHTC_Sang_Truong
             this.colNHOM1.OptionsColumn.AllowEdit = false;
             this.colNHOM1.Visible = true;
             this.colNHOM1.VisibleIndex = 2;
-            this.colNHOM1.Width = 94;
+            this.colNHOM1.Width = 248;
             // 
             // colHOCKY
             // 
-            this.colHOCKY.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.colHOCKY.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
             this.colHOCKY.AppearanceCell.Options.UseFont = true;
             this.colHOCKY.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colHOCKY.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.colHOCKY.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.colHOCKY.AppearanceHeader.Options.UseBackColor = true;
             this.colHOCKY.AppearanceHeader.Options.UseFont = true;
+            this.colHOCKY.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHOCKY.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHOCKY.Caption = "Học kỳ";
             this.colHOCKY.FieldName = "HOCKY";
             this.colHOCKY.MinWidth = 25;
@@ -639,16 +659,18 @@ namespace QLDSVHTC_Sang_Truong
             this.colHOCKY.OptionsColumn.AllowEdit = false;
             this.colHOCKY.Visible = true;
             this.colHOCKY.VisibleIndex = 5;
-            this.colHOCKY.Width = 94;
+            this.colHOCKY.Width = 260;
             // 
             // colNIENKHOA
             // 
-            this.colNIENKHOA.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.colNIENKHOA.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
             this.colNIENKHOA.AppearanceCell.Options.UseFont = true;
             this.colNIENKHOA.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colNIENKHOA.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.colNIENKHOA.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.colNIENKHOA.AppearanceHeader.Options.UseBackColor = true;
             this.colNIENKHOA.AppearanceHeader.Options.UseFont = true;
+            this.colNIENKHOA.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNIENKHOA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNIENKHOA.Caption = "Niên Khóa";
             this.colNIENKHOA.FieldName = "NIENKHOA";
             this.colNIENKHOA.MinWidth = 25;
@@ -656,16 +678,20 @@ namespace QLDSVHTC_Sang_Truong
             this.colNIENKHOA.OptionsColumn.AllowEdit = false;
             this.colNIENKHOA.Visible = true;
             this.colNIENKHOA.VisibleIndex = 4;
-            this.colNIENKHOA.Width = 94;
+            this.colNIENKHOA.Width = 248;
             // 
             // colTONGTIET
             // 
-            this.colTONGTIET.AppearanceCell.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.colTONGTIET.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
             this.colTONGTIET.AppearanceCell.Options.UseFont = true;
+            this.colTONGTIET.AppearanceCell.Options.UseTextOptions = true;
+            this.colTONGTIET.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTONGTIET.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colTONGTIET.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.colTONGTIET.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.colTONGTIET.AppearanceHeader.Options.UseBackColor = true;
             this.colTONGTIET.AppearanceHeader.Options.UseFont = true;
+            this.colTONGTIET.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTONGTIET.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTONGTIET.Caption = "Tổng số tiết";
             this.colTONGTIET.FieldName = "TONGTIET";
             this.colTONGTIET.MinWidth = 25;
@@ -673,17 +699,7 @@ namespace QLDSVHTC_Sang_Truong
             this.colTONGTIET.OptionsColumn.AllowEdit = false;
             this.colTONGTIET.Visible = true;
             this.colTONGTIET.VisibleIndex = 3;
-            this.colTONGTIET.Width = 94;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-4, 378);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(389, 21);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "                 DANH SÁCH LỚP ĐÃ ĐĂNG KÝ             ";
+            this.colTONGTIET.Width = 248;
             // 
             // colTENMH
             // 
@@ -717,19 +733,19 @@ namespace QLDSVHTC_Sang_Truong
             this.xoaToolStripMenuItem,
             this.chiTietLopToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 52);
             // 
             // xoaToolStripMenuItem
             // 
             this.xoaToolStripMenuItem.Name = "xoaToolStripMenuItem";
-            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.xoaToolStripMenuItem.Text = "Hủy đăng ký";
             this.xoaToolStripMenuItem.Click += new System.EventHandler(this.xoaToolStripMenuItem_Click);
             // 
             // chiTietLopToolStripMenuItem
             // 
             this.chiTietLopToolStripMenuItem.Name = "chiTietLopToolStripMenuItem";
-            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.chiTietLopToolStripMenuItem.Text = "Chi tiết lớp";
             // 
             // formClassRegistration
@@ -737,9 +753,7 @@ namespace QLDSVHTC_Sang_Truong
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 763);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.sP_DS_DKY_SVGridControl);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.gridConSp_LOAD_REGISTER_INFOR);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -800,10 +814,8 @@ namespace QLDSVHTC_Sang_Truong
         private DevExpress.XtraEditors.TextEdit tENMHTextEdit;
         private DevExpress.XtraEditors.TextEdit hOTENTextEdit;
         private System.Windows.Forms.Label lbDebug;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bdsSP_DS_DKY_SV;
         private QLDSV_TCDataSetTableAdapters.SP_DS_DKY_SVTableAdapter sP_DS_DKY_SVTableAdapter;
-        private System.Windows.Forms.Label label3;
         private DevExpress.XtraGrid.GridControl sP_DS_DKY_SVGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMAMH1;
