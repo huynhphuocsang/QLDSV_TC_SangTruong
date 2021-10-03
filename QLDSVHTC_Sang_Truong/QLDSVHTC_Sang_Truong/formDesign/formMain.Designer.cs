@@ -54,6 +54,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusMa = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnCreditClass = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -70,9 +71,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem1,
             this.btnLogout,
-            this.barBtnRegister});
+            this.barBtnRegister,
+            this.btnCreditClass});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 7;
+            this.ribbon.MaxItemId = 8;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -157,13 +159,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnLogout);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnCreditClass);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonPageGroup6
             // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnLogout);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
             // ribbonPage3
             // 
@@ -232,6 +234,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusNhom.Size = new System.Drawing.Size(50, 20);
             this.statusNhom.Text = "KHOA";
             // 
+            // btnCreditClass
+            // 
+            this.btnCreditClass.Caption = "Quản lý lớp tín chỉ";
+            this.btnCreditClass.Id = 7;
+            this.btnCreditClass.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreditClass.ImageOptions.SvgImage")));
+            this.btnCreditClass.Name = "btnCreditClass";
+            this.btnCreditClass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreditClass_ItemClick);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -283,5 +293,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barBtnRegister;
+        private DevExpress.XtraBars.BarButtonItem btnCreditClass;
     }
 }
