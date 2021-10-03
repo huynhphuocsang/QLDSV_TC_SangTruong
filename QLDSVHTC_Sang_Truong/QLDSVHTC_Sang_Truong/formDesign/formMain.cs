@@ -97,5 +97,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 Program.frmRegister.Show();
             }
         }
+
+        private void btnCreditClass_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formManageCreditClass));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formManageCreditClass form = new formManageCreditClass();
+                 form.MdiParent = this;
+                form.Show(); 
+            }
+        }
     }
 }
