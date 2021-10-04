@@ -30,6 +30,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formManageCreditClass));
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
             this.lOPTINCHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTINCHITableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.LOPTINCHITableAdapter();
@@ -39,18 +40,36 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNIENKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOCKY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lkSubjectEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colNHOM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOSVTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHUYLOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.fKLOPTINCHIMONHOCBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
+            this.cbSchoolYear = new System.Windows.Forms.ComboBox();
+            this.nmGroup = new System.Windows.Forms.NumericUpDown();
+            this.nmMinimumStudent = new System.Windows.Forms.NumericUpDown();
+            this.nmSemester = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.lkTeacher = new DevExpress.XtraEditors.LookUpEdit();
             this.gIANGVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbSubject = new System.Windows.Forms.ComboBox();
             this.mONHOCTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.MONHOCTableAdapter();
             this.fKLOPTINCHIMONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gIANGVIENTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.GIANGVIENTableAdapter();
@@ -59,10 +78,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkSubjectEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKLOPTINCHIMONHOCBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMinimumStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSemester)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkTeacher.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIANGVIENBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLOPTINCHIMONHOCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
@@ -97,13 +121,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.lOPTINCHIGridControl.DataSource = this.lOPTINCHIBindingSource;
             this.lOPTINCHIGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lOPTINCHIGridControl.Location = new System.Drawing.Point(0, 112);
+            this.lOPTINCHIGridControl.Location = new System.Drawing.Point(0, 211);
             this.lOPTINCHIGridControl.MainView = this.gridView1;
             this.lOPTINCHIGridControl.Name = "lOPTINCHIGridControl";
-            this.lOPTINCHIGridControl.Size = new System.Drawing.Size(1240, 500);
+            this.lOPTINCHIGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.lkSubjectEdit});
+            this.lOPTINCHIGridControl.Size = new System.Drawing.Size(1240, 401);
             this.lOPTINCHIGridControl.TabIndex = 1;
             this.lOPTINCHIGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.lOPTINCHIGridControl.Click += new System.EventHandler(this.lOPTINCHIGridControl_Click);
             // 
             // gridView1
             // 
@@ -134,7 +161,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNIENKHOA.AppearanceHeader.Options.UseBackColor = true;
             this.colNIENKHOA.AppearanceHeader.Options.UseFont = true;
             this.colNIENKHOA.Caption = "Niên khóa";
-            this.colNIENKHOA.FieldName = "Nienkhoa";
+            this.colNIENKHOA.FieldName = "NIENKHOA";
             this.colNIENKHOA.MinWidth = 25;
             this.colNIENKHOA.Name = "colNIENKHOA";
             this.colNIENKHOA.Visible = true;
@@ -162,12 +189,35 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAMH.AppearanceHeader.Options.UseBackColor = true;
             this.colMAMH.AppearanceHeader.Options.UseFont = true;
             this.colMAMH.Caption = "Mã môn ";
+            this.colMAMH.ColumnEdit = this.lkSubjectEdit;
+            this.colMAMH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
             this.colMAMH.Name = "colMAMH";
             this.colMAMH.Visible = true;
             this.colMAMH.VisibleIndex = 2;
             this.colMAMH.Width = 133;
+            // 
+            // lkSubjectEdit
+            // 
+            this.lkSubjectEdit.AutoHeight = false;
+            this.lkSubjectEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkSubjectEdit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MAMH", "Name1"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENMH", "Name2"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SOTIET_LT", "Name3"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SOTIET_TH", "Name4")});
+            this.lkSubjectEdit.DataSource = this.mONHOCBindingSource;
+            this.lkSubjectEdit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.lkSubjectEdit.DisplayMember = "TENMH";
+            this.lkSubjectEdit.Name = "lkSubjectEdit";
+            this.lkSubjectEdit.ValueMember = "MAMH";
+            // 
+            // mONHOCBindingSource
+            // 
+            this.mONHOCBindingSource.DataMember = "MONHOC";
+            this.mONHOCBindingSource.DataSource = this.qLDSV_TCDataSet;
             // 
             // colNHOM
             // 
@@ -239,22 +289,182 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHUYLOP.VisibleIndex = 7;
             this.colHUYLOP.Width = 159;
             // 
+            // fKLOPTINCHIMONHOCBindingSource1
+            // 
+            this.fKLOPTINCHIMONHOCBindingSource1.DataMember = "FK_LOPTINCHI_MONHOC";
+            this.fKLOPTINCHIMONHOCBindingSource1.DataSource = this.mONHOCBindingSource;
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.simpleButton5);
+            this.panel1.Controls.Add(this.simpleButton4);
+            this.panel1.Controls.Add(this.simpleButton3);
+            this.panel1.Controls.Add(this.simpleButton2);
+            this.panel1.Controls.Add(this.simpleButton1);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.cbDepartment);
+            this.panel1.Controls.Add(this.cbSchoolYear);
+            this.panel1.Controls.Add(this.nmGroup);
+            this.panel1.Controls.Add(this.nmMinimumStudent);
+            this.panel1.Controls.Add(this.nmSemester);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lkTeacher);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbSubject);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 111);
+            this.panel1.Size = new System.Drawing.Size(1240, 259);
             this.panel1.TabIndex = 2;
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
+            this.simpleButton5.Location = new System.Drawing.Point(537, 12);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(96, 38);
+            this.simpleButton5.TabIndex = 7;
+            this.simpleButton5.Text = "Reload";
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.simpleButton4.Location = new System.Drawing.Point(434, 12);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(97, 38);
+            this.simpleButton4.TabIndex = 7;
+            this.simpleButton4.Text = "Redo";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.simpleButton3.Location = new System.Drawing.Point(330, 12);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(98, 38);
+            this.simpleButton3.TabIndex = 7;
+            this.simpleButton3.Text = "Undo";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(230, 12);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(93, 38);
+            this.simpleButton2.TabIndex = 7;
+            this.simpleButton2.Text = "Xóa";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(12, 12);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(91, 38);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Text = "Lưu";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
+            this.btnAdd.Location = new System.Drawing.Point(109, 12);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(114, 38);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Thêm mới";
+            // 
+            // cbDepartment
+            // 
+            this.cbDepartment.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDepartment.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(514, 82);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(237, 32);
+            this.cbDepartment.TabIndex = 5;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // cbSchoolYear
+            // 
+            this.cbSchoolYear.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.lOPTINCHIBindingSource, "MALTC", true));
+            this.cbSchoolYear.FormattingEnabled = true;
+            this.cbSchoolYear.Items.AddRange(new object[] {
+            "2019-2020",
+            "2020-2021",
+            "2021-2022",
+            "2022-2023"});
+            this.cbSchoolYear.Location = new System.Drawing.Point(102, 155);
+            this.cbSchoolYear.Name = "cbSchoolYear";
+            this.cbSchoolYear.Size = new System.Drawing.Size(121, 24);
+            this.cbSchoolYear.TabIndex = 5;
+            this.cbSchoolYear.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // nmGroup
+            // 
+            this.nmGroup.Location = new System.Drawing.Point(1055, 228);
+            this.nmGroup.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmGroup.Name = "nmGroup";
+            this.nmGroup.Size = new System.Drawing.Size(76, 23);
+            this.nmGroup.TabIndex = 4;
+            this.nmGroup.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmGroup.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // nmMinimumStudent
+            // 
+            this.nmMinimumStudent.Location = new System.Drawing.Point(1055, 156);
+            this.nmMinimumStudent.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nmMinimumStudent.Name = "nmMinimumStudent";
+            this.nmMinimumStudent.Size = new System.Drawing.Size(76, 23);
+            this.nmMinimumStudent.TabIndex = 4;
+            this.nmMinimumStudent.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nmMinimumStudent.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // nmSemester
+            // 
+            this.nmSemester.Location = new System.Drawing.Point(102, 231);
+            this.nmSemester.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nmSemester.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmSemester.Name = "nmSemester";
+            this.nmSemester.Size = new System.Drawing.Size(76, 23);
+            this.nmSemester.TabIndex = 4;
+            this.nmSemester.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmSemester.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(658, 8);
+            this.label2.Location = new System.Drawing.Point(279, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 3;
@@ -262,7 +472,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // lkTeacher
             // 
-            this.lkTeacher.Location = new System.Drawing.Point(749, 5);
+            this.lkTeacher.Location = new System.Drawing.Point(370, 232);
             this.lkTeacher.Name = "lkTeacher";
             this.lkTeacher.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -270,7 +480,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lkTeacher.Properties.DisplayMember = "TEN";
             this.lkTeacher.Properties.NullText = "Chọn giảng viên";
             this.lkTeacher.Properties.ValueMember = "MAGV";
-            this.lkTeacher.Size = new System.Drawing.Size(277, 22);
+            this.lkTeacher.Size = new System.Drawing.Size(499, 22);
             this.lkTeacher.TabIndex = 2;
             this.lkTeacher.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.lkTeacher_CustomDisplayText);
             // 
@@ -279,31 +489,78 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gIANGVIENBindingSource.DataMember = "GIANGVIEN";
             this.gIANGVIENBindingSource.DataSource = this.qLDSV_TCDataSet;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(915, 231);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 17);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Mã nhóm";
+            this.label7.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(417, 74);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 40);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Khoa";
+            this.label6.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(915, 159);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Số sinh viên tối thiểu";
+            this.label5.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Niên khóa";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 234);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Học kỳ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(668, 76);
+            this.label1.Location = new System.Drawing.Point(289, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Môn học";
             // 
-            // comboBox1
+            // cbSubject
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.lOPTINCHIBindingSource, "MAMH", true));
-            this.comboBox1.DataSource = this.mONHOCBindingSource;
-            this.comboBox1.DisplayMember = "TENMH";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(749, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.ValueMember = "MAMH";
-            // 
-            // mONHOCBindingSource
-            // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.qLDSV_TCDataSet;
+            this.cbSubject.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.lOPTINCHIBindingSource, "MAMH", true));
+            this.cbSubject.DataSource = this.mONHOCBindingSource;
+            this.cbSubject.DisplayMember = "TENMH";
+            this.cbSubject.FormattingEnabled = true;
+            this.cbSubject.Location = new System.Drawing.Point(370, 155);
+            this.cbSubject.Name = "cbSubject";
+            this.cbSubject.Size = new System.Drawing.Size(121, 24);
+            this.cbSubject.TabIndex = 0;
+            this.cbSubject.ValueMember = "MAMH";
             // 
             // mONHOCTableAdapter
             // 
@@ -332,11 +589,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkSubjectEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKLOPTINCHIMONHOCBindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMinimumStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSemester)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkTeacher.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIANGVIENBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLOPTINCHIMONHOCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
@@ -362,7 +624,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingSource mONHOCBindingSource;
         private QLDSV_TCDataSetTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSubject;
         private System.Windows.Forms.BindingSource fKLOPTINCHIMONHOCBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource gIANGVIENBindingSource;
@@ -370,5 +632,23 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.LookUpEdit lkTeacher;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private System.Windows.Forms.ComboBox cbSchoolYear;
+        private System.Windows.Forms.NumericUpDown nmSemester;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nmMinimumStudent;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbDepartment;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.NumericUpDown nmGroup;
+        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lkSubjectEdit;
+        private System.Windows.Forms.BindingSource fKLOPTINCHIMONHOCBindingSource1;
     }
 }

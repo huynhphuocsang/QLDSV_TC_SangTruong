@@ -18,9 +18,18 @@
     <TableUISetting Name="GIANGVIEN">
       <ColumnUISettings>
         <ColumnUISetting Name="TEN">
+          <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v19.2" />
+            </ControlSetting></ControlSettings>
+        </ColumnUISetting>
+      </ColumnUISettings>
+    </TableUISetting>
+    <TableUISetting Name="LOPTINCHI">
+      <ColumnUISettings>
+        <ColumnUISetting Name="MAMH">
           <ControlSettings>
             <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v19.2" />
+              <BindableControlInfo Name="ComboBoxEdit" Type="DevExpress.XtraEditors.ComboBoxEdit" AssemblyName="DevExpress.XtraEditors.v19.2" />
             </ControlSetting>
           </ControlSettings>
         </ColumnUISetting>
