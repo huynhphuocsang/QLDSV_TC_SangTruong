@@ -109,5 +109,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 form.Show(); 
             }
         }
+
+        
     }
 }
