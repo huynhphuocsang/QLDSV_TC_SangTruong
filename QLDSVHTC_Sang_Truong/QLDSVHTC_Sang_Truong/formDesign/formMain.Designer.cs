@@ -54,6 +54,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusMa = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.barBtnScores = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -70,9 +71,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem1,
             this.btnLogout,
-            this.barBtnRegister});
+            this.barBtnRegister,
+            this.barBtnScores});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 7;
+            this.ribbon.MaxItemId = 10;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -162,8 +164,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // ribbonPageGroup6
             // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.barBtnScores);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
             // ribbonPage3
             // 
@@ -232,6 +234,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusNhom.Size = new System.Drawing.Size(50, 20);
             this.statusNhom.Text = "KHOA";
             // 
+            // barBtnScores
+            // 
+            this.barBtnScores.Caption = "Quản lý điểm sinh viên";
+            this.barBtnScores.Id = 9;
+            this.barBtnScores.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnScores.ImageOptions.SvgImage")));
+            this.barBtnScores.Name = "barBtnScores";
+            this.barBtnScores.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBtnScores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnScores_ItemClick);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -283,5 +294,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barBtnRegister;
+        private DevExpress.XtraBars.BarButtonItem barBtnScores;
     }
 }

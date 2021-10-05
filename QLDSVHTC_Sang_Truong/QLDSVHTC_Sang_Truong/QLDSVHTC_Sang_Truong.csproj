@@ -84,6 +84,12 @@
     <Compile Include="formDesign\formTuitionFee.Designer.cs">
       <DependentUpon>formTuitionFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\formScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\formScores.Designer.cs">
+      <DependentUpon>formScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="func.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formTuitionFee.resx">
       <DependentUpon>formTuitionFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\formScores.resx">
+      <DependentUpon>formScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
