@@ -155,6 +155,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.tableAdapterManager.LOPTINCHITableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
+            this.tableAdapterManager.SP_LOAD_LIST_SCORESTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // lOPBindingNavigator

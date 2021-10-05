@@ -192,4 +192,9 @@ D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\o
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
+<<<<<<< HEAD
+D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formScores.resources
+=======
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManageCreditClass.resources
+>>>>>>> 01f846b22a782dbcf340659304fda85865926073
+D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManageCreditClass.resources

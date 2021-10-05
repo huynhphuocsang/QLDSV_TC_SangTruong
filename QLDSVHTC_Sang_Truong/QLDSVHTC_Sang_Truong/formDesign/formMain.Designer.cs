@@ -56,6 +56,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusMa = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnScoresSV = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -73,9 +74,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.barButtonItem1,
             this.btnLogout,
             this.barBtnRegister,
-            this.btnCreditClass});
+            this.btnCreditClass,
+            this.btnScoresSV});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 9;
+            this.ribbon.MaxItemId = 10;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -157,8 +159,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup6});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Quản lý";
             // 
@@ -179,8 +181,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // ribbonPageGroup7
             // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnScoresSV);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "ribbonPageGroup7";
             // 
             // ribbonPage3
             // 
@@ -249,6 +251,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusNhom.Size = new System.Drawing.Size(50, 20);
             this.statusNhom.Text = "KHOA";
             // 
+            // btnScoresSV
+            // 
+            this.btnScoresSV.Caption = "Quản lý điểm sinh viên";
+            this.btnScoresSV.Id = 9;
+            this.btnScoresSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.btnScoresSV.Name = "btnScoresSV";
+            this.btnScoresSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_1);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -302,5 +312,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.BarButtonItem barBtnRegister;
         private DevExpress.XtraBars.BarButtonItem btnCreditClass;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem btnScoresSV;
     }
 }

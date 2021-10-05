@@ -110,6 +110,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
         }
 
-        
+        private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formScores));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formScores form = new formScores();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
     }
 }
