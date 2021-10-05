@@ -98,15 +98,27 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
         }
 
-        private void barBtnScores_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnCreditClass_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formManageCreditClass));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formManageCreditClass form = new formManageCreditClass();
+                 form.MdiParent = this;
+                form.Show(); 
+            }
+        }
+
+        private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(formScores));
             if (frm != null) frm.Activate();
             else
             {
-                Program.frmScores = new formScores();
-                Program.frmScores.MdiParent = this;
-                Program.frmScores.Show();
+                formScores form = new formScores();
+                form.MdiParent = this;
+                form.Show();
             }
         }
     }

@@ -313,7 +313,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(117, 43);
             this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Nhập điểm";
+            this.btnStart.Text = "Bắt đầu";
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // mONHOCTableAdapter
@@ -488,6 +488,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridColumn1.FieldName = "gridColumn1";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.UnboundExpression = "[DIEM_CC] * 0.1 + [DIEM_GK] * 0.3 + [DIEM_CK] * 0.6";
             this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn1.Visible = true;
@@ -638,7 +639,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "formScores";
-            this.Text = "frmScores";
+            this.Text = "Điểm sinh viên";
             this.Load += new System.EventHandler(this.frmScores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);

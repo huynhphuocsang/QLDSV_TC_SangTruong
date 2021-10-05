@@ -37,13 +37,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet1.SINHVIEN);
             gridView1.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
 
-            gridView1.Columns["NIENKHOA"].OptionsColumn.ReadOnly = true;
-            gridView1.Columns["HOCKY"].OptionsColumn.ReadOnly = true;
-            gridView1.Columns["HOCPHI"].OptionsColumn.ReadOnly = true;
-            gridView1.Columns["PADED"].OptionsColumn.ReadOnly = true;
+            //gridView1.Columns["NIENKHOA"].OptionsColumn.ReadOnly = true;
+            //gridView1.Columns["HOCKY"].OptionsColumn.ReadOnly = true;
+            //gridView1.Columns["HOCPHI"].OptionsColumn.ReadOnly = true;
+            //gridView1.Columns["PADED"].OptionsColumn.ReadOnly = true;
 
-            gridView2.Columns["NGAYDONG"].OptionsColumn.ReadOnly = true;
-            gridView2.Columns["SOTIENDONG"].OptionsColumn.ReadOnly = true;
+            //gridView2.Columns["NGAYDONG"].OptionsColumn.ReadOnly = true;
+            //gridView2.Columns["SOTIENDONG"].OptionsColumn.ReadOnly = true;
+
+            gridView1.OptionsBehavior.Editable = false;
+            gridView2.OptionsBehavior.Editable = false;
             btnPay.Enabled = false; 
         }
 

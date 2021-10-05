@@ -111,6 +111,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartment.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDepartment.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cbDepartment.FormattingEnabled = true;
             this.cbDepartment.Location = new System.Drawing.Point(463, 39);
             this.cbDepartment.Name = "cbDepartment";
@@ -121,12 +122,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(361, 37);
+            this.label1.Font = new System.Drawing.Font("Calibri", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(355, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 29);
+            this.label1.Size = new System.Drawing.Size(91, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "KHOA";
+            this.label1.Text = "Khoa";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // qLDSV_TCDataSet

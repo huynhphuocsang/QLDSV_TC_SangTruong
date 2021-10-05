@@ -141,16 +141,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
      
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (gridViewLop.RowCount == 0)
+            /*if (gridViewLop.RowCount == 0)
             {
-                MessageBox.Show("Vui lòng chọn lớp cần nhập!", "Thông báo !", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng click(2) chọn lớp cần nhập!", "Thông báo !", MessageBoxButtons.OK);
                 return;
             }
             if (gridViewDiem.RowCount == 0)
             {
                 MessageBox.Show("Lớp chưa có sinh viên nào để nhập điểm!", "Thông báo !", MessageBoxButtons.OK);
                 return;
-            }
+            }*/
+            loadClassRegister();
             btnGhi.Enabled =btnReload.Enabled= true;
         }
 
@@ -168,7 +169,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 this.Validate();
                 this.sP_LOAD_LIST_SCORESBindingSource.EndEdit();
 
-                //điều đặc biệt
                 this.sP_LOAD_LIST_SCORESTableAdapter.Update(this.qLDSV_TCDataSet.SP_LOAD_LIST_SCORES);
 
                 MessageBox.Show("Thành công");
@@ -178,12 +178,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 MessageBox.Show("Thất bại!");
             }
-
-
-
-            this.sP_LOAD_LIST_SCORESTableAdapter.Connection.ConnectionString = Program.connstr;
-            //this.sP_LOAD_LIST_SCORESTableAdapter.Fill(this.qLDSV_TCDataSet.SP_LOAD_LIST_SCORES, cbNienkhoa.Text, Int32.Parse(nbHocky.Value.ToString()), txtMaMH.Text, Int32.Parse(nbNhom.Value.ToString()));
-
+            loadScoresSV();
         }
 
         private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -208,12 +203,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         }
         private void cbNienkhoa_EditValueChanged(object sender, EventArgs e)
         {
-            loadClassRegister();
+            //loadClassRegister();
         }
 
         private void cbHocky_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadClassRegister();
+            //loadClassRegister();
         }
 
         private void gridView2_DoubleClick(object sender, EventArgs e)
