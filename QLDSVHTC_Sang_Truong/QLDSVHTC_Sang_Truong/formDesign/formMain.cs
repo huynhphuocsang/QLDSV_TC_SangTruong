@@ -112,22 +112,32 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            /*Form frm = this.CheckExists(typeof(formManagerSubject));
-            if (frm != null) frm.Activate();
-            else
-            {
-                formManagerSubject form = new formManagerSubject();
-                form.MdiParent = this;
-                form.Show();
-            }*/
-            /*Form frm = this.CheckExists(typeof(formScores));
+
+            Form frm = this.CheckExists(typeof(formScores));
             if (frm != null) frm.Activate();
             else
             {
                 formScores form = new formScores();
                 form.MdiParent = this;
                 form.Show();
-            }*/
+            }
+
+        }
+
+        private void barButtonItem2_ItemClick_2(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formManagerSubject));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formManagerSubject form = new formManagerSubject();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void btnCreateLogin_ItemClick(object sender, ItemClickEventArgs e)
+        {
             Form frm = this.CheckExists(typeof(formCreateLogin));
             if (frm != null) frm.Activate();
             else
