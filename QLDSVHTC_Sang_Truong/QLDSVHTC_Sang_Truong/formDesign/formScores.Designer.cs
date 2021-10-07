@@ -36,10 +36,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.cbHocky = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbNienkhoa = new DevExpress.XtraEditors.LookUpEdit();
             this.vDSNIENKHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
-            this.label2 = new System.Windows.Forms.Label();
             this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
             this.v_DS_NIENKHOATableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.V_DS_NIENKHOATableAdapter();
@@ -50,9 +50,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.btnNhapDiem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRedo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUndo = new DevExpress.XtraEditors.SimpleButton();
             this.btnReload = new DevExpress.XtraEditors.SimpleButton();
             this.btnGhi = new DevExpress.XtraEditors.SimpleButton();
-            this.btnStart = new DevExpress.XtraEditors.SimpleButton();
             this.mONHOCTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.MONHOCTableAdapter();
             this.sP_LOAD_LIST_SCORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_LOAD_LIST_SCORESTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.SP_LOAD_LIST_SCORESTableAdapter();
@@ -106,7 +108,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartment.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(184, 21);
+            this.cbDepartment.Location = new System.Drawing.Point(171, 27);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Size = new System.Drawing.Size(208, 29);
             this.cbDepartment.TabIndex = 3;
@@ -115,10 +117,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 21);
+            this.label1.Font = new System.Drawing.Font("Calibri", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(58, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 29);
+            this.label1.Size = new System.Drawing.Size(107, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "KHOA:";
             // 
@@ -127,9 +130,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.groupControl2.Controls.Add(this.cbHocky);
             this.groupControl2.Controls.Add(this.cbDepartment);
             this.groupControl2.Controls.Add(this.label1);
-            this.groupControl2.Controls.Add(this.cbNienkhoa);
             this.groupControl2.Controls.Add(this.label2);
             this.groupControl2.Controls.Add(nIENKHOALabel);
+            this.groupControl2.Controls.Add(this.cbNienkhoa);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
@@ -152,6 +155,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbHocky.TabIndex = 14;
             this.cbHocky.SelectedIndexChanged += new System.EventHandler(this.cbHocky_SelectedIndexChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(782, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Học kỳ";
+            // 
             // cbNienkhoa
             // 
             this.cbNienkhoa.Location = new System.Drawing.Point(598, 24);
@@ -163,8 +176,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbNienkhoa.Properties.DataSource = this.vDSNIENKHOABindingSource;
             this.cbNienkhoa.Properties.DisplayMember = "NIENKHOA";
             this.cbNienkhoa.Properties.NullText = "Chọn niên khóa";
-            this.cbNienkhoa.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSuggest;
-            this.cbNienkhoa.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbNienkhoa.Properties.ValueMember = "NIENKHOA";
             this.cbNienkhoa.Size = new System.Drawing.Size(146, 26);
             this.cbNienkhoa.TabIndex = 13;
@@ -179,16 +190,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
             this.qLDSV_TCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(782, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Học kỳ";
             // 
             // mONHOCBindingSource
             // 
@@ -271,9 +272,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.btnNhapDiem);
+            this.groupControl3.Controls.Add(this.btnRedo);
+            this.groupControl3.Controls.Add(this.btnUndo);
             this.groupControl3.Controls.Add(this.btnReload);
             this.groupControl3.Controls.Add(this.btnGhi);
-            this.groupControl3.Controls.Add(this.btnStart);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 80);
             this.groupControl3.Name = "groupControl3";
@@ -282,11 +285,38 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.groupControl3.TabIndex = 12;
             this.groupControl3.Text = "groupControl3";
             // 
+            // btnNhapDiem
+            // 
+            this.btnNhapDiem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNhapDiem.ImageOptions.SvgImage")));
+            this.btnNhapDiem.Location = new System.Drawing.Point(257, 18);
+            this.btnNhapDiem.Name = "btnNhapDiem";
+            this.btnNhapDiem.Size = new System.Drawing.Size(122, 43);
+            this.btnNhapDiem.TabIndex = 10;
+            this.btnNhapDiem.Text = "Nhập điểm";
+            this.btnNhapDiem.Click += new System.EventHandler(this.btnNhapDiem_Click);
+            // 
+            // btnRedo
+            // 
+            this.btnRedo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRedo.ImageOptions.SvgImage")));
+            this.btnRedo.Location = new System.Drawing.Point(642, 18);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(97, 43);
+            this.btnRedo.TabIndex = 8;
+            this.btnRedo.Text = "Redo";
+            // 
+            // btnUndo
+            // 
+            this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndo.ImageOptions.SvgImage")));
+            this.btnUndo.Location = new System.Drawing.Point(538, 18);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(90, 43);
+            this.btnUndo.TabIndex = 9;
+            this.btnUndo.Text = "Undo";
+            // 
             // btnReload
             // 
-            this.btnReload.Enabled = false;
             this.btnReload.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReload.ImageOptions.SvgImage")));
-            this.btnReload.Location = new System.Drawing.Point(573, 18);
+            this.btnReload.Location = new System.Drawing.Point(767, 18);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(94, 43);
             this.btnReload.TabIndex = 3;
@@ -295,26 +325,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnGhi
             // 
-            this.btnGhi.Enabled = false;
             this.btnGhi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGhi.ImageOptions.SvgImage")));
-            this.btnGhi.Location = new System.Drawing.Point(432, 18);
+            this.btnGhi.Location = new System.Drawing.Point(412, 18);
             this.btnGhi.Name = "btnGhi";
             this.btnGhi.Size = new System.Drawing.Size(97, 43);
             this.btnGhi.TabIndex = 2;
             this.btnGhi.Text = "Ghi";
             this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
-            // 
-            // btnStart
-            // 
-            this.btnStart.Appearance.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStart.Appearance.Options.UseBackColor = true;
-            this.btnStart.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnStart.ImageOptions.SvgImage")));
-            this.btnStart.Location = new System.Drawing.Point(264, 18);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(117, 43);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Bắt đầu";
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // mONHOCTableAdapter
             // 
@@ -358,13 +375,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridViewDiem.GridControl = this.sP_LOAD_LIST_SCORESGridControl;
             this.gridViewDiem.GroupPanelText = "DANH SÁCH ĐIỂM SINH VIÊN";
             this.gridViewDiem.Name = "gridViewDiem";
-            this.gridViewDiem.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            this.gridViewDiem.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
-            this.gridViewDiem.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanging);
-            this.gridViewDiem.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView1_ValidateRow);
             this.gridViewDiem.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
             this.gridViewDiem.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
-            this.gridViewDiem.DataSourceChanged += new System.EventHandler(this.gridView1_DataSourceChanged);
             // 
             // colMASV
             // 
@@ -668,7 +680,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private QLDSV_TCDataSet qLDSV_TCDataSet;
         private QLDSV_TCDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraEditors.LookUpEdit cbNienkhoa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource vDSNIENKHOABindingSource;
         private QLDSV_TCDataSetTableAdapters.V_DS_NIENKHOATableAdapter v_DS_NIENKHOATableAdapter;
@@ -679,7 +690,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.SimpleButton btnStart;
         private System.Windows.Forms.BindingSource mONHOCBindingSource;
         private QLDSV_TCDataSetTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
         private System.Windows.Forms.BindingSource sP_LOAD_LIST_SCORESBindingSource;
@@ -704,5 +714,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraGrid.Columns.GridColumn colSOSV;
         private System.Windows.Forms.ComboBox cbHocky;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.SimpleButton btnRedo;
+        private DevExpress.XtraEditors.SimpleButton btnUndo;
+        private DevExpress.XtraEditors.LookUpEdit cbNienkhoa;
+        private DevExpress.XtraEditors.SimpleButton btnNhapDiem;
     }
 }

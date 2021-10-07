@@ -66,6 +66,12 @@
     <Compile Include="formDesign\formClassRegistration.Designer.cs">
       <DependentUpon>formClassRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\formCreateLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\formCreateLogin.Designer.cs">
+      <DependentUpon>formCreateLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="formDesign\formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="formDesign\formManageCreditClass.Designer.cs">
       <DependentUpon>formManageCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDesign\formManagerSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\formManagerSubject.Designer.cs">
+      <DependentUpon>formManagerSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="formDesign\formTuitionFee.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="formDesign\formClassRegistration.resx">
       <DependentUpon>formClassRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\formCreateLogin.resx">
+      <DependentUpon>formCreateLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formManageCreditClass.resx">
       <DependentUpon>formManageCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\formManagerSubject.resx">
+      <DependentUpon>formManagerSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\formTuitionFee.resx">
       <DependentUpon>formTuitionFee.cs</DependentUpon>
