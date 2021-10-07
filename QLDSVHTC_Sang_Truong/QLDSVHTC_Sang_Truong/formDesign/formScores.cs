@@ -18,7 +18,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         public formScores()
         {
             InitializeComponent();
-            cbHocky.SelectedIndex = 0;
+           
         }
 
         private void frmScores_Load(object sender, EventArgs e)
@@ -43,6 +43,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 cbDepartment.Enabled = true;
             }
+
+            cbHocky.SelectedIndex = 0;
+            setEnableGrid(false);
+            btnGhi.Enabled = btnReload.Enabled = btnUndo.Enabled = btnRedo.Enabled = btnReload.Enabled = false;
+        }
+
+        private void setEnableGrid(Boolean column)
+        {
+            gridViewDiem.Columns[2].OptionsColumn.AllowEdit = column;
+            gridViewDiem.Columns[3].OptionsColumn.AllowEdit = column;
+            gridViewDiem.Columns[4].OptionsColumn.AllowEdit = column;
         }
 
         private void getEndScore()
@@ -117,7 +128,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
                 if (Program.KetNoi() == 0)
                 {
-                    MessageBox.Show("Lỗi chuyển khoa", "Thông báo !", MessageBoxButtons.OK);
+                    MessageBox.Show("Lỗi chuyển khoa", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
@@ -139,27 +150,28 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
         }
      
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            /*if (gridViewLop.RowCount == 0)
-            {
-                MessageBox.Show("Vui lòng click(2) chọn lớp cần nhập!", "Thông báo !", MessageBoxButtons.OK);
-                return;
-            }
-            if (gridViewDiem.RowCount == 0)
-            {
-                MessageBox.Show("Lớp chưa có sinh viên nào để nhập điểm!", "Thông báo !", MessageBoxButtons.OK);
-                return;
-            }*/
-            loadClassRegister();
-            btnGhi.Enabled =btnReload.Enabled= true;
-        }
-
+        
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             getEndScore();
         }
-    
+
+        private void btnNhapDiem_Click(object sender, EventArgs e)
+        {
+            if (gridViewLop.RowCount == 0)
+            {
+                MessageBox.Show("Dữ liệu đang trống!", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (gridViewDiem.RowCount == 0)
+            {
+                MessageBox.Show("Hãy chọn nhôm để nhập điểm\r\n (Vui lòng nhấn chọn 2 lần vào môn cần nhập)!", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            setEnableGrid(true);
+            btnNhapDiem.Enabled = false;
+            btnGhi.Enabled = btnReload.Enabled = true;
+        }
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
@@ -171,54 +183,33 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
                 this.sP_LOAD_LIST_SCORESTableAdapter.Update(this.qLDSV_TCDataSet.SP_LOAD_LIST_SCORES);
 
-                MessageBox.Show("Thành công");
+                MessageBox.Show("Lưu dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thất bại!");
+                MessageBox.Show("Lưu dữ liệu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            setEnableGrid(false);
             loadScoresSV();
+            btnNhapDiem.Enabled = true;
+            btnGhi.Enabled = btnReload.Enabled = false;
         }
 
-        private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            //getEndScore();
-        }
-
-        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            //gridView1.SetFocusedRowCellValue(gridView1.FocusedColumn, Math.Round(float.Parse(e.Value.ToString()) * 2, MidpointRounding.AwayFromZero) / 2);
-            //lbDebug.Text += "  cgan";
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            
-        }
-
-        private void gridView1_DataSourceChanged(object sender, EventArgs e)
-        {
-
-        }
         private void cbNienkhoa_EditValueChanged(object sender, EventArgs e)
         {
-            //loadClassRegister();
+            loadClassRegister();
+           
         }
 
         private void cbHocky_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //loadClassRegister();
+            loadClassRegister();
         }
 
         private void gridView2_DoubleClick(object sender, EventArgs e)
         {
             loadScoresSV();
-        }
-
-        private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
-        {
-
         }
 
         private void gridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
@@ -233,7 +224,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 {
                     e.Valid = false;
                     e.ErrorText = "Hãy nhập điểm bằng số";
-                    MessageBox.Show(this, "Hãy nhập điểm bằng số!", "Thông báo!", MessageBoxButtons.OK);
+                    MessageBox.Show(this, "Hãy nhập điểm bằng số!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -242,7 +233,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     {
                         e.Valid = false;
                         e.ErrorText = "Hãy nhập điểm trong khoảng 0-10";
-                        MessageBox.Show(this, "Hãy nhập điểm trong khoảng 0-10!", "Thông báo!", MessageBoxButtons.OK);
+                        MessageBox.Show(this, "Hãy nhập điểm trong khoảng 0-10!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -250,7 +241,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnReload_Click(object sender, EventArgs e)
         {
+            setEnableGrid(false);
+            loadClassRegister();
             loadScoresSV();
+            btnNhapDiem.Enabled = true;
+            btnGhi.Enabled = btnReload.Enabled = false;
         }
+
+        
     }
 }

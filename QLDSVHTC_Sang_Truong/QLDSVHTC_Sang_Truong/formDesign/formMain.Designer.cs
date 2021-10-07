@@ -39,13 +39,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnRegister = new DevExpress.XtraBars.BarButtonItem();
             this.btnCreditClass = new DevExpress.XtraBars.BarButtonItem();
+            this.btnScoresSV = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -56,7 +57,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusMa = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnScoresSV = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnManageSubject = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCreateLogin = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -75,9 +79,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnLogout,
             this.barBtnRegister,
             this.btnCreditClass,
-            this.btnScoresSV});
+            this.btnScoresSV,
+            this.btnManageSubject,
+            this.btnCreateLogin});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 10;
+            this.ribbon.MaxItemId = 12;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -142,6 +148,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnCreditClass.Name = "btnCreditClass";
             this.btnCreditClass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreditClass_ItemClick);
             // 
+            // btnScoresSV
+            // 
+            this.btnScoresSV.Caption = "Quản lý điểm sinh viên";
+            this.btnScoresSV.Id = 9;
+            this.btnScoresSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnScoresSV.ImageOptions.SvgImage")));
+            this.btnScoresSV.Name = "btnScoresSV";
+            this.btnScoresSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_1);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -160,7 +174,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.ribbonPageGroup2,
             this.ribbonPageGroup5,
             this.ribbonPageGroup7,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup8,
+            this.ribbonPageGroup9});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Quản lý";
             // 
@@ -174,15 +190,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.ribbonPageGroup5.ItemLinks.Add(this.btnCreditClass);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnLogout);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            // 
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.btnScoresSV);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnManageSubject);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
             // ribbonPage3
             // 
@@ -251,13 +267,31 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusNhom.Size = new System.Drawing.Size(50, 20);
             this.statusNhom.Text = "KHOA";
             // 
-            // btnScoresSV
+            // ribbonPageGroup8
             // 
-            this.btnScoresSV.Caption = "Quản lý điểm sinh viên";
-            this.btnScoresSV.Id = 9;
-            this.btnScoresSV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.btnScoresSV.Name = "btnScoresSV";
-            this.btnScoresSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_1);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnCreateLogin);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnLogout);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            // 
+            // btnManageSubject
+            // 
+            this.btnManageSubject.Caption = "Quản lý môn học";
+            this.btnManageSubject.Id = 10;
+            this.btnManageSubject.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnManageSubject.ImageOptions.SvgImage")));
+            this.btnManageSubject.Name = "btnManageSubject";
+            this.btnManageSubject.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_2);
+            // 
+            // btnCreateLogin
+            // 
+            this.btnCreateLogin.Caption = "Tạo tài khoản";
+            this.btnCreateLogin.Id = 11;
+            this.btnCreateLogin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreateLogin.ImageOptions.SvgImage")));
+            this.btnCreateLogin.Name = "btnCreateLogin";
+            this.btnCreateLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreateLogin_ItemClick);
             // 
             // formMain
             // 
@@ -313,5 +347,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.BarButtonItem btnCreditClass;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btnScoresSV;
+        private DevExpress.XtraBars.BarButtonItem btnManageSubject;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem btnCreateLogin;
     }
 }
