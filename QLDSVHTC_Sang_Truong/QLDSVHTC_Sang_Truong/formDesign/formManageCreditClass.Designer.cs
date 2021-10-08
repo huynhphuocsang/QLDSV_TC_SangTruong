@@ -62,11 +62,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnReload = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dANGKYTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIGridControl)).BeginInit();
@@ -83,6 +85,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.fKLOPTINCHIMONHOCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // qLDSV_TCDataSet
@@ -435,7 +438,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(417, 74);
+            this.label6.Location = new System.Drawing.Point(620, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 40);
             this.label6.TabIndex = 1;
@@ -447,7 +450,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbDepartment.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(514, 82);
+            this.cbDepartment.Location = new System.Drawing.Point(717, 74);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Size = new System.Drawing.Size(237, 32);
             this.cbDepartment.TabIndex = 5;
@@ -461,10 +464,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnAdd.Size = new System.Drawing.Size(114, 38);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
             this.btnSave.Location = new System.Drawing.Point(12, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(91, 38);
@@ -472,14 +476,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // btnDelete
             // 
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(230, 12);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(93, 38);
-            this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "Xóa";
+            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btnDelete.Location = new System.Drawing.Point(230, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(93, 38);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // simpleButton3
             // 
@@ -499,21 +504,22 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.simpleButton4.TabIndex = 7;
             this.simpleButton4.Text = "Redo";
             // 
-            // simpleButton5
+            // btnReload
             // 
-            this.simpleButton5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
-            this.simpleButton5.Location = new System.Drawing.Point(537, 12);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(96, 38);
-            this.simpleButton5.TabIndex = 7;
-            this.simpleButton5.Text = "Reload";
+            this.btnReload.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
+            this.btnReload.Location = new System.Drawing.Point(537, 12);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 38);
+            this.btnReload.TabIndex = 7;
+            this.btnReload.Text = "Reload";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.simpleButton5);
+            this.panel1.Controls.Add(this.btnReload);
             this.panel1.Controls.Add(this.simpleButton4);
             this.panel1.Controls.Add(this.simpleButton3);
-            this.panel1.Controls.Add(this.simpleButton2);
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.cbDepartment);
@@ -521,8 +527,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 137);
+            this.panel1.Size = new System.Drawing.Size(1240, 148);
             this.panel1.TabIndex = 2;
+            // 
+            // dANGKYBindingSource
+            // 
+            this.dANGKYBindingSource.DataMember = "FK_DANGKY_LOPTINCHI";
+            this.dANGKYBindingSource.DataSource = this.lOPTINCHIBindingSource;
+            // 
+            // dANGKYTableAdapter
+            // 
+            this.dANGKYTableAdapter.ClearBeforeFill = true;
             // 
             // formManageCreditClass
             // 
@@ -551,6 +566,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -588,10 +604,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.ComboBox cbDepartment;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton btnReload;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.BindingSource dANGKYBindingSource;
+        private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
     }
 }
