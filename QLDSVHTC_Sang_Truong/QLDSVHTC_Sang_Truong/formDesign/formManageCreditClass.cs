@@ -14,9 +14,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 {
     public partial class formManageCreditClass : DevExpress.XtraEditors.XtraForm
     {
+
+        private CommandManager cmdManager; 
         public formManageCreditClass()
         {
             InitializeComponent();
+            cmdManager = new CommandManager();
         }
 
         private void lOPTINCHIBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -29,6 +32,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void formManageCreditClass_Load(object sender, EventArgs e)
         {
+          
+            this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr; 
+            this.dANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
 
             //load combobox: 
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
@@ -213,6 +219,36 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPTINCHIBindingSource.EndEdit();
             this.lOPTINCHITableAdapter.Update(this.qLDSV_TCDataSet.LOPTINCHI); 
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            cmdManager.execute(new InsertAction(lOPTINCHIBindingSource));
+            if (cbDepartment.SelectedIndex == 0)
+            {
+                gridView1.SetFocusedRowCellValue("MAKHOA", "CNTT");
+            }
+            else if (cbDepartment.SelectedIndex == 1)
+            {
+                gridView1.SetFocusedRowCellValue("MAKHOA", "VT"); 
+            }
+            gridView1.SetFocusedRowCellValue("HUYLOP", false); 
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            this.lOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
+            this.lOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI); 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dANGKYBindingSource.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa lớp này vì đã có người đăng ký!\nGợi ý: hãy 'Hủy' lớp");
+                return; 
+            }
+            cmdManager.execute(new DeleteAction(lOPTINCHIBindingSource)); 
         }
     }
 }
