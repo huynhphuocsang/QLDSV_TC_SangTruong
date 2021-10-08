@@ -98,3 +98,4 @@ D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
+D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.AssemblyReference.cache
