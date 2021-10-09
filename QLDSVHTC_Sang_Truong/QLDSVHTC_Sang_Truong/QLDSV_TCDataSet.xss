@@ -14,9 +14,9 @@
     <Shape ID="DesignTable:MONHOC" ZOrder="15" X="387" Y="1007" Height="181" Width="237" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:SINHVIEN" ZOrder="4" X="660" Y="31" Height="296" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="237" />
     <Shape ID="DesignTable:V_DS_NIENKHOA" ZOrder="2" X="937" Y="365" Height="113" Width="290" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:SP_LOAD_REGISTER_INFOR" ZOrder="3" X="824" Y="56" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
+    <Shape ID="DesignTable:SP_LOAD_REGISTER_INFOR" ZOrder="3" X="996" Y="40" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
     <Shape ID="DesignTable:SP_DS_DKY_SV" ZOrder="6" X="1395" Y="122" Height="250" Width="272" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="28" SplitterPosition="191" />
-    <Shape ID="DesignTable:SP_LOAD_LIST_SCORES" ZOrder="1" X="1153" Y="374" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
+    <Shape ID="DesignTable:SP_LOAD_LIST_SCORES" ZOrder="1" X="1339" Y="463" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_CTLTC_SINHVIEN" ZOrder="14" LineWidth="11">
