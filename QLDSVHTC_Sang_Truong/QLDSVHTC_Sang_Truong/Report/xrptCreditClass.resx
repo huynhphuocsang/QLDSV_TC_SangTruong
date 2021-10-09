@@ -123,19 +123,7 @@
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlNQX1JFUE9SVF9MT1BUSU5DSEkiPjxGaWVsZCBOYW1lPSJNT05IT0MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTkhPTSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkdJQU5HVklFTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTT1NWVE9JVEhJRVUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTVkRBTkdLWSIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
-  <metadata name="qldsV_TCDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="excelDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 60</value>
-  </metadata>
-  <metadata name="dANGKYTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 103</value>
-  </metadata>
-  <metadata name="qldsV_TCDataSet21.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 146</value>
-  </metadata>
-  <metadata name="qldsV_TCDataSet22.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 232</value>
-  </metadata>
-  <metadata name="qldsV_TCDataSet23.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 275</value>
   </metadata>
 </root>
