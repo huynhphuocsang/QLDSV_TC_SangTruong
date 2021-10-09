@@ -14,9 +14,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 {
     public partial class formManageCreditClass : DevExpress.XtraEditors.XtraForm
     {
+
+        private CommandManager cmdManager; 
         public formManageCreditClass()
         {
             InitializeComponent();
+            cmdManager = new CommandManager();
         }
 
         private void lOPTINCHIBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -29,6 +32,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void formManageCreditClass_Load(object sender, EventArgs e)
         {
+          
+            this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr; 
+            this.dANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
 
             //load combobox: 
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
@@ -54,23 +60,23 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void gridView1_Click(object sender, EventArgs e)
         {
-            string teacherCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAGV").ToString();
-            lkTeacher.EditValue = teacherCode;
+            //string teacherCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAGV").ToString();
+            //lkTeacher.EditValue = teacherCode;
 
-            string schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
+            //string schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
 
-            //đặc biệt
-            //cbSchoolYear.SelectedIndex = cbSchoolYear.FindString(schoolYear);
-            cbSchoolYear.SelectedItem = schoolYear;
+            ////đặc biệt
+            ////cbSchoolYear.SelectedIndex = cbSchoolYear.FindString(schoolYear);
+            //cbSchoolYear.SelectedItem = schoolYear;
 
-            int  semester =int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString());
-            nmSemester.Value = semester;
+            //int  semester =int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString());
+            //nmSemester.Value = semester;
 
-            int group = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NHOM").ToString());
-            nmGroup.Value = group;
+            //int group = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NHOM").ToString());
+            //nmGroup.Value = group;
 
-            int minimumStudent = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SOSVTOITHIEU").ToString());
-            nmMinimumStudent.Value = minimumStudent; 
+            //int minimumStudent = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SOSVTOITHIEU").ToString());
+            //nmMinimumStudent.Value = minimumStudent; 
         }
         private void load()
         {
@@ -180,6 +186,69 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             lkSubjectEdit.DataSource = mONHOCBindingSource;
             lkSubjectEdit.ValueMember = "MAMH";
             lkSubjectEdit.DisplayMember = "TENMH"; 
+        }
+
+        private void lkTeacher_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lkTeacher2_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
+        {
+            RepositoryItemLookUpEdit props;
+            if (sender is LookUpEdit)
+                props = (sender as LookUpEdit).Properties;
+            else
+                props = sender as RepositoryItemLookUpEdit;
+
+            if (props != null && (e.Value is string))
+            {
+                DataRowView row = props.GetDataSourceRowByKeyValue(e.Value) as DataRowView;
+
+                if (row != null)
+                {
+                    e.DisplayText = String.Format("{0} {1}", row["HO"], row["TEN"]);
+
+                }
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.lOPTINCHIBindingSource.EndEdit();
+            this.lOPTINCHITableAdapter.Update(this.qLDSV_TCDataSet.LOPTINCHI); 
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            cmdManager.execute(new InsertAction(lOPTINCHIBindingSource));
+            if (cbDepartment.SelectedIndex == 0)
+            {
+                gridView1.SetFocusedRowCellValue("MAKHOA", "CNTT");
+            }
+            else if (cbDepartment.SelectedIndex == 1)
+            {
+                gridView1.SetFocusedRowCellValue("MAKHOA", "VT"); 
+            }
+            gridView1.SetFocusedRowCellValue("HUYLOP", false); 
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            this.lOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
+            this.lOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI); 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dANGKYBindingSource.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa lớp này vì đã có người đăng ký!\nGợi ý: hãy 'Hủy' lớp");
+                return; 
+            }
+            cmdManager.execute(new DeleteAction(lOPTINCHIBindingSource)); 
         }
     }
 }

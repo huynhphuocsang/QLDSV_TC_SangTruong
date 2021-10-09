@@ -433,6 +433,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_CC.FieldName = "DIEM_CC";
             this.colDIEM_CC.MinWidth = 25;
             this.colDIEM_CC.Name = "colDIEM_CC";
+            this.colDIEM_CC.OptionsColumn.AllowEdit = false;
             this.colDIEM_CC.OptionsFilter.AllowAutoFilter = false;
             this.colDIEM_CC.Visible = true;
             this.colDIEM_CC.VisibleIndex = 2;
@@ -456,6 +457,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_GK.FieldName = "DIEM_GK";
             this.colDIEM_GK.MinWidth = 25;
             this.colDIEM_GK.Name = "colDIEM_GK";
+            this.colDIEM_GK.OptionsColumn.AllowEdit = false;
             this.colDIEM_GK.OptionsFilter.AllowAutoFilter = false;
             this.colDIEM_GK.Visible = true;
             this.colDIEM_GK.VisibleIndex = 3;
@@ -479,6 +481,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_CK.FieldName = "DIEM_CK";
             this.colDIEM_CK.MinWidth = 25;
             this.colDIEM_CK.Name = "colDIEM_CK";
+            this.colDIEM_CK.OptionsColumn.AllowEdit = false;
             this.colDIEM_CK.OptionsFilter.AllowAutoFilter = false;
             this.colDIEM_CK.Visible = true;
             this.colDIEM_CK.VisibleIndex = 4;

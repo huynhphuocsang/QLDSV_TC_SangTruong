@@ -44,8 +44,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 this.lOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP);
                 gridView1.ClearColumnErrors();
 
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+                //this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                //this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
                 //reset lai gia tri: 
                 addClass = false;
                 bindingNavigatorAddNewItem.Enabled = true;
@@ -415,8 +415,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             
 
 
-            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN); 
+            //this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            //this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN); 
             
         }
 

@@ -98,6 +98,7 @@ D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
+<<<<<<< HEAD
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe.config
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.pdb
@@ -199,3 +200,6 @@ D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\o
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
+=======
+D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.AssemblyReference.cache
+>>>>>>> 404cdf2a3e3005ee9ce2ddab6f60e26ab4d48666

@@ -23,9 +23,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void frmScores_Load(object sender, EventArgs e)
         {
-            this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
+            //this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.MONHOC' table. You can move, or remove it, as needed.
-            this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
+           // this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
 
             this.v_DS_NIENKHOATableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.V_DS_NIENKHOA' table. You can move, or remove it, as needed.
