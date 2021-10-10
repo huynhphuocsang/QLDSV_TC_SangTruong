@@ -78,5 +78,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ReportPrintTool printTool = new ReportPrintTool(xrpt);
             printTool.ShowPreviewDialog(); 
         }
+
+        private void cbxSchoolyear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

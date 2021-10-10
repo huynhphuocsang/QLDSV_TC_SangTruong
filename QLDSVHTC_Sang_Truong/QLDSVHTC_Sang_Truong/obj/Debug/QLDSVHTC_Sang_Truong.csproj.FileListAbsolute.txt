@@ -298,3 +298,7 @@ D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruon
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfCreditClass.resources
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentListCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptStudentListCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfTuitionFee.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptTuitionFee.resources

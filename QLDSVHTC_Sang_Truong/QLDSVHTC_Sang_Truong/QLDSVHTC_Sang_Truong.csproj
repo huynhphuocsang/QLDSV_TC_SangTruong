@@ -131,6 +131,18 @@
     <Compile Include="formDesign\RpfCreditClass.Designer.cs">
       <DependentUpon>RpfCreditClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\RpfStudentListCreditClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfStudentListCreditClass.Designer.cs">
+      <DependentUpon>RpfStudentListCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDesign\RpfTuitionFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfTuitionFee.Designer.cs">
+      <DependentUpon>RpfTuitionFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="func.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,6 +179,18 @@
     <Compile Include="Report\xrptCreditClass.Designer.cs">
       <DependentUpon>xrptCreditClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\xrptStudentListCreditClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptStudentListCreditClass.Designer.cs">
+      <DependentUpon>xrptStudentListCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xrptTuitionFee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptTuitionFee.Designer.cs">
+      <DependentUpon>xrptTuitionFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction.cs" />
     <EmbeddedResource Include="formDesign\formClasses.resx">
       <DependentUpon>formClasses.cs</DependentUpon>
@@ -200,6 +224,12 @@
     <EmbeddedResource Include="formDesign\RpfCreditClass.resx">
       <DependentUpon>RpfCreditClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfStudentListCreditClass.resx">
+      <DependentUpon>RpfStudentListCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfTuitionFee.resx">
+      <DependentUpon>RpfTuitionFee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -216,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptCreditClass.resx">
       <DependentUpon>xrptCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptStudentListCreditClass.resx">
+      <DependentUpon>xrptStudentListCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptTuitionFee.resx">
+      <DependentUpon>xrptTuitionFee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
