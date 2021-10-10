@@ -64,6 +64,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbxSchoolyear.Name = "cbxSchoolyear";
             this.cbxSchoolyear.Size = new System.Drawing.Size(121, 24);
             this.cbxSchoolyear.TabIndex = 1;
+            this.cbxSchoolyear.SelectedIndexChanged += new System.EventHandler(this.cbxSchoolyear_SelectedIndexChanged);
             // 
             // nmSemester
             // 
@@ -138,7 +139,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 431);
+            this.ClientSize = new System.Drawing.Size(771, 446);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -147,6 +148,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Controls.Add(this.cbxSchoolyear);
             this.Controls.Add(this.cbDepartment);
             this.Name = "RpfCreditClass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RpfCreditClass";
             this.Load += new System.EventHandler(this.RpfCreditClass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmSemester)).EndInit();
