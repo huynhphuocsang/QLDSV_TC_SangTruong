@@ -24,14 +24,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void formCreateLogin_Load(object sender, EventArgs e)
         {
-           
+            
+
             if (Program.mGroup.ToLower() == "khoa" || Program.mGroup.ToLower() == "pkt")
             {
                 cbDepartment.Enabled = false;
                 func.BindingDataToComBo(cbDepartment, Program.bdsDSPM);
                 if (Program.mGroup.ToLower() == "khoa")
                 {
-                    cbDepartment.SelectedIndex = Program.mPhongBan;
                     NhomQuyenGroup.SelectedIndex = 1;
                     NhomQuyenGroup.Properties.Items[0].Enabled = NhomQuyenGroup.Properties.Items[2].Enabled = false;
                 }
@@ -49,10 +49,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
 
             this.qLDSV_TCDataSet.EnforceConstraints = false;
-            this.gIANGVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.GIANGVIEN' table. You can move, or remove it, as needed.
-            this.gIANGVIENTableAdapter.Fill(this.qLDSV_TCDataSet.GIANGVIEN);
-
+            this.dSGV_CTTKTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dSGV_CTTKTableAdapter.Fill(this.qLDSV_TCDataSet.DSGV_CTTK);
         }
 
         private bool Validated()
@@ -121,6 +119,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     MessageBox.Show("Lỗi chuyển khoa", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                else
+                {
+                    try
+                    {
+                        this.dSGV_CTTKTableAdapter.Connection.ConnectionString = Program.connstr;
+                        this.dSGV_CTTKTableAdapter.Fill(this.qLDSV_TCDataSet.DSGV_CTTK);
+                        lookUpUser.EditValue = null;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi cập nhật dữ liệu!" + ex.Message, "Thông báo !", MessageBoxButtons.OK);
+                        return;
+                    }
+                }
             }
             catch
             {
@@ -141,13 +154,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
                 nLogin = txtLogin.Text.Trim();
                 nPass = txtPass.Text.Trim();
-                nUserName = lookUpUser.EditValue.ToString();
+                nUserName = lookUpUser.EditValue.ToString().Trim();
                 nRole = NhomQuyenGroup.EditValue.ToString();
 
                 string strLenh = "DECLARE @A INT \n"
                     + "EXEC  @A= SP_TAOLOGIN '" + nLogin + "','" + nPass + "','" + nUserName + "','" + nRole + "'\n"
                     + "SELECT K=@A ";
-                //string strLenh = "EXEC SP_TAOLOGIN '" + nLogin + "','" + nPass + "','" + nUserName + "','" + nRole + "'";
                 try
                 {
                     Program.myReader = Program.ExecSqlDataReader(strLenh);
@@ -199,6 +211,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 txtConfirm.UseSystemPasswordChar = true;
             }
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

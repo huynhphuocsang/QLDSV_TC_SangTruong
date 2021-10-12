@@ -29,10 +29,6 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label mAMHLabel;
-            System.Windows.Forms.Label tENMHLabel;
-            System.Windows.Forms.Label sOTIET_LTLabel;
-            System.Windows.Forms.Label sOTIET_THLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formManagerSubject));
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
             this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
@@ -50,79 +46,27 @@
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCancel = new DevExpress.XtraBars.BarButtonItem();
             this.btnUndo = new DevExpress.XtraBars.BarButtonItem();
             this.btnRedo = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.nbSoTH = new DevExpress.XtraEditors.SpinEdit();
-            this.nbSoLT = new DevExpress.XtraEditors.SpinEdit();
-            this.txtTenMH = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaMH = new DevExpress.XtraEditors.TextEdit();
             this.bdsLopTinChi = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTINCHITableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.LOPTINCHITableAdapter();
-            this.btnCancel = new DevExpress.XtraBars.BarButtonItem();
-            mAMHLabel = new System.Windows.Forms.Label();
-            tENMHLabel = new System.Windows.Forms.Label();
-            sOTIET_LTLabel = new System.Windows.Forms.Label();
-            sOTIET_THLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSoTH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSoLT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenMH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLopTinChi)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mAMHLabel
-            // 
-            mAMHLabel.AutoSize = true;
-            mAMHLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mAMHLabel.Location = new System.Drawing.Point(204, 45);
-            mAMHLabel.Name = "mAMHLabel";
-            mAMHLabel.Size = new System.Drawing.Size(67, 21);
-            mAMHLabel.TabIndex = 0;
-            mAMHLabel.Text = "Mã MH:";
-            // 
-            // tENMHLabel
-            // 
-            tENMHLabel.AutoSize = true;
-            tENMHLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENMHLabel.Location = new System.Drawing.Point(510, 45);
-            tENMHLabel.Name = "tENMHLabel";
-            tENMHLabel.Size = new System.Drawing.Size(73, 21);
-            tENMHLabel.TabIndex = 2;
-            tENMHLabel.Text = "Tên MH:";
-            // 
-            // sOTIET_LTLabel
-            // 
-            sOTIET_LTLabel.AutoSize = true;
-            sOTIET_LTLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTIET_LTLabel.Location = new System.Drawing.Point(204, 101);
-            sOTIET_LTLabel.Name = "sOTIET_LTLabel";
-            sOTIET_LTLabel.Size = new System.Drawing.Size(87, 21);
-            sOTIET_LTLabel.TabIndex = 4;
-            sOTIET_LTLabel.Text = "Số tiết LT:";
-            // 
-            // sOTIET_THLabel
-            // 
-            sOTIET_THLabel.AutoSize = true;
-            sOTIET_THLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTIET_THLabel.Location = new System.Drawing.Point(487, 101);
-            sOTIET_THLabel.Name = "sOTIET_THLabel";
-            sOTIET_THLabel.Size = new System.Drawing.Size(90, 21);
-            sOTIET_THLabel.TabIndex = 6;
-            sOTIET_THLabel.Text = "Số tiết TH:";
             // 
             // qLDSV_TCDataSet
             // 
@@ -155,23 +99,30 @@
             // 
             this.mONHOCGridControl.DataSource = this.bdsMONHOC;
             this.mONHOCGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mONHOCGridControl.Location = new System.Drawing.Point(0, 199);
+            this.mONHOCGridControl.Location = new System.Drawing.Point(0, 40);
             this.mONHOCGridControl.MainView = this.gridView1;
             this.mONHOCGridControl.Name = "mONHOCGridControl";
-            this.mONHOCGridControl.Size = new System.Drawing.Size(1030, 389);
+            this.mONHOCGridControl.Size = new System.Drawing.Size(1030, 548);
             this.mONHOCGridControl.TabIndex = 1;
             this.mONHOCGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAMH,
             this.colTENMH,
             this.colSOTIET_LT,
             this.colSOTIET_TH});
             this.gridView1.GridControl = this.mONHOCGridControl;
+            this.gridView1.GroupPanelText = "Danh sách môn học";
             this.gridView1.Name = "gridView1";
+            this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
+            this.gridView1.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
             // 
             // colMAMH
             // 
@@ -328,26 +279,27 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Caption = "Hủy";
+            this.btnCancel.Id = 7;
+            this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCancel_ItemClick);
+            // 
             // btnUndo
             // 
             this.btnUndo.Caption = "Undo";
             this.btnUndo.Id = 4;
-            this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
+            this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndo.ImageOptions.SvgImage")));
             this.btnUndo.Name = "btnUndo";
             // 
             // btnRedo
             // 
             this.btnRedo.Caption = "Redo";
             this.btnRedo.Id = 5;
-            this.btnRedo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem6.ImageOptions.SvgImage")));
+            this.btnRedo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRedo.ImageOptions.SvgImage")));
             this.btnRedo.Name = "btnRedo";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "Tải lại";
-            this.barButtonItem7.Id = 6;
-            this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
             // 
             // bar3
             // 
@@ -393,81 +345,22 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 558);
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Tải lại";
+            this.barButtonItem7.Id = 6;
+            this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(sOTIET_THLabel);
-            this.groupControl1.Controls.Add(this.nbSoTH);
-            this.groupControl1.Controls.Add(sOTIET_LTLabel);
-            this.groupControl1.Controls.Add(this.nbSoLT);
-            this.groupControl1.Controls.Add(tENMHLabel);
-            this.groupControl1.Controls.Add(this.txtTenMH);
-            this.groupControl1.Controls.Add(mAMHLabel);
-            this.groupControl1.Controls.Add(this.txtMaMH);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 30);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1030, 169);
+            this.groupControl1.Size = new System.Drawing.Size(1030, 10);
             this.groupControl1.TabIndex = 18;
             this.groupControl1.Text = "groupControl1";
-            // 
-            // nbSoTH
-            // 
-            this.nbSoTH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "SOTIET_TH", true));
-            this.nbSoTH.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.nbSoTH.Location = new System.Drawing.Point(589, 98);
-            this.nbSoTH.MenuManager = this.barManager1;
-            this.nbSoTH.Name = "nbSoTH";
-            this.nbSoTH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbSoTH.Properties.Appearance.Options.UseFont = true;
-            this.nbSoTH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nbSoTH.Size = new System.Drawing.Size(80, 28);
-            this.nbSoTH.TabIndex = 7;
-            // 
-            // nbSoLT
-            // 
-            this.nbSoLT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "SOTIET_LT", true));
-            this.nbSoLT.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.nbSoLT.Location = new System.Drawing.Point(297, 98);
-            this.nbSoLT.MenuManager = this.barManager1;
-            this.nbSoLT.Name = "nbSoLT";
-            this.nbSoLT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbSoLT.Properties.Appearance.Options.UseFont = true;
-            this.nbSoLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nbSoLT.Size = new System.Drawing.Size(97, 28);
-            this.nbSoLT.TabIndex = 5;
-            // 
-            // txtTenMH
-            // 
-            this.txtTenMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "TENMH", true));
-            this.txtTenMH.Location = new System.Drawing.Point(589, 42);
-            this.txtTenMH.MenuManager = this.barManager1;
-            this.txtTenMH.Name = "txtTenMH";
-            this.txtTenMH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenMH.Properties.Appearance.Options.UseFont = true;
-            this.txtTenMH.Size = new System.Drawing.Size(221, 28);
-            this.txtTenMH.TabIndex = 3;
-            // 
-            // txtMaMH
-            // 
-            this.txtMaMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "MAMH", true));
-            this.txtMaMH.Location = new System.Drawing.Point(277, 42);
-            this.txtMaMH.MenuManager = this.barManager1;
-            this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMH.Properties.Appearance.Options.UseFont = true;
-            this.txtMaMH.Size = new System.Drawing.Size(125, 28);
-            this.txtMaMH.TabIndex = 1;
             // 
             // bdsLopTinChi
             // 
@@ -478,19 +371,21 @@
             // 
             this.lOPTINCHITableAdapter.ClearBeforeFill = true;
             // 
-            // btnCancel
+            // label1
             // 
-            this.btnCancel.Caption = "Hủy";
-            this.btnCancel.Id = 7;
-            this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCancel_ItemClick);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(566, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "label1";
             // 
             // formManagerSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 608);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.mONHOCGridControl);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -498,7 +393,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "formManagerSubject";
-            this.Text = "formManagerSubject";
+            this.Text = "Quản lý môn học";
             this.Load += new System.EventHandler(this.formManagerSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
@@ -506,12 +401,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSoTH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSoLT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenMH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLopTinChi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -545,12 +434,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSOTIET_LT;
         private DevExpress.XtraGrid.Columns.GridColumn colSOTIET_TH;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SpinEdit nbSoTH;
-        private DevExpress.XtraEditors.SpinEdit nbSoLT;
-        private DevExpress.XtraEditors.TextEdit txtTenMH;
-        private DevExpress.XtraEditors.TextEdit txtMaMH;
         private System.Windows.Forms.BindingSource bdsLopTinChi;
         private QLDSV_TCDataSetTableAdapters.LOPTINCHITableAdapter lOPTINCHITableAdapter;
         private DevExpress.XtraBars.BarButtonItem btnCancel;
+        private System.Windows.Forms.Label label1;
     }
 }

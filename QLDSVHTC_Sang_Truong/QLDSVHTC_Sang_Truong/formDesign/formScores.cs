@@ -23,18 +23,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void frmScores_Load(object sender, EventArgs e)
         {
-            //this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.MONHOC' table. You can move, or remove it, as needed.
-           // this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
 
-            this.v_DS_NIENKHOATableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.V_DS_NIENKHOA' table. You can move, or remove it, as needed.
-            this.v_DS_NIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.V_DS_NIENKHOA);
+            
 
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
             //chuyển dữ liệu từ danh sách phân mảnh vào cho combobox.
             func.BindingDataToComBo(cbDepartment, Program.bdsDSPM);
-            //load();
             if (Program.mGroup.Equals("KHOA"))
             {
                 cbDepartment.Enabled = false;
@@ -44,6 +38,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 cbDepartment.Enabled = true;
             }
 
+            this.v_DS_NIENKHOATableAdapter.Connection.ConnectionString = Program.connstr;
+            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.V_DS_NIENKHOA' table. You can move, or remove it, as needed.
+            this.v_DS_NIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.V_DS_NIENKHOA);
             cbHocky.SelectedIndex = 0;
             setEnableGrid(false);
             btnGhi.Enabled = btnReload.Enabled = btnUndo.Enabled = btnRedo.Enabled = btnReload.Enabled = false;
@@ -55,10 +52,30 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             gridViewDiem.Columns[3].OptionsColumn.AllowEdit = column;
             gridViewDiem.Columns[4].OptionsColumn.AllowEdit = column;
         }
+        private Boolean getEnableGrid()
+        {
+            return gridViewDiem.Columns[2].OptionsColumn.AllowEdit;
+        }
+
+        private void checkTuition()
+        {
+            if (btnNhapDiem.Enabled) return;
+
+            string pay = gridViewDiem.GetRowCellValue(gridViewDiem.FocusedRowHandle, "TOPAY").ToString();
+            if (getEnableGrid() && pay.Equals(""))
+            {
+                MessageBox.Show(this, "Không thể nhập, Sinh viên này chưa đóng học phí!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                setEnableGrid(false);
+            }
+            else if (!getEnableGrid() && !pay.Equals(""))
+            {
+                setEnableGrid(true);
+            }
+        }
 
         private void getEndScore()
         {
-            int rowSelect = gridViewDiem.GetSelectedRows()[0];
+            int rowSelect = gridViewDiem.FocusedRowHandle;
             DataRow dr = gridViewDiem.GetDataRow(rowSelect);
             //gridView1.SetFocusedRowCellValue(gridView1.FocusedColumn, Math.Round(float.Parse(e.Value.ToString()) * 2, MidpointRounding.AwayFromZero) / 2);
             
@@ -135,9 +152,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 {
                     try
                     {
+                        this.v_DS_NIENKHOATableAdapter.Connection.ConnectionString = Program.connstr;
+                        this.v_DS_NIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.V_DS_NIENKHOA);
+                        cbHocky.SelectedIndex = 0;
+                        setEnableGrid(false);
+                        btnNhapDiem.Enabled = true;
+                        btnGhi.Enabled = btnReload.Enabled = btnUndo.Enabled = btnRedo.Enabled = btnReload.Enabled = false;
                         loadClassRegister();
                         loadScoresSV();
-
                     }
                     catch (Exception) { }
                 }
@@ -198,12 +220,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void cbNienkhoa_EditValueChanged(object sender, EventArgs e)
         {
+            if (cbNienkhoa.Text.Equals("")) return;
             loadClassRegister();
            
         }
 
         private void cbHocky_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbNienkhoa.Text.Equals("")) return;
             loadClassRegister();
         }
 
@@ -218,17 +242,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 String input = e.Value as string;
                 bool test = !input.Equals("") && Regex.IsMatch(input, "\\d+");
-                if (input.Equals("")) return;
-
-                if (!Regex.IsMatch(input, "\\d+"))
+                float scoreCode;
+                bool isNumeric = float.TryParse(input, out scoreCode);
+                if(isNumeric)
                 {
-                    e.Valid = false;
-                    e.ErrorText = "Hãy nhập điểm bằng số";
-                    MessageBox.Show(this, "Hãy nhập điểm bằng số!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    float scoreCode = float.Parse(input);
                     if (scoreCode < 0 || scoreCode > 10)
                     {
                         e.Valid = false;
@@ -248,6 +265,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             btnGhi.Enabled = btnReload.Enabled = false;
         }
 
-        
+        private void gridViewDiem_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            checkTuition();
+        }
+
+       
+
+        private void gridViewDiem_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            checkTuition();
+        }
     }
 }
