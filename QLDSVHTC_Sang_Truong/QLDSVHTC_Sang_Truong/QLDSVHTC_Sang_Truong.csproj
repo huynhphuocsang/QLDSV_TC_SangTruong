@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -11,6 +11,7 @@
     <AssemblyName>QLDSVHTC_Sang_Truong</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,18 +32,33 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2" />
     <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -108,6 +125,24 @@
     <Compile Include="formDesign\formScores.Designer.cs">
       <DependentUpon>formScores.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\RpfCreditClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfCreditClass.Designer.cs">
+      <DependentUpon>RpfCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDesign\RpfStudentListCreditClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfStudentListCreditClass.Designer.cs">
+      <DependentUpon>RpfStudentListCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDesign\RpfTuitionFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfTuitionFee.Designer.cs">
+      <DependentUpon>RpfTuitionFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="func.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,11 +159,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLDSV_TCDataSet2.cs">
+      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSV_TCDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\ReportTuitionFee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\ReportTuitionFee.Designer.cs">
       <DependentUpon>ReportTuitionFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xrptCreditClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptCreditClass.Designer.cs">
+      <DependentUpon>xrptCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xrptStudentListCreditClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptStudentListCreditClass.Designer.cs">
+      <DependentUpon>xrptStudentListCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xrptTuitionFee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptTuitionFee.Designer.cs">
+      <DependentUpon>xrptTuitionFee.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction.cs" />
     <EmbeddedResource Include="formDesign\formClasses.resx">
@@ -160,6 +221,15 @@
     <EmbeddedResource Include="formDesign\formScores.resx">
       <DependentUpon>formScores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfCreditClass.resx">
+      <DependentUpon>RpfCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfStudentListCreditClass.resx">
+      <DependentUpon>RpfStudentListCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfTuitionFee.resx">
+      <DependentUpon>RpfTuitionFee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -169,9 +239,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report\ReportTuitionFee.resx">
       <DependentUpon>ReportTuitionFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptCreditClass.resx">
+      <DependentUpon>xrptCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptStudentListCreditClass.resx">
+      <DependentUpon>xrptStudentListCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptTuitionFee.resx">
+      <DependentUpon>xrptTuitionFee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -204,6 +284,17 @@
     </None>
     <None Include="QLDSV_TCDataSet1.xss">
       <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet2.xsc">
+      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TCDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TCDataSet2.xss">
+      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup />
