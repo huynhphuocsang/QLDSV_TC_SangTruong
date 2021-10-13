@@ -57,7 +57,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 return;
             }
            
-            xrptStudentScores rpt = new xrptStudentScores(maSV, cbNienKhoa.Text, Int32.Parse(cbHocky.Value.ToString()));
+            xrptStudentScores rpt = new xrptStudentScores(maSV);
+            rpt.lbMaSV.Text = maSV;
+            rpt.lbTenSV.Text = ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["HO"].ToString()+" "+ ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["TEN"].ToString();
+            rpt.lbLop.Text = cbLop.SelectedValue.ToString();
+            rpt.lbKhoa.Text = cbDepartment.Text;
+
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
         }

@@ -37,7 +37,6 @@ namespace QLDSVHTC_Sang_Truong
             System.Windows.Forms.Label hOTENLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClassRegistration));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.lbDebug = new System.Windows.Forms.Label();
             this.hOTENTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.sP_LOAD_REGISTER_INFORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
@@ -161,7 +160,6 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.lbDebug);
             this.groupControl1.Controls.Add(hOTENLabel);
             this.groupControl1.Controls.Add(this.hOTENTextEdit);
             this.groupControl1.Controls.Add(mAMHLabel);
@@ -180,15 +178,6 @@ namespace QLDSVHTC_Sang_Truong
             this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(987, 122);
             this.groupControl1.TabIndex = 0;
-            // 
-            // lbDebug
-            // 
-            this.lbDebug.AutoSize = true;
-            this.lbDebug.Location = new System.Drawing.Point(307, 92);
-            this.lbDebug.Name = "lbDebug";
-            this.lbDebug.Size = new System.Drawing.Size(59, 17);
-            this.lbDebug.TabIndex = 12;
-            this.lbDebug.Text = "lbDebug";
             // 
             // hOTENTextEdit
             // 
@@ -815,7 +804,6 @@ namespace QLDSVHTC_Sang_Truong
         private DevExpress.XtraEditors.SpinEdit edNhom;
         private DevExpress.XtraEditors.TextEdit tENMHTextEdit;
         private DevExpress.XtraEditors.TextEdit hOTENTextEdit;
-        private System.Windows.Forms.Label lbDebug;
         private System.Windows.Forms.BindingSource bdsSP_DS_DKY_SV;
         private QLDSV_TCDataSetTableAdapters.SP_DS_DKY_SVTableAdapter sP_DS_DKY_SVTableAdapter;
         private DevExpress.XtraGrid.GridControl sP_DS_DKY_SVGridControl;

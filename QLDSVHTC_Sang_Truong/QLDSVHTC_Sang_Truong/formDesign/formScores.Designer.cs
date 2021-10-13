@@ -54,7 +54,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnNhapDiem = new DevExpress.XtraEditors.SimpleButton();
             this.btnRedo = new DevExpress.XtraEditors.SimpleButton();
             this.btnUndo = new DevExpress.XtraEditors.SimpleButton();
@@ -71,7 +70,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_GK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_CK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTOPAY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bdsSP_ClassRegister = new System.Windows.Forms.BindingSource(this.components);
             this.sP_LOAD_REGISTER_INFORTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.SP_LOAD_REGISTER_INFORTableAdapter();
             this.sP_LOAD_REGISTER_INFORGridControl = new DevExpress.XtraGrid.GridControl();
@@ -291,7 +289,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.label3);
             this.groupControl3.Controls.Add(this.btnNhapDiem);
             this.groupControl3.Controls.Add(this.btnRedo);
             this.groupControl3.Controls.Add(this.btnUndo);
@@ -304,15 +301,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.groupControl3.Size = new System.Drawing.Size(1232, 75);
             this.groupControl3.TabIndex = 12;
             this.groupControl3.Text = "groupControl3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(953, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
             // 
             // btnNhapDiem
             // 
@@ -400,8 +388,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_CC,
             this.colDIEM_GK,
             this.colDIEM_CK,
-            this.gridColumn1,
-            this.colTOPAY});
+            this.gridColumn1});
             gridFormatRule1.ApplyToRow = true;
             gridFormatRule1.Name = "scoresLow";
             formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -555,15 +542,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 94;
-            // 
-            // colTOPAY
-            // 
-            this.colTOPAY.FieldName = "TOPAY";
-            this.colTOPAY.MinWidth = 25;
-            this.colTOPAY.Name = "colTOPAY";
-            this.colTOPAY.Visible = true;
-            this.colTOPAY.VisibleIndex = 6;
-            this.colTOPAY.Width = 94;
             // 
             // bdsSP_ClassRegister
             // 
@@ -723,7 +701,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LOAD_LIST_SCORESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LOAD_LIST_SCORESGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDiem)).EndInit();
@@ -778,8 +755,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraEditors.SimpleButton btnUndo;
         private DevExpress.XtraEditors.LookUpEdit cbNienkhoa;
         private DevExpress.XtraEditors.SimpleButton btnNhapDiem;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraGrid.Columns.GridColumn colTOPAY;
         private System.Windows.Forms.NumericUpDown cbHocky;
     }
 }

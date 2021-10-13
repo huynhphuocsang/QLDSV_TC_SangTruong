@@ -131,6 +131,12 @@
     <Compile Include="formDesign\RpfClassScores.Designer.cs">
       <DependentUpon>RpfClassScores.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\RpfCreditClassScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfCreditClassScores.Designer.cs">
+      <DependentUpon>RpfCreditClassScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="formDesign\RpfCreditClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     <Compile Include="Report\xrptClassScores.Designer.cs">
       <DependentUpon>xrptClassScores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\xrptCreditClassScores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptCreditClassScores.Designer.cs">
+      <DependentUpon>xrptCreditClassScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\xrptCreditClass.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -248,6 +260,9 @@
     <EmbeddedResource Include="formDesign\RpfClassScores.resx">
       <DependentUpon>RpfClassScores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfCreditClassScores.resx">
+      <DependentUpon>RpfCreditClassScores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formDesign\RpfCreditClass.resx">
       <DependentUpon>RpfCreditClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptClassScores.resx">
       <DependentUpon>xrptClassScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptCreditClassScores.resx">
+      <DependentUpon>xrptCreditClassScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptCreditClass.resx">
       <DependentUpon>xrptCreditClass.cs</DependentUpon>

@@ -121,16 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlNQX1JFUE9SVF9DTEFTU19TQ09SRVMiPjxGaWVsZCBOYW1lPSJNQVNWIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkhPIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRFTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJESUVNX0NDIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRElFTV9HSyIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJESUVNX0NLIiBUeXBlPSJEb3VibGUiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
-  </data>
-  <data name="calDiemKtCH.Expression" xml:space="preserve">
-    <value>Iif([calDiemKT]&gt;9,'A+' ,Iif([calDiemKT]&gt;8.5,'A' ,Iif([calDiemKT]&gt;8,'B+' ,Iif([calDiemKT]&gt;7,'B' , Iif([calDiemKT]&gt;6.5,'C+' ,Iif([calDiemKT]&gt;5.5,'C' ,Iif([calDiemKT]&gt;5,'D+' , Iif([calDiemKT]&gt;4,'D' ,'F' )
-)
- )
- )
-)
- )
- )
- )</value>
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlNQX1JFUE9SVF9DTEFTU19TQ09SRVMiPjxGaWVsZCBOYW1lPSJNQVNWIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkhPVEVOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1BTUgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRElFTSIgVHlwZT0iRG91YmxlIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
   </data>
 </root>
