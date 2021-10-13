@@ -39,7 +39,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.cbHocky = new System.Windows.Forms.ComboBox();
+            this.cbHocky = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cbNienkhoa = new DevExpress.XtraEditors.LookUpEdit();
             this.vDSNIENKHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -84,6 +84,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             nIENKHOALabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbHocky)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbNienkhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vDSNIENKHOABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
@@ -149,23 +150,35 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // cbHocky
             // 
-            this.cbHocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.cbHocky.FormattingEnabled = true;
-            this.cbHocky.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cbHocky.Location = new System.Drawing.Point(858, 22);
+            this.cbHocky.BackColor = System.Drawing.Color.White;
+            this.cbHocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHocky.Location = new System.Drawing.Point(849, 25);
+            this.cbHocky.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.cbHocky.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cbHocky.Name = "cbHocky";
-            this.cbHocky.Size = new System.Drawing.Size(74, 28);
-            this.cbHocky.TabIndex = 14;
-            this.cbHocky.SelectedIndexChanged += new System.EventHandler(this.cbHocky_SelectedIndexChanged);
+            this.cbHocky.ReadOnly = true;
+            this.cbHocky.Size = new System.Drawing.Size(129, 27);
+            this.cbHocky.TabIndex = 15;
+            this.cbHocky.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cbHocky.ValueChanged += new System.EventHandler(this.cbHocky_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(782, 24);
+            this.label2.Location = new System.Drawing.Point(782, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 11;
@@ -591,6 +604,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridViewLop.GridControl = this.sP_LOAD_REGISTER_INFORGridControl;
             this.gridViewLop.GroupPanelText = "DANH SÁCH LỚP TÍN CHỈ";
             this.gridViewLop.Name = "gridViewLop";
+            this.gridViewLop.Click += new System.EventHandler(this.gridViewLop_Click);
             this.gridViewLop.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
             // 
             // colMAMH
@@ -701,6 +715,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbHocky)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbNienkhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vDSNIENKHOABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
@@ -758,7 +773,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraGrid.Columns.GridColumn colNHOM;
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN1;
         private DevExpress.XtraGrid.Columns.GridColumn colSOSV;
-        private System.Windows.Forms.ComboBox cbHocky;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.SimpleButton btnRedo;
         private DevExpress.XtraEditors.SimpleButton btnUndo;
@@ -766,5 +780,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraEditors.SimpleButton btnNhapDiem;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraGrid.Columns.GridColumn colTOPAY;
+        private System.Windows.Forms.NumericUpDown cbHocky;
     }
 }

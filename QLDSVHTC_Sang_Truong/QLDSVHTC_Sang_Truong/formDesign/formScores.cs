@@ -41,7 +41,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.v_DS_NIENKHOATableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.V_DS_NIENKHOA' table. You can move, or remove it, as needed.
             this.v_DS_NIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.V_DS_NIENKHOA);
-            cbHocky.SelectedIndex = 0;
             setEnableGrid(false);
             btnGhi.Enabled = btnReload.Enabled = btnUndo.Enabled = btnRedo.Enabled = btnReload.Enabled = false;
         }
@@ -101,7 +100,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 this.qLDSV_TCDataSet.EnforceConstraints = false;
                 this.sP_LOAD_REGISTER_INFORTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sP_LOAD_REGISTER_INFORTableAdapter.Fill(this.qLDSV_TCDataSet.SP_LOAD_REGISTER_INFOR, cbNienkhoa.Text, Int32.Parse(cbHocky.Text));
+                this.sP_LOAD_REGISTER_INFORTableAdapter.Fill(this.qLDSV_TCDataSet.SP_LOAD_REGISTER_INFOR, cbNienkhoa.Text, Int32.Parse(cbHocky.Value.ToString()));
             }
             catch (System.Exception ex)
             {
@@ -117,7 +116,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 this.qLDSV_TCDataSet.EnforceConstraints = false;
                 this.sP_LOAD_LIST_SCORESTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sP_LOAD_LIST_SCORESTableAdapter.Fill(this.qLDSV_TCDataSet.SP_LOAD_LIST_SCORES, cbNienkhoa.Text, Int32.Parse(cbHocky.Text), maMH, nhom);
+                this.sP_LOAD_LIST_SCORESTableAdapter.Fill(this.qLDSV_TCDataSet.SP_LOAD_LIST_SCORES, cbNienkhoa.Text, Int32.Parse(cbHocky.Value.ToString()), maMH, nhom);
             }
             catch (System.Exception ex)
             {
@@ -154,7 +153,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     {
                         this.v_DS_NIENKHOATableAdapter.Connection.ConnectionString = Program.connstr;
                         this.v_DS_NIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.V_DS_NIENKHOA);
-                        cbHocky.SelectedIndex = 0;
                         setEnableGrid(false);
                         btnNhapDiem.Enabled = true;
                         btnGhi.Enabled = btnReload.Enabled = btnUndo.Enabled = btnRedo.Enabled = btnReload.Enabled = false;
@@ -187,7 +185,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             }
             if (gridViewDiem.RowCount == 0)
             {
-                MessageBox.Show("Hãy chọn nhôm để nhập điểm\r\n (Vui lòng nhấn chọn 2 lần vào môn cần nhập)!", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hãy chọn nhôm để nhập điểm!", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             setEnableGrid(true);
@@ -222,6 +220,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (cbNienkhoa.Text.Equals("")) return;
             loadClassRegister();
+            loadScoresSV();
            
         }
 
@@ -229,9 +228,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (cbNienkhoa.Text.Equals("")) return;
             loadClassRegister();
+            loadScoresSV();
         }
 
         private void gridView2_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+        private void gridViewLop_Click(object sender, EventArgs e)
         {
             loadScoresSV();
         }
@@ -276,5 +280,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             checkTuition();
         }
+
+        private void cbHocky_ValueChanged(object sender, EventArgs e)
+        {
+            if (cbNienkhoa.Text.Equals("")) return;
+            loadClassRegister();
+        }
+
+        
     }
 }

@@ -628,6 +628,25 @@ FROM     DSGV_CTTK</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DS_MONHOCTableAdapter" GeneratorDataComponentClassName="DS_MONHOCTableAdapter" Name="DS_MONHOC" UserDataComponentName="DS_MONHOCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLDSV_TCConnectionString (Settings)" DbObjectName="QLDSV_TC.dbo.MONHOC" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT MH.MAMH, TENMH 
+FROM MONHOC MH, (SELECT DISTINCT MAMH FROM LOPTINCHI WHERE HUYLOP=0) LTC
+WHERE MH.MAMH=LTC.MAMH</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MAMH" DataSetColumn="MAMH" />
+              <Mapping SourceColumn="TENMH" DataSetColumn="TENMH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -988,6 +1007,26 @@ FROM     DSGV_CTTK</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DS_MONHOC" msprop:Generator_TableClassName="DS_MONHOCDataTable" msprop:Generator_TableVarName="tableDS_MONHOC" msprop:Generator_RowChangedName="DS_MONHOCRowChanged" msprop:Generator_TablePropName="DS_MONHOC" msprop:Generator_RowDeletingName="DS_MONHOCRowDeleting" msprop:Generator_RowChangingName="DS_MONHOCRowChanging" msprop:Generator_RowEvHandlerName="DS_MONHOCRowChangeEventHandler" msprop:Generator_RowDeletedName="DS_MONHOCRowDeleted" msprop:Generator_RowClassName="DS_MONHOCRow" msprop:Generator_UserTableName="DS_MONHOC" msprop:Generator_RowEvArgName="DS_MONHOCRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" msprop:Generator_UserColumnName="MAMH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENMH" msprop:Generator_ColumnVarNameInTable="columnTENMH" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" msprop:Generator_UserColumnName="TENMH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1031,6 +1070,10 @@ FROM     DSGV_CTTK</CommandText>
       <xs:selector xpath=".//mstns:DSGV_CTTK" />
       <xs:field xpath="mstns:MAGV" />
     </xs:unique>
+    <xs:unique name="DS_MONHOC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DS_MONHOC" />
+      <xs:field xpath="mstns:MAMH" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -1042,6 +1085,7 @@ FROM     DSGV_CTTK</CommandText>
       <msdata:Relationship name="FK_LOPTINCHI_KHOA" msdata:parent="KHOA" msdata:child="LOPTINCHI" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_UserRelationName="FK_LOPTINCHI_KHOA" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_RelationVarName="relationFK_LOPTINCHI_KHOA" msprop:Generator_UserParentTable="KHOA" />
       <msdata:Relationship name="FK_LOPTINCHI_MONHOC" msdata:parent="MONHOC" msdata:child="LOPTINCHI" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_UserRelationName="FK_LOPTINCHI_MONHOC" msprop:Generator_RelationVarName="relationFK_LOPTINCHI_MONHOC" msprop:Generator_UserParentTable="MONHOC" msprop:Generator_ParentPropName="MONHOCRow" />
       <msdata:Relationship name="FK_SINHVIEN_LOP" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_UserRelationName="FK_SINHVIEN_LOP" msprop:Generator_ParentPropName="LOPRow" msprop:Generator_RelationVarName="relationFK_SINHVIEN_LOP" msprop:Generator_UserParentTable="LOP" />
+      <msdata:Relationship name="FK_LOPTINCHI_MONHOC1" msdata:parent="DS_MONHOC" msdata:child="LOPTINCHI" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_UserRelationName="FK_LOPTINCHI_MONHOC1" msprop:Generator_ParentPropName="DS_MONHOCRow" msprop:Generator_RelationVarName="relationFK_LOPTINCHI_MONHOC1" msprop:Generator_UserParentTable="DS_MONHOC" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

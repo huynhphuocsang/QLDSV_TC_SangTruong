@@ -509,3 +509,7 @@ D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\o
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptStudentListCreditClass.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptTuitionFee.resources
+D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfClassScores.resources
+D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptClassScores.resources
+D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentScores.resources
+D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptStudentScores.resources
