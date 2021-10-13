@@ -125,6 +125,12 @@
     <Compile Include="formDesign\formScores.Designer.cs">
       <DependentUpon>formScores.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDesign\RpfClassScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfClassScores.Designer.cs">
+      <DependentUpon>RpfClassScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="formDesign\RpfCreditClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="formDesign\RpfStudentListCreditClass.Designer.cs">
       <DependentUpon>RpfStudentListCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDesign\RpfStudentScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesign\RpfStudentScores.Designer.cs">
+      <DependentUpon>RpfStudentScores.cs</DependentUpon>
     </Compile>
     <Compile Include="formDesign\RpfTuitionFee.cs">
       <SubType>Form</SubType>
@@ -173,6 +185,12 @@
     <Compile Include="Report\ReportTuitionFee.Designer.cs">
       <DependentUpon>ReportTuitionFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\xrptClassScores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptClassScores.Designer.cs">
+      <DependentUpon>xrptClassScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\xrptCreditClass.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -184,6 +202,12 @@
     </Compile>
     <Compile Include="Report\xrptStudentListCreditClass.Designer.cs">
       <DependentUpon>xrptStudentListCreditClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xrptStudentScores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrptStudentScores.Designer.cs">
+      <DependentUpon>xrptStudentScores.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\xrptTuitionFee.cs">
       <SubType>Component</SubType>
@@ -221,11 +245,17 @@
     <EmbeddedResource Include="formDesign\formScores.resx">
       <DependentUpon>formScores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfClassScores.resx">
+      <DependentUpon>RpfClassScores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formDesign\RpfCreditClass.resx">
       <DependentUpon>RpfCreditClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\RpfStudentListCreditClass.resx">
       <DependentUpon>RpfStudentListCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesign\RpfStudentScores.resx">
+      <DependentUpon>RpfStudentScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formDesign\RpfTuitionFee.resx">
       <DependentUpon>RpfTuitionFee.cs</DependentUpon>
@@ -244,11 +274,17 @@
     <EmbeddedResource Include="Report\ReportTuitionFee.resx">
       <DependentUpon>ReportTuitionFee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptClassScores.resx">
+      <DependentUpon>xrptClassScores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptCreditClass.resx">
       <DependentUpon>xrptCreditClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptStudentListCreditClass.resx">
       <DependentUpon>xrptStudentListCreditClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrptStudentScores.resx">
+      <DependentUpon>xrptStudentScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptTuitionFee.resx">
       <DependentUpon>xrptTuitionFee.cs</DependentUpon>

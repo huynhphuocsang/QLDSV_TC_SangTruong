@@ -4,6 +4,10 @@
 
     partial class QLDSV_TCDataSet
     {
+        partial class DS_MONHOCDataTable
+        {
+        }
+
         partial class SINHVIENDataTable
         {
         }

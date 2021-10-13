@@ -183,5 +183,29 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 form.Show();
             }
         }
+
+        private void btnRpfClassScores_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(RpfClassScores));
+            if (frm != null) frm.Activate();
+            else
+            {
+                RpfClassScores form = new RpfClassScores();
+                //form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void btnStudentScores_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(RpfStudentScores));
+            if (frm != null) frm.Activate();
+            else
+            {
+                RpfStudentScores form = new RpfStudentScores();
+                //form.MdiParent = this;
+                form.Show();
+            }
+        }
     }
 }
