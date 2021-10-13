@@ -30,13 +30,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label nIENKHOALabel;
             System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RpfStudentScores));
-            this.cbHocky = new System.Windows.Forms.NumericUpDown();
             this.btnInDS = new DevExpress.XtraEditors.SimpleButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbNienKhoa = new System.Windows.Forms.ComboBox();
             this.vDSNIENKHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
             this.v_DS_NIENKHOATableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.V_DS_NIENKHOATableAdapter();
@@ -53,12 +49,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colPHAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYSINH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tENLOPComboBox = new System.Windows.Forms.ComboBox();
+            this.cbLop = new System.Windows.Forms.ComboBox();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            nIENKHOALabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.cbHocky)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vDSNIENKHOABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
@@ -66,17 +60,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // nIENKHOALabel
-            // 
-            nIENKHOALabel.AutoSize = true;
-            nIENKHOALabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nIENKHOALabel.Location = new System.Drawing.Point(222, 132);
-            nIENKHOALabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nIENKHOALabel.Name = "nIENKHOALabel";
-            nIENKHOALabel.Size = new System.Drawing.Size(83, 21);
-            nIENKHOALabel.TabIndex = 23;
-            nIENKHOALabel.Text = "Niên khóa";
             // 
             // label3
             // 
@@ -89,29 +72,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             label3.TabIndex = 29;
             label3.Text = "Lớp:";
             // 
-            // cbHocky
-            // 
-            this.cbHocky.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHocky.Location = new System.Drawing.Point(658, 133);
-            this.cbHocky.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.cbHocky.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.cbHocky.Name = "cbHocky";
-            this.cbHocky.Size = new System.Drawing.Size(120, 28);
-            this.cbHocky.TabIndex = 26;
-            this.cbHocky.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // btnInDS
             // 
             this.btnInDS.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnInDS.ImageOptions.SvgImage")));
@@ -122,30 +82,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnInDS.TabIndex = 25;
             this.btnInDS.Text = "IN BẢNG ĐIỂM";
             this.btnInDS.Click += new System.EventHandler(this.btnInDS_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(589, 136);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Học kỳ";
-            // 
-            // cbNienKhoa
-            // 
-            this.cbNienKhoa.DataSource = this.vDSNIENKHOABindingSource;
-            this.cbNienKhoa.DisplayMember = "NIENKHOA";
-            this.cbNienKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNienKhoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNienKhoa.FormattingEnabled = true;
-            this.cbNienKhoa.Location = new System.Drawing.Point(313, 132);
-            this.cbNienKhoa.Name = "cbNienKhoa";
-            this.cbNienKhoa.Size = new System.Drawing.Size(192, 29);
-            this.cbNienKhoa.TabIndex = 28;
-            this.cbNienKhoa.ValueMember = "NIENKHOA";
             // 
             // vDSNIENKHOABindingSource
             // 
@@ -195,10 +131,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // sINHVIENGridControl
             // 
             this.sINHVIENGridControl.DataSource = this.bdsSINHVIEN;
-            this.sINHVIENGridControl.Location = new System.Drawing.Point(12, 184);
+            this.sINHVIENGridControl.Location = new System.Drawing.Point(12, 143);
             this.sINHVIENGridControl.MainView = this.gridView1;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
-            this.sINHVIENGridControl.Size = new System.Drawing.Size(1020, 239);
+            this.sINHVIENGridControl.Size = new System.Drawing.Size(1028, 280);
             this.sINHVIENGridControl.TabIndex = 31;
             this.sINHVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -334,19 +270,19 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNGAYSINH.VisibleIndex = 5;
             this.colNGAYSINH.Width = 94;
             // 
-            // tENLOPComboBox
+            // cbLop
             // 
-            this.tENLOPComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource, "TENLOP", true));
-            this.tENLOPComboBox.DataSource = this.lOPBindingSource;
-            this.tENLOPComboBox.DisplayMember = "TENLOP";
-            this.tENLOPComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tENLOPComboBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tENLOPComboBox.FormattingEnabled = true;
-            this.tENLOPComboBox.Location = new System.Drawing.Point(341, 71);
-            this.tENLOPComboBox.Name = "tENLOPComboBox";
-            this.tENLOPComboBox.Size = new System.Drawing.Size(371, 29);
-            this.tENLOPComboBox.TabIndex = 32;
-            this.tENLOPComboBox.ValueMember = "MALOP";
+            this.cbLop.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource, "TENLOP", true));
+            this.cbLop.DataSource = this.lOPBindingSource;
+            this.cbLop.DisplayMember = "TENLOP";
+            this.cbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLop.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLop.FormattingEnabled = true;
+            this.cbLop.Location = new System.Drawing.Point(341, 71);
+            this.cbLop.Name = "cbLop";
+            this.cbLop.Size = new System.Drawing.Size(371, 29);
+            this.cbLop.TabIndex = 32;
+            this.cbLop.ValueMember = "MALOP";
             // 
             // cbDepartment
             // 
@@ -380,19 +316,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.ClientSize = new System.Drawing.Size(1052, 528);
             this.Controls.Add(this.cbDepartment);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tENLOPComboBox);
+            this.Controls.Add(this.cbLop);
             this.Controls.Add(this.sINHVIENGridControl);
             this.Controls.Add(label3);
-            this.Controls.Add(this.cbNienKhoa);
-            this.Controls.Add(this.cbHocky);
             this.Controls.Add(this.btnInDS);
-            this.Controls.Add(nIENKHOALabel);
-            this.Controls.Add(this.label2);
             this.Name = "RpfStudentScores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Điểm tổng kết sinh viên";
             this.Load += new System.EventHandler(this.RpfStudentScores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cbHocky)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vDSNIENKHOABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
@@ -405,10 +336,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         }
 
         #endregion
-        private System.Windows.Forms.NumericUpDown cbHocky;
         private DevExpress.XtraEditors.SimpleButton btnInDS;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbNienKhoa;
         private QLDSV_TCDataSet qLDSV_TCDataSet;
         private System.Windows.Forms.BindingSource vDSNIENKHOABindingSource;
         private QLDSV_TCDataSetTableAdapters.V_DS_NIENKHOATableAdapter v_DS_NIENKHOATableAdapter;
@@ -425,7 +353,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraGrid.Columns.GridColumn colPHAI;
         private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
         private DevExpress.XtraGrid.Columns.GridColumn colNGAYSINH;
-        private System.Windows.Forms.ComboBox tENLOPComboBox;
+        private System.Windows.Forms.ComboBox cbLop;
         private System.Windows.Forms.ComboBox cbDepartment;
         private System.Windows.Forms.Label label1;
     }

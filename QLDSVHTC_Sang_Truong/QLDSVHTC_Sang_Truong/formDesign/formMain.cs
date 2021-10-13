@@ -186,11 +186,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnRpfClassScores_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(RpfClassScores));
+            Form frm = this.CheckExists(typeof(RpfCreditClassScores));
             if (frm != null) frm.Activate();
             else
             {
-                RpfClassScores form = new RpfClassScores();
+                RpfCreditClassScores form = new RpfCreditClassScores();
                 //form.MdiParent = this;
                 form.Show();
             }
@@ -203,6 +203,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             else
             {
                 RpfStudentScores form = new RpfStudentScores();
+                //form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void barButtonItem2_ItemClick_3(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(RpfClassScores));
+            if (frm != null) frm.Activate();
+            else
+            {
+                RpfClassScores form = new RpfClassScores();
                 //form.MdiParent = this;
                 form.Show();
             }
