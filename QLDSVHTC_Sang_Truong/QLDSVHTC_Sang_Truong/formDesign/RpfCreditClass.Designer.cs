@@ -149,7 +149,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Controls.Add(this.cbDepartment);
             this.Name = "RpfCreditClass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RpfCreditClass";
+            this.Text = "In danh sách lớp tín chỉ theo niên khóa-học kỳ";
             this.Load += new System.EventHandler(this.RpfCreditClass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmSemester)).EndInit();
             this.ResumeLayout(false);
