@@ -25,7 +25,25 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (Program.mGroup == "SV")
             {
-                barBtnRegister.Enabled = true;
+                //barBtnRegister.Enabled = true;
+                ribbonPage1.Visible = true; 
+            }else if (Program.mGroup == "KHOA" || Program.mGroup == "PGV")
+            {
+                ribbonPageManageClass.Visible = true;
+                ribbonPageManageCreditClass.Visible = true;
+                ribbonPageManageListScore.Visible = true;
+                ribbonPageManageSubject.Visible = true;
+
+                ribbonPageReportCreditClass.Visible = true; 
+                ribbonPageManageReportStudent.Visible = true;
+                ribbonPageManageReportSubject.Visible = true;
+                ribbonPageManageStudentScore.Visible = true;
+                ribbonPageManageReportClassScore.Visible = true; 
+            }
+            else if (Program.mGroup == "PKT")
+            {
+                ribbonPageManageTuitionFee.Visible = true;
+                ribbonPageManageReportTuition.Visible = true;
             }
         }
 
