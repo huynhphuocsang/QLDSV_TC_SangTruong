@@ -23,6 +23,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void RpfTuitionFee_Load(object sender, EventArgs e)
         {
+            this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet1.LOP' table. You can move, or remove it, as needed.
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet1.LOP);
 
