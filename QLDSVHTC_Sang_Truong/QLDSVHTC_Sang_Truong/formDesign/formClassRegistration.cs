@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
 
 namespace QLDSVHTC_Sang_Truong
 {
@@ -159,6 +160,29 @@ namespace QLDSVHTC_Sang_Truong
             {
                 contextMenuStrip1.Show(sP_DS_DKY_SVGridControl, e.Location);
             }
+        }
+        private void chiTietLopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            string schoolYear = cbPhase.Text;
+            int semester = Convert.ToInt32(nbSemester.Value);
+            string subjectName = ((DataRowView)bdsSP_DS_DKY_SV[bdsSP_DS_DKY_SV.Position])["TENMH"].ToString();
+            string subjectCode = ((DataRowView)bdsSP_DS_DKY_SV[bdsSP_DS_DKY_SV.Position])["MAMH"].ToString();
+            int group = Convert.ToInt32(((DataRowView)bdsSP_DS_DKY_SV[bdsSP_DS_DKY_SV.Position])["NHOM"].ToString());
+
+            xrptStudentListCreditClass xrpt = new xrptStudentListCreditClass(schoolYear, semester, subjectCode, group);
+
+            //xrpt.xrlbDepartment.Text = cbDepartment.Text;
+
+            if (Program.mPhongBan == 0) xrpt.xrlbDepartment.Text = "Công nghệ thông tin";
+            else xrpt.xrlbDepartment.Text = "Viễn thông";
+            xrpt.xrlbSchoolyear.Text = schoolYear;
+            xrpt.xrlbSemester.Text = semester.ToString();
+            xrpt.xrlbSubject.Text = subjectName;
+            xrpt.xrlbGroup.Text = group.ToString();
+
+            ReportPrintTool printTool = new ReportPrintTool(xrpt);
+            printTool.ShowPreviewDialog();
         }
     }
 }

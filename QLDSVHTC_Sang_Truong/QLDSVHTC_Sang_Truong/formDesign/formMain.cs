@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
-using DevExpress.XtraEditors; 
+using DevExpress.XtraEditors;
+using QLDSVHTC_Sang_Truong.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
 
 namespace QLDSVHTC_Sang_Truong.formDesign
 {
@@ -25,10 +27,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (Program.mGroup == "SV")
             {
-                //barBtnRegister.Enabled = true;
-                ribbonPage1.Visible = true; 
-            }else if (Program.mGroup == "KHOA" || Program.mGroup == "PGV")
+                ribbonPageSV.Visible = true;
+                ribbon.SelectedPage = ribbonPageSV;
+            }
+            else if (Program.mGroup == "KHOA" || Program.mGroup == "PGV")
             {
+                ribbonPageManager.Visible = true;
+                ribbonPageReport.Visible = true;
+
                 ribbonPageManageClass.Visible = true;
                 ribbonPageManageCreditClass.Visible = true;
                 ribbonPageManageListScore.Visible = true;
@@ -38,13 +44,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 ribbonPageManageReportStudent.Visible = true;
                 ribbonPageManageReportSubject.Visible = true;
                 ribbonPageManageStudentScore.Visible = true;
-                ribbonPageManageReportClassScore.Visible = true; 
+                ribbonPageManageReportClassScore.Visible = true;
+
+                ribbon.SelectedPage = ribbonPageManager;
             }
             else if (Program.mGroup == "PKT")
             {
+                ribbonPageManager.Visible = true;
+                ribbonPageReport.Visible = true;
+
                 ribbonPageManageTuitionFee.Visible = true;
                 ribbonPageManageReportTuition.Visible = true;
+
+                ribbon.SelectedPage = ribbonPageManager;
             }
+           
         }
 
         private void bntManageClass_ItemClick(object sender, ItemClickEventArgs e)
@@ -236,6 +250,23 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 //form.MdiParent = this;
                 form.Show();
             }
+        }
+
+        private void btnXemDiem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String maSV = Program.username;
+
+            xrptStudentScores rpt = new xrptStudentScores(maSV);
+            rpt.lbMaSV.Text = maSV.ToUpper();
+            rpt.lbTenSV.Text = Program.mHoten;
+            rpt.lbLop.Text = "";
+
+            if (Program.mPhongBan == 0) rpt.lbKhoa.Text = "Công nghệ thông tin";
+            else rpt.lbKhoa.Text = "Viễn thông";
+
+            ReportPrintTool print = new ReportPrintTool(rpt);
+            print.ShowRibbonPreviewDialog();
+            //print.ShowPreviewDialog();
         }
     }
 }
