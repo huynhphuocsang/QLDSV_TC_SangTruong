@@ -49,7 +49,7 @@ namespace QLDSVHTC_Sang_Truong
             {
                 this.qLDSV_TCDataSet.EnforceConstraints = false;
                 this.sP_DS_DKY_SVTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sP_DS_DKY_SVTableAdapter.Fill(this.qLDSV_TCDataSet.SP_DS_DKY_SV, Program.frmChinh.statusMa.Text, cbPhase.Text, new System.Nullable<int>(((int)(System.Convert.ChangeType(nbSemester.Value, typeof(int))))));
+                this.sP_DS_DKY_SVTableAdapter.Fill(this.qLDSV_TCDataSet.SP_DS_DKY_SV, Program.frmChinh.statusMa.Text, cbPhase.Text, Int32.Parse(nbSemester.Value.ToString()),Program.chiPhi);
             }
             catch (System.Exception ex)
             {
@@ -93,19 +93,6 @@ namespace QLDSVHTC_Sang_Truong
 
             //lấy mã lớp tín chỉ
             String maLTC= gridViewSpLoadRegister.GetRowCellValue(gridViewSpLoadRegister.FocusedRowHandle, "MALTC").ToString();
-            
-           /* //so sánh vs danh sách đã đăng ký để kt trùng
-            for (int i = 0; i < bdsSP_DS_DKY_SV.Count; i++)
-            {
-                DataRow dr = gridView1.GetDataRow(i);
-                if (dr["MAMH"].ToString().Equals(txtMaMH.Text) && dr["NIENKHOA"].ToString().Equals(cbPhase.Text) 
-                    && dr["HOCKY"].ToString().Equals(nbSemester.Value.ToString()))
-                {
-                    MessageBox.Show("Sinh viên đã đăng ký môn này");
-                    return;
-                }
-            }*/
-
             //đăng ký
             String str_sp = "dbo.SP_DKY_LOPTINCHI";
             Program.sqlcmd = Program.conn.CreateCommand();

@@ -35,26 +35,29 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.label1 = new System.Windows.Forms.Label();
             this.NhomQuyenGroup = new DevExpress.XtraEditors.RadioGroup();
             this.lookUpUser = new DevExpress.XtraEditors.LookUpEdit();
-            this.gIANGVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
             this.taoLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.showConfirmPass = new System.Windows.Forms.CheckBox();
             this.PassWord = new System.Windows.Forms.CheckBox();
-            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.gIANGVIENTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.GIANGVIENTableAdapter();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gIANGVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
+            this.gIANGVIENTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.GIANGVIENTableAdapter();
+            this.dSGVCTTKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSGV_CTTKTableAdapter = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.DSGV_CTTKTableAdapter();
             hOTENLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NhomQuyenGroup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIANGVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSGVCTTKBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // hOTENLabel
@@ -121,24 +124,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lookUpUser.Properties.Appearance.Options.UseBackColor = true;
             this.lookUpUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpUser.Properties.DataSource = this.gIANGVIENBindingSource;
-            this.lookUpUser.Properties.DisplayMember = "HO";
+            this.lookUpUser.Properties.DataSource = this.dSGVCTTKBindingSource;
+            this.lookUpUser.Properties.DisplayMember = "HOTEN";
             this.lookUpUser.Properties.DropDownRows = 5;
             this.lookUpUser.Properties.NullText = "Chọn mã giảng viên";
             this.lookUpUser.Properties.ValueMember = "MAGV";
-            this.lookUpUser.Size = new System.Drawing.Size(350, 22);
+            this.lookUpUser.Size = new System.Drawing.Size(510, 22);
             this.lookUpUser.TabIndex = 43;
             this.lookUpUser.EditValueChanged += new System.EventHandler(this.lookUpUser_EditValueChanged);
-            // 
-            // gIANGVIENBindingSource
-            // 
-            this.gIANGVIENBindingSource.DataMember = "GIANGVIEN";
-            this.gIANGVIENBindingSource.DataSource = this.qLDSV_TCDataSet;
-            // 
-            // qLDSV_TCDataSet
-            // 
-            this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
-            this.qLDSV_TCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // taoLogin
             // 
@@ -185,23 +178,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.PassWord.UseVisualStyleBackColor = true;
             this.PassWord.CheckedChanged += new System.EventHandler(this.PassWord_CheckedChanged);
             // 
-            // txtConfirm
-            // 
-            this.txtConfirm.Location = new System.Drawing.Point(516, 261);
-            this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtConfirm.Name = "txtConfirm";
-            this.txtConfirm.Size = new System.Drawing.Size(354, 23);
-            this.txtConfirm.TabIndex = 35;
-            this.txtConfirm.UseSystemPasswordChar = true;
-            // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(516, 204);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(354, 23);
-            this.txtPass.TabIndex = 36;
+            this.txtPass.TabIndex = 35;
             this.txtPass.UseSystemPasswordChar = true;
+            // 
+            // txtConfirm
+            // 
+            this.txtConfirm.Location = new System.Drawing.Point(516, 264);
+            this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(354, 23);
+            this.txtConfirm.TabIndex = 36;
+            this.txtConfirm.UseSystemPasswordChar = true;
+            this.txtConfirm.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // label5
             // 
@@ -244,19 +238,40 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.label2.TabIndex = 31;
             this.label2.Text = "Tên đăng nhập :";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // gIANGVIENBindingSource
+            // 
+            this.gIANGVIENBindingSource.DataMember = "GIANGVIEN";
+            this.gIANGVIENBindingSource.DataSource = this.qLDSV_TCDataSet;
+            // 
+            // qLDSV_TCDataSet
+            // 
+            this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
+            this.qLDSV_TCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gIANGVIENTableAdapter
             // 
             this.gIANGVIENTableAdapter.ClearBeforeFill = true;
             // 
-            // errorProvider
+            // dSGVCTTKBindingSource
             // 
-            this.errorProvider.ContainerControl = this;
+            this.dSGVCTTKBindingSource.DataMember = "DSGV_CTTK";
+            this.dSGVCTTKBindingSource.DataSource = this.qLDSV_TCDataSet;
+            // 
+            // dSGV_CTTKTableAdapter
+            // 
+            this.dSGV_CTTKTableAdapter.ClearBeforeFill = true;
             // 
             // formCreateLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1129, 663);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.NhomQuyenGroup);
             this.Controls.Add(this.lookUpUser);
             this.Controls.Add(this.taoLogin);
@@ -264,8 +279,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Controls.Add(hOTENLabel);
             this.Controls.Add(this.showConfirmPass);
             this.Controls.Add(this.PassWord);
-            this.Controls.Add(this.txtConfirm);
-            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label3);
@@ -277,9 +290,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Load += new System.EventHandler(this.formCreateLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NhomQuyenGroup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIANGVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSGVCTTKBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,8 +309,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox showConfirmPass;
         private System.Windows.Forms.CheckBox PassWord;
-        private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label label3;
@@ -305,5 +319,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.BindingSource gIANGVIENBindingSource;
         private QLDSV_TCDataSetTableAdapters.GIANGVIENTableAdapter gIANGVIENTableAdapter;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.BindingSource dSGVCTTKBindingSource;
+        private QLDSV_TCDataSetTableAdapters.DSGV_CTTKTableAdapter dSGV_CTTKTableAdapter;
     }
 }

@@ -37,7 +37,6 @@ namespace QLDSVHTC_Sang_Truong
             System.Windows.Forms.Label hOTENLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClassRegistration));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.lbDebug = new System.Windows.Forms.Label();
             this.hOTENTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.sP_LOAD_REGISTER_INFORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
@@ -73,9 +72,9 @@ namespace QLDSVHTC_Sang_Truong
             this.colMAMH1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENMH1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNHOM1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHOCKY = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNIENKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTONGTIET = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTTH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSTC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHOCPHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNHOM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -161,7 +160,6 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.lbDebug);
             this.groupControl1.Controls.Add(hOTENLabel);
             this.groupControl1.Controls.Add(this.hOTENTextEdit);
             this.groupControl1.Controls.Add(mAMHLabel);
@@ -180,15 +178,6 @@ namespace QLDSVHTC_Sang_Truong
             this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(987, 122);
             this.groupControl1.TabIndex = 0;
-            // 
-            // lbDebug
-            // 
-            this.lbDebug.AutoSize = true;
-            this.lbDebug.Location = new System.Drawing.Point(307, 92);
-            this.lbDebug.Name = "lbDebug";
-            this.lbDebug.Size = new System.Drawing.Size(59, 17);
-            this.lbDebug.TabIndex = 12;
-            this.lbDebug.Text = "lbDebug";
             // 
             // hOTENTextEdit
             // 
@@ -409,6 +398,7 @@ namespace QLDSVHTC_Sang_Truong
             this.tableAdapterManager.LOPTINCHITableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
+            this.tableAdapterManager.SP_LOAD_LIST_SCORESTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLDSVHTC_Sang_Truong.QLDSV_TCDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // sP_LOAD_REGISTER_INFORTableAdapter
@@ -574,9 +564,9 @@ namespace QLDSVHTC_Sang_Truong
             this.colMAMH1,
             this.colTENMH1,
             this.colNHOM1,
-            this.colHOCKY,
-            this.colNIENKHOA,
-            this.colTONGTIET});
+            this.colTTH,
+            this.colSTC,
+            this.colHOCPHI});
             this.gridView1.GridControl = this.sP_DS_DKY_SVGridControl;
             this.gridView1.GroupPanelText = "DANH SÁCH MÔN HỌC ĐÃ ĐĂNG KÝ";
             this.gridView1.Name = "gridView1";
@@ -642,64 +632,65 @@ namespace QLDSVHTC_Sang_Truong
             this.colNHOM1.VisibleIndex = 2;
             this.colNHOM1.Width = 248;
             // 
-            // colHOCKY
+            // colTTH
             // 
-            this.colHOCKY.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
-            this.colHOCKY.AppearanceCell.Options.UseFont = true;
-            this.colHOCKY.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colHOCKY.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.colHOCKY.AppearanceHeader.Options.UseBackColor = true;
-            this.colHOCKY.AppearanceHeader.Options.UseFont = true;
-            this.colHOCKY.AppearanceHeader.Options.UseTextOptions = true;
-            this.colHOCKY.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colHOCKY.Caption = "Học kỳ";
-            this.colHOCKY.FieldName = "HOCKY";
-            this.colHOCKY.MinWidth = 25;
-            this.colHOCKY.Name = "colHOCKY";
-            this.colHOCKY.OptionsColumn.AllowEdit = false;
-            this.colHOCKY.Visible = true;
-            this.colHOCKY.VisibleIndex = 5;
-            this.colHOCKY.Width = 260;
+            this.colTTH.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTTH.AppearanceCell.Options.UseFont = true;
+            this.colTTH.AppearanceCell.Options.UseTextOptions = true;
+            this.colTTH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTTH.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colTTH.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTTH.AppearanceHeader.Options.UseBackColor = true;
+            this.colTTH.AppearanceHeader.Options.UseFont = true;
+            this.colTTH.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTTH.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTTH.Caption = "Tết thực hành";
+            this.colTTH.FieldName = "TTH";
+            this.colTTH.MinWidth = 25;
+            this.colTTH.Name = "colTTH";
+            this.colTTH.Visible = true;
+            this.colTTH.VisibleIndex = 5;
+            this.colTTH.Width = 94;
             // 
-            // colNIENKHOA
+            // colSTC
             // 
-            this.colNIENKHOA.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
-            this.colNIENKHOA.AppearanceCell.Options.UseFont = true;
-            this.colNIENKHOA.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colNIENKHOA.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.colNIENKHOA.AppearanceHeader.Options.UseBackColor = true;
-            this.colNIENKHOA.AppearanceHeader.Options.UseFont = true;
-            this.colNIENKHOA.AppearanceHeader.Options.UseTextOptions = true;
-            this.colNIENKHOA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colNIENKHOA.Caption = "Niên Khóa";
-            this.colNIENKHOA.FieldName = "NIENKHOA";
-            this.colNIENKHOA.MinWidth = 25;
-            this.colNIENKHOA.Name = "colNIENKHOA";
-            this.colNIENKHOA.OptionsColumn.AllowEdit = false;
-            this.colNIENKHOA.Visible = true;
-            this.colNIENKHOA.VisibleIndex = 4;
-            this.colNIENKHOA.Width = 248;
+            this.colSTC.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSTC.AppearanceCell.Options.UseFont = true;
+            this.colSTC.AppearanceCell.Options.UseTextOptions = true;
+            this.colSTC.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSTC.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSTC.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSTC.AppearanceHeader.Options.UseBackColor = true;
+            this.colSTC.AppearanceHeader.Options.UseFont = true;
+            this.colSTC.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSTC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSTC.Caption = "Số tín chỉ";
+            this.colSTC.FieldName = "STC";
+            this.colSTC.MinWidth = 25;
+            this.colSTC.Name = "colSTC";
+            this.colSTC.Visible = true;
+            this.colSTC.VisibleIndex = 4;
+            this.colSTC.Width = 94;
             // 
-            // colTONGTIET
+            // colHOCPHI
             // 
-            this.colTONGTIET.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F);
-            this.colTONGTIET.AppearanceCell.Options.UseFont = true;
-            this.colTONGTIET.AppearanceCell.Options.UseTextOptions = true;
-            this.colTONGTIET.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTONGTIET.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colTONGTIET.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.colTONGTIET.AppearanceHeader.Options.UseBackColor = true;
-            this.colTONGTIET.AppearanceHeader.Options.UseFont = true;
-            this.colTONGTIET.AppearanceHeader.Options.UseTextOptions = true;
-            this.colTONGTIET.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTONGTIET.Caption = "Tổng số tiết";
-            this.colTONGTIET.FieldName = "TONGTIET";
-            this.colTONGTIET.MinWidth = 25;
-            this.colTONGTIET.Name = "colTONGTIET";
-            this.colTONGTIET.OptionsColumn.AllowEdit = false;
-            this.colTONGTIET.Visible = true;
-            this.colTONGTIET.VisibleIndex = 3;
-            this.colTONGTIET.Width = 248;
+            this.colHOCPHI.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHOCPHI.AppearanceCell.Options.UseFont = true;
+            this.colHOCPHI.AppearanceCell.Options.UseTextOptions = true;
+            this.colHOCPHI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colHOCPHI.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colHOCPHI.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHOCPHI.AppearanceHeader.Options.UseBackColor = true;
+            this.colHOCPHI.AppearanceHeader.Options.UseFont = true;
+            this.colHOCPHI.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHOCPHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colHOCPHI.Caption = "Học phí";
+            this.colHOCPHI.FieldName = "HOCPHI";
+            this.colHOCPHI.MinWidth = 25;
+            this.colHOCPHI.Name = "colHOCPHI";
+            this.colHOCPHI.Visible = true;
+            this.colHOCPHI.VisibleIndex = 3;
+            this.colHOCPHI.Width = 94;
             // 
             // colTENMH
             // 
@@ -813,7 +804,6 @@ namespace QLDSVHTC_Sang_Truong
         private DevExpress.XtraEditors.SpinEdit edNhom;
         private DevExpress.XtraEditors.TextEdit tENMHTextEdit;
         private DevExpress.XtraEditors.TextEdit hOTENTextEdit;
-        private System.Windows.Forms.Label lbDebug;
         private System.Windows.Forms.BindingSource bdsSP_DS_DKY_SV;
         private QLDSV_TCDataSetTableAdapters.SP_DS_DKY_SVTableAdapter sP_DS_DKY_SVTableAdapter;
         private DevExpress.XtraGrid.GridControl sP_DS_DKY_SVGridControl;
@@ -831,11 +821,11 @@ namespace QLDSVHTC_Sang_Truong
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colSOSV;
         private DevExpress.XtraGrid.Columns.GridColumn colMALTC;
-        private DevExpress.XtraGrid.Columns.GridColumn colHOCKY;
-        private DevExpress.XtraGrid.Columns.GridColumn colNIENKHOA;
-        private DevExpress.XtraGrid.Columns.GridColumn colTONGTIET;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem xoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chiTietLopToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTC;
+        private DevExpress.XtraGrid.Columns.GridColumn colHOCPHI;
+        private DevExpress.XtraGrid.Columns.GridColumn colTTH;
     }
 }

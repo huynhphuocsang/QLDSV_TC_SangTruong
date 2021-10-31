@@ -44,6 +44,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnCreateLogin = new DevExpress.XtraBars.BarButtonItem();
             this.btnRptCreditClass = new DevExpress.XtraBars.BarButtonItem();
             this.btnRptStudetList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRptTuitionFee = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRpfClassScores = new DevExpress.XtraBars.BarButtonItem();
+            this.btnStudentScores = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -56,6 +59,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -66,8 +72,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusMa = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnRptTuitionFee = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -91,9 +97,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnCreateLogin,
             this.btnRptCreditClass,
             this.btnRptStudetList,
-            this.btnRptTuitionFee});
+            this.btnRptTuitionFee,
+            this.btnRpfClassScores,
+            this.btnStudentScores,
+            this.barButtonItem2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 15;
+            this.ribbon.Margin = new System.Windows.Forms.Padding(5);
+            this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -199,6 +209,31 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRptStudetList.Name = "btnRptStudetList";
             this.btnRptStudetList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRptStudetList_ItemClick);
             // 
+            // btnRptTuitionFee
+            // 
+            this.btnRptTuitionFee.Caption = "Danh sách sinh viên đóng học phí";
+            this.btnRptTuitionFee.Id = 14;
+            this.btnRptTuitionFee.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRptTuitionFee.ImageOptions.SvgImage")));
+            this.btnRptTuitionFee.Name = "btnRptTuitionFee";
+            this.btnRptTuitionFee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRptTuitionFee_ItemClick);
+            // 
+            // btnRpfClassScores
+            // 
+            this.btnRpfClassScores.Caption = "Bảng điểm môn học lớp tín chỉ";
+            this.btnRpfClassScores.Id = 15;
+            this.btnRpfClassScores.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRpfClassScores.ImageOptions.SvgImage")));
+            this.btnRpfClassScores.Name = "btnRpfClassScores";
+            this.btnRpfClassScores.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnRpfClassScores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRpfClassScores_ItemClick);
+            // 
+            // btnStudentScores
+            // 
+            this.btnStudentScores.Caption = "Bảng điểm sinh viên";
+            this.btnStudentScores.Id = 16;
+            this.btnStudentScores.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnStudentScores.ImageOptions.SvgImage")));
+            this.btnStudentScores.Name = "btnStudentScores";
+            this.btnStudentScores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStudentScores_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -258,7 +293,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup10,
             this.ribbonPageGroup11,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup13,
+            this.ribbonPageGroup14,
+            this.ribbonPageGroup15});
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "Báo cáo";
             // 
@@ -271,6 +309,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.ribbonPageGroup11.ItemLinks.Add(this.btnRptStudetList);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnRptTuitionFee);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.btnRpfClassScores);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnStudentScores);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             // 
             // ribbonPage3
             // 
@@ -300,6 +353,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 679);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1088, 30);
@@ -339,18 +393,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusNhom.Size = new System.Drawing.Size(50, 20);
             this.statusNhom.Text = "KHOA";
             // 
-            // ribbonPageGroup12
+            // ribbonPageGroup15
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.btnRptTuitionFee);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             // 
-            // btnRptTuitionFee
+            // barButtonItem2
             // 
-            this.btnRptTuitionFee.Caption = "Danh sách sinh viên đóng học phí";
-            this.btnRptTuitionFee.Id = 14;
-            this.btnRptTuitionFee.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRptTuitionFee.ImageOptions.SvgImage")));
-            this.btnRptTuitionFee.Name = "btnRptTuitionFee";
-            this.btnRptTuitionFee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRptTuitionFee_ItemClick);
+            this.barButtonItem2.Caption = "Bảng điểm lớp học";
+            this.barButtonItem2.Id = 17;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_3);
             // 
             // formMain
             // 
@@ -417,5 +471,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.BarButtonItem btnRptTuitionFee;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem btnRpfClassScores;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.BarButtonItem btnStudentScores;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
     }
 }
