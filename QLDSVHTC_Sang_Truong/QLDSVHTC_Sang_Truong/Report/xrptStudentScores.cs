@@ -16,5 +16,9 @@ namespace QLDSVHTC_Sang_Truong.Report
             this.sqlDataSource1.Fill();
         }
 
+        public static implicit operator ReportUnit(xrptStudentScores v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

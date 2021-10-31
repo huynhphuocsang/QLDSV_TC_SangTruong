@@ -724,7 +724,7 @@ namespace QLDSVHTC_Sang_Truong
             this.xoaToolStripMenuItem,
             this.chiTietLopToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // xoaToolStripMenuItem
             // 
@@ -736,8 +736,9 @@ namespace QLDSVHTC_Sang_Truong
             // chiTietLopToolStripMenuItem
             // 
             this.chiTietLopToolStripMenuItem.Name = "chiTietLopToolStripMenuItem";
-            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.chiTietLopToolStripMenuItem.Text = "Chi tiết lớp";
+            this.chiTietLopToolStripMenuItem.Click += new System.EventHandler(this.chiTietLopToolStripMenuItem_Click);
             // 
             // formClassRegistration
             // 

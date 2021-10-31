@@ -47,33 +47,34 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRptTuitionFee = new DevExpress.XtraBars.BarButtonItem();
             this.btnRpfClassScores = new DevExpress.XtraBars.BarButtonItem();
             this.btnStudentScores = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXemDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageSV = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManager = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageManageClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageCreditClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageListScore = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageSubject = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageTuitionFee = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageReportCreditClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageReportStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageReportTuition = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageReportSubject = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageStudentScore = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageManageReportClassScore = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusMa = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -100,16 +101,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRptTuitionFee,
             this.btnRpfClassScores,
             this.btnStudentScores,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.btnXemDiem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbon.MaxItemId = 18;
+            this.ribbon.MaxItemId = 19;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage5,
-            this.ribbonPage3,
+            this.ribbonPageSV,
+            this.ribbonPageManager,
+            this.ribbonPageReport,
             this.ribbonPage4});
             this.ribbon.Size = new System.Drawing.Size(1088, 193);
             this.ribbon.StatusBar = this.ribbonStatusBar;
@@ -154,7 +155,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // barBtnRegister
             // 
             this.barBtnRegister.Caption = "Đăng ký lớp tín chỉ";
-            this.barBtnRegister.Enabled = false;
             this.barBtnRegister.Id = 6;
             this.barBtnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnRegister.ImageOptions.SvgImage")));
             this.barBtnRegister.Name = "barBtnRegister";
@@ -191,6 +191,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnCreateLogin.Id = 11;
             this.btnCreateLogin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreateLogin.ImageOptions.SvgImage")));
             this.btnCreateLogin.Name = "btnCreateLogin";
+            this.btnCreateLogin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnCreateLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreateLogin_ItemClick);
             // 
             // btnRptCreditClass
@@ -234,121 +235,156 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnStudentScores.Name = "btnStudentScores";
             this.btnStudentScores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStudentScores_ItemClick);
             // 
-            // ribbonPage1
+            // barButtonItem2
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Sinh viên";
+            this.barButtonItem2.Caption = "Bảng điểm lớp học";
+            this.barButtonItem2.Id = 17;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_3);
+            // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.Caption = "Xem điểm sinh viên";
+            this.btnXemDiem.Id = 18;
+            this.btnXemDiem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXemDiem.ImageOptions.SvgImage")));
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDiem_ItemClick);
+            // 
+            // ribbonPageSV
+            // 
+            this.ribbonPageSV.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
+            this.ribbonPageSV.Name = "ribbonPageSV";
+            this.ribbonPageSV.Text = "Sinh viên";
+            this.ribbonPageSV.Visible = false;
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barBtnRegister);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup5,
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup8,
-            this.ribbonPageGroup9});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Quản lý";
-            // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.bntManageClass);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnXemDiem);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
-            // ribbonPageGroup5
+            // ribbonPageManager
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnCreditClass);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageManager.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageManageClass,
+            this.ribbonPageManageCreditClass,
+            this.ribbonPageManageListScore,
+            this.ribbonPageManageSubject,
+            this.ribbonPageManageTuitionFee,
+            this.ribbonPageGroup8});
+            this.ribbonPageManager.Name = "ribbonPageManager";
+            this.ribbonPageManager.Text = "Quản lý";
+            this.ribbonPageManager.Visible = false;
             // 
-            // ribbonPageGroup7
+            // ribbonPageManageClass
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnScoresSV);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageManageClass.ItemLinks.Add(this.bntManageClass);
+            this.ribbonPageManageClass.Name = "ribbonPageManageClass";
+            this.ribbonPageManageClass.Visible = false;
             // 
-            // ribbonPageGroup6
+            // ribbonPageManageCreditClass
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnManageSubject);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageManageCreditClass.ItemLinks.Add(this.btnCreditClass);
+            this.ribbonPageManageCreditClass.Name = "ribbonPageManageCreditClass";
+            this.ribbonPageManageCreditClass.Visible = false;
+            // 
+            // ribbonPageManageListScore
+            // 
+            this.ribbonPageManageListScore.ItemLinks.Add(this.btnScoresSV);
+            this.ribbonPageManageListScore.Name = "ribbonPageManageListScore";
+            this.ribbonPageManageListScore.Visible = false;
+            // 
+            // ribbonPageManageSubject
+            // 
+            this.ribbonPageManageSubject.ItemLinks.Add(this.btnManageSubject);
+            this.ribbonPageManageSubject.Name = "ribbonPageManageSubject";
+            this.ribbonPageManageSubject.Visible = false;
+            // 
+            // ribbonPageManageTuitionFee
+            // 
+            this.ribbonPageManageTuitionFee.ItemLinks.Add(this.btnReportTuition);
+            this.ribbonPageManageTuitionFee.Name = "ribbonPageManageTuitionFee";
+            this.ribbonPageManageTuitionFee.Visible = false;
             // 
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnCreateLogin);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
-            // ribbonPageGroup9
+            // ribbonPageReport
             // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.btnLogout);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageReportCreditClass,
+            this.ribbonPageManageReportStudent,
+            this.ribbonPageManageReportTuition,
+            this.ribbonPageManageReportSubject,
+            this.ribbonPageManageStudentScore,
+            this.ribbonPageManageReportClassScore});
+            this.ribbonPageReport.Name = "ribbonPageReport";
+            this.ribbonPageReport.Text = "Báo cáo";
+            this.ribbonPageReport.Visible = false;
             // 
-            // ribbonPage5
+            // ribbonPageReportCreditClass
             // 
-            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup10,
-            this.ribbonPageGroup11,
-            this.ribbonPageGroup12,
-            this.ribbonPageGroup13,
-            this.ribbonPageGroup14,
-            this.ribbonPageGroup15});
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "Báo cáo";
+            this.ribbonPageReportCreditClass.ItemLinks.Add(this.btnRptCreditClass);
+            this.ribbonPageReportCreditClass.Name = "ribbonPageReportCreditClass";
+            this.ribbonPageReportCreditClass.Visible = false;
             // 
-            // ribbonPageGroup10
+            // ribbonPageManageReportStudent
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnRptCreditClass);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageManageReportStudent.ItemLinks.Add(this.btnRptStudetList);
+            this.ribbonPageManageReportStudent.Name = "ribbonPageManageReportStudent";
+            this.ribbonPageManageReportStudent.Visible = false;
             // 
-            // ribbonPageGroup11
+            // ribbonPageManageReportTuition
             // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.btnRptStudetList);
-            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            this.ribbonPageManageReportTuition.ItemLinks.Add(this.btnRptTuitionFee);
+            this.ribbonPageManageReportTuition.Name = "ribbonPageManageReportTuition";
+            this.ribbonPageManageReportTuition.Visible = false;
             // 
-            // ribbonPageGroup12
+            // ribbonPageManageReportSubject
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.btnRptTuitionFee);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            this.ribbonPageManageReportSubject.ItemLinks.Add(this.btnRpfClassScores);
+            this.ribbonPageManageReportSubject.Name = "ribbonPageManageReportSubject";
+            this.ribbonPageManageReportSubject.Visible = false;
             // 
-            // ribbonPageGroup13
+            // ribbonPageManageStudentScore
             // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.btnRpfClassScores);
-            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageManageStudentScore.ItemLinks.Add(this.btnStudentScores);
+            this.ribbonPageManageStudentScore.Name = "ribbonPageManageStudentScore";
+            this.ribbonPageManageStudentScore.Visible = false;
             // 
-            // ribbonPageGroup14
+            // ribbonPageManageReportClassScore
             // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.btnStudentScores);
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Học phí";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnReportTuition);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageManageReportClassScore.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageManageReportClassScore.Name = "ribbonPageManageReportClassScore";
+            this.ribbonPageManageReportClassScore.Visible = false;
             // 
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup9});
             this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Giao diện";
+            this.ribbonPage4.Text = "Cá nhân hóa";
             // 
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Giao diện làm việc";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnLogout);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
             // ribbonStatusBar
             // 
@@ -393,19 +429,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.statusNhom.Size = new System.Drawing.Size(50, 20);
             this.statusNhom.Text = "KHOA";
             // 
-            // ribbonPageGroup15
-            // 
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Bảng điểm lớp học";
-            this.barButtonItem2.Id = 17;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_3);
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -435,14 +458,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageSV;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem bntManageClass;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageManager;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageClass;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageTuitionFee;
         private DevExpress.XtraBars.BarButtonItem btnReportTuition;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -454,28 +476,30 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageCreditClass;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageSubject;
         private DevExpress.XtraBars.BarButtonItem barBtnRegister;
         private DevExpress.XtraBars.BarButtonItem btnCreditClass;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageListScore;
         private DevExpress.XtraBars.BarButtonItem btnScoresSV;
         private DevExpress.XtraBars.BarButtonItem btnManageSubject;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem btnCreateLogin;
         private DevExpress.XtraBars.BarButtonItem btnRptCreditClass;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageReport;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageReportCreditClass;
         private DevExpress.XtraBars.BarButtonItem btnRptStudetList;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageReportStudent;
         private DevExpress.XtraBars.BarButtonItem btnRptTuitionFee;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageReportTuition;
         private DevExpress.XtraBars.BarButtonItem btnRpfClassScores;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageReportSubject;
         private DevExpress.XtraBars.BarButtonItem btnStudentScores;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageStudentScore;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageManageReportClassScore;
+        private DevExpress.XtraBars.BarButtonItem btnXemDiem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }
