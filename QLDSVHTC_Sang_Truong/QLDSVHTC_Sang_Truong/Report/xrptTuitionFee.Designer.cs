@@ -49,6 +49,10 @@ namespace QLDSVHTC_Sang_Truong
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrlbSemester = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrlbSchoolyear = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlbDeparment = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlbClassId = new DevExpress.XtraReports.UI.XRLabel();
@@ -70,16 +74,13 @@ namespace QLDSVHTC_Sang_Truong
             this.tableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrlbTotalMoney = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.qldsV_TCDataSet1 = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
             this.calTotalStudent = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrlbSchoolyear = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrlbSemester = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrlbMoneyText = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qldsV_TCDataSet1)).BeginInit();
@@ -217,6 +218,52 @@ namespace QLDSVHTC_Sang_Truong
             this.xrLabel1});
             this.ReportHeader.HeightF = 146.3333F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrlbSemester
+            // 
+            this.xrlbSemester.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbSemester.LocationFloat = new DevExpress.Utils.PointFloat(222.9169F, 113.3333F);
+            this.xrlbSemester.Multiline = true;
+            this.xrlbSemester.Name = "xrlbSemester";
+            this.xrlbSemester.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlbSemester.SizeF = new System.Drawing.SizeF(252.5F, 23F);
+            this.xrlbSemester.StylePriority.UseFont = false;
+            // 
+            // xrlbSchoolyear
+            // 
+            this.xrlbSchoolyear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbSchoolyear.LocationFloat = new DevExpress.Utils.PointFloat(222.9169F, 71.66666F);
+            this.xrlbSchoolyear.Multiline = true;
+            this.xrlbSchoolyear.Name = "xrlbSchoolyear";
+            this.xrlbSchoolyear.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlbSchoolyear.SizeF = new System.Drawing.SizeF(252.5F, 23F);
+            this.xrlbSchoolyear.StylePriority.UseFont = false;
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(128.3334F, 113.3333F);
+            this.xrLabel8.Multiline = true;
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(72.49999F, 23F);
+            this.xrLabel8.StylePriority.UseFont = false;
+            this.xrLabel8.StylePriority.UseForeColor = false;
+            this.xrLabel8.Text = "Học kỳ";
+            // 
+            // xrLabel7
+            // 
+            this.xrLabel7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(128.3334F, 71.66666F);
+            this.xrLabel7.Multiline = true;
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(88.33334F, 23F);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseForeColor = false;
+            this.xrLabel7.Text = "Niên khóa: ";
             // 
             // xrlbDeparment
             // 
@@ -475,31 +522,32 @@ namespace QLDSVHTC_Sang_Truong
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel6,
+            this.xrlbMoneyText,
+            this.xrlbTotalMoney,
             this.xrLabel5,
             this.xrLabel4,
             this.xrLabel2});
             this.ReportFooter.Name = "ReportFooter";
             // 
-            // xrLabel6
+            // xrlbTotalMoney
             // 
-            this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrlbTotalMoney.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrlbTotalMoney.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SOTIENDADONG])")});
-            this.xrLabel6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(174.1667F, 66.99999F);
-            this.xrLabel6.Multiline = true;
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel6.StylePriority.UseBorders = false;
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.StylePriority.UseForeColor = false;
+            this.xrlbTotalMoney.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbTotalMoney.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.xrlbTotalMoney.LocationFloat = new DevExpress.Utils.PointFloat(174.1667F, 66.99999F);
+            this.xrlbTotalMoney.Multiline = true;
+            this.xrlbTotalMoney.Name = "xrlbTotalMoney";
+            this.xrlbTotalMoney.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlbTotalMoney.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrlbTotalMoney.StylePriority.UseBorders = false;
+            this.xrlbTotalMoney.StylePriority.UseFont = false;
+            this.xrlbTotalMoney.StylePriority.UseForeColor = false;
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.xrLabel6.Summary = xrSummary1;
-            this.xrLabel6.Text = "xrLabel2";
-            this.xrLabel6.TextFormatString = "{0:#,#}";
+            this.xrlbTotalMoney.Summary = xrSummary1;
+            this.xrlbTotalMoney.Text = "xrlbTotalMoney";
+            this.xrlbTotalMoney.TextFormatString = "{0:#,#}";
             // 
             // xrLabel5
             // 
@@ -556,51 +604,17 @@ namespace QLDSVHTC_Sang_Truong
             this.calTotalStudent.DataMember = "SP_REPORT_TUITIONFEE";
             this.calTotalStudent.Name = "calTotalStudent";
             // 
-            // xrLabel7
+            // xrlbMoneyText
             // 
-            this.xrLabel7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(128.3334F, 71.66666F);
-            this.xrLabel7.Multiline = true;
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(88.33334F, 23F);
-            this.xrLabel7.StylePriority.UseFont = false;
-            this.xrLabel7.StylePriority.UseForeColor = false;
-            this.xrLabel7.Text = "Niên khóa: ";
-            // 
-            // xrLabel8
-            // 
-            this.xrLabel8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(128.3334F, 113.3333F);
-            this.xrLabel8.Multiline = true;
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(72.49999F, 23F);
-            this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.StylePriority.UseForeColor = false;
-            this.xrLabel8.Text = "Học kỳ";
-            // 
-            // xrlbSchoolyear
-            // 
-            this.xrlbSchoolyear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrlbSchoolyear.LocationFloat = new DevExpress.Utils.PointFloat(222.9169F, 71.66666F);
-            this.xrlbSchoolyear.Multiline = true;
-            this.xrlbSchoolyear.Name = "xrlbSchoolyear";
-            this.xrlbSchoolyear.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrlbSchoolyear.SizeF = new System.Drawing.SizeF(252.5F, 23F);
-            this.xrlbSchoolyear.StylePriority.UseFont = false;
-            // 
-            // xrlbSemester
-            // 
-            this.xrlbSemester.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrlbSemester.LocationFloat = new DevExpress.Utils.PointFloat(222.9169F, 113.3333F);
-            this.xrlbSemester.Multiline = true;
-            this.xrlbSemester.Name = "xrlbSemester";
-            this.xrlbSemester.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrlbSemester.SizeF = new System.Drawing.SizeF(252.5F, 23F);
-            this.xrlbSemester.StylePriority.UseFont = false;
+            this.xrlbMoneyText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbMoneyText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.xrlbMoneyText.LocationFloat = new DevExpress.Utils.PointFloat(292.5F, 66.99999F);
+            this.xrlbMoneyText.Multiline = true;
+            this.xrlbMoneyText.Name = "xrlbMoneyText";
+            this.xrlbMoneyText.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlbMoneyText.SizeF = new System.Drawing.SizeF(263.5819F, 23F);
+            this.xrlbMoneyText.StylePriority.UseFont = false;
+            this.xrlbMoneyText.StylePriority.UseForeColor = false;
             // 
             // xrptTuitionFee
             // 
@@ -673,11 +687,12 @@ namespace QLDSVHTC_Sang_Truong
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private QLDSV_TCDataSet qldsV_TCDataSet1;
         private DevExpress.XtraReports.UI.CalculatedField calTotalStudent;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         public DevExpress.XtraReports.UI.XRLabel xrlbSemester;
         public DevExpress.XtraReports.UI.XRLabel xrlbSchoolyear;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        public DevExpress.XtraReports.UI.XRLabel xrlbMoneyText;
+        public DevExpress.XtraReports.UI.XRLabel xrlbTotalMoney;
     }
 }

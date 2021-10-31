@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 using System.Data.SqlClient;
-
+//using CrystalDecisions.CrystalReports.Engine; 
 namespace QLDSVHTC_Sang_Truong.formDesign
 {
     public partial class RpfTuitionFee : DevExpress.XtraEditors.XtraForm
@@ -23,8 +23,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void RpfTuitionFee_Load(object sender, EventArgs e)
         {
+
+            
+
             this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet1.LOP' table. You can move, or remove it, as needed.
+
             this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet1.LOP);
 
             cbSchoolyear.SelectedIndex = 0;
@@ -72,9 +76,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             xrpt.xrlbSchoolyear.Text = schoolYear;
             xrpt.xrlbSemester.Text = semester.ToString(); 
 
-
+            //xrpt.CalculatedFields.
+            
             ReportPrintTool printTool = new ReportPrintTool(xrpt);
             printTool.ShowPreviewDialog();
+            //string tempmoney = xrpt.xrlbTotalMoney.Text; 
         }
 
         private void lkClass_EditValueChanged(object sender, EventArgs e)
