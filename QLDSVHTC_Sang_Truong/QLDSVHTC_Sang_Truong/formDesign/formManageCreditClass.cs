@@ -223,7 +223,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            cmdManager.execute(new InsertAction(lOPTINCHIBindingSource));
+            //cmdManager.execute(new InsertAction(lOPTINCHIBindingSource));
+            lOPTINCHIBindingSource.AddNew(); 
             if (cbDepartment.SelectedIndex == 0)
             {
                 gridView1.SetFocusedRowCellValue("MAKHOA", "CNTT");

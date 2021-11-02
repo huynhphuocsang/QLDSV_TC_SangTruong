@@ -226,7 +226,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -312,7 +311,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnReload
             // 
+            this.btnReload.BackgroundImage = global::QLDSVHTC_Sang_Truong.Properties.Resources.reload;
             this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(29, 24);
@@ -323,6 +324,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.lOPGridControl.DataSource = this.lOPBindingSource;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lOPGridControl.EmbeddedNavigator.ToolTip = "Reload";
             this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
@@ -566,7 +568,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNGAYSINH.AppearanceHeader.Options.UseTextOptions = true;
             this.colNGAYSINH.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNGAYSINH.Caption = "Ngày sinh";
+            this.colNGAYSINH.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colNGAYSINH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYSINH.FieldName = "NGAYSINH";
+            this.colNGAYSINH.GroupFormat.FormatString = "dd/MM/yyyy";
+            this.colNGAYSINH.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYSINH.MinWidth = 25;
             this.colNGAYSINH.Name = "colNGAYSINH";
             this.colNGAYSINH.Visible = true;
@@ -713,7 +719,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.Controls.Add(this.lOPBindingNavigator);
             this.Controls.Add(this.panel1);
             this.Name = "formClasses";
-            this.Text = "formClasses";
+            this.Text = "Quản lý lớp học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formClasses_Load);
             this.panel1.ResumeLayout(false);

@@ -233,7 +233,7 @@ namespace QLDSVHTC_Sang_Truong
             // 
             // xrlbGroup
             // 
-            this.xrlbGroup.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbGroup.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrlbGroup.LocationFloat = new DevExpress.Utils.PointFloat(454.2996F, 59.5F);
             this.xrlbGroup.Multiline = true;
             this.xrlbGroup.Name = "xrlbGroup";
@@ -245,18 +245,18 @@ namespace QLDSVHTC_Sang_Truong
             // 
             this.xrLabel9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(380.1329F, 59.5F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(390.133F, 59.50002F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(56.66666F, 23F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(64.16666F, 23F);
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.StylePriority.UseForeColor = false;
             this.xrLabel9.Text = "Nhóm:";
             // 
             // xrlbSubject
             // 
-            this.xrlbSubject.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbSubject.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrlbSubject.LocationFloat = new DevExpress.Utils.PointFloat(160.9663F, 59.50002F);
             this.xrlbSubject.Multiline = true;
             this.xrlbSubject.Name = "xrlbSubject";
@@ -268,18 +268,18 @@ namespace QLDSVHTC_Sang_Truong
             // 
             this.xrlb4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrlb4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.xrlb4.LocationFloat = new DevExpress.Utils.PointFloat(71.79962F, 59.50002F);
+            this.xrlb4.LocationFloat = new DevExpress.Utils.PointFloat(61.79962F, 59.50002F);
             this.xrlb4.Multiline = true;
             this.xrlb4.Name = "xrlb4";
             this.xrlb4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrlb4.SizeF = new System.Drawing.SizeF(77.5F, 23F);
+            this.xrlb4.SizeF = new System.Drawing.SizeF(86.66667F, 23F);
             this.xrlb4.StylePriority.UseFont = false;
             this.xrlb4.StylePriority.UseForeColor = false;
             this.xrlb4.Text = "Môn học:";
             // 
             // xrlbSemester
             // 
-            this.xrlbSemester.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbSemester.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrlbSemester.LocationFloat = new DevExpress.Utils.PointFloat(432.6329F, 23.00001F);
             this.xrlbSemester.Multiline = true;
             this.xrlbSemester.Name = "xrlbSemester";
@@ -291,18 +291,18 @@ namespace QLDSVHTC_Sang_Truong
             // 
             this.xrlb2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrlb2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.xrlb2.LocationFloat = new DevExpress.Utils.PointFloat(362.6329F, 23.00001F);
+            this.xrlb2.LocationFloat = new DevExpress.Utils.PointFloat(361.2501F, 23.00001F);
             this.xrlb2.Multiline = true;
             this.xrlb2.Name = "xrlb2";
             this.xrlb2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrlb2.SizeF = new System.Drawing.SizeF(63.33334F, 23F);
+            this.xrlb2.SizeF = new System.Drawing.SizeF(71.38284F, 23F);
             this.xrlb2.StylePriority.UseFont = false;
             this.xrlb2.StylePriority.UseForeColor = false;
             this.xrlb2.Text = "Học kỳ:";
             // 
             // xrlbSchoolyear
             // 
-            this.xrlbSchoolyear.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrlbSchoolyear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrlbSchoolyear.LocationFloat = new DevExpress.Utils.PointFloat(176.7996F, 23.00001F);
             this.xrlbSchoolyear.Multiline = true;
             this.xrlbSchoolyear.Name = "xrlbSchoolyear";

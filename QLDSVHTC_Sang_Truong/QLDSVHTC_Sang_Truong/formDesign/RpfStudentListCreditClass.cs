@@ -23,12 +23,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void RpfStudentListCreditClass_Load(object sender, EventArgs e)
         {
+
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.MONHOC' table. You can move, or remove it, as needed.
             this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
             Program.bdsDSPM.Filter = "PHONGBAN LIKE 'KHOA%'";
 
             //chuyển dữ liệu từ danh sách phân mảnh vào cho combobox.
             func.BindingDataToComBo(cbDepartment, Program.bdsDSPM);
+            if (Program.mGroup.Equals("KHOA"))
+            {
+                cbDepartment.Enabled = false; 
+            }else if (Program.mGroup.Equals("PGV"))
+            {
+                cbDepartment.Enabled = true; 
+            }
+
 
             cbSchoolyear.SelectedIndex = 0;
             lkSubject.Properties.PopulateColumns(); 
@@ -111,6 +120,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
+            if (lkSubject.EditValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn môn học");
+                return; 
+            }
             string schoolYear = this.cbSchoolyear.Text;
             int semester = Convert.ToInt32(this.nmSemester.Value);
             string subjectName = lkSubject.Text;

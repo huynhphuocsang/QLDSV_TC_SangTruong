@@ -1,243 +1,70 @@
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe.config
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.pdb
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.BonusSkins.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Data.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Printing.v19.2.Core.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Sparkline.v19.2.Core.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraBars.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraEditors.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGrid.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraLayout.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPrinting.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Images.v19.2.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Data.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Sparkline.v19.2.Core.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraBars.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraEditors.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Printing.v19.2.Core.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGrid.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraLayout.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPrinting.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.xml
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Utils.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Utils.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Utils.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Utils.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraBars.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraBars.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraBars.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraBars.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraEditors.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraEditors.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraEditors.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraEditors.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Printing.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Printing.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Printing.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Printing.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraGrid.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraGrid.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraGrid.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraGrid.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraLayout.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraLayout.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraLayout.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraLayout.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Office.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formClasses.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formClassRegistration.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formCreateLogin.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formLogin.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formMain.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManageCreditClass.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManagerSubject.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formTuitionFee.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formScores.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Properties.Resources.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.GenerateResource.cache
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe.licenses
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CoreCompileInputs.cache
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
-<<<<<<< HEAD
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe.config
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.pdb
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.BonusSkins.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Data.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Printing.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Sparkline.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraBars.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraEditors.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGrid.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraLayout.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPrinting.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Images.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Data.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Sparkline.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraBars.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraEditors.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Printing.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGrid.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraLayout.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPrinting.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Utils.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Utils.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Utils.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Utils.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Sparkline.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraBars.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraBars.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraBars.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraBars.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraEditors.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraEditors.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraEditors.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraEditors.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Printing.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Printing.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Printing.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Printing.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraLayout.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraLayout.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraLayout.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraLayout.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Office.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csprojAssemblyReference.cache
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formClasses.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formClassRegistration.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formCreateLogin.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formLogin.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formMain.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManageCreditClass.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManagerSubject.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formTuitionFee.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formScores.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Properties.Resources.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.GenerateResource.cache
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe.licenses
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CoreCompileInputs.cache
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
-=======
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.AssemblyReference.cache
->>>>>>> 404cdf2a3e3005ee9ce2ddab6f60e26ab4d48666
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe.config
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.pdb
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.BonusSkins.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Data.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Printing.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Sparkline.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraBars.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraEditors.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGrid.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraLayout.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPrinting.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Images.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraRichEdit.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.UI.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraNavBar.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPivotGrid.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Extensions.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraDiagram.v19.2.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Diagram.v19.2.Core.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Data.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.PivotGrid.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Sparkline.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.UI.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Xpo.v19.2.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraBars.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraEditors.v19.2.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Printing.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGauges.v19.2.Core.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGrid.v19.2.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraLayout.v19.2.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPrinting.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraTreeList.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Office.v19.2.Core.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraRichEdit.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.UI.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraNavBar.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPivotGrid.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraDiagram.v19.2.xml
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Diagram.v19.2.Core.xml
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.DataAccess.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.DataAccess.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.DataAccess.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.DataAccess.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Office.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.PivotGrid.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.PivotGrid.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.PivotGrid.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.PivotGrid.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.RichEdit.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.RichEdit.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.RichEdit.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.RichEdit.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Utils.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Utils.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Utils.v19.2.resources.dll
@@ -246,10 +73,22 @@ D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruon
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Sparkline.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Sparkline.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Sparkline.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Utils.v19.2.UI.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Utils.v19.2.UI.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Utils.v19.2.UI.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Utils.v19.2.UI.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraBars.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraBars.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraBars.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraBars.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraCharts.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraCharts.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraCharts.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraCharts.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraEditors.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraEditors.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraEditors.v19.2.resources.dll
@@ -258,6 +97,10 @@ D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruon
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Printing.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Printing.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Printing.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraGauges.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraGauges.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraGauges.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraGauges.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraGrid.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraGrid.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraGrid.v19.2.resources.dll
@@ -270,100 +113,6 @@ D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruon
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraPrinting.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraPrinting.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraPrinting.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.RichEdit.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraTreeList.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Office.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.AssemblyReference.cache
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formClasses.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formClassRegistration.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formCreateLogin.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formLogin.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formMain.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManageCreditClass.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManagerSubject.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formTuitionFee.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formScores.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Properties.Resources.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.GenerateResource.cache
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe.licenses
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CoreCompileInputs.cache
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Charts.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.CodeParser.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.PivotGrid.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Export.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.UI.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Xpo.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGauges.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraRichEdit.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.UI.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraNavBar.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPivotGrid.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Extensions.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraDiagram.v19.2.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Diagram.v19.2.Core.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.PivotGrid.v19.2.Core.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.UI.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Xpo.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGauges.v19.2.Core.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraRichEdit.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.UI.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraNavBar.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPivotGrid.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraDiagram.v19.2.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Diagram.v19.2.Core.xml
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.DataAccess.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.DataAccess.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.DataAccess.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.DataAccess.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Utils.v19.2.UI.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Utils.v19.2.UI.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Utils.v19.2.UI.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Utils.v19.2.UI.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraCharts.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraCharts.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraCharts.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraCharts.v19.2.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraGauges.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraReports.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraReports.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraReports.v19.2.resources.dll
@@ -372,6 +121,10 @@ D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruon
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraReports.v19.2.Extensions.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraReports.v19.2.Extensions.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraReports.v19.2.Extensions.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraTreeList.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraTreeList.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraTreeList.v19.2.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraTreeList.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraRichEdit.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraRichEdit.v19.2.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraRichEdit.v19.2.resources.dll
@@ -400,121 +153,35 @@ D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruon
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.AssemblyReference.cache
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formClasses.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formClassRegistration.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formCreateLogin.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formLogin.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formMain.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManageCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formManagerSubject.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formTuitionFee.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.formScores.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfClassScores.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfCreditClassScores.resources
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfCreditClass.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentListCreditClass.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptStudentListCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentScores.resources
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfTuitionFee.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Properties.Resources.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptClassScores.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptCreditClassScores.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptStudentListCreditClass.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptStudentScores.resources
 D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptTuitionFee.resources
->>>>>>> d27eb6c9ac808acd6d94f560a87af012885f388b
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Charts.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.CodeParser.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.PivotGrid.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.RichEdit.v19.2.Export.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.UI.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Xpo.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGauges.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraRichEdit.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.UI.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraNavBar.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPivotGrid.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Extensions.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraDiagram.v19.2.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Diagram.v19.2.Core.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.PivotGrid.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Utils.v19.2.UI.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Xpo.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraGauges.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraRichEdit.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.DataAccess.v19.2.UI.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraNavBar.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraPivotGrid.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.XtraDiagram.v19.2.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\DevExpress.Diagram.v19.2.Core.xml
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.DataAccess.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.DataAccess.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.DataAccess.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.DataAccess.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.PivotGrid.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Utils.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Utils.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Utils.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Utils.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraCharts.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraCharts.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraCharts.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraCharts.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraGauges.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraReports.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraReports.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraReports.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraReports.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraReports.v19.2.Extensions.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraReports.v19.2.Extensions.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraReports.v19.2.Extensions.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraReports.v19.2.Extensions.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraRichEdit.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraRichEdit.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraRichEdit.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraRichEdit.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraVerticalGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraVerticalGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraVerticalGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraVerticalGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.DataAccess.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.DataAccess.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.DataAccess.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.DataAccess.v19.2.UI.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraNavBar.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraNavBar.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraNavBar.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraNavBar.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraCharts.v19.2.Wizard.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraCharts.v19.2.Wizard.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraCharts.v19.2.Wizard.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraCharts.v19.2.Wizard.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.XtraPivotGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.XtraPivotGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.XtraPivotGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.XtraPivotGrid.v19.2.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\de\DevExpress.Diagram.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfCreditClass.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentListCreditClass.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfTuitionFee.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptStudentListCreditClass.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptTuitionFee.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfClassScores.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptClassScores.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentScores.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptStudentScores.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfCreditClassScores.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptCreditClassScores.resources
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.GenerateResource.cache
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe.licenses
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CoreCompileInputs.cache
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
+D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe.config
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.exe
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\bin\Debug\QLDSVHTC_Sang_Truong.pdb
@@ -721,13 +388,5 @@ D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_San
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.GenerateResource.cache
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe.licenses
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CoreCompileInputs.cache
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.csproj.CopyComplete
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.exe
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.pdb
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.fromStudentScore.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfClassScores.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfCreditClassScores.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentScores.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptClassScores.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptCreditClassScores.resources
-D:\OneDrive - DAA\Study\LearnPTIT\CoSoDuLieuPhanTan\FinalExam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptStudentScores.resources
