@@ -31,6 +31,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClasses));
+            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.lOPGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -97,6 +97,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             ((System.ComponentModel.ISupportInitialize)(this.dANGKYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // colMALOP
+            // 
+            this.colMALOP.AppearanceCell.BackColor = System.Drawing.Color.Transparent;
+            this.colMALOP.AppearanceCell.Options.UseBackColor = true;
+            this.colMALOP.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMALOP.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMALOP.AppearanceHeader.Options.UseBackColor = true;
+            this.colMALOP.AppearanceHeader.Options.UseFont = true;
+            this.colMALOP.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMALOP.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMALOP.Caption = "Mã lớp";
+            this.colMALOP.FieldName = "MALOP";
+            this.colMALOP.MinWidth = 25;
+            this.colMALOP.Name = "colMALOP";
+            this.colMALOP.Visible = true;
+            this.colMALOP.VisibleIndex = 0;
+            this.colMALOP.Width = 94;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cbDepartment);
@@ -106,6 +124,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1536, 100);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cbDepartment
             // 
@@ -226,6 +245,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -349,24 +369,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView1.GroupPanelText = "Danh sách lớp";
             this.gridView1.Name = "gridView1";
             this.gridView1.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
-            // 
-            // colMALOP
-            // 
-            this.colMALOP.AppearanceCell.BackColor = System.Drawing.Color.Transparent;
-            this.colMALOP.AppearanceCell.Options.UseBackColor = true;
-            this.colMALOP.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.colMALOP.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colMALOP.AppearanceHeader.Options.UseBackColor = true;
-            this.colMALOP.AppearanceHeader.Options.UseFont = true;
-            this.colMALOP.AppearanceHeader.Options.UseTextOptions = true;
-            this.colMALOP.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colMALOP.Caption = "Mã lớp";
-            this.colMALOP.FieldName = "MALOP";
-            this.colMALOP.MinWidth = 25;
-            this.colMALOP.Name = "colMALOP";
-            this.colMALOP.Visible = true;
-            this.colMALOP.VisibleIndex = 0;
-            this.colMALOP.Width = 94;
             // 
             // colTENLOP
             // 
@@ -659,6 +661,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRedoSV.Size = new System.Drawing.Size(94, 43);
             this.btnRedoSV.TabIndex = 0;
             this.btnRedoSV.Text = "Redo";
+            this.btnRedoSV.Click += new System.EventHandler(this.btnRedoSV_Click);
             // 
             // btnUndoSV
             // 
@@ -668,6 +671,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnUndoSV.Size = new System.Drawing.Size(94, 43);
             this.btnUndoSV.TabIndex = 0;
             this.btnUndoSV.Text = "Undo";
+            this.btnUndoSV.Click += new System.EventHandler(this.btnUndoSV_Click);
             // 
             // bntSaveSV
             // 
@@ -764,7 +768,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.ToolStripButton lOPBindingNavigatorSaveItem;
         private DevExpress.XtraGrid.GridControl lOPGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
         private DevExpress.XtraGrid.Columns.GridColumn colKHOAHOC;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHOA;
@@ -795,5 +798,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraEditors.SimpleButton btnAddSV;
         private System.Windows.Forms.BindingSource dANGKYBindingSource;
         private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
     }
 }
