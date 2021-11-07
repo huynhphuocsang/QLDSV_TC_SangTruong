@@ -63,8 +63,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUndo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRedo = new DevExpress.XtraEditors.SimpleButton();
             this.btnReload = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -160,6 +160,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView1.GroupPanelText = "DANH SÁCH LỚP TÍN CHỈ";
             this.gridView1.Name = "gridView1";
             this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
+            this.gridView1.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
             // 
             // colNIENKHOA
             // 
@@ -478,7 +479,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnDelete
             // 
-            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.Location = new System.Drawing.Point(230, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 38);
@@ -486,27 +487,29 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // simpleButton3
+            // btnUndo
             // 
-            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(330, 12);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(98, 38);
-            this.simpleButton3.TabIndex = 7;
-            this.simpleButton3.Text = "Undo";
+            this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnUndo.Location = new System.Drawing.Point(330, 12);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(98, 38);
+            this.btnUndo.TabIndex = 7;
+            this.btnUndo.Text = "Undo";
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
-            // simpleButton4
+            // btnRedo
             // 
-            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(434, 12);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(97, 38);
-            this.simpleButton4.TabIndex = 7;
-            this.simpleButton4.Text = "Redo";
+            this.btnRedo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.btnRedo.Location = new System.Drawing.Point(434, 12);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(97, 38);
+            this.btnRedo.TabIndex = 7;
+            this.btnRedo.Text = "Redo";
+            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
             // 
             // btnReload
             // 
-            this.btnReload.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
+            this.btnReload.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReload.ImageOptions.SvgImage")));
             this.btnReload.Location = new System.Drawing.Point(537, 12);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(96, 38);
@@ -517,8 +520,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // panel1
             // 
             this.panel1.Controls.Add(this.btnReload);
-            this.panel1.Controls.Add(this.simpleButton4);
-            this.panel1.Controls.Add(this.simpleButton3);
+            this.panel1.Controls.Add(this.btnRedo);
+            this.panel1.Controls.Add(this.btnUndo);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnAdd);
@@ -605,8 +608,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton btnUndo;
+        private DevExpress.XtraEditors.SimpleButton btnRedo;
         private DevExpress.XtraEditors.SimpleButton btnReload;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingSource dANGKYBindingSource;

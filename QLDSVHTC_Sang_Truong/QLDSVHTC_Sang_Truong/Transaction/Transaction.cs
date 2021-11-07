@@ -82,14 +82,14 @@ namespace QLDSVHTC_Sang_Truong
             redoStack.Push(action);
 
             int firstPosition = action.position;
-            MessageBox.Show("vi tri dau: " + firstPosition);
+            //MessageBox.Show("vi tri dau: " + firstPosition);
             action.undo();
             //nếu là delete: 
             if (firstPosition < 0)
             {
                 this.updatePosition(firstPosition, action.position);
 
-                MessageBox.Show("vi tri dau: " + firstPosition + "vi tri sau: " + action.position);
+                //MessageBox.Show("vi tri dau: " + firstPosition + "vi tri sau: " + action.position);
             }
             if (action.changePositionWhenUndo)
             {
@@ -105,8 +105,8 @@ namespace QLDSVHTC_Sang_Truong
             Transaction action = redoStack.Pop();
             undoStack.Push(action);
 
-            int firstPosition = action.position; 
-
+            int firstPosition = action.position;
+            //MessageBox.Show("vi tri dau: " + firstPosition);
             action.redo();
             //dành cho insert: 
             if (firstPosition < 0)
@@ -210,7 +210,8 @@ namespace QLDSVHTC_Sang_Truong
         public override void redo()
         {
             // save lai data
-            data = ((DataRowView)binding.Current).Row.ItemArray;
+            //data = ((DataRowView)binding.Current).Row.ItemArray;
+            data = ((DataRowView)binding[position]).Row.ItemArray;
             binding.RemoveAt(position);
 
             
@@ -255,6 +256,8 @@ namespace QLDSVHTC_Sang_Truong
    
         public override void execute()
         {
+           
+
             binding.AddNew(); // tao dong trong va nhay xuong cho edit
             // save lai vi tri
             position = binding.Position;
@@ -344,14 +347,14 @@ namespace QLDSVHTC_Sang_Truong
             }
             binding.EndEdit();
             binding.ResetCurrentItem();
-            //MessageBox.Show("undo update vi tri: "+position+ "-"+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3]); 
+            MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
         }
 
         public override void redo()
         {
             try
             {
-                MessageBox.Show("redo: " +position+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3]);
+                
                 
                 
                 DataRowView row = (DataRowView)binding[position];
@@ -361,10 +364,11 @@ namespace QLDSVHTC_Sang_Truong
                 }
                 binding.EndEdit();
                 binding.ResetCurrentItem();
+                //MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
             }
-            catch
+            catch(Exception ex)
             {
-                return;
+                Console.WriteLine(ex.Message); 
             }
 
         }

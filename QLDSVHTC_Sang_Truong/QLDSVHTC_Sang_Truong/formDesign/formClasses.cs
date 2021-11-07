@@ -35,8 +35,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
 
             string classCode = gridView1.GetRowCellValue(gridView1.RowCount-1,"MALOP").ToString();
-            string className = gridView1.GetRowCellValue(gridView1.RowCount - 1, "TENLOP").ToString();
-            string classSchoolYear = gridView1.GetRowCellValue(gridView1.RowCount - 1, "KHOAHOC").ToString();
+            string className = gridView1.GetRowCellValue(gridView1.RowCount-1 , "TENLOP").ToString();
+            string classSchoolYear = gridView1.GetRowCellValue(gridView1.RowCount-1 , "KHOAHOC").ToString();
             
             if (checkEmpty(classCode, className, classSchoolYear) == true) return;
 
@@ -205,7 +205,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             
             btnUndo.Enabled = true;
            
-            if (lOPBindingSource.Count == 0) bindingNavigatorAddNewItem.Enabled = false;
+            //if (lOPBindingSource.Count == 0) bindingNavigatorAddNewItem.Enabled = false;
         }
 
         
@@ -220,8 +220,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
 
                 
-                string classCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MALOP").ToString();
-                string className = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TENLOP").ToString();
+                string classCode = gridView1.GetRowCellValue(gridView1.DataRowCount-1, "MALOP").ToString();
+                string className = gridView1.GetRowCellValue(gridView1.DataRowCount-1, "TENLOP").ToString();
                 if(classCode.Equals("") || className.Equals(""))
                 {
                     MessageBox.Show("Bạn phải hoàn tất thao tác trước đó!", "Cảnh báo!", MessageBoxButtons.OK);
@@ -232,7 +232,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
 
             cmdManager.execute(new InsertAction(lOPBindingSource));
-           
+             
 
             if (cbDepartment.SelectedIndex == 0)
             {
@@ -246,13 +246,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             gridView1.SetFocusedRowCellValue("MALOP", "");
             gridView1.SetFocusedRowCellValue("TENLOP", "");
             gridView1.SetFocusedRowCellValue("KHOAHOC", "");
+            
+            //quan trọng, nhấm đánh dấu là đã được tồn tại
+            gridView1.FocusedRowHandle = gridView1.DataRowCount;
         }
 
         private bool checkEmpty(string classCode, string className, string classSchoolYear)
         {
             if (classCode.Trim().Equals(""))
             {
-                MessageBox.Show("Mã lớp không được rỗng!", "Cảnh báo!", MessageBoxButtons.OK);
+                MessageBox.Show("Mã lớp không được rỗng", "Cảnh báo!", MessageBoxButtons.OK);
                 return true;
             }
             else if (className.Trim().Equals(""))
@@ -416,9 +419,9 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             if (svBds.Count > 0)
             {
-                string studentCode = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MASV").ToString();
-                string firstName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "HO").ToString();
-                string lastName = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "TEN").ToString();
+                string studentCode = gridView2.GetRowCellValue(gridView2.DataRowCount-1, "MASV").ToString();
+                string firstName = gridView2.GetRowCellValue(gridView2.DataRowCount-1, "HO").ToString();
+                string lastName = gridView2.GetRowCellValue(gridView2.DataRowCount-1, "TEN").ToString();
                 if (studentCode.Equals("") || firstName.Equals("") || lastName.Equals(""))
                 {
                     MessageBox.Show("Bạn phải hoàn tất thao tác trước đó!", "Cảnh báo!", MessageBoxButtons.OK);
@@ -431,7 +434,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             gridView2.SetFocusedRowCellValue("HO", "");
             gridView2.SetFocusedRowCellValue("TEN", "");
             gridView2.SetFocusedRowCellValue("PHAI", false);
-            gridView2.SetFocusedRowCellValue("DANGHIHOC", false); 
+            gridView2.SetFocusedRowCellValue("DANGHIHOC", false);
+
+
+            gridView2.FocusedRowHandle = gridView2.DataRowCount; 
         }
 
         private void btnDeleteSV_Click(object sender, EventArgs e)
