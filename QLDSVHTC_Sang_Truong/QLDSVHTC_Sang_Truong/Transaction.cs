@@ -8,11 +8,17 @@ using System.Windows.Forms;
 
 namespace QLDSVHTC_Sang_Truong
 {
-    interface Transaction
+    abstract class Transaction
     {
-        void execute();
-        void undo();
-        void redo();
+        public abstract void execute();
+        public abstract void undo();
+        public abstract void redo();
+        public int position; 
+        public BindingSource binding;
+
+        
+        public bool changePositionWhenUndo = false;
+        public bool changePossionWhenExec = false; 
     }
 
     class CommandManager
@@ -20,6 +26,7 @@ namespace QLDSVHTC_Sang_Truong
 
         private Stack<Transaction> undoStack;
         private Stack<Transaction> redoStack;
+        int markPositionForChange = -1;
         public CommandManager()
         {
             undoStack = new Stack<Transaction>();
@@ -49,8 +56,18 @@ namespace QLDSVHTC_Sang_Truong
         }
         public void execute(Transaction action)
         {
+            int originPosition = action.position;
             action.execute();
             undoStack.Push(action);
+            if (action.changePossionWhenExec == true)//dành cho trường hợp delete.
+            {
+                this.changeMarkPostion(originPosition); 
+
+                this.updatePosition(originPosition);
+            }
+            
+            
+           
         }
 
         public void commit(Transaction action)
@@ -62,16 +79,49 @@ namespace QLDSVHTC_Sang_Truong
         {
 
             Transaction action = undoStack.Pop();
-            action.undo();
             redoStack.Push(action);
+
+            int firstPosition = action.position;
+            MessageBox.Show("vi tri dau: " + firstPosition);
+            action.undo();
+            //nếu là delete: 
+            if (firstPosition < 0)
+            {
+                this.updatePosition(firstPosition, action.position);
+
+                MessageBox.Show("vi tri dau: " + firstPosition + "vi tri sau: " + action.position);
+            }
+            if (action.changePositionWhenUndo)
+            {
+                this.changeMarkPostion(firstPosition); 
+                this.updatePosition(firstPosition); 
+            }
+            
 
         }
 
         public void redo()
         {
             Transaction action = redoStack.Pop();
-            action.redo();
             undoStack.Push(action);
+
+            int firstPosition = action.position; 
+
+            action.redo();
+            //dành cho insert: 
+            if (firstPosition < 0)
+            {
+                this.updatePosition(firstPosition, action.position); 
+            }
+
+            //dành cho delete: 
+            if (action.changePossionWhenExec == true)//dành cho trường hợp delete.
+            {
+                this.changeMarkPostion(firstPosition);
+                this.updatePosition(firstPosition);
+            }
+
+
         }
         public void clear()
         {
@@ -86,46 +136,101 @@ namespace QLDSVHTC_Sang_Truong
             undoStack.Pop();
 
         }
+        public void updatePosition(int positionMark)
+        {
+          
+            foreach (Transaction item in redoStack)
+            {
+                if (item.position > positionMark)
+                    item.position -= 1; 
+
+            }
+            foreach (Transaction item in undoStack)
+            {
+                if (item.position > positionMark)
+                    item.position -= 1;
+            }
+        }
+        public void updatePosition(int first, int later)
+        {
+            foreach (Transaction item in redoStack)
+            {
+                if (item.position == first)
+                    item.position = later;
+
+            }
+            foreach (Transaction item in undoStack)
+            {
+                if (item.position == first)
+                    item.position = later;
+            }
+        }
+        public void changeMarkPostion(int positionMark)
+        {
+            foreach (Transaction item in redoStack)
+            {
+                if (item.position == positionMark)
+                    item.position = this.markPositionForChange;
+
+            }
+            foreach (Transaction item in undoStack)
+            {
+                if (item.position == positionMark)
+                    item.position = this.markPositionForChange;
+            }
+            this.markPositionForChange--; 
+        }
     }
 
     class DeleteAction : Transaction
     {
-        BindingSource binding;
-
+       
+        
         Object[] data;
 
         public DeleteAction(BindingSource binding)
         {
             this.binding = binding;
-
+            this.changePossionWhenExec = true;
+            position = binding.Position;
         }
 
-        public void execute()
+        
+
+        public override void execute()
+        {
+            data = ((DataRowView)binding.Current).Row.ItemArray;
+        
+            binding.RemoveCurrent();
+            
+        }
+
+       
+
+        public override void redo()
         {
             // save lai data
             data = ((DataRowView)binding.Current).Row.ItemArray;
-            // thuc thi delet
-            binding.RemoveCurrent(); // delete
+            binding.RemoveAt(position);
 
+            
         }
 
-        public void redo()
+       
+        public override void undo()
         {
-            // save lai data
-            data = ((DataRowView)binding.Current).Row.ItemArray;
-            // thuc thi delet
-            binding.RemoveCurrent(); // delete
-        }
 
-        public void undo()
-        {
+
             // insert lai data
             binding.AddNew();
-            DataRowView row = (DataRowView)binding.Current;
+            position = binding.Position;
+            DataRowView row = (DataRowView)binding[position];
+            
             for (int i = 0; i < data.Length; i++)
             {
                 row[i] = data[i];
             }
+            
             binding.EndEdit();
             binding.ResetCurrentItem();
         }
@@ -134,38 +239,57 @@ namespace QLDSVHTC_Sang_Truong
     // edit lai class se chay sau khi user nhap data, de co dc data redo
     class InsertAction : Transaction
     {
-        BindingSource binding;
-        int position;
-        Object[] data;
+
+        Object[] data; 
         public InsertAction(BindingSource binding)
         {
             this.binding = binding;
-
+            this.changePositionWhenUndo = true; 
         }
 
-        // chay insert voi data user nhap, chay sau getdata()
-        public void execute()
+        public void getData()
+        {
+            data = ((DataRowView)binding.Current).Row.ItemArray;
+        }
+
+   
+        public override void execute()
         {
             binding.AddNew(); // tao dong trong va nhay xuong cho edit
             // save lai vi tri
             position = binding.Position;
+            
+           
         }
 
-        // chay khi user bam nut chuan bi insert
-        public void redo()
+        public override void undo()
+        {
+
+
+            data = ((DataRowView)binding[position]).Row.ItemArray;
+            
+            // delete record dc insert tai vi tri da save
+            binding.RemoveAt(position);
+
+        }
+
+        public override void redo()
         {
             try
             {
+                //MessageBox.Show("redo cua insert: " + data[0] + "-" + data[1] + "-" + data[2] + "-" + data[3]);
                 binding.AddNew(); // tao dong trong va nhay xuong cho edit
                                   // save lai vi tri
 
                 position = binding.Position;
                 // update lai data
                 DataRowView row = (DataRowView)binding[binding.Position];
+
                 for (int i = 0; i < data.Length; i++)
                 {
                     row[i] = data[i];
                 }
+
                 binding.EndEdit();
                 binding.ResetCurrentItem();
 
@@ -175,71 +299,40 @@ namespace QLDSVHTC_Sang_Truong
                 return;
 
             }
-
-        }
-        // can goi de luu data cho redo
-        public void getData()
-        {
-            data = ((DataRowView)binding.Current).Row.ItemArray;
-        }
-
-        public void undo()
-        {
-            // delete record dc insert tai vi tri da save
-            binding.RemoveAt(position);
         }
     }
 
     // tuong tu insert action: luu data truoc de undo, data sau de redo
     class UpdateAction : Transaction
     {
-        BindingSource binding;
+       
         Object[] oldData;
-        Object[] newData;
-        int position;
+    
         public UpdateAction(BindingSource binding)
         {
             this.binding = binding;
         }
-        // giai doan 2
-        public void execute()
-        {
-            // save lai data
-            oldData = ((DataRowView)binding.Current).Row.ItemArray;
-            position = binding.Position;
+       
 
-        }
-        // khoi tao bat dau nhap lieu, giai doan 1
-        public void redo()
-        {
-            // update lai data
-            try
-            {
-                DataRowView row = (DataRowView)binding[position];
-                for (int i = 0; i < oldData.Length; i++)
-                {
-                    if (i >= newData.Length) break; //mới thêm vào.
-                    row[i] = newData[i];
-                }
-                binding.EndEdit();
-                binding.ResetCurrentItem();
-            }
-            catch
-            {
-                return;
-            }
-
-        }
-
-        // can goi de luu data cho redo
+        
         public void getData()
         {
             binding.EndEdit();
-            binding.ResetCurrentItem(); // danh dau 2 dong
-            newData = ((DataRowView)binding.Current).Row.ItemArray;
+            binding.ResetCurrentItem(); 
+            
         }
 
-        public void undo()
+       
+
+        public override void execute()
+        {
+            position = binding.Position;
+            // save lai data
+            oldData = ((DataRowView)binding.Current).Row.ItemArray;
+            
+        }
+
+        public override void undo()
         {
             // update lai data
             DataRowView row = (DataRowView)binding[position];
@@ -251,6 +344,29 @@ namespace QLDSVHTC_Sang_Truong
             }
             binding.EndEdit();
             binding.ResetCurrentItem();
+            //MessageBox.Show("undo update vi tri: "+position+ "-"+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3]); 
+        }
+
+        public override void redo()
+        {
+            try
+            {
+                MessageBox.Show("redo: " +position+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3]);
+                
+                
+                DataRowView row = (DataRowView)binding[position];
+                for (int i = 0; i < oldData.Length; i++)
+                {
+                    row[i] = oldData[i];
+                }
+                binding.EndEdit();
+                binding.ResetCurrentItem();
+            }
+            catch
+            {
+                return;
+            }
+
         }
     }
 
