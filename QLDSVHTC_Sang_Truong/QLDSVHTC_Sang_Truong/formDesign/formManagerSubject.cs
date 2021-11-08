@@ -34,7 +34,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.MONHOC' table. You can move, or remove it, as needed.
             this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
             setEnableGrid(false);
-            btnCancel.Enabled = btnSave.Enabled=btnUndo.Enabled=btnRedo.Enabled = false;
+            btnSave.Enabled=btnUndo.Enabled=btnRedo.Enabled = false;
         }
 
         private void setEnableGrid(Boolean column)
@@ -115,7 +115,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
-            btnCancel.Enabled = btnSave.Enabled = true;
+            btnSave.Enabled = true;
             if (bdsLopTinChi.Count > 0)
             {
                 MessageBox.Show("Môn học bạn muốn xóa đã có lớp đăng ký, không thể xóa!!!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -132,15 +132,25 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
-            btnCancel.Enabled = btnSave.Enabled = true;
-            setEnableGrid(true);
+            if (btnEdit.Caption.Equals("Sửa"))
+            {
+                //btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
+                btnSave.Enabled = true;
+                setEnableGrid(true);
+                btnEdit.Caption = "Hủy sửa";
+            }
+            else
+            {
+                setEnableGrid(false);
+                btnEdit.Caption = "Sửa";
+            }
+            
         }
 
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnEdit.Enabled = btnDelete.Enabled = false;
-            btnCancel.Enabled = btnSave.Enabled = true;
+            //btnEdit.Enabled = btnDelete.Enabled = false;
+            btnSave.Enabled = true;
             cmdManager.execute(new InsertAction(bdsMONHOC));
             setEnableGrid(true);
             isInsert = true;
@@ -160,18 +170,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
                 setEnableGrid(false);
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
-                btnCancel.Enabled = btnSave.Enabled = false;
+                btnSave.Enabled = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lưu dữ liệu thất bại!!\r\n Dữ liệu không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lưu dữ liệu thất bại!!\r\n Vui lòng kiểm tra và nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
 
         private void btnCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DialogResult dr = XtraMessageBox.Show("Dữ liệu chưa được lưu vào cơ sở dữ liệu, bạn có muốn hủy", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = XtraMessageBox.Show("Xác nhận tải lại trang", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.No)
             {
@@ -181,8 +191,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
-                btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
-                btnCancel.Enabled = btnSave.Enabled = false;
+                //btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
+                btnSave.Enabled = false;
                 setEnableGrid(false);
                 isInsert = false;
             }
@@ -203,7 +213,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
                     btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
-                    btnCancel.Enabled = btnSave.Enabled = false;
+                    btnSave.Enabled = false;
                 }
             }
             if (isInsert && gridView1.FocusedColumn.FieldName == "MAMH")
@@ -245,16 +255,29 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 bool isNumeric = int.TryParse(input, out scoreCode);
                 if (isNumeric)
                 {
+                    int rowFocus = gridView1.FocusedRowHandle;
+                    //tên cột số tiết học đang nhập
+                    string fieldNameFocus = gridView1.FocusedColumn.FieldName;
+
+                    //kt có đang focus cột nào trong gridview ko
+                    if (rowFocus<0 || gridView1.GetRowCellValue(rowFocus, fieldNameFocus.Equals("SOTIET_LT") ? "SOTIET_TH" : "SOTIET_LT")==null) return;
+
+                    string inputNext = "";
+                    try
+                    {
+                        //dữ liệu của cột số tiết học còn lại: nếu fieldNameFocus là SOTIET_LT thì ta sẽ lấy dữ liệu SOTIET_TH để cộng lại r tính toán hợp lệ ko
+                        inputNext = gridView1.GetRowCellValue(rowFocus, fieldNameFocus.Equals("SOTIET_LT") ? "SOTIET_TH" : "SOTIET_LT").ToString();
+                    }
+                    catch (InvalidCastException ex) { return; }
+                    
                     if (scoreCode < 0)
                     {
                         e.Valid = false;
                         e.ErrorText = "Số tiết học phải lớn hơn 0";
                         //MessageBox.Show(this, "Số tiết học phải lớn hơn 0!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else
-                    {
-                        string fieldNameFocus = gridView1.FocusedColumn.FieldName;
-                        tongTiet = scoreCode + float.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, fieldNameFocus.Equals("SOTIET_LT") ? "SOTIET_TH" : "SOTIET_LT").ToString());
+                    else if (!inputNext.Equals("")) { 
+                        tongTiet = scoreCode + float.Parse(gridView1.GetRowCellValue(rowFocus, fieldNameFocus.Equals("SOTIET_LT") ? "SOTIET_TH" : "SOTIET_LT").ToString());
                         label1.Text = tongTiet.ToString();
                         if (tongTiet % 15 != 0)
                         {
