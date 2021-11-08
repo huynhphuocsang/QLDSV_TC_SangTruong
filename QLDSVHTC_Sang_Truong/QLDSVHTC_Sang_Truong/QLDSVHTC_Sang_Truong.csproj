@@ -177,14 +177,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QLDSV_TCDataSet2.cs">
-      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLDSV_TCDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Report\ReportTuitionFee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,7 +219,8 @@
     <Compile Include="Report\xrptTuitionFee.Designer.cs">
       <DependentUpon>xrptTuitionFee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction.cs" />
+    <Compile Include="Transaction\TransactionForCreditClass.cs" />
+    <Compile Include="Transaction\Transaction.cs" />
     <EmbeddedResource Include="formDesign\formClasses.resx">
       <DependentUpon>formClasses.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -338,17 +331,6 @@
     </None>
     <None Include="QLDSV_TCDataSet1.xss">
       <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLDSV_TCDataSet2.xsc">
-      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QLDSV_TCDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDSV_TCDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLDSV_TCDataSet2.xss">
-      <DependentUpon>QLDSV_TCDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

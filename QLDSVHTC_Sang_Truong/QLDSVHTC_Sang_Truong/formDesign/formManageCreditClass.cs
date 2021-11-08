@@ -15,11 +15,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
     public partial class formManageCreditClass : DevExpress.XtraEditors.XtraForm
     {
 
-        private CommandManager cmdManager; 
+        private CommandManagerForCredit cmdManager;
+        
+        //private int totalOfficalClass = 0; 
         public formManageCreditClass()
         {
             InitializeComponent();
-            cmdManager = new CommandManager();
+            cmdManager = new CommandManagerForCredit();
         }
 
         private void lOPTINCHIBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -51,32 +53,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 cbDepartment.Enabled = true;
             }
 
+            
 
 
-
-            //gridView1.OptionsBehavior.Editable = false;
+            btnUndo.Enabled = btnRedo.Enabled = false;
+            //totalOfficalClass = lOPTINCHIBindingSource.Count; 
 
         }
 
         private void gridView1_Click(object sender, EventArgs e)
         {
-            //string teacherCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAGV").ToString();
-            //lkTeacher.EditValue = teacherCode;
-
-            //string schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
-
-            ////đặc biệt
-            ////cbSchoolYear.SelectedIndex = cbSchoolYear.FindString(schoolYear);
-            //cbSchoolYear.SelectedItem = schoolYear;
-
-            //int  semester =int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString());
-            //nmSemester.Value = semester;
-
-            //int group = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NHOM").ToString());
-            //nmGroup.Value = group;
-
-            //int minimumStudent = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SOSVTOITHIEU").ToString());
-            //nmMinimumStudent.Value = minimumStudent; 
+            
         }
         private void load()
         {
@@ -215,16 +202,35 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            string  subject= gridView1.GetRowCellValue(gridView1.RowCount - 1, "MAMH").ToString();
+            string teacher = gridView1.GetRowCellValue(gridView1.RowCount - 1, "MAGV").ToString();
+            if (checkEmpty(subject, teacher)) return; 
+
+
             this.Validate();
             this.lOPTINCHIBindingSource.EndEdit();
-            this.lOPTINCHITableAdapter.Update(this.qLDSV_TCDataSet.LOPTINCHI); 
-
+            this.lOPTINCHITableAdapter.Update(this.qLDSV_TCDataSet.LOPTINCHI);
+            //this.totalOfficalClass = lOPTINCHIBindingSource.Count;
+            XtraMessageBox.Show("Lưu dữ liệu mới thành công", "Thông báo!", MessageBoxButtons.OK);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //cmdManager.execute(new InsertAction(lOPTINCHIBindingSource));
-            lOPTINCHIBindingSource.AddNew(); 
+            
+            if (lOPTINCHIBindingSource.Count > 0)
+            {
+                
+                string subject = gridView1.GetRowCellValue(gridView1.DataRowCount-1, "MAMH").ToString();
+                string teacherCode = gridView1.GetRowCellValue(gridView1.DataRowCount-1, "MAGV").ToString();
+                if(subject =="" || teacherCode == "")
+                {
+                    XtraMessageBox.Show("Bạn phải hoàn thành thao tác trước đó!","Cảnh báo!", MessageBoxButtons.OK);
+                    return; 
+                }
+            }
+
+
+            cmdManager.execute(new InsertActionForCredit(lOPTINCHIBindingSource));
             if (cbDepartment.SelectedIndex == 0)
             {
                 gridView1.SetFocusedRowCellValue("MAKHOA", "CNTT");
@@ -233,13 +239,29 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 gridView1.SetFocusedRowCellValue("MAKHOA", "VT"); 
             }
-            gridView1.SetFocusedRowCellValue("HUYLOP", false); 
+            
+
+            gridView1.SetFocusedRowCellValue("NIENKHOA", cbxShoolyear.Items[0]);
+            gridView1.SetFocusedRowCellValue("HOCKY", 1);
+            gridView1.SetFocusedRowCellValue("MAMH","");
+            gridView1.SetFocusedRowCellValue("NHOM", 1);
+            gridView1.SetFocusedRowCellValue("MAGV", "");
+            gridView1.SetFocusedRowCellValue("SOSVTOITHIEU", 10);
+            gridView1.SetFocusedRowCellValue("HUYLOP", false);
+
+            gridView1.FocusedRowHandle = gridView1.DataRowCount;
+            btnUndo.Enabled = true; 
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
+            cmdManager.clear();
+            btnUndo.Enabled = false;
+            btnRedo.Enabled = false;
             this.lOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
-            this.lOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI); 
+            this.lOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI);
+
+            XtraMessageBox.Show("Load dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -249,7 +271,113 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 MessageBox.Show("Không thể xóa lớp này vì đã có người đăng ký!\nGợi ý: hãy 'Hủy' lớp");
                 return; 
             }
-            cmdManager.execute(new DeleteAction(lOPTINCHIBindingSource)); 
+            cmdManager.execute(new DeleteActionForCredit(lOPTINCHIBindingSource));
+            btnUndo.Enabled = true; 
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            cmdManager.undo();
+            if (cmdManager.undoStackSize() == 0)
+            {
+                btnUndo.Enabled = false;
+            }
+            btnRedo.Enabled = true;
+        }
+
+        private void btnRedo_Click(object sender, EventArgs e)
+        {
+            cmdManager.redo();
+            if (cmdManager.redoStackSize() == 0)
+            {
+                btnRedo.Enabled = false;
+            }
+            btnUndo.Enabled = true;
+        }
+
+        private void gridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            // không cho update vì phải xử lý thêm nhiều trường hợp null; 
+
+
+
+            //if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //{
+            //    cmdManager.execute(new UpdateActionForCredit(lOPTINCHIBindingSource));
+            //}
+
+            //if (gridView1.FocusedColumn.FieldName != "NIENKHOA")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
+            //    }
+
+
+            //}
+
+            //if (gridView1.FocusedColumn.FieldName == "NIENKHOA")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource)); 
+            //    }
+                
+
+            //}
+            //else if (gridView1.FocusedColumn.FieldName == "HOCKY")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
+            //    }
+            //}
+            //else if (gridView1.FocusedColumn.FieldName == "MAMH")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
+            //    }
+            //}
+            //else if (gridView1.FocusedColumn.FieldName == "NHOM")
+            //{
+
+            //}else if(gridView1.FocusedColumn.FieldName == "MAGV")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
+            //    }
+            //}
+            //else if (gridView1.FocusedColumn.FieldName == "SOSVTOITHIEU")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
+            //    }
+            //}
+            //else if (gridView1.FocusedColumn.FieldName == "HUYLOP")
+            //{
+            //    if (lOPTINCHIBindingSource.Position < totalOfficalClass)
+            //    {
+            //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
+            //    }
+            //}
+        }
+
+        public bool checkEmpty(string subject, string teacher)
+        {
+            if (subject.Trim().Equals(""))
+            {
+                XtraMessageBox.Show("Môn không được rỗng!", "Cảnh báo!", MessageBoxButtons.OK);
+                return true;
+            }
+            if (teacher.Trim().Equals(""))
+            {
+                XtraMessageBox.Show("Giảng viên không được rỗng!", "Cảnh báo!", MessageBoxButtons.OK);
+                return true;
+            }
+            return false; 
         }
     }
 }
