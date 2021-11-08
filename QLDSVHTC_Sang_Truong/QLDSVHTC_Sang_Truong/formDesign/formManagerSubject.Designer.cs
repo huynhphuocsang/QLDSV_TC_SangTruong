@@ -281,7 +281,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Caption = "Hủy";
+            this.btnCancel.Caption = "Refesh";
             this.btnCancel.Id = 7;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
             this.btnCancel.Name = "btnCancel";
