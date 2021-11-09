@@ -32,10 +32,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nIENKHOALabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formScores));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -320,6 +320,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRedo.Size = new System.Drawing.Size(97, 43);
             this.btnRedo.TabIndex = 8;
             this.btnRedo.Text = "Redo";
+            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
             // 
             // btnUndo
             // 
@@ -329,6 +330,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnUndo.Size = new System.Drawing.Size(90, 43);
             this.btnUndo.TabIndex = 9;
             this.btnUndo.Text = "Undo";
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnReload
             // 
@@ -389,22 +391,22 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_GK,
             this.colDIEM_CK,
             this.gridColumn1});
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Name = "scoresLow";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue1.Expression = "[gridColumn1] < 4";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            gridFormatRule2.ApplyToRow = true;
-            gridFormatRule2.Name = "pay";
-            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue2.Expression = "[TOPAY] <> 1";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            this.gridViewDiem.FormatRules.Add(gridFormatRule1);
-            this.gridViewDiem.FormatRules.Add(gridFormatRule2);
+            gridFormatRule3.ApplyToRow = true;
+            gridFormatRule3.Name = "scoresLow";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue3.Expression = "[gridColumn1] < 4";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            gridFormatRule4.ApplyToRow = true;
+            gridFormatRule4.Name = "pay";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue4.Expression = "[TOPAY] <> 1";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            this.gridViewDiem.FormatRules.Add(gridFormatRule3);
+            this.gridViewDiem.FormatRules.Add(gridFormatRule4);
             this.gridViewDiem.GridControl = this.sP_LOAD_LIST_SCORESGridControl;
             this.gridViewDiem.GroupPanelText = "DANH SÁCH ĐIỂM SINH VIÊN";
             this.gridViewDiem.Name = "gridViewDiem";

@@ -219,6 +219,7 @@
     <Compile Include="Report\xrptTuitionFee.Designer.cs">
       <DependentUpon>xrptTuitionFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\TransactionForScore.cs" />
     <Compile Include="Transaction\TransactionForCreditClass.cs" />
     <Compile Include="Transaction\Transaction.cs" />
     <EmbeddedResource Include="formDesign\formClasses.resx">
