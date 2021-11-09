@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QLDSVHTC_Sang_Truong
 {
-    abstract class Transaction
+    abstract class TransactionForScore
     {
         public abstract void execute();
         public abstract void undo();
@@ -21,13 +21,13 @@ namespace QLDSVHTC_Sang_Truong
         public bool changePossionWhenExec = false; 
     }
 
-    class CommandManager
+    class CommandManagerForScore
     {
 
         private Stack<Transaction> undoStack;
         private Stack<Transaction> redoStack;
         int markPositionForChange = -1;
-        public CommandManager()
+        public CommandManagerForScore()
         {
             undoStack = new Stack<Transaction>();
             redoStack = new Stack<Transaction>();
@@ -182,136 +182,13 @@ namespace QLDSVHTC_Sang_Truong
         }
     }
 
-    class DeleteAction : Transaction
-    {
-       
-        
-        Object[] data;
-
-        public DeleteAction(BindingSource binding)
-        {
-            this.binding = binding;
-            this.changePossionWhenExec = true;
-            position = binding.Position;
-        }
-
-        
-
-        public override void execute()
-        {
-            data = ((DataRowView)binding.Current).Row.ItemArray;
-        
-            binding.RemoveCurrent();
-            
-        }
-
-       
-
-        public override void redo()
-        {
-            // save lai data
-            //data = ((DataRowView)binding.Current).Row.ItemArray;
-            data = ((DataRowView)binding[position]).Row.ItemArray;
-            binding.RemoveAt(position);
-
-            
-        }
-
-       
-        public override void undo()
-        {
-
-
-            // insert lai data
-            binding.AddNew();
-            position = binding.Position;
-            DataRowView row = (DataRowView)binding[position];
-            
-            for (int i = 0; i < data.Length; i++)
-            {
-                row[i] = data[i];
-            }
-            
-            binding.EndEdit();
-            binding.ResetCurrentItem();
-        }
-    }
-
-    // edit lai class se chay sau khi user nhap data, de co dc data redo
-    class InsertAction : Transaction
-    {
-
-        Object[] data; 
-        public InsertAction(BindingSource binding)
-        {
-            this.binding = binding;
-            this.changePositionWhenUndo = true; 
-        }
-
-        public void getData()
-        {
-            data = ((DataRowView)binding.Current).Row.ItemArray;
-        }
-
-   
-        public override void execute()
-        {
-           
-
-            binding.AddNew(); // tao dong trong va nhay xuong cho edit
-            // save lai vi tri
-            position = binding.Position;
-            
-           
-        }
-
-        public override void undo()
-        {
-
-
-            data = ((DataRowView)binding[position]).Row.ItemArray;
-            
-            // delete record dc insert tai vi tri da save
-            binding.RemoveAt(position);
-
-        }
-
-        public override void redo()
-        {
-            try
-            {
-                //MessageBox.Show("redo cua insert: " + data[0] + "-" + data[1] + "-" + data[2] + "-" + data[3]);
-                binding.AddNew(); // tao dong trong va nhay xuong cho edit
-                                  // save lai vi tri
-
-                position = binding.Position;
-                // update lai data
-                DataRowView row = (DataRowView)binding[binding.Position];
-
-                for (int i = 0; i < data.Length; i++)
-                {
-                    row[i] = data[i];
-                }
-
-                binding.EndEdit();
-                binding.ResetCurrentItem();
-
-            }
-            catch
-            {
-                return;
-
-            }
-        }
-    }
-
-    // tuong tu insert action: luu data truoc de undo, data sau de redo
-    class UpdateAction : Transaction
+    
+    class UpdateActionForScore : Transaction
     {
        
         Object[] oldData;
     
-        public UpdateAction(BindingSource binding)
+        public UpdateActionForScore(BindingSource binding)
         {
             this.binding = binding;
         }
@@ -332,7 +209,7 @@ namespace QLDSVHTC_Sang_Truong
             position = binding.Position;
             // save lai data
             oldData = ((DataRowView)binding.Current).Row.ItemArray;
-            
+           // MessageBox.Show("Execute: "+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
         }
 
         public override void undo()
@@ -340,35 +217,36 @@ namespace QLDSVHTC_Sang_Truong
             // update lai data
             DataRowView row = (DataRowView)binding[position];
 
-            for (int i = 0; i < oldData.Length; i++)
+            for (int i = 3; i <= 5; i++)
             {
                 try { row[i] = oldData[i]; } catch (Exception ex) { }
 
             }
             binding.EndEdit();
             binding.ResetCurrentItem();
-            MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
+            //MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
         }
 
         public override void redo()
         {
             try
             {
-                
-                
-                
+
+
+
                 DataRowView row = (DataRowView)binding[position];
-                for (int i = 0; i < oldData.Length; i++)
+                for (int i = 3; i <= 5; i++)
                 {
+
                     row[i] = oldData[i];
                 }
                 binding.EndEdit();
                 binding.ResetCurrentItem();
-                //MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] );
+                
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message); 
+                Console.WriteLine("Lỗi chỗ này nè: "+ex.Message); 
             }
 
         }

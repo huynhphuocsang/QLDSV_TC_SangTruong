@@ -14,11 +14,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 {
     public partial class formScores : DevExpress.XtraEditors.XtraForm
     {
-        private CommandManager cmdManager;
+        private CommandManagerForScore cmdManager;
+        private bool ckScore = false; 
         public formScores()
         {
             InitializeComponent();
-           
+            cmdManager = new CommandManagerForScore(); 
         }
 
         private void frmScores_Load(object sender, EventArgs e)
@@ -43,6 +44,21 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.v_DS_NIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.V_DS_NIENKHOA);
             setEnableGrid(false);
             btnGhi.Enabled = btnReload.Enabled = btnUndo.Enabled = btnRedo.Enabled = btnReload.Enabled = false;
+
+
+            gridViewDiem.CellValueChanged += (s, ex) =>
+            {
+                
+                btnUndo.Enabled = true;
+                if (ckScore == true)
+                {
+                    cmdManager.execute(new UpdateActionForScore(sP_LOAD_LIST_SCORESBindingSource));
+                    ckScore = false; 
+                }
+                   
+                
+            };
+
         }
 
         private void setEnableGrid(Boolean column)
@@ -248,6 +264,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 bool test = !input.Equals("") && Regex.IsMatch(input, "\\d+");
                 float scoreCode;
                 bool isNumeric = float.TryParse(input, out scoreCode);
+               
                 if(isNumeric)
                 {
                     if (scoreCode < 0 || scoreCode > 10)
@@ -256,6 +273,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                         e.ErrorText = "Hãy nhập điểm trong khoảng 0-10";
                         MessageBox.Show(this, "Hãy nhập điểm trong khoảng 0-10!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    else
+                    {
+                        if (gridViewDiem.FocusedColumn.FieldName == "DIEM_CC")
+                        {
+                            cmdManager.execute(new UpdateActionForScore(sP_LOAD_LIST_SCORESBindingSource));
+                        }
+                        else
+                        {
+                            ckScore = true;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -265,8 +294,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             setEnableGrid(false);
             loadClassRegister();
             loadScoresSV();
+
+            cmdManager.clear(); 
+
             btnNhapDiem.Enabled = true;
             btnGhi.Enabled = btnReload.Enabled = false;
+            btnUndo.Enabled = btnRedo.Enabled = false; 
         }
 
         private void gridViewDiem_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
@@ -287,6 +320,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             loadClassRegister();
         }
 
-        
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            cmdManager.undo();
+            if (cmdManager.undoStackSize() == 0)
+            {
+                btnUndo.Enabled = false;
+            }
+            btnRedo.Enabled = true;
+        }
+
+        private void btnRedo_Click(object sender, EventArgs e)
+        {
+            cmdManager.redo();
+            if (cmdManager.redoStackSize() == 0)
+            {
+                btnRedo.Enabled = false;
+            }
+            btnUndo.Enabled = true;
+        }
     }
 }
