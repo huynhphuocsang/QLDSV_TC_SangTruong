@@ -347,7 +347,7 @@ namespace QLDSVHTC_Sang_Truong
             }
             binding.EndEdit();
             binding.ResetCurrentItem();
-            MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
+            //MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
         }
 
         public override void redo()
