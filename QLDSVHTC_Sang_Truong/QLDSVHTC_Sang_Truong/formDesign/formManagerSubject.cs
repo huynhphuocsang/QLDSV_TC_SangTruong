@@ -17,6 +17,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private CommandManager cmdManager;
         private Boolean isInsert = false;
         private float tongTiet = 0;
+        private int totalOfficalSubject = 0;
+        private bool inValid = true; 
         public formManagerSubject()
         {
             InitializeComponent();
@@ -35,6 +37,27 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
             setEnableGrid(false);
             btnSave.Enabled=btnUndo.Enabled=btnRedo.Enabled = false;
+            totalOfficalSubject = bdsMONHOC.Count;
+
+
+            gridView1.CellValueChanged += (s, ex) =>
+            {
+                string subjectCode = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAMH").ToString();
+                string subjectName = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TENMH").ToString();
+                string numberOfTheory = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SOTIET_LT").ToString();
+                string numberOfPractice = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SOTIET_TH").ToString();
+                btnUndo.Enabled = true;
+                
+                if ((subjectCode == "" && subjectName == "" && numberOfTheory == "" && numberOfPractice=="") || inValid == true)
+                {
+                    return;
+                }
+                else
+                {
+                    cmdManager.execute(new UpdateAction(bdsMONHOC));
+                }
+
+            };
         }
 
         private void setEnableGrid(Boolean column)
@@ -126,6 +149,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (choose == DialogResult.Yes)
             {
                 cmdManager.execute(new DeleteAction(bdsMONHOC));
+                btnUndo.Enabled = true; 
             }
 
         }
@@ -154,6 +178,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             cmdManager.execute(new InsertAction(bdsMONHOC));
             setEnableGrid(true);
             isInsert = true;
+            btnUndo.Enabled = true; 
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -195,6 +220,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 btnSave.Enabled = false;
                 setEnableGrid(false);
                 isInsert = false;
+                cmdManager.clear();
+                btnRedo.Enabled = btnUndo.Enabled = false; 
             }
             
         }
@@ -225,11 +252,18 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     e.Valid = false;
                     e.ErrorText = "Mã môn học đã tồn tại";
                     btnAdd.Enabled = false;
+                    inValid = true; 
                     MessageBox.Show(this, "Mã mã môn học đã tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     btnAdd.Enabled = true;
+
+                    inValid = false;
+                    if (bdsMONHOC.Position < totalOfficalSubject)
+                    {
+                        cmdManager.execute(new UpdateAction(bdsMONHOC)); 
+                    }
                 }
             }
 
@@ -241,11 +275,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     e.Valid = false;
                     e.ErrorText = "Tên môn học đã tồn tại";
                     btnAdd.Enabled = false;
+                    inValid = true; 
                     MessageBox.Show(this, "Tên mã môn học đã tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     btnAdd.Enabled = true;
+                    inValid = false;
+                    if (bdsMONHOC.Position < totalOfficalSubject)
+                    {
+                        cmdManager.execute(new UpdateAction(bdsMONHOC));
+                    }
                 }
             }
 
@@ -283,7 +323,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                         {
                             e.Valid = false;
                             e.ErrorText = "Số tiết học không hợp lệ";
+                            inValid = true; 
                             MessageBox.Show(this, "Số tiết học không hợp lệ!\r\n Do 1 tín chỉ bằng 15 tiết nên tổng số tiết cần phải chia hết cho 15", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            inValid = false;
+                            if (bdsMONHOC.Position < totalOfficalSubject)
+                            {
+                                cmdManager.execute(new UpdateAction(bdsMONHOC));
+                            }
                         }
                     }
                 }
@@ -294,6 +343,26 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             
+        }
+
+        private void btnUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            cmdManager.undo();
+            if (cmdManager.undoStackSize() == 0)
+            {
+                btnUndo.Enabled = false;
+            }
+            btnRedo.Enabled = true;
+        }
+
+        private void btnRedo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            cmdManager.redo();
+            if (cmdManager.redoStackSize() == 0)
+            {
+                btnRedo.Enabled = false;
+            }
+            btnUndo.Enabled = true;
         }
     }
 }
