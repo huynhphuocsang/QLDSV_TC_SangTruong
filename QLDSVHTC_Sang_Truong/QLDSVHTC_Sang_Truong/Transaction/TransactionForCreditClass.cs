@@ -24,17 +24,17 @@ namespace QLDSVHTC_Sang_Truong
     class CommandManagerForCredit
     {
 
-        private Stack<Transaction> undoStack;
-        private Stack<Transaction> redoStack;
+        private Stack<TransactionForCredit> undoStack;
+        private Stack<TransactionForCredit> redoStack;
         int markPositionForChange = -1;
         public CommandManagerForCredit()
         {
-            undoStack = new Stack<Transaction>();
-            redoStack = new Stack<Transaction>();
+            undoStack = new Stack<TransactionForCredit>();
+            redoStack = new Stack<TransactionForCredit>();
 
         }
 
-        public Transaction getLastUndoNode()
+        public TransactionForCredit getLastUndoNode()
         {
             return undoStack.Peek();
         }
@@ -49,12 +49,12 @@ namespace QLDSVHTC_Sang_Truong
             return redoStack.Count;
         }
 
-        public void initAction(Transaction action)
+        public void initAction(TransactionForCredit action)
         {
             action.redo();
             undoStack.Push(action);
         }
-        public void execute(Transaction action)
+        public void execute(TransactionForCredit action)
         {
             int originPosition = action.position;
             action.execute();
@@ -70,7 +70,7 @@ namespace QLDSVHTC_Sang_Truong
            
         }
 
-        public void commit(Transaction action)
+        public void commit(TransactionForCredit action)
         {
             action.execute();
         }
@@ -78,7 +78,7 @@ namespace QLDSVHTC_Sang_Truong
         public void undo()
         {
 
-            Transaction action = undoStack.Pop();
+            TransactionForCredit action = undoStack.Pop();
             redoStack.Push(action);
 
             int firstPosition = action.position;
@@ -102,7 +102,7 @@ namespace QLDSVHTC_Sang_Truong
 
         public void redo()
         {
-            Transaction action = redoStack.Pop();
+            TransactionForCredit action = redoStack.Pop();
             undoStack.Push(action);
 
             int firstPosition = action.position;
@@ -139,13 +139,13 @@ namespace QLDSVHTC_Sang_Truong
         public void updatePosition(int positionMark)
         {
           
-            foreach (Transaction item in redoStack)
+            foreach (TransactionForCredit item in redoStack)
             {
                 if (item.position > positionMark)
                     item.position -= 1; 
 
             }
-            foreach (Transaction item in undoStack)
+            foreach (TransactionForCredit item in undoStack)
             {
                 if (item.position > positionMark)
                     item.position -= 1;
@@ -153,13 +153,13 @@ namespace QLDSVHTC_Sang_Truong
         }
         public void updatePosition(int first, int later)
         {
-            foreach (Transaction item in redoStack)
+            foreach (TransactionForCredit item in redoStack)
             {
                 if (item.position == first)
                     item.position = later;
 
             }
-            foreach (Transaction item in undoStack)
+            foreach (TransactionForCredit item in undoStack)
             {
                 if (item.position == first)
                     item.position = later;
@@ -167,13 +167,13 @@ namespace QLDSVHTC_Sang_Truong
         }
         public void changeMarkPostion(int positionMark)
         {
-            foreach (Transaction item in redoStack)
+            foreach (TransactionForCredit item in redoStack)
             {
                 if (item.position == positionMark)
                     item.position = this.markPositionForChange;
 
             }
-            foreach (Transaction item in undoStack)
+            foreach (TransactionForCredit item in undoStack)
             {
                 if (item.position == positionMark)
                     item.position = this.markPositionForChange;
@@ -182,7 +182,7 @@ namespace QLDSVHTC_Sang_Truong
         }
     }
 
-    class DeleteActionForCredit : Transaction
+    class DeleteActionForCredit : TransactionForCredit
     {
        
         
@@ -237,7 +237,7 @@ namespace QLDSVHTC_Sang_Truong
     }
 
     // edit lai class se chay sau khi user nhap data, de co dc data redo
-    class InsertActionForCredit : Transaction
+    class InsertActionForCredit : TransactionForCredit
     {
 
         Object[] data; 
@@ -304,74 +304,74 @@ namespace QLDSVHTC_Sang_Truong
         }
     }
 
-    // tuong tu insert action: luu data truoc de undo, data sau de redo
-    class UpdateActionForCredit : Transaction
-    {
+    // form quản lý lớp tín chỉ không sử dụng update.
+    //class UpdateActionForCredit : TransactionForCredit
+    //{
        
-        Object[] oldData;
+    //    Object[] oldData;
     
-        public UpdateActionForCredit(BindingSource binding)
-        {
-            this.binding = binding;
-        }
+    //    public UpdateActionForCredit(BindingSource binding)
+    //    {
+    //        this.binding = binding;
+    //    }
        
 
         
-        public void getData()
-        {
-            binding.EndEdit();
-            binding.ResetCurrentItem(); 
+    //    public void getData()
+    //    {
+    //        binding.EndEdit();
+    //        binding.ResetCurrentItem(); 
             
-        }
+    //    }
 
        
 
-        public override void execute()
-        {
-            position = binding.Position;
-            // save lai data
-            oldData = ((DataRowView)binding.Current).Row.ItemArray;
+    //    public override void execute()
+    //    {
+    //        position = binding.Position;
+    //        // save lai data
+    //        oldData = ((DataRowView)binding.Current).Row.ItemArray;
             
-        }
+    //    }
 
-        public override void undo()
-        {
-            // update lai data
-            DataRowView row = (DataRowView)binding[position];
+    //    public override void undo()
+    //    {
+    //        // update lai data
+    //        DataRowView row = (DataRowView)binding[position];
 
-            for (int i = 1; i < oldData.Length; i++)
-            {
-                try { row[i] = oldData[i]; } catch (Exception ex) { }
+    //        for (int i = 1; i < oldData.Length; i++)
+    //        {
+    //            try { row[i] = oldData[i]; } catch (Exception ex) { }
 
-            }
-            binding.EndEdit();
-            binding.ResetCurrentItem();
-            MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
-        }
+    //        }
+    //        binding.EndEdit();
+    //        binding.ResetCurrentItem();
+    //        MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
+    //    }
 
-        public override void redo()
-        {
-            try
-            {
+    //    public override void redo()
+    //    {
+    //        try
+    //        {
                 
                 
                 
-                DataRowView row = (DataRowView)binding[position];
-                for (int i = 1; i < oldData.Length; i++)
-                {
-                    row[i] = oldData[i];
-                }
-                binding.EndEdit();
-                binding.ResetCurrentItem();
-                MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Lỗi chỗ này nè: "+ex.Message); 
-            }
+    //            DataRowView row = (DataRowView)binding[position];
+    //            for (int i = 1; i < oldData.Length; i++)
+    //            {
+    //                row[i] = oldData[i];
+    //            }
+    //            binding.EndEdit();
+    //            binding.ResetCurrentItem();
+    //            MessageBox.Show("redo: " + position + oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
+    //        }
+    //        catch(Exception ex)
+    //        {
+    //            Console.WriteLine("Lỗi chỗ này nè: "+ex.Message); 
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
 
 

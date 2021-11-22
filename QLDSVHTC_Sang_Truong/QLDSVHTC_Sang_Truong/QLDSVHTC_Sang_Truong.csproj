@@ -172,16 +172,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLDSV_TCDataSet1.cs">
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLDSV_TCDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Report\ReportTuitionFee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\ReportTuitionFee.Designer.cs">
-      <DependentUpon>ReportTuitionFee.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\xrptClassScores.cs">
       <SubType>Component</SubType>
@@ -280,9 +277,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report\ReportTuitionFee.resx">
-      <DependentUpon>ReportTuitionFee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\xrptClassScores.resx">
       <DependentUpon>xrptClassScores.cs</DependentUpon>
     </EmbeddedResource>
