@@ -328,6 +328,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 btnUndo.Enabled = false;
             }
             btnRedo.Enabled = true;
+            btnGhi.Enabled = true;
         }
 
         private void btnRedo_Click(object sender, EventArgs e)
@@ -338,6 +339,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 btnRedo.Enabled = false;
             }
             btnUndo.Enabled = true;
+            btnGhi.Enabled = true; 
         }
     }
 }

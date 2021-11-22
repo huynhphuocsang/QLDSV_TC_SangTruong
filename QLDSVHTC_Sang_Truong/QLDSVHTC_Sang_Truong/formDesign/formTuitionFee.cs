@@ -47,7 +47,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             gridView1.OptionsBehavior.Editable = false;
             gridView2.OptionsBehavior.Editable = false;
-            btnPay.Enabled = false; 
+            btnPay.Enabled = false;
+            btnCancel.Enabled = false;
         }
 
         private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
@@ -180,10 +181,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (nmMoney.Value == 0)
             {
                 btnPay.Enabled = false;
+                btnCancel.Enabled = false; 
             }
             else
             {
-                btnPay.Enabled = true; 
+                btnPay.Enabled = true;
+                btnCancel.Enabled = true; 
             }
 
             this.sP_SHOW_DETAIL_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr; 
@@ -237,7 +240,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 txtShoolYear.Text = "";
                 nmMoney.Value = 0;
                 btnPay.Enabled = false;
-
+                btnCancel.Enabled = false; 
             }
             else
             {
@@ -253,6 +256,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             txtSemester.Text = "";
             nmMoney.Value = 0;
             btnPay.Enabled = false;
+            btnCancel.Enabled = false; 
         }
 
         
