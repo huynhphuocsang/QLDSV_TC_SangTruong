@@ -202,16 +202,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string  subject= gridView1.GetRowCellValue(gridView1.RowCount - 1, "MAMH").ToString();
-            string teacher = gridView1.GetRowCellValue(gridView1.RowCount - 1, "MAGV").ToString();
-            if (checkEmpty(subject, teacher)) return; 
+            try
+            {
+                string subject = gridView1.GetRowCellValue(gridView1.RowCount - 1, "MAMH").ToString();
+                string teacher = gridView1.GetRowCellValue(gridView1.RowCount - 1, "MAGV").ToString();
+                if (checkEmpty(subject, teacher)) return;
 
 
-            this.Validate();
-            this.lOPTINCHIBindingSource.EndEdit();
-            this.lOPTINCHITableAdapter.Update(this.qLDSV_TCDataSet.LOPTINCHI);
-            //this.totalOfficalClass = lOPTINCHIBindingSource.Count;
-            XtraMessageBox.Show("Lưu dữ liệu mới thành công", "Thông báo!", MessageBoxButtons.OK);
+                this.Validate();
+                this.lOPTINCHIBindingSource.EndEdit();
+                this.lOPTINCHITableAdapter.Update(this.qLDSV_TCDataSet.LOPTINCHI);
+                //this.totalOfficalClass = lOPTINCHIBindingSource.Count;
+                XtraMessageBox.Show("Lưu dữ liệu mới thành công", "Thông báo!", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lớp tín chỉ bị trùng lại 'Nhóm-Môn học-Học kỳ-Niên khóa'","Lỗi khi lưu! Hãy kiểm tra lại thông tin", MessageBoxButtons.OK); 
+            }
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -266,6 +274,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (lOPTINCHIBindingSource.Count == 0)
+            {
+                XtraMessageBox.Show("Không còn lớp để xóa","Cảnh báo!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
             if (dANGKYBindingSource.Count > 0)
             {
                 MessageBox.Show("Không thể xóa lớp này vì đã có người đăng ký!\nGợi ý: hãy 'Hủy' lớp");
