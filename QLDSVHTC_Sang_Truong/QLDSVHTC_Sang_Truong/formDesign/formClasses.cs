@@ -194,18 +194,30 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            //kiêm tra thử xem liệu lớp đã được tham chiếu hay chưa? 
-            if (svBds.Count > 0)
+            if (lOPBindingSource.Count == 0)
             {
-                MessageBox.Show("Không thể xóa lớp vì đã có sinh viên!","Cảnh báo!",MessageBoxButtons.OK);
-                return; 
+                MessageBox.Show("Không có lớp để xóa!", "Cảnh báo!", MessageBoxButtons.OK);
+                return;
             }
-            //cmdManager.updatePosition(lOPBindingSource); 
-            cmdManager.execute(new DeleteAction(lOPBindingSource));
+            try
+            {
+                //kiêm tra thử xem liệu lớp đã được tham chiếu hay chưa? 
+                if (svBds.Count > 0)
+                {
+                    MessageBox.Show("Không thể xóa lớp vì đã có sinh viên!", "Cảnh báo!", MessageBoxButtons.OK);
+                    return;
+                }
+                //cmdManager.updatePosition(lOPBindingSource); 
+                cmdManager.execute(new DeleteAction(lOPBindingSource));
+
+                btnUndo.Enabled = true;
+            }catch(Exception ex)
+            {
+                XtraMessageBox.Show("Đã xảy ra lỗi khi xóa!", "Thông báo", MessageBoxButtons.OK);
+            }
             
-            btnUndo.Enabled = true;
            
-            //if (lOPBindingSource.Count == 0) bindingNavigatorAddNewItem.Enabled = false;
+            
         }
 
         
@@ -232,6 +244,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
 
             cmdManager.execute(new InsertAction(lOPBindingSource));
+            
+           
              
 
             if (cbDepartment.SelectedIndex == 0)
@@ -442,16 +456,28 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnDeleteSV_Click(object sender, EventArgs e)
         {
-            
-            if (dANGKYBindingSource.Count > 0)
+            if (svBds.Count == 0)
             {
-               
-                XtraMessageBox.Show("Bạn không thể xóa sinh viên này!\nGợi ý: bạn hãy chuyển trạng thái thành : 'Đã nghỉ học'", "Cảnh báo!", MessageBoxButtons.OK); 
-                return; 
+                XtraMessageBox.Show("Không còn sinh viên để xóa!", "Cảnh báo!", MessageBoxButtons.OK);
+                return;
             }
-            cmdManagerSV.execute(new DeleteAction(svBds));
-            //cmdManagerSV.updatePosition(); 
-            btnUndoSV.Enabled = true; 
+            try
+            {
+                if (dANGKYBindingSource.Count > 0)
+                {
+
+                    XtraMessageBox.Show("Bạn không thể xóa sinh viên này!\nGợi ý: bạn hãy chuyển trạng thái thành : 'Đã nghỉ học'", "Cảnh báo!", MessageBoxButtons.OK);
+                    return;
+                }
+                cmdManagerSV.execute(new DeleteAction(svBds));
+                //cmdManagerSV.updatePosition(); 
+                btnUndoSV.Enabled = true;
+            }catch(Exception ex)
+            {
+                XtraMessageBox.Show("Đã xảy ra lỗi khi xóa!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+           
 
         }
 

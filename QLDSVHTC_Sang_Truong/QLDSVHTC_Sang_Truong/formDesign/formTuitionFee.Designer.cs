@@ -424,7 +424,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // btnCancel
             // 
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(0, 3);
+            this.btnCancel.Location = new System.Drawing.Point(767, 223);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 45);
             this.btnCancel.TabIndex = 0;

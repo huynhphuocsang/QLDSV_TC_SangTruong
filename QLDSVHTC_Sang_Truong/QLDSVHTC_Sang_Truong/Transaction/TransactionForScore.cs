@@ -13,28 +13,23 @@ namespace QLDSVHTC_Sang_Truong
         public abstract void execute();
         public abstract void undo();
         public abstract void redo();
-        public int position; 
+        public int position =0;
         public BindingSource binding;
 
-        
-        public bool changePositionWhenUndo = false;
-        public bool changePossionWhenExec = false; 
     }
-
     class CommandManagerForScore
     {
 
-        private Stack<Transaction> undoStack;
-        private Stack<Transaction> redoStack;
-        int markPositionForChange = -1;
+        private Stack<TransactionForScore> undoStack;
+        private Stack<TransactionForScore> redoStack;
         public CommandManagerForScore()
         {
-            undoStack = new Stack<Transaction>();
-            redoStack = new Stack<Transaction>();
+            undoStack = new Stack<TransactionForScore>();
+            redoStack = new Stack<TransactionForScore>();
 
         }
 
-        public Transaction getLastUndoNode()
+        public TransactionForScore getLastUndoNode()
         {
             return undoStack.Peek();
         }
@@ -49,28 +44,19 @@ namespace QLDSVHTC_Sang_Truong
             return redoStack.Count;
         }
 
-        public void initAction(Transaction action)
+        public void initAction(TransactionForScore action)
         {
             action.redo();
             undoStack.Push(action);
         }
-        public void execute(Transaction action)
+        public void execute(TransactionForScore action)
         {
             int originPosition = action.position;
             action.execute();
             undoStack.Push(action);
-            if (action.changePossionWhenExec == true)//dành cho trường hợp delete.
-            {
-                this.changeMarkPostion(originPosition); 
-
-                this.updatePosition(originPosition);
-            }
-            
-            
-           
         }
 
-        public void commit(Transaction action)
+        public void commit(TransactionForScore action)
         {
             action.execute();
         }
@@ -78,50 +64,25 @@ namespace QLDSVHTC_Sang_Truong
         public void undo()
         {
 
-            Transaction action = undoStack.Pop();
+            TransactionForScore action = undoStack.Pop();
             redoStack.Push(action);
 
             int firstPosition = action.position;
             //MessageBox.Show("vi tri dau: " + firstPosition);
             action.undo();
-            //nếu là delete: 
-            if (firstPosition < 0)
-            {
-                this.updatePosition(firstPosition, action.position);
-
-                //MessageBox.Show("vi tri dau: " + firstPosition + "vi tri sau: " + action.position);
-            }
-            if (action.changePositionWhenUndo)
-            {
-                this.changeMarkPostion(firstPosition); 
-                this.updatePosition(firstPosition); 
-            }
+           
             
+
 
         }
 
         public void redo()
         {
-            Transaction action = redoStack.Pop();
+            TransactionForScore action = redoStack.Pop();
             undoStack.Push(action);
-
-            int firstPosition = action.position;
             //MessageBox.Show("vi tri dau: " + firstPosition);
             action.redo();
-            //dành cho insert: 
-            if (firstPosition < 0)
-            {
-                this.updatePosition(firstPosition, action.position); 
-            }
-
-            //dành cho delete: 
-            if (action.changePossionWhenExec == true)//dành cho trường hợp delete.
-            {
-                this.changeMarkPostion(firstPosition);
-                this.updatePosition(firstPosition);
-            }
-
-
+            
         }
         public void clear()
         {
@@ -130,86 +91,42 @@ namespace QLDSVHTC_Sang_Truong
         }
 
 
-        // khi user chon update/insert nhung cancel ma k commit
+       
         public void clearLastNode()
         {
             undoStack.Pop();
 
         }
-        public void updatePosition(int positionMark)
-        {
-          
-            foreach (Transaction item in redoStack)
-            {
-                if (item.position > positionMark)
-                    item.position -= 1; 
-
-            }
-            foreach (Transaction item in undoStack)
-            {
-                if (item.position > positionMark)
-                    item.position -= 1;
-            }
-        }
-        public void updatePosition(int first, int later)
-        {
-            foreach (Transaction item in redoStack)
-            {
-                if (item.position == first)
-                    item.position = later;
-
-            }
-            foreach (Transaction item in undoStack)
-            {
-                if (item.position == first)
-                    item.position = later;
-            }
-        }
-        public void changeMarkPostion(int positionMark)
-        {
-            foreach (Transaction item in redoStack)
-            {
-                if (item.position == positionMark)
-                    item.position = this.markPositionForChange;
-
-            }
-            foreach (Transaction item in undoStack)
-            {
-                if (item.position == positionMark)
-                    item.position = this.markPositionForChange;
-            }
-            this.markPositionForChange--; 
-        }
+       
     }
 
-    
-    class UpdateActionForScore : Transaction
+    class UpdateActionForScore : TransactionForScore
     {
-       
+
         Object[] oldData;
-    
+
         public UpdateActionForScore(BindingSource binding)
         {
             this.binding = binding;
         }
-       
 
-        
+
+
         public void getData()
         {
             binding.EndEdit();
-            binding.ResetCurrentItem(); 
-            
+            binding.ResetCurrentItem();
+
         }
 
-       
+
 
         public override void execute()
         {
             position = binding.Position;
             // save lai data
             oldData = ((DataRowView)binding.Current).Row.ItemArray;
-           // MessageBox.Show("Execute: "+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
+            // MessageBox.Show("Execute: "+ oldData[0] + "-" + oldData[1] + "-" + oldData[2] + "-" + oldData[3] + "-" + oldData[4] + "-" + oldData[5] + "-" + oldData[6]);
         }
 
         public override void undo()
@@ -242,16 +159,13 @@ namespace QLDSVHTC_Sang_Truong
                 }
                 binding.EndEdit();
                 binding.ResetCurrentItem();
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Lỗi chỗ này nè: "+ex.Message); 
+                Console.WriteLine("Lỗi chỗ này nè: " + ex.Message);
             }
 
         }
     }
-
-
-
 }

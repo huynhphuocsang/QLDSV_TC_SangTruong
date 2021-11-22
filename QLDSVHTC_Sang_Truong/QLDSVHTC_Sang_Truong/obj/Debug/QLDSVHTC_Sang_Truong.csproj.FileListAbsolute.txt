@@ -378,7 +378,6 @@ D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_San
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentScores.resources
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfTuitionFee.resources
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Properties.Resources.resources
-D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptClassScores.resources
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptCreditClassScores.resources
 D:\Study\LearnPTIT\CoSoDuLieuPhanTan\Final Exam\QLDSV_TC_SangTruong\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
@@ -586,7 +585,6 @@ D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\o
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfStudentScores.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.formDesign.RpfTuitionFee.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Properties.Resources.resources
-D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.ReportTuitionFee.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptClassScores.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.Report.xrptCreditClassScores.resources
 D:\MyCode\Csharp\DistributedDataBase\QLDSVHTC_Sang_Truong\QLDSVHTC_Sang_Truong\obj\Debug\QLDSVHTC_Sang_Truong.xrptCreditClass.resources
