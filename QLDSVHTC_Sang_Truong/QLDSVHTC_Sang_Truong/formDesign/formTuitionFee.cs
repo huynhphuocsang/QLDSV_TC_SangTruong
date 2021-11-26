@@ -82,6 +82,11 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             
             this.sP_PAY_TUITIONFEETableAdapter.Connection.ConnectionString = Program.connstr;
             this.sP_PAY_TUITIONFEETableAdapter.Fill(this.qLDSV_TCDataSet1.SP_PAY_TUITIONFEE, studentCode);
+
+            while (gridView2.RowCount > 0)
+            {
+                gridView2.DeleteRow(0);
+            }
         }
 
         private void fillToolStripButton_Click_1(object sender, EventArgs e)

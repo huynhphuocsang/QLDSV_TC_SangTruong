@@ -477,6 +477,8 @@ namespace QLDSVHTC_Sang_Truong
             // 
             this.colNHOM2.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNHOM2.AppearanceCell.Options.UseFont = true;
+            this.colNHOM2.AppearanceCell.Options.UseTextOptions = true;
+            this.colNHOM2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNHOM2.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.colNHOM2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNHOM2.AppearanceHeader.Options.UseBackColor = true;
@@ -515,6 +517,8 @@ namespace QLDSVHTC_Sang_Truong
             // 
             this.colSOSV1.AppearanceCell.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colSOSV1.AppearanceCell.Options.UseFont = true;
+            this.colSOSV1.AppearanceCell.Options.UseTextOptions = true;
+            this.colSOSV1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSOSV1.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.colSOSV1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colSOSV1.AppearanceHeader.Options.UseBackColor = true;
@@ -724,7 +728,7 @@ namespace QLDSVHTC_Sang_Truong
             this.xoaToolStripMenuItem,
             this.chiTietLopToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 52);
             // 
             // xoaToolStripMenuItem
             // 
@@ -736,7 +740,7 @@ namespace QLDSVHTC_Sang_Truong
             // chiTietLopToolStripMenuItem
             // 
             this.chiTietLopToolStripMenuItem.Name = "chiTietLopToolStripMenuItem";
-            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.chiTietLopToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.chiTietLopToolStripMenuItem.Text = "Chi tiết lớp";
             this.chiTietLopToolStripMenuItem.Click += new System.EventHandler(this.chiTietLopToolStripMenuItem_Click);
             // 
