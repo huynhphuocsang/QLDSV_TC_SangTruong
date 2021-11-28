@@ -36,6 +36,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.MONHOC' table. You can move, or remove it, as needed.
             this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
             setEnableGrid(false);
+            btnEdit.Caption = "Sửa";
             btnSave.Enabled=btnUndo.Enabled=btnRedo.Enabled = false;
             totalOfficalSubject = bdsMONHOC.Count;
 
@@ -194,6 +195,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.mONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
                 setEnableGrid(false);
+                btnEdit.Caption = "Sửa";
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 btnSave.Enabled = false;
             }
@@ -219,6 +221,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 //btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 btnSave.Enabled = false;
                 setEnableGrid(false);
+                btnEdit.Caption = "Sửa";
                 isInsert = false;
                 cmdManager.clear();
                 btnRedo.Enabled = btnUndo.Enabled = false; 

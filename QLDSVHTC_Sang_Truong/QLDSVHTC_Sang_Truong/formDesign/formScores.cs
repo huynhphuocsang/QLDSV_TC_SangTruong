@@ -117,6 +117,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 this.qLDSV_TCDataSet.EnforceConstraints = false;
                 this.sP_LOAD_REGISTER_INFORTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.sP_LOAD_REGISTER_INFORTableAdapter.Fill(this.qLDSV_TCDataSet.SP_LOAD_REGISTER_INFOR, cbNienkhoa.Text, Int32.Parse(cbHocky.Value.ToString()));
+
+                //clear subform
+                while (gridViewDiem.RowCount > 0)
+                {
+                    gridViewDiem.DeleteRow(0);
+                }
             }
             catch (System.Exception ex)
             {
@@ -126,6 +132,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void loadScoresSV()
         {
+            if (gridViewLop.RowCount == 0) return;
             String maMH = ((DataRowView)bdsSP_ClassRegister[bdsSP_ClassRegister.Position])["MAMH"].ToString();
             int nhom = (int)((DataRowView)bdsSP_ClassRegister[bdsSP_ClassRegister.Position])["NHOM"];
             try
@@ -194,16 +201,16 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void btnNhapDiem_Click(object sender, EventArgs e)
         {
-            if (gridViewLop.RowCount == 0)
+            if (gridViewLop.RowCount == 0|| gridViewDiem.RowCount == 0)
             {
-                MessageBox.Show("Dữ liệu đang trống!", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Dữ liệu đang trống!\n Hãy chọn dữ liệu có thông tin để nhập", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (gridViewDiem.RowCount == 0)
+            /*if (gridViewDiem.RowCount == 0)
             {
                 MessageBox.Show("Hãy chọn nhôm để nhập điểm!", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            }
+            }*/
             setEnableGrid(true);
             btnNhapDiem.Enabled = false;
             btnGhi.Enabled = btnReload.Enabled = true;
@@ -236,6 +243,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             if (cbNienkhoa.Text.Equals("")) return;
             loadClassRegister();
+            
             loadScoresSV();
            
         }
