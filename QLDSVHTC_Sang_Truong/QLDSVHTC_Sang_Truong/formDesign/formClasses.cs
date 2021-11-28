@@ -544,15 +544,24 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 }
 
 
-                int checkValue = checkExistValue(studentCode, "SV"); 
-                if (checkValue == 1)
-                {
-                    e.Valid = false;
-                    e.ErrorText = "Mã sinh viên đã tồn tại";
-                    inValidStudent = true; 
-                    MessageBox.Show(this, "Mã số sinh viên bị trùng!", "Cảnh báo!", MessageBoxButtons.OK);
-                }
-                else if (checkValue == 2)
+                int checkValue = checkExistValue(studentCode, "SV");
+                //if (checkValue == 1)
+                //{
+                //    e.Valid = false;
+                //    e.ErrorText = "Mã sinh viên đã tồn tại";
+                //    inValidStudent = true; 
+                //    MessageBox.Show(this, "Mã số sinh viên bị trùng!", "Cảnh báo!", MessageBoxButtons.OK);
+                //}
+                //else if (checkValue == 2)
+                //{
+                //    e.Valid = false;
+                //    e.ErrorText = "Mã sinh viên đã tồn tại ở khoa khác";
+                //    inValidStudent = true;
+                //    MessageBox.Show(this, "Mã số sinh viên bị trùng ở khoa khác!", "Cảnh báo!", MessageBoxButtons.OK);
+                //}
+
+              
+                if (checkValue == 2)
                 {
                     e.Valid = false;
                     e.ErrorText = "Mã sinh viên đã tồn tại ở khoa khác";
@@ -615,30 +624,37 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     return; 
                 }
 
-                    int checkValue = checkExistValue(classCode, "MALOP");
-                    if (checkValue == 1)
-                    {
-                        e.Valid = false;
-                        e.ErrorText = "Mã lớp đã bị trùng!";
-                      
-                        MessageBox.Show(this, "Mã lớp bị trùng", "Cảnh báo!", MessageBoxButtons.OK);
-                    inValid = true; 
-                }
-                    else if (checkValue == 2)
-                    {
-                        e.Valid = false;
-                        e.ErrorText = "Mã lớp đã bị trùng ở khoa khác!";
-                    MessageBox.Show( "Mã lớp lớp bị trùng ở khoa khác!", "Cảnh báo!", MessageBoxButtons.OK);
+                //int checkValue = checkExistValue(classCode, "MALOP");
+                //if (checkValue == 1)
+                //{
+                //    e.Valid = false;
+                //    e.ErrorText = "Mã lớp đã bị trùng!";
+
+                //    MessageBox.Show(this, "Mã lớp bị trùng", "Cảnh báo!", MessageBoxButtons.OK);
+                //inValid = true; 
+                // }
+                //else if (checkValue == 2)
+                //{
+                //    e.Valid = false;
+                //    e.ErrorText = "Mã lớp đã bị trùng ở khoa khác!";
+                //MessageBox.Show( "Mã lớp lớp bị trùng ở khoa khác!", "Cảnh báo!", MessageBoxButtons.OK);
+                //inValid = true;
+
+                int checkValue = checkExistValue(classCode, "MALOP");
+           
+                if (checkValue == 2)
+                {
+                    e.Valid = false;
+                    e.ErrorText = "Mã lớp đã bị trùng ở khoa khác!";
+                    MessageBox.Show("Mã lớp lớp bị trùng ở khoa khác!", "Cảnh báo!", MessageBoxButtons.OK);
                     inValid = true;
                 }
                     else
                     {
-
-                        
                         inValid = false;
-                    if(lOPBindingSource.Position <totalOfficalClass)
-                        cmdManager.execute(new UpdateAction(lOPBindingSource));
-                }
+                        if(lOPBindingSource.Position <totalOfficalClass)
+                            cmdManager.execute(new UpdateAction(lOPBindingSource));
+                    }
             }
             else if (gridView1.FocusedColumn.FieldName == "TENLOP")
             {
@@ -650,21 +666,31 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                     MessageBox.Show(this, "Tên lớp bị rỗng", "Cảnh báo!", MessageBoxButtons.OK);
                 }
                 int checkValue = checkExistValue(className, "TENLOP");
-                if (checkValue ==1)
-                {
-                    e.Valid = false;
-                    e.ErrorText = "Tên lớp đã bị trùng!";
-                   
-                    MessageBox.Show(this, "Tên lớp bị trùng","Cảnh báo!",MessageBoxButtons.OK);
-                    inValid = true;
-                } else if (checkValue == 2)
+                //if (checkValue ==1)
+                //{
+                //    e.Valid = false;
+                //    e.ErrorText = "Tên lớp đã bị trùng!";
+
+                //    MessageBox.Show(this, "Tên lớp bị trùng","Cảnh báo!",MessageBoxButtons.OK);
+                //    inValid = true;
+                //} else if (checkValue == 2)
+                //{
+                //    e.Valid = false;
+                //    e.ErrorText = "Tên lớp đã bị trùng ở khoa khác!";
+                //    bindingNavigatorAddNewItem.Enabled = false;
+                //    MessageBox.Show(this, "Tên lớp bị trùng ở khoa khác!", "Thông báo!", MessageBoxButtons.OK);
+                //    inValid = true;
+                //} 
+
+                
+                 if (checkValue == 2)
                 {
                     e.Valid = false;
                     e.ErrorText = "Tên lớp đã bị trùng ở khoa khác!";
                     bindingNavigatorAddNewItem.Enabled = false;
                     MessageBox.Show(this, "Tên lớp bị trùng ở khoa khác!", "Thông báo!", MessageBoxButtons.OK);
                     inValid = true;
-                } 
+                }
                 else
                 {
 
