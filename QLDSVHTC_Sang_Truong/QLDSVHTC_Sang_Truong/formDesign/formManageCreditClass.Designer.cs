@@ -177,6 +177,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNIENKHOA.FieldName = "NIENKHOA";
             this.colNIENKHOA.MinWidth = 25;
             this.colNIENKHOA.Name = "colNIENKHOA";
+            this.colNIENKHOA.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colNIENKHOA.Visible = true;
             this.colNIENKHOA.VisibleIndex = 0;
             this.colNIENKHOA.Width = 150;
@@ -208,6 +209,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHOCKY.FieldName = "HOCKY";
             this.colHOCKY.MinWidth = 25;
             this.colHOCKY.Name = "colHOCKY";
+            this.colHOCKY.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colHOCKY.Visible = true;
             this.colHOCKY.VisibleIndex = 1;
             this.colHOCKY.Width = 150;
@@ -245,6 +247,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
             this.colMAMH.Name = "colMAMH";
+            this.colMAMH.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMAMH.Visible = true;
             this.colMAMH.VisibleIndex = 2;
             this.colMAMH.Width = 150;
@@ -283,6 +286,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNHOM.FieldName = "NHOM";
             this.colNHOM.MinWidth = 25;
             this.colNHOM.Name = "colNHOM";
+            this.colNHOM.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colNHOM.Visible = true;
             this.colNHOM.VisibleIndex = 3;
             this.colNHOM.Width = 116;
@@ -319,6 +323,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAGV.FieldName = "MAGV";
             this.colMAGV.MinWidth = 25;
             this.colMAGV.Name = "colMAGV";
+            this.colMAGV.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMAGV.Visible = true;
             this.colMAGV.VisibleIndex = 4;
             this.colMAGV.Width = 307;
@@ -357,6 +362,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
+            this.colMAKHOA.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMAKHOA.OptionsColumn.ReadOnly = true;
             this.colMAKHOA.Visible = true;
             this.colMAKHOA.VisibleIndex = 5;
@@ -377,6 +383,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colSOSVTOITHIEU.FieldName = "SOSVTOITHIEU";
             this.colSOSVTOITHIEU.MinWidth = 25;
             this.colSOSVTOITHIEU.Name = "colSOSVTOITHIEU";
+            this.colSOSVTOITHIEU.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colSOSVTOITHIEU.Visible = true;
             this.colSOSVTOITHIEU.VisibleIndex = 6;
             this.colSOSVTOITHIEU.Width = 108;
@@ -412,6 +419,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHUYLOP.FieldName = "HUYLOP";
             this.colHUYLOP.MinWidth = 25;
             this.colHUYLOP.Name = "colHUYLOP";
+            this.colHUYLOP.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colHUYLOP.Visible = true;
             this.colHUYLOP.VisibleIndex = 7;
             this.colHUYLOP.Width = 73;
@@ -489,7 +497,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnUndo
             // 
-            this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndo.ImageOptions.SvgImage")));
             this.btnUndo.Location = new System.Drawing.Point(330, 12);
             this.btnUndo.Name = "btnUndo";
             this.btnUndo.Size = new System.Drawing.Size(98, 38);
@@ -499,7 +507,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // btnRedo
             // 
-            this.btnRedo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.btnRedo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRedo.ImageOptions.SvgImage")));
             this.btnRedo.Location = new System.Drawing.Point(434, 12);
             this.btnRedo.Name = "btnRedo";
             this.btnRedo.Size = new System.Drawing.Size(97, 38);

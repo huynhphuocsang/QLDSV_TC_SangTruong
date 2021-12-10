@@ -734,5 +734,45 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
             btnRedoSV.Enabled = false;
         }
+
+        private void btnadd2_Click(object sender, EventArgs e)
+        {
+            if (lOPBindingSource.Count > 0)
+            {
+
+
+                //string classCode = gridView1.GetRowCellValue(gridView1.DataRowCount - 1, "MALOP").ToString();
+                //string className = gridView1.GetRowCellValue(gridView1.DataRowCount - 1, "TENLOP").ToString();
+                //if (classCode.Equals("") || className.Equals(""))
+                //{
+                //    MessageBox.Show("Bạn phải hoàn tất thao tác trước đó!", "Cảnh báo!", MessageBoxButtons.OK);
+                //    return;
+                //}
+            }
+
+
+
+            cmdManager.execute(new InsertAction(lOPBindingSource));
+
+
+
+
+            //if (cbDepartment.SelectedIndex == 0)
+            //{
+            //    gridView1.SetFocusedRowCellValue("MAKHOA", "CNTT");
+            //}
+            //else if (cbDepartment.SelectedIndex == 1)
+            //{
+            //    gridView1.SetFocusedRowCellValue("MAKHOA", "VT");
+            //}
+
+            ////quan trọng: để chương trình không tự báo lỗi.
+            //gridView1.SetFocusedRowCellValue("MALOP", "");
+            //gridView1.SetFocusedRowCellValue("TENLOP", "");
+            //gridView1.SetFocusedRowCellValue("KHOAHOC", "");
+
+            ////quan trọng, nhấm đánh dấu là đã được tồn tại
+            //gridView1.FocusedRowHandle = gridView1.DataRowCount;
+        }
     }
 }

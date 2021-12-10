@@ -139,6 +139,7 @@
             this.colMAMH.MinWidth = 25;
             this.colMAMH.Name = "colMAMH";
             this.colMAMH.OptionsColumn.AllowEdit = false;
+            this.colMAMH.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMAMH.Visible = true;
             this.colMAMH.VisibleIndex = 0;
             this.colMAMH.Width = 94;
@@ -157,6 +158,7 @@
             this.colTENMH.FieldName = "TENMH";
             this.colTENMH.MinWidth = 25;
             this.colTENMH.Name = "colTENMH";
+            this.colTENMH.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colTENMH.Visible = true;
             this.colTENMH.VisibleIndex = 1;
             this.colTENMH.Width = 94;
@@ -179,6 +181,7 @@
             this.colSOTIET_LT.FieldName = "SOTIET_LT";
             this.colSOTIET_LT.MinWidth = 25;
             this.colSOTIET_LT.Name = "colSOTIET_LT";
+            this.colSOTIET_LT.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colSOTIET_LT.Visible = true;
             this.colSOTIET_LT.VisibleIndex = 2;
             this.colSOTIET_LT.Width = 94;
@@ -201,6 +204,7 @@
             this.colSOTIET_TH.FieldName = "SOTIET_TH";
             this.colSOTIET_TH.MinWidth = 25;
             this.colSOTIET_TH.Name = "colSOTIET_TH";
+            this.colSOTIET_TH.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colSOTIET_TH.Visible = true;
             this.colSOTIET_TH.VisibleIndex = 3;
             this.colSOTIET_TH.Width = 94;
