@@ -231,10 +231,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (lOPBindingSource.Count > 0)
             {
 
-                
-                string classCode = gridView1.GetRowCellValue(gridView1.DataRowCount-1, "MALOP").ToString();
-                string className = gridView1.GetRowCellValue(gridView1.DataRowCount-1, "TENLOP").ToString();
-                if(classCode.Equals("") || className.Equals(""))
+
+                string classCode = gridView1.GetRowCellValue(gridView1.DataRowCount - 1, "MALOP").ToString();
+                string className = gridView1.GetRowCellValue(gridView1.DataRowCount - 1, "TENLOP").ToString();
+                if (classCode.Equals("") || className.Equals(""))
                 {
                     MessageBox.Show("Bạn phải hoàn tất thao tác trước đó!", "Cảnh báo!", MessageBoxButtons.OK);
                     return;
@@ -260,7 +260,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             gridView1.SetFocusedRowCellValue("MALOP", "");
             gridView1.SetFocusedRowCellValue("TENLOP", "");
             gridView1.SetFocusedRowCellValue("KHOAHOC", "");
-            
+
             //quan trọng, nhấm đánh dấu là đã được tồn tại
             gridView1.FocusedRowHandle = gridView1.DataRowCount;
         }
@@ -726,6 +726,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             cmdManagerSV.clear();
             btnUndoSV.Enabled = false;
+
             btnRedoSV.Enabled = false;
         }
     }
