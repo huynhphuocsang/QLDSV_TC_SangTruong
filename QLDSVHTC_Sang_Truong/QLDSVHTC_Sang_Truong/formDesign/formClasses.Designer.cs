@@ -207,14 +207,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lOPBindingNavigator.Name = "lOPBindingNavigator";
             this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 27);
+            this.lOPBindingNavigator.Size = new System.Drawing.Size(1536, 31);
             this.lOPBindingNavigator.TabIndex = 2;
             this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -224,7 +224,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -233,13 +233,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -254,7 +254,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -262,7 +262,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -271,13 +271,13 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -285,7 +285,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -296,7 +296,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.bindingNavigatorDeleteItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -305,7 +305,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.lOPBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("lOPBindingNavigatorSaveItem.Image")));
             this.lOPBindingNavigatorSaveItem.Name = "lOPBindingNavigatorSaveItem";
-            this.lOPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.lOPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.lOPBindingNavigatorSaveItem.Text = "Save Data";
             this.lOPBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPBindingNavigatorSaveItem_Click);
             // 
@@ -315,7 +315,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnUndo.Image = ((System.Drawing.Image)(resources.GetObject("btnUndo.Image")));
             this.btnUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(29, 24);
+            this.btnUndo.Size = new System.Drawing.Size(29, 28);
             this.btnUndo.Text = "Undo";
             this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
@@ -325,7 +325,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnRedo.Image = ((System.Drawing.Image)(resources.GetObject("btnRedo.Image")));
             this.btnRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(29, 24);
+            this.btnRedo.Size = new System.Drawing.Size(29, 28);
             this.btnRedo.Text = "Redo";
             this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
             // 
@@ -336,7 +336,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(29, 24);
+            this.btnReload.Size = new System.Drawing.Size(29, 28);
             this.btnReload.Text = "Reload";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
@@ -345,10 +345,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.lOPGridControl.DataSource = this.lOPBindingSource;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.lOPGridControl.EmbeddedNavigator.ToolTip = "Reload";
-            this.lOPGridControl.Location = new System.Drawing.Point(0, 127);
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 131);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(712, 535);
+            this.lOPGridControl.Size = new System.Drawing.Size(712, 531);
             this.lOPGridControl.TabIndex = 2;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -370,6 +370,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridView1.Name = "gridView1";
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
             this.gridView1.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
             // 
@@ -641,7 +642,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panelControl1.Controls.Add(this.btnDeleteSV);
             this.panelControl1.Controls.Add(this.btnAddSV);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(712, 127);
+            this.panelControl1.Location = new System.Drawing.Point(712, 131);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(824, 57);
             this.panelControl1.TabIndex = 4;

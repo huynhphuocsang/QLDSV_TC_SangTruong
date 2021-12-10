@@ -717,12 +717,17 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void gridView1_RowClick(object sender, RowClickEventArgs e)
         {
-            cmdManagerSV.clear();
+            /*cmdManagerSV.clear();
             btnUndoSV.Enabled = false;
-            btnRedoSV.Enabled = false;
+            btnRedoSV.Enabled = false;*/
         }
 
         private void gridView1_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             cmdManagerSV.clear();
             btnUndoSV.Enabled = false;
