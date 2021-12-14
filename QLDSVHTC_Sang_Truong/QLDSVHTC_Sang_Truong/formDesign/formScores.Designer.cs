@@ -32,10 +32,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nIENKHOALabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formScores));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -391,22 +391,22 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_GK,
             this.colDIEM_CK,
             this.gridColumn1});
-            gridFormatRule3.ApplyToRow = true;
-            gridFormatRule3.Name = "scoresLow";
-            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue3.Expression = "[gridColumn1] < 4";
-            gridFormatRule3.Rule = formatConditionRuleValue3;
-            gridFormatRule4.ApplyToRow = true;
-            gridFormatRule4.Name = "pay";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue4.Expression = "[TOPAY] <> 1";
-            gridFormatRule4.Rule = formatConditionRuleValue4;
-            this.gridViewDiem.FormatRules.Add(gridFormatRule3);
-            this.gridViewDiem.FormatRules.Add(gridFormatRule4);
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Name = "scoresLow";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue1.Expression = "[gridColumn1] < 4";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.ApplyToRow = true;
+            gridFormatRule2.Name = "pay";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue2.Expression = "[TOPAY] <> 1";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gridViewDiem.FormatRules.Add(gridFormatRule1);
+            this.gridViewDiem.FormatRules.Add(gridFormatRule2);
             this.gridViewDiem.GridControl = this.sP_LOAD_LIST_SCORESGridControl;
             this.gridViewDiem.GroupPanelText = "DANH SÁCH ĐIỂM SINH VIÊN";
             this.gridViewDiem.Name = "gridViewDiem";
@@ -430,6 +430,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMASV.MinWidth = 25;
             this.colMASV.Name = "colMASV";
             this.colMASV.OptionsColumn.AllowEdit = false;
+            this.colMASV.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMASV.Visible = true;
             this.colMASV.VisibleIndex = 0;
             this.colMASV.Width = 94;
@@ -449,6 +450,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHOTEN.MinWidth = 25;
             this.colHOTEN.Name = "colHOTEN";
             this.colHOTEN.OptionsColumn.AllowEdit = false;
+            this.colHOTEN.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colHOTEN.Visible = true;
             this.colHOTEN.VisibleIndex = 1;
             this.colHOTEN.Width = 94;
@@ -471,6 +473,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_CC.FieldName = "DIEM_CC";
             this.colDIEM_CC.MinWidth = 25;
             this.colDIEM_CC.Name = "colDIEM_CC";
+            this.colDIEM_CC.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colDIEM_CC.OptionsFilter.AllowAutoFilter = false;
             this.colDIEM_CC.Visible = true;
             this.colDIEM_CC.VisibleIndex = 2;
@@ -494,6 +497,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_GK.FieldName = "DIEM_GK";
             this.colDIEM_GK.MinWidth = 25;
             this.colDIEM_GK.Name = "colDIEM_GK";
+            this.colDIEM_GK.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colDIEM_GK.OptionsFilter.AllowAutoFilter = false;
             this.colDIEM_GK.Visible = true;
             this.colDIEM_GK.VisibleIndex = 3;
@@ -517,6 +521,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIEM_CK.FieldName = "DIEM_CK";
             this.colDIEM_CK.MinWidth = 25;
             this.colDIEM_CK.Name = "colDIEM_CK";
+            this.colDIEM_CK.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colDIEM_CK.OptionsFilter.AllowAutoFilter = false;
             this.colDIEM_CK.Visible = true;
             this.colDIEM_CK.VisibleIndex = 4;
@@ -539,6 +544,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn1.UnboundExpression = "[DIEM_CC] * 0.1 + [DIEM_GK] * 0.3 + [DIEM_CK] * 0.6";
             this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn1.Visible = true;
