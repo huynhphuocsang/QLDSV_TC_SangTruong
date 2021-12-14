@@ -311,12 +311,12 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             if (gridView1.FocusedColumn.FieldName == "MAMH" || gridView1.FocusedColumn.FieldName == "NHOM" || gridView1.FocusedColumn.FieldName == "HOCKY"|| gridView1.FocusedColumn.FieldName == "NIENKHOA")
             {
 
-                string schoolYear = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString();
-                int semester = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString());
-                string subjectCode =  e.Value as string;
-                int group = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NHOM").ToString());
+                string schoolYear = (gridView1.FocusedColumn.FieldName != "NIENKHOA") ?gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString() : e.Value as string;
+                int semester = (gridView1.FocusedColumn.FieldName != "HOCKY") ? int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString()) : int.Parse(e.Value.ToString());
+                string subjectCode = (gridView1.FocusedColumn.FieldName != "MAMH") ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAMH").ToString() : e.Value as string;
+                int group = (gridView1.FocusedColumn.FieldName != "NHOM") ? int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NHOM").ToString()): int.Parse(e.Value.ToString());
 
-                if (subjectCode != "")
+                if (subjectCode != "" && schoolYear != "" && semester != 0 && group != 0)
                 {
                     int checkValue = this.checkExistValue(schoolYear, semester, subjectCode, group);
 
