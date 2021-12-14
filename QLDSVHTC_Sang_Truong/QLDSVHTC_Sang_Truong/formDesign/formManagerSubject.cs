@@ -67,6 +67,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 gridView1.Columns[i].OptionsColumn.AllowEdit = column;
             }
+            //label1.Text= ((DataRowView)bdsMONHOC[bdsMONHOC.Position]).Row.ToString();
         }
 
         private Boolean checkEmpty()
@@ -178,6 +179,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             btnSave.Enabled = true;
             cmdManager.execute(new InsertAction(bdsMONHOC));
             setEnableGrid(true);
+            btnEdit.Caption = "Sửa";
             isInsert = true;
             btnUndo.Enabled = true; 
         }

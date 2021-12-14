@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,10 +53,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             {
                 cbDepartment.Enabled = true;
             }
-
             
-
-
             btnUndo.Enabled = btnRedo.Enabled = false;
             //totalOfficalClass = lOPTINCHIBindingSource.Count; 
 
@@ -310,10 +308,30 @@ namespace QLDSVHTC_Sang_Truong.formDesign
 
         private void gridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
+            if (gridView1.FocusedColumn.FieldName == "MAMH" || gridView1.FocusedColumn.FieldName == "NHOM" || gridView1.FocusedColumn.FieldName == "HOCKY"|| gridView1.FocusedColumn.FieldName == "NIENKHOA")
+            {
+
+                string schoolYear = (gridView1.FocusedColumn.FieldName != "NIENKHOA") ?gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NIENKHOA").ToString() : e.Value as string;
+                int semester = (gridView1.FocusedColumn.FieldName != "HOCKY") ? int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HOCKY").ToString()) : int.Parse(e.Value.ToString());
+                string subjectCode = (gridView1.FocusedColumn.FieldName != "MAMH") ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAMH").ToString() : e.Value as string;
+                int group = (gridView1.FocusedColumn.FieldName != "NHOM") ? int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NHOM").ToString()): int.Parse(e.Value.ToString());
+
+                if (subjectCode != "" && schoolYear != "" && semester != 0 && group != 0)
+                {
+                    int checkValue = this.checkExistValue(schoolYear, semester, subjectCode, group);
+
+                    if (checkValue == 1)
+                    {
+                        e.Valid = false;
+                        e.ErrorText = "Lớp tín chỉ này đã bị trùng ở khoa khác!";
+                        MessageBox.Show(this, "Lớp tín chỉ này đã bị trùng ở khoa khác!", "Thông báo!", MessageBoxButtons.OK);
+                    }
+                }
+
+            }
+
+
             // không cho update vì phải xử lý thêm nhiều trường hợp null; 
-
-
-
             //if (lOPTINCHIBindingSource.Position < totalOfficalClass)
             //{
             //    cmdManager.execute(new UpdateActionForCredit(lOPTINCHIBindingSource));
@@ -335,7 +353,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             //    {
             //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource)); 
             //    }
-                
+
 
             //}
             //else if (gridView1.FocusedColumn.FieldName == "HOCKY")
@@ -376,9 +394,10 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             //        cmdManager.execute(new UpdateAction(lOPTINCHIBindingSource));
             //    }
             //}
+
         }
 
-        public bool checkEmpty(string subject, string teacher)
+            public bool checkEmpty(string subject, string teacher)
         {
             if (subject.Trim().Equals(""))
             {
@@ -391,6 +410,27 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 return true;
             }
             return false; 
+        }
+        private int checkExistValue(string schoolyear, int semester, string subjectCode, int group)
+        {
+
+            
+                //kiểm tra tên trước: 
+                string queryName = "DECLARE @return_value int "
+                   + "EXEC @return_value = [dbo].[SP_CHECK_EXIST_CREDITCLASS] @Nienkhoa = N'" + schoolyear + "', @Hocky ="+semester+",@MaMH = "+subjectCode+ ",@Nhom = "+group+" SELECT  'Return Value' = @return_value";
+                SqlDataReader resultClassName = Program.ExecSqlDataReader(queryName);
+
+                if (resultClassName == null)
+                {
+                    MessageBox.Show("Server bị lỗi");
+                    resultClassName.Close();
+                    return -1;
+                }
+                resultClassName.Read();
+                int tempvalue = resultClassName.GetInt32(0);
+                resultClassName.Close();
+                return tempvalue;
+
         }
     }
 }

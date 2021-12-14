@@ -33,7 +33,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClasses));
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnadd2 = new DevExpress.XtraEditors.SimpleButton();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
@@ -120,7 +119,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnadd2);
             this.panel1.Controls.Add(this.cbDepartment);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -129,15 +127,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panel1.Size = new System.Drawing.Size(1536, 100);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnadd2
-            // 
-            this.btnadd2.Location = new System.Drawing.Point(138, 39);
-            this.btnadd2.Name = "btnadd2";
-            this.btnadd2.Size = new System.Drawing.Size(94, 29);
-            this.btnadd2.TabIndex = 2;
-            this.btnadd2.Text = "themlop ne";
-            this.btnadd2.Click += new System.EventHandler(this.btnadd2_Click);
             // 
             // cbDepartment
             // 
@@ -258,6 +247,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -830,6 +820,5 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.BindingSource dANGKYBindingSource;
         private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
-        private DevExpress.XtraEditors.SimpleButton btnadd2;
     }
 }
