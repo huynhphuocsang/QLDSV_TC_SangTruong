@@ -33,6 +33,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClasses));
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnadd2 = new DevExpress.XtraEditors.SimpleButton();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.qLDSV_TCDataSet = new QLDSVHTC_Sang_Truong.QLDSV_TCDataSet();
@@ -111,12 +112,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.MinWidth = 25;
             this.colMALOP.Name = "colMALOP";
+            this.colMALOP.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colMALOP.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
             this.colMALOP.Visible = true;
             this.colMALOP.VisibleIndex = 0;
             this.colMALOP.Width = 94;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnadd2);
             this.panel1.Controls.Add(this.cbDepartment);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -125,6 +129,15 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.panel1.Size = new System.Drawing.Size(1536, 100);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnadd2
+            // 
+            this.btnadd2.Location = new System.Drawing.Point(138, 39);
+            this.btnadd2.Name = "btnadd2";
+            this.btnadd2.Size = new System.Drawing.Size(94, 29);
+            this.btnadd2.TabIndex = 2;
+            this.btnadd2.Text = "themlop ne";
+            this.btnadd2.Click += new System.EventHandler(this.btnadd2_Click);
             // 
             // cbDepartment
             // 
@@ -245,7 +258,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -388,6 +400,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colTENLOP.FieldName = "TENLOP";
             this.colTENLOP.MinWidth = 25;
             this.colTENLOP.Name = "colTENLOP";
+            this.colTENLOP.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colTENLOP.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
             this.colTENLOP.Visible = true;
             this.colTENLOP.VisibleIndex = 1;
             this.colTENLOP.Width = 94;
@@ -406,6 +420,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colKHOAHOC.FieldName = "KHOAHOC";
             this.colKHOAHOC.MinWidth = 25;
             this.colKHOAHOC.Name = "colKHOAHOC";
+            this.colKHOAHOC.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colKHOAHOC.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
             this.colKHOAHOC.Visible = true;
             this.colKHOAHOC.VisibleIndex = 2;
             this.colKHOAHOC.Width = 94;
@@ -424,6 +440,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
+            this.colMAKHOA.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colMAKHOA.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
             this.colMAKHOA.Visible = true;
             this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 94;
@@ -495,6 +513,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMASV.FieldName = "MASV";
             this.colMASV.MinWidth = 25;
             this.colMASV.Name = "colMASV";
+            this.colMASV.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMASV.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.False;
             this.colMASV.OptionsFilter.ImmediateUpdateAutoFilter = false;
             this.colMASV.Visible = true;
@@ -513,6 +532,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colHO.FieldName = "HO";
             this.colHO.MinWidth = 25;
             this.colHO.Name = "colHO";
+            this.colHO.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
             this.colHO.Width = 94;
@@ -529,6 +549,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colTEN.FieldName = "TEN";
             this.colTEN.MinWidth = 25;
             this.colTEN.Name = "colTEN";
+            this.colTEN.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
             this.colTEN.Width = 94;
@@ -545,6 +566,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colPHAI.FieldName = "PHAI";
             this.colPHAI.MinWidth = 25;
             this.colPHAI.Name = "colPHAI";
+            this.colPHAI.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colPHAI.Visible = true;
             this.colPHAI.VisibleIndex = 3;
             this.colPHAI.Width = 94;
@@ -561,6 +583,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDIACHI.FieldName = "DIACHI";
             this.colDIACHI.MinWidth = 25;
             this.colDIACHI.Name = "colDIACHI";
+            this.colDIACHI.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 4;
             this.colDIACHI.Width = 94;
@@ -581,6 +604,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colNGAYSINH.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYSINH.MinWidth = 25;
             this.colNGAYSINH.Name = "colNGAYSINH";
+            this.colNGAYSINH.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colNGAYSINH.Visible = true;
             this.colNGAYSINH.VisibleIndex = 5;
             this.colNGAYSINH.Width = 94;
@@ -597,6 +621,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colMALOP1.FieldName = "MALOP";
             this.colMALOP1.MinWidth = 25;
             this.colMALOP1.Name = "colMALOP1";
+            this.colMALOP1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colMALOP1.Visible = true;
             this.colMALOP1.VisibleIndex = 6;
             this.colMALOP1.Width = 94;
@@ -613,6 +638,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colDANGHIHOC.FieldName = "DANGHIHOC";
             this.colDANGHIHOC.MinWidth = 25;
             this.colDANGHIHOC.Name = "colDANGHIHOC";
+            this.colDANGHIHOC.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colDANGHIHOC.Visible = true;
             this.colDANGHIHOC.VisibleIndex = 7;
             this.colDANGHIHOC.Width = 94;
@@ -629,6 +655,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
             this.colPASSWORD.FieldName = "PASSWORD";
             this.colPASSWORD.MinWidth = 25;
             this.colPASSWORD.Name = "colPASSWORD";
+            this.colPASSWORD.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colPASSWORD.Visible = true;
             this.colPASSWORD.VisibleIndex = 8;
             this.colPASSWORD.Width = 94;
@@ -803,5 +830,6 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         private System.Windows.Forms.BindingSource dANGKYBindingSource;
         private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter dANGKYTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
+        private DevExpress.XtraEditors.SimpleButton btnadd2;
     }
 }
