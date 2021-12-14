@@ -19,13 +19,14 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         //private String regexStudent = "N(([0-1][1-9])|([2][0]))[a-zA-Z]{4}\\d{3}";
         public Boolean isStudent = false;
 
-        private void LayDSPM(String cmd)
+        private void LayDSPM(String cmd)//"SELECT * FROM V_DS_PHANMANH"
         {
             DataTable dt = new DataTable();
 
             if (conn_publisher.State == ConnectionState.Closed) conn_publisher.Open();
             SqlDataAdapter da = new SqlDataAdapter(cmd, conn_publisher);
             da.Fill(dt);
+
             conn_publisher.Close();
             Program.bdsDSPM.DataSource = dt;
             cbPhongBan.DataSource = Program.bdsDSPM;
@@ -57,8 +58,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             skins();
             if (KetNoi_CSDLGoc() == 0) return;
-            LayDSPM("SELECT * FROM V_DS_PHANMANH");
-            cbPhongBan.SelectedIndex = 1; cbPhongBan.SelectedIndex = 0;
+            LayDSPM("SELECT * FROM V_DS_PHANMANH"); 
+            cbPhongBan.SelectedIndex = 0;
             
             txtPass.Properties.UseSystemPasswordChar = true; 
         }
@@ -104,7 +105,7 @@ namespace QLDSVHTC_Sang_Truong.formDesign
                 loginNameSV = txtTK.Text;
                 passSV = txtPass.Text;
 
-                if(Program.KetNoi()==0) return;//site 3'
+                if(Program.KetNoi()==0) return;//not site 3'
 
                 String strCmd = "EXEC SP_LOGIN_SV '" + Program.mlogin + "', '"+loginNameSV+"','"+passSV+"'";
                 Program.myReader = Program.ExecSqlDataReader(strCmd);
