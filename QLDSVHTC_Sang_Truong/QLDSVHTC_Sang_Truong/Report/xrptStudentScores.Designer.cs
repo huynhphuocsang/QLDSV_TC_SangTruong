@@ -61,6 +61,7 @@ namespace QLDSVHTC_Sang_Truong.Report
             this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.table2 = new DevExpress.XtraReports.UI.XRTable();
             this.tableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -68,9 +69,8 @@ namespace QLDSVHTC_Sang_Truong.Report
             this.tableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.calDiemKtCH = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.calDiemKtCH = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -383,6 +383,24 @@ namespace QLDSVHTC_Sang_Truong.Report
             this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell3.Weight = 0.45136114925688603D;
             // 
+            // xrTableCell3
+            // 
+            this.xrTableCell3.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.xrTableCell3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell3.BorderWidth = 1F;
+            this.xrTableCell3.Multiline = true;
+            this.xrTableCell3.Name = "xrTableCell3";
+            this.xrTableCell3.StyleName = "DetailCaption1";
+            this.xrTableCell3.StylePriority.UseBorderColor = false;
+            this.xrTableCell3.StylePriority.UseBorders = false;
+            this.xrTableCell3.StylePriority.UseBorderWidth = false;
+            this.xrTableCell3.StylePriority.UseTextAlignment = false;
+            this.xrTableCell3.Text = "Điểm môn học (CH)";
+            this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell3.Weight = 0.45136114925688603D;
+            // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -482,32 +500,6 @@ namespace QLDSVHTC_Sang_Truong.Report
             this.tableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell8.Weight = 0.4513612378673757D;
             // 
-            // calDiemKtCH
-            // 
-            this.calDiemKtCH.DataMember = "SP_REPORT_SV_SCORES";
-            this.calDiemKtCH.Expression = "Iif([DIEMKT]>9,\'A+\' ,Iif([DIEMKT]>8.5,\'A\' ,Iif([DIEMKT]>8,\'B+\' ,Iif([DIEMKT]>7,\'B" +
-    "\' , Iif([DIEMKT]>6.5,\'C+\' ,Iif([DIEMKT]>5.5,\'C\' ,Iif([DIEMKT]>5,\'D+\' , Iif([DIEM" +
-    "KT]>4,\'D\' ,\'F\' )\n)\n )\n )\n)\n )\n )\n )";
-            this.calDiemKtCH.Name = "calDiemKtCH";
-            // 
-            // xrTableCell3
-            // 
-            this.xrTableCell3.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.xrTableCell3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell3.BorderWidth = 1F;
-            this.xrTableCell3.Multiline = true;
-            this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.StyleName = "DetailCaption1";
-            this.xrTableCell3.StylePriority.UseBorderColor = false;
-            this.xrTableCell3.StylePriority.UseBorders = false;
-            this.xrTableCell3.StylePriority.UseBorderWidth = false;
-            this.xrTableCell3.StylePriority.UseTextAlignment = false;
-            this.xrTableCell3.Text = "Điểm môn học (CH)";
-            this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell3.Weight = 0.45136114925688603D;
-            // 
             // xrTableCell4
             // 
             this.xrTableCell4.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -527,6 +519,14 @@ namespace QLDSVHTC_Sang_Truong.Report
             this.xrTableCell4.Text = "xrTableCell4";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell4.Weight = 0.4513612378673757D;
+            // 
+            // calDiemKtCH
+            // 
+            this.calDiemKtCH.DataMember = "SP_REPORT_SV_SCORES";
+            this.calDiemKtCH.Expression = "Iif([DIEMKT]>9,\'A+\' ,Iif([DIEMKT]>8.5,\'A\' ,Iif([DIEMKT]>8,\'B+\' ,Iif([DIEMKT]>7,\'B" +
+    "\' , Iif([DIEMKT]>6.5,\'C+\' ,Iif([DIEMKT]>5.5,\'C\' ,Iif([DIEMKT]>5,\'D+\' , Iif([DIEM" +
+    "KT]>4,\'D\' ,\'F\' )\n)\n )\n )\n)\n )\n )\n )";
+            this.calDiemKtCH.Name = "calDiemKtCH";
             // 
             // xrptStudentScores
             // 

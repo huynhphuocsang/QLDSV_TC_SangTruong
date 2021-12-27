@@ -58,8 +58,8 @@ namespace QLDSVHTC_Sang_Truong.formDesign
         {
             skins();
             if (KetNoi_CSDLGoc() == 0) return;
-            LayDSPM("SELECT * FROM V_DS_PHANMANH"); 
-            cbPhongBan.SelectedIndex = 0;
+            LayDSPM("SELECT * FROM V_DS_PHANMANH");
+            cbPhongBan.SelectedIndex = 1; cbPhongBan.SelectedIndex = 0;
             
             txtPass.Properties.UseSystemPasswordChar = true; 
         }
