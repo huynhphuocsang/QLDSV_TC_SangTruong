@@ -1,5 +1,6 @@
 # This is a project of Distributed database subject at PTIT(semester 1-schoolyear 2021-2022)
-# Trường and I always hope this project will help someone.
+## This project got a high score in Mr. Thu's exam!
+## Trường and I always hope this project will help someone.
 ### About the requirement: 
 ~~~~
     ĐỀ TÀI MÔN  CƠ SỞ DỮ LIỆU PHÂN TÁN
